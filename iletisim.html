@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>İletişim — Derin Akademi</title>
+  <meta name="description" content="Derin Akademi ile iletişime geçin. Sorularınız için buradayız."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/main.css"/>
+  <style>
+    .contact-layout{display:grid;grid-template-columns:1fr 480px;gap:64px;align-items:start;}
+    .contact-info{display:flex;flex-direction:column;gap:20px;margin-bottom:40px;}
+    .info-card{display:flex;gap:16px;align-items:flex-start;background:var(--glass-bg);border:1px solid var(--glass-bd);border-radius:var(--radius-sm);padding:20px 22px;transition:var(--t-fast);}
+    .info-card:hover{border-color:var(--teal-border);}
+    .info-icon{width:44px;height:44px;border-radius:12px;background:var(--teal-glow-s);border:1px solid var(--teal-border);display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;}
+    .info-text-title{font-size:13px;font-weight:700;color:var(--white);margin-bottom:4px;}
+    .info-text-val{font-size:13px;color:var(--silver);}
+    /* FORM */
+    .contact-form-wrap{background:var(--glass-bg);border:1px solid var(--glass-bd);border-radius:var(--radius-xl);padding:44px;backdrop-filter:blur(14px);}
+    .form-title{font-family:'Montserrat',sans-serif;font-size:22px;font-weight:900;margin-bottom:6px;}
+    .form-subtitle{font-size:14px;color:var(--silver);margin-bottom:32px;}
+    .form-group{margin-bottom:20px;}
+    .form-label{display:block;font-size:13px;font-weight:600;color:var(--silver);margin-bottom:8px;}
+    .form-input,.form-textarea{width:100%;background:rgba(255,255,255,0.03);border:1px solid var(--glass-bd);border-radius:var(--radius-sm);padding:13px 16px;color:var(--white);font-size:14px;font-family:'Inter',sans-serif;outline:none;transition:var(--t-fast);box-sizing:border-box;}
+    .form-input::placeholder,.form-textarea::placeholder{color:var(--silver-dim);}
+    .form-input:focus,.form-textarea:focus{border-color:var(--teal-border);box-shadow:0 0 0 3px var(--teal-glow-s);}
+    .form-textarea{resize:vertical;min-height:140px;}
+    .form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+    select.form-input{cursor:pointer;}
+    select.form-input option{background:var(--navy-mid);color:var(--white);}
+    /* MAP placeholder */
+    .map-placeholder{height:320px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid var(--glass-bd);display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,rgba(0,200,180,0.05),rgba(0,100,200,0.04));font-size:14px;color:var(--silver);flex-direction:column;gap:8px;margin-top:40px;}
+    /* FAQ */
+    .faq-list{display:flex;flex-direction:column;gap:12px;}
+    .faq-item{background:var(--glass-bg);border:1px solid var(--glass-bd);border-radius:var(--radius-sm);overflow:hidden;}
+    .faq-question{display:flex;justify-content:space-between;align-items:center;padding:18px 22px;cursor:pointer;font-weight:600;font-size:14px;transition:var(--t-fast);gap:12px;}
+    .faq-question:hover{color:var(--teal);}
+    .faq-icon{font-size:18px;transition:transform 0.3s;flex-shrink:0;}
+    .faq-item.open .faq-icon{transform:rotate(45deg);}
+    .faq-answer{padding:0 22px;max-height:0;overflow:hidden;transition:max-height 0.35s ease,padding 0.3s;}
+    .faq-item.open .faq-answer{max-height:200px;padding:0 22px 18px;}
+    .faq-answer p{font-size:14px;color:var(--silver);line-height:1.7;}
+    /* Contact channels */
+    .channels-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px;margin-bottom:64px;}
+    .channel-card{background:var(--glass-bg);border:1px solid var(--glass-bd);border-radius:var(--radius-lg);padding:32px 24px;text-align:center;transition:var(--t-base);}
+    .channel-card:hover{border-color:var(--teal-border);transform:translateY(-4px);}
+    .channel-icon{font-size:36px;margin-bottom:14px;}
+    .channel-title{font-family:'Montserrat',sans-serif;font-size:15px;font-weight:800;margin-bottom:6px;}
+    .channel-sub{font-size:13px;color:var(--silver);margin-bottom:16px;}
+    @media(max-width:1024px){.contact-layout{grid-template-columns:1fr;}.channels-grid{grid-template-columns:1fr 1fr;}}
+    @media(max-width:640px){.form-row{grid-template-columns:1fr;}.channels-grid{grid-template-columns:1fr;}.contact-form-wrap{padding:28px 20px;}}
+  </style>
+  <!-- SEO: Open Graph -->
+  <meta property="og:type" content="website"/>
+  <meta property="og:site_name" content="Derin Akademi"/>
+  <meta property="og:title" content="İletişim — Derin Akademi"/>
+  <meta property="og:description" content="Derin Akademi ile iletişime geçin. Sorularınız için buradayız."/>
+  <meta property="og:url" content="https://derinakademi.com/iletisim.html"/>
+  <meta property="og:image" content="https://derinakademi.com/public/hakan%20selahi/hakan-selahi.jpg"/>
+  <meta property="og:locale" content="tr_TR"/>
+  <!-- SEO: Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="İletişim — Derin Akademi"/>
+  <meta name="twitter:description" content="Derin Akademi ile iletişime geçin. Sorularınız için buradayız."/>
+  <meta name="twitter:image" content="https://derinakademi.com/public/hakan%20selahi/hakan-selahi.jpg"/>
+  <!-- SEO: Canonical & Robots -->
+  <link rel="canonical" href="https://derinakademi.com/iletisim.html"/>
+  <meta name="robots" content="index, follow"/>
+</head>
+<body>
+<div class="ambient"></div>
+
+<!-- ══ NAVBAR ══ -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><img src="public/logos/68.png" alt="Derin Akademi" class="nav-logo-img"/></a>
+    <ul class="nav-links">
+      <li><a href="kurslar.html">Eğitimlerimiz</a></li>
+      <li><a href="danismanlik.html">Danışmanlıklarımız</a></li>
+      <li><a href="hakkimizda.html">Hakkımızda</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="iletisim.html" class="active">İletişim</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button id="langToggle" onclick="daToggleLang()" class="btn btn-ghost btn-sm" style="font-weight:700;letter-spacing:1px;padding:7px 14px;min-width:52px;">EN</button>
+      <button onclick="openTeklifModal()" class="btn btn-primary btn-sm">Özel Teklif Al</button>
+    </div>
+    <button class="menu-toggle">☰</button>
+  </div>
+</nav>
+<div class="mobile-nav">
+  <button class="mobile-nav-close">✕</button>
+  <a href="index.html">Ana Sayfa</a><a href="kurslar.html">Eğitimlerimiz</a><a href="danismanlik.html">Danışmanlıklarımız</a>
+  <a href="hakkimizda.html">Hakkımızda</a><a href="blog.html">Blog</a><a href="iletisim.html" class="active">İletişim</a>
+  <div class="mobile-nav-actions">
+    <button onclick="openTeklifModal()" class="btn btn-primary btn-md" style="width:100%;justify-content:center">Özel Teklif Al</button>
+  </div>
+</div>
+
+<!-- ══ PAGE HERO ══ -->
+<div class="page-hero">
+  <div class="container">
+    <div class="page-hero-tag reveal"><span class="section-tag">İletişim</span></div>
+    <h1 class="page-hero-title reveal reveal-d1">Yardım için<br>Buradayız</h1>
+    <p class="page-hero-desc reveal reveal-d2">Sorularınız, önerileriniz veya kurumsal çözüm talepleriniz için bize ulaşın — 24 saat içinde yanıt veriyoruz.</p>
+  </div>
+</div>
+
+<!-- ══ CHANNELS ══ -->
+<section style="padding:60px 0 0;">
+  <div class="container">
+    <div class="channels-grid">
+      <div class="channel-card reveal">
+        <div class="channel-icon">💬</div>
+        <div class="channel-title">Canlı Destek</div>
+        <div class="channel-sub">Hafta içi 09:00–18:00 arası anlık yanıt</div>
+        <a href="#" class="btn btn-primary btn-sm" style="justify-content:center">Sohbet Başlat</a>
+      </div>
+      <div class="channel-card reveal reveal-d1">
+        <div class="channel-icon">📧</div>
+        <div class="channel-title">E-posta</div>
+        <div class="channel-sub">24 saat içinde yanıt garantisi</div>
+        <a href="mailto:derin@derinakademi.net" class="btn btn-ghost btn-sm" style="justify-content:center">Yaz Bize</a>
+      </div>
+      <div class="channel-card reveal reveal-d2">
+        <div class="channel-icon">🏢</div>
+        <div class="channel-title">Kurumsal</div>
+        <div class="channel-sub">Ekibiniz için özel çözümler</div>
+        <a href="#contact-form" class="btn btn-outline btn-sm" style="justify-content:center">Teklif Al</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CONTACT FORM + INFO ══ -->
+<section class="section-pad" id="contact-form">
+  <div class="container">
+    <div class="contact-layout">
+
+      <!-- Left: Info + Map -->
+      <div>
+        <div class="section-tag reveal">Bilgilerimiz</div>
+        <h2 class="section-title reveal reveal-d1">Bizimle<br><span class="gradient-text">İletişime Geç</span></h2>
+        <p style="color:var(--silver);font-size:14px;line-height:1.8;margin-bottom:36px;" class="reveal reveal-d2">Formdan mesaj gönderebilir, e-posta atabilir ya da sosyal medya üzerinden ulaşabilirsiniz.</p>
+
+        <div class="contact-info reveal reveal-d2">
+          <div class="info-card">
+            <div class="info-icon">📍</div>
+            <div><div class="info-text-title">Adres</div><div class="info-text-val">İçerenköy Mah. Topçu İbrahim Sokak Quick Tower Sitesi No:8-10D Ataşehir, İstanbul 34752</div></div>
+          </div>
+          <div class="info-card">
+            <div class="info-icon">📞</div>
+            <div><div class="info-text-title">Telefon</div><div class="info-text-val"><a href="tel:+905330193134" style="color:inherit;text-decoration:none;">0 (533) 019 31 34</a></div></div>
+          </div>
+          <div class="info-card">
+            <div class="info-icon">📧</div>
+            <div><div class="info-text-title">E-posta</div><div class="info-text-val"><a href="mailto:derin@derinakademi.net" style="color:inherit;text-decoration:none;">derin@derinakademi.net</a></div></div>
+          </div>
+          <div class="info-card">
+            <div class="info-icon">🕐</div>
+            <div><div class="info-text-title">Çalışma Saatleri</div><div class="info-text-val">Hafta içi 09:00 – 18:00 (TST)</div></div>
+          </div>
+        </div>
+
+        <div style="display:flex;gap:12px;margin-bottom:32px;" class="reveal reveal-d3">
+          <a href="https://www.instagram.com/derinakademi/" target="_blank" class="btn btn-ghost btn-sm">📷 Instagram</a>
+          <a href="https://www.linkedin.com/company/derinakademi/" target="_blank" class="btn btn-ghost btn-sm">in LinkedIn</a>
+        </div>
+
+        <!-- Map -->
+        <div class="map-placeholder reveal" style="padding:0;overflow:hidden;height:260px;">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3011.0!2d29.102!3d40.982!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cac7a0df5e58cd%3A0xb4d7b0b3f3b2e8e9!2sQuick%20Tower%2C%20%C4%B0%C3%A7erenk%C3%B6y%20Mah.%2C%20Ata%C5%9Fehir%2C%20%C4%B0stanbul!5e0!3m2!1str!2str!4v1700000000000"
+            width="100%" height="260" style="border:0;display:block;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade" title="Derin Akademi Konum"></iframe>
+        </div>
+      </div>
+
+      <!-- Right: Form -->
+      <div class="contact-form-wrap reveal">
+        <h2 class="form-title">Mesaj Gönder</h2>
+        <p class="form-subtitle">Yanıt süresi en fazla 24 saattir.</p>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">Ad</label>
+            <input type="text" class="form-input" placeholder="Adınız"/>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Soyad</label>
+            <input type="text" class="form-input" placeholder="Soyadınız"/>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">E-posta</label>
+          <input type="email" class="form-input" placeholder="ornek@mail.com"/>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Telefon (İsteğe Bağlı)</label>
+          <input type="tel" class="form-input" placeholder="+90 5XX XXX XX XX"/>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Konu</label>
+          <select class="form-input">
+            <option value="">Konu seçin…</option>
+            <option>Kurs & İçerik</option>
+            <option>Teknik Destek</option>
+            <option>Fatura & Ödeme</option>
+            <option>Sertifika</option>
+            <option>Kurumsal Çözümler</option>
+            <option>Eğitmen Olmak İstiyorum</option>
+            <option>Basın & Medya</option>
+            <option>Diğer</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Mesajınız</label>
+          <textarea class="form-textarea" placeholder="Mesajınızı buraya yazın…"></textarea>
+        </div>
+
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:24px;">
+          <input type="checkbox" id="kvkk" style="width:16px;height:16px;accent-color:var(--teal);cursor:pointer;"/>
+          <label for="kvkk" style="font-size:12px;color:var(--silver);cursor:pointer;"> <a href="#" style="color:var(--teal)">KVKK Aydınlatma Metni</a>'ni okudum, onaylıyorum.</label>
+        </div>
+
+        <button class="btn btn-primary btn-lg" style="width:100%;justify-content:center" onclick="showToast('Mesajınız iletildi! 🎉 En kısa sürede yanıt vereceğiz.')">
+          Gönder →
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FAQ ══ -->
+<section class="section-pad" style="padding-top:0;padding-bottom:80px;">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:56px;">
+      <div class="section-tag reveal" style="justify-content:center">SSS</div>
+      <h2 class="section-title reveal reveal-d1" style="text-align:center">Sık Sorulan<br><span class="gradient-text">Sorular</span></h2>
+    </div>
+    <div class="faq-list" style="max-width:760px;margin:0 auto;">
+      <div class="faq-item reveal">
+        <div class="faq-question">Satın aldığım kurslara ne kadar süre erişebilirim?<span class="faq-icon">+</span></div>
+        <div class="faq-answer"><p>Bireysel kurs satın alımlarında ömür boyu erişim sunuyoruz. Abonelik planlarında erişim süreniz abonelik süreniz ile aktiftir.</p></div>
+      </div>
+      <div class="faq-item reveal reveal-d1">
+        <div class="faq-question">Sertifikalar iş başvurularında geçerli mi?<span class="faq-icon">+</span></div>
+        <div class="faq-answer"><p>Derin Akademi sertifikaları Google, Microsoft, Trendyol ve Getir gibi iş ortaklarımız tarafından tanınmaktadır. Sertifikalarınız LinkedIn profilinize doğrudan eklenilebilir.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <div class="faq-question">Para iade politikanız nasıl işliyor?<span class="faq-icon">+</span></div>
+        <div class="faq-answer"><p>Satın alım tarihinden itibaren 7 gün içinde ve kursun %20'sinden fazlasını tamamlamamış olmanız durumunda tam iade yapılmaktadır.</p></div>
+      </div>
+      <div class="faq-item reveal reveal-d1">
+        <div class="faq-question">Grup veya kurumsal indirim alabilir miyim?<span class="faq-icon">+</span></div>
+        <div class="faq-answer"><p>5 kişi ve üzeri grup alımları için özel fiyatlandırma sunuyoruz. kurumsal@derinakademi.com adresine yazarak detaylı teklif alabilirsiniz.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <div class="faq-question">Canlı dersler kayıt edilip izlenebiliyor mu?<span class="faq-icon">+</span></div>
+        <div class="faq-answer"><p>Evet. Tüm canlı ders kayıtları en geç 24 saat içinde hesabınızda izlenebilir hale gelir. Kayıtlara süresiz erişim hakkınız bulunmaktadır.</p></div>
+      </div>
+      <div class="faq-item reveal reveal-d1">
+        <div class="faq-question">Mobil uygulamanız var mı?<span class="faq-icon">+</span></div>
+        <div class="faq-answer"><p>iOS ve Android uygulamamız sayesinde kurslarınızı çevrimdışı indirebilir, yolda bile öğrenmeye devam edebilirsiniz. App Store ve Google Play'de "Derin Akademi" olarak bulabilirsiniz.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FOOTER ══ -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo" style="display:inline-flex"><img src="public/logos/68.png" alt="Derin Akademi" class="nav-logo-img"/></a>
+        <p class="brand-desc">İnsan kaynakları alanında uzmanlaşmış danışmanlık ve eğitim şirketi. Anlatan değil, çalışan sistemler kurarız.</p>
+        <div class="footer-social">
+          <a class="social-btn" href="https://www.instagram.com/derinakademi/" target="_blank">📷</a>
+          <a class="social-btn" href="https://www.linkedin.com/company/derinakademi/" target="_blank">in</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Hizmetler</div>
+        <ul class="footer-links">
+          <li><a href="kurslar.html">Eğitimlerimiz</a></li>
+          <li><a href="danismanlik.html">Danışmanlıklarımız</a></li>
+          <li><a href="kurslar.html">Kurumsal Eğitim</a></li>
+          <li><a href="danismanlik.html">Kurumsallaşma</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Şirket</div>
+        <ul class="footer-links">
+          <li><a href="hakkimizda.html">Hakkımızda</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="kariyer.html">Kariyer</a></li>
+          <li><a href="iletisim.html">İletişim</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Bülten</div>
+        <div class="footer-newsletter">
+          <p>İK gündemindeki gelişmelerden ve eğitimlerimizden haberdar ol.</p>
+          <div class="newsletter-form"><input type="email" class="newsletter-input" placeholder="E-posta"/><button class="btn btn-primary btn-sm" onclick="showToast('Abone oldunuz! 🎉')">→</button></div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2026 Derin Akademi. Tüm hakları saklıdır. &nbsp;<a href="https://reneedesignlab.com/tr" target="_blank" style="color:var(--silver-dim);text-decoration:none;" onmouseover="this.style.color='var(--silver)'" onmouseout="this.style.color='var(--silver-dim)'">by Renee DesignLab</a></div>
+      <div class="footer-legal"><a href="gizlilik-politikasi.html">Gizlilik Politikası</a><a href="kullanim-kosullari.html">Kullanım Koşulları</a><a href="kvkk.html">KVKK</a><a href="cerezler.html">Çerezler</a></div>
+    </div>
+  </div>
+</footer>
+
+<button id="back-to-top" style="position:fixed;bottom:28px;right:28px;z-index:500;width:44px;height:44px;border-radius:12px;background:var(--glass-bg);border:1px solid var(--glass-bd);color:var(--teal);font-size:18px;cursor:pointer;opacity:0;transition:var(--t-base);backdrop-filter:blur(12px);">↑</button>
+
+<script src="js/main.js"></script>
+
+<!-- ══ ÖZEL TEKLİF MODAL ══ -->
+<div id="teklif-modal" class="teklif-modal">
+  <div class="teklif-modal-box">
+    <button class="teklif-modal-close" onclick="closeTeklifModal()">✕</button>
+    <div>
+      <div style="color:var(--teal);font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:10px;">İletişim Bilgileri</div>
+      <h2 style="font-family:'Montserrat',sans-serif;font-size:24px;font-weight:900;line-height:1.2;margin-bottom:8px;">Hemen <span class="gradient-text">Teklif Alın</span></h2>
+      <p style="color:var(--silver);font-size:13px;line-height:1.75;margin-bottom:28px;">Eğitim ihtiyaçlarınızı paylaşın, size özel program ve teklif oluşturalım.</p>
+      <div style="display:flex;flex-direction:column;gap:18px;margin-bottom:28px;">
+        <div class="teklif-info-row"><div class="teklif-info-icon">📞</div><div><div style="font-size:11px;color:var(--silver-dim);margin-bottom:3px;">Telefon</div><a href="tel:+905330193134" style="font-size:14px;font-weight:600;color:var(--white);text-decoration:none;">0 (533) 019 31 34</a></div></div>
+        <div class="teklif-info-row"><div class="teklif-info-icon">📧</div><div><div style="font-size:11px;color:var(--silver-dim);margin-bottom:3px;">E-posta</div><a href="mailto:derin@derinakademi.net" style="font-size:14px;font-weight:600;color:var(--white);text-decoration:none;">derin@derinakademi.net</a></div></div>
+        <div class="teklif-info-row"><div class="teklif-info-icon">📍</div><div><div style="font-size:11px;color:var(--silver-dim);margin-bottom:3px;">Adres</div><div style="font-size:13px;color:var(--silver);line-height:1.6;">İçerenköy Mah. Topçu İbrahim Sokak Quick Tower Sitesi No:8-10D Ataşehir, İstanbul 34752</div></div></div>
+      </div>
+      <div style="display:flex;gap:10px;">
+        <a href="https://www.instagram.com/derinakademi/" target="_blank" style="display:flex;align-items:center;gap:6px;padding:8px 14px;border-radius:8px;background:var(--glass-bg);border:1px solid var(--glass-bd);font-size:12px;font-weight:600;color:var(--silver);text-decoration:none;">📷 Instagram</a>
+        <a href="https://www.linkedin.com/company/derinakademi/" target="_blank" style="display:flex;align-items:center;gap:6px;padding:8px 14px;border-radius:8px;background:var(--glass-bg);border:1px solid var(--glass-bd);font-size:12px;font-weight:600;color:var(--silver);text-decoration:none;">in LinkedIn</a>
+      </div>
+    </div>
+    <div>
+      <div class="teklif-field"><label>Ad Soyad *</label><input type="text" class="teklif-modal-input" placeholder="Adınız Soyadınız"/></div>
+      <div class="teklif-field"><label>E-posta *</label><input type="email" class="teklif-modal-input" placeholder="ornek@mail.com"/></div>
+      <div class="teklif-field"><label>Telefon *</label><input type="tel" class="teklif-modal-input" placeholder="0 5XX XXX XX XX"/></div>
+      <div class="teklif-field"><label>Kurum / Şirket (İsteğe Bağlı)</label><input type="text" class="teklif-modal-input" placeholder="Şirketinizin adı"/></div>
+      <div class="teklif-field"><label>Talebiniz *</label><textarea class="teklif-modal-input" placeholder="İhtiyacınızı ve beklentilerinizi yazın..." style="resize:vertical;min-height:100px;"></textarea></div>
+      <button class="btn btn-primary btn-lg" style="width:100%;justify-content:center;margin-top:4px;" onclick="showToast('Talebiniz iletildi! 🎉');closeTeklifModal();">Teklif İste →</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  // FAQ accordion
+  document.querySelectorAll('.faq-question').forEach(q => {
+    q.addEventListener('click', () => {
+      const item = q.parentElement;
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    });
+  });
+</script>
+<script src="js/i18n.js"></script>
+</body>
+</html>

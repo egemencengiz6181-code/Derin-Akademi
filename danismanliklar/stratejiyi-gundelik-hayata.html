@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Stratejiyi Gündelik Hayata Taşıma Danismanlik &mdash; Derin Akademi</title>
+  <meta name="description" content="Şirket stratejisini çalışanların günlük kararlarına ve davranışlarına entegre ediyoruz."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="../css/main.css"/>
+  <style>
+  :root { --cs-teal: #00c8b4; --cs-navy: #030d1f; }
+  /* ─── HERO ─── */
+  .cs-hero { padding: 130px 0 80px; position: relative; overflow: hidden; }
+  .cs-hero-bg { position: absolute; right: -60px; top: 50%; transform: translateY(-50%); font-family: "Montserrat", sans-serif; font-size: 320px; font-weight: 900; color: rgba(0,200,180,0.04); line-height: 1; pointer-events: none; user-select: none; }
+  .cs-hero-inner { display: grid; grid-template-columns: 1fr auto; gap: 60px; align-items: center; max-width: 900px; }
+  .cs-breadcrumb { display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--silver-dim); margin-bottom: 20px; }
+  .cs-breadcrumb a { color: var(--silver-dim); text-decoration: none; transition: color 0.2s; }
+  .cs-breadcrumb a:hover { color: var(--teal); }
+  .cs-category { font-size: 11px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; color: var(--teal); margin-bottom: 14px; }
+  .cs-title { font-family: "Montserrat", sans-serif; font-size: clamp(36px, 5vw, 66px); font-weight: 900; letter-spacing: -2px; line-height: 1.0; margin-bottom: 20px; }
+  .cs-subtitle { font-size: 18px; color: var(--silver); line-height: 1.7; max-width: 560px; margin-bottom: 36px; }
+  .cs-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+  /* Stats card */
+  .cs-stats-card { background: var(--glass-bg); border: 1px solid var(--glass-bd); border-radius: var(--radius-xl); padding: 36px 28px; display: flex; flex-direction: column; gap: 28px; backdrop-filter: blur(20px); min-width: 200px; flex-shrink: 0; }
+  .cs-stat { text-align: center; }
+  .cs-stat-num { font-family: "Montserrat", sans-serif; font-size: 36px; font-weight: 900; color: var(--teal); display: block; line-height: 1; margin-bottom: 6px; }
+  .cs-stat-label { font-size: 12px; color: var(--silver-dim); font-weight: 600; line-height: 1.4; }
+  .cs-stat-divider { height: 1px; background: var(--glass-bd); }
+  /* ─── CHALLENGE vs SOLUTION ─── */
+  .cs-compare { display: grid; grid-template-columns: 1fr 1fr; gap: 0; border-radius: var(--radius-xl); overflow: hidden; border: 1px solid var(--glass-bd); margin: 72px 0 80px; }
+  .cs-col { padding: 44px 40px; }
+  .cs-col-challenge { background: rgba(220,38,38,0.04); border-right: 1px solid var(--glass-bd); }
+  .cs-col-solution { background: rgba(0,200,180,0.04); }
+  .cs-col-head { display: flex; align-items: center; gap: 12px; margin-bottom: 28px; }
+  .cs-col-icon { font-size: 24px; }
+  .cs-col-title { font-family: "Montserrat", sans-serif; font-size: 16px; font-weight: 900; }
+  .cs-col-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 14px; }
+  .cs-col-list li { display: flex; gap: 12px; font-size: 15px; color: var(--silver); line-height: 1.65; }
+  .cs-col-list .bullet { flex-shrink: 0; margin-top: 4px; font-size: 13px; }
+  .cs-col-challenge .bullet { color: #ef4444; }
+  .cs-col-solution .bullet { color: var(--teal); }
+  /* ─── PROCESS TIMELINE ─── */
+  .cs-timeline-wrap { position: relative; padding: 16px 0 8px; }
+  .cs-timeline-line { position: absolute; left: 27px; top: 40px; bottom: 40px; width: 2px; background: linear-gradient(to bottom, var(--teal), rgba(0,200,180,0.05)); }
+  .cs-steps { display: flex; flex-direction: column; gap: 0; }
+  .cs-step { display: grid; grid-template-columns: 56px 1fr; gap: 28px; padding-bottom: 44px; opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
+  .cs-step.visible { opacity: 1; transform: translateY(0); }
+  .cs-step:last-child { padding-bottom: 0; }
+  .cs-step-num { width: 56px; height: 56px; border-radius: 50%; background: rgba(0,200,180,0.08); border: 2px solid var(--teal-border); display: flex; align-items: center; justify-content: center; font-family: "Montserrat", sans-serif; font-size: 18px; font-weight: 900; color: var(--teal); z-index: 1; flex-shrink: 0; }
+  .cs-step-body { padding-top: 12px; }
+  .cs-step-title { font-family: "Montserrat", sans-serif; font-weight: 800; font-size: 17px; margin-bottom: 8px; }
+  .cs-step-desc { font-size: 14px; color: var(--silver); line-height: 1.75; }
+  /* ─── VALUE GRID ─── */
+  .cs-values-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 16px; }
+  .cs-val-card { background: var(--glass-bg); border: 1px solid var(--glass-bd); border-radius: var(--radius-lg); padding: 28px 26px; transition: var(--t-base); opacity: 0; transform: translateY(20px); }
+  .cs-val-card.visible { opacity: 1; transform: translateY(0); }
+  .cs-val-card:hover { border-color: var(--teal-border); transform: translateY(-4px); }
+  .cs-val-icon { font-size: 28px; margin-bottom: 14px; display: block; }
+  .cs-val-title { font-family: "Montserrat", sans-serif; font-weight: 800; font-size: 15px; margin-bottom: 8px; }
+  .cs-val-desc { font-size: 13px; color: var(--silver); line-height: 1.65; }
+  /* ─── PULL QUOTE ─── */
+  .cs-quote { position: relative; padding: 44px 52px; margin: 80px 0; background: linear-gradient(135deg, rgba(0,200,180,0.06), rgba(0,100,200,0.04)); border-left: 4px solid var(--teal); border-radius: 0 var(--radius-xl) var(--radius-xl) 0; }
+  .cs-quote::before { content: "\201C"; position: absolute; top: -20px; left: 36px; font-family: Georgia, serif; font-size: 140px; color: var(--teal); opacity: 0.08; line-height: 1; pointer-events: none; }
+  .cs-quote-text { font-size: 22px; font-style: italic; font-weight: 600; line-height: 1.65; color: var(--silver-light); }
+  /* ─── TARGETS ─── */
+  .cs-targets { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px; }
+  .cs-target { padding: 10px 20px; border-radius: 50px; background: var(--glass-bg); border: 1px solid var(--glass-bd); font-size: 13px; font-weight: 600; color: var(--silver-light); transition: var(--t-fast); }
+  .cs-target:hover { border-color: var(--teal-border); color: var(--teal); }
+  /* ─── CTA BANNER ─── */
+  .cs-cta-banner { background: linear-gradient(135deg, rgba(0,200,180,0.08), rgba(0,100,200,0.05)); border: 1px solid var(--teal-border); border-radius: var(--radius-xl); padding: 72px; text-align: center; margin-top: 80px; }
+  .cs-cta-title { font-family: "Montserrat", sans-serif; font-size: clamp(24px,3vw,38px); font-weight: 900; margin-bottom: 16px; }
+  .cs-cta-desc { font-size: 16px; color: var(--silver); max-width: 520px; margin: 0 auto 36px; line-height: 1.75; }
+  .cs-cta-actions { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+  /* Section labels */
+  .cs-section-label { font-size: 11px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; color: var(--teal); margin-bottom: 10px; }
+  .cs-section-title { font-family: "Montserrat", sans-serif; font-size: clamp(22px,3vw,32px); font-weight: 900; margin-bottom: 40px; }
+  /* Responsive */
+  @media(max-width:960px) { .cs-hero-inner { grid-template-columns: 1fr; } .cs-stats-card { flex-direction: row; min-width: unset; } .cs-compare { grid-template-columns: 1fr; } .cs-col-challenge { border-right: none; border-bottom: 1px solid var(--glass-bd); } }
+  @media(max-width:640px) { .cs-title { letter-spacing: -1px; } .cs-quote { padding: 32px 28px; } .cs-quote-text { font-size: 17px; } .cs-cta-banner { padding: 44px 28px; } .cs-values-grid { grid-template-columns: 1fr; } .cs-stats-card { flex-direction: column; } }
+</style>
+  <!-- SEO: Open Graph -->
+  <meta property="og:type" content="website"/>
+  <meta property="og:site_name" content="Derin Akademi"/>
+  <meta property="og:title" content="Stratejiyi Gündelik Hayata Taşıma Danismanlik — Derin Akademi"/>
+  <meta property="og:description" content="Şirket stratejisini çalışanların günlük kararlarına ve davranışlarına entegre ediyoruz."/>
+  <meta property="og:url" content="https://derinakademi.com/danismanliklar/stratejiyi-gundelik-hayata.html"/>
+  <meta property="og:image" content="https://derinakademi.com/public/hakan%20selahi/hakan-selahi.jpg"/>
+  <meta property="og:locale" content="tr_TR"/>
+  <!-- SEO: Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="Stratejiyi Gündelik Hayata Taşıma Danismanlik — Derin Akademi"/>
+  <meta name="twitter:description" content="Şirket stratejisini çalışanların günlük kararlarına ve davranışlarına entegre ediyoruz."/>
+  <meta name="twitter:image" content="https://derinakademi.com/public/hakan%20selahi/hakan-selahi.jpg"/>
+  <!-- SEO: Canonical & Robots -->
+  <link rel="canonical" href="https://derinakademi.com/danismanliklar/stratejiyi-gundelik-hayata.html"/>
+  <meta name="robots" content="index, follow"/>
+</head>
+<body>
+<div class="ambient"></div>
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-logo"><img src="../public/logos/68.png" alt="Derin Akademi" class="nav-logo-img"/></a>
+    <ul class="nav-links">
+      <li><a href="../kurslar.html">Egitimlerimiz</a></li>
+      <li><a href="../danismanlik.html" class="active">Danismanliklarimiz</a></li>
+      <li><a href="../hakkimizda.html">Hakkimizda</a></li>
+      <li><a href="../blog.html">Blog</a></li>
+      <li><a href="../iletisim.html">Iletisim</a></li>
+    </ul>
+    <div class="nav-actions"><button onclick="openTeklifModal()" class="btn btn-primary btn-sm">Ozel Teklif Al</button></div>
+    <button class="menu-toggle">&#9776;</button>
+  </div>
+</nav>
+<div class="mobile-nav">
+  <button class="mobile-nav-close">&#x2715;</button>
+  <a href="../index.html">Ana Sayfa</a><a href="../kurslar.html">Egitimlerimiz</a><a href="../danismanlik.html">Danismanliklarimiz</a>
+  <a href="../hakkimizda.html">Hakkimizda</a><a href="../blog.html">Blog</a><a href="../iletisim.html">Iletisim</a>
+  <div class="mobile-nav-actions"><button onclick="openTeklifModal()" class="btn btn-primary btn-md" style="width:100%;justify-content:center">Ozel Teklif Al</button></div>
+</div>
+
+<!-- HERO -->
+<section class="cs-hero">
+  <div class="container" style="position:relative;">
+    <div class="cs-hero-bg" aria-hidden="true">08</div>
+    <div class="cs-hero-inner">
+      <div>
+        <nav class="cs-breadcrumb">
+          <a href="../index.html">Ana Sayfa</a> &rsaquo;
+          <a href="../danismanlik.html">Danismanliklarimiz</a> &rsaquo;
+          <span>Stratejiyi Gündelik Hayata Taşıma</span>
+        </nav>
+        <div class="cs-category">Örgütsel Gelişim</div>
+        <h1 class="cs-title">Stratejiyi Gündelik Hayata Taşıma</h1>
+        <p class="cs-subtitle">Şirket stratejisini çalışanların günlük kararlarına ve davranışlarına entegre ediyoruz.</p>
+        <div class="cs-actions">
+          <button onclick="openTeklifModal()" class="btn btn-primary btn-lg">Teklif Al &rarr;</button>
+          <a href="https://wa.me/905330193134" target="_blank" class="btn btn-ghost btn-lg">WhatsApp ile Yaz</a>
+        </div>
+      </div>
+      <div class="cs-stats-card">
+        <div class="cs-stat"><span class="cs-stat-num">%68</span><span class="cs-stat-label">Strateji Bilinirliği Artışı</span></div>
+<div class="cs-stat-divider"></div>
+<div class="cs-stat"><span class="cs-stat-num">6 Ay</span><span class="cs-stat-label">Uygulama Süreci</span></div>
+<div class="cs-stat-divider"></div>
+<div class="cs-stat"><span class="cs-stat-num">4 Seviye</span><span class="cs-stat-label">Kurumsal Hizalama</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CHALLENGE vs SOLUTION -->
+<section style="padding: 0 0 0;">
+  <div class="container">
+    <div class="cs-compare">
+      <div class="cs-col cs-col-challenge">
+        <div class="cs-col-head">
+          <span class="cs-col-icon">&#128683;</span>
+          <span class="cs-col-title">Sorun: Donemin Gercekleri</span>
+        </div>
+        <ul class="cs-col-list">
+          <li><span class="bullet">&#10006;</span> Strateji yalnızca üst yönetimin bildiği bir belge halinde kalmış</li>
+<li><span class="bullet">&#10006;</span> Çalışanlar günlük kararlarını stratejik önceliklerle ilişkilendiremiyor</li>
+<li><span class="bullet">&#10006;</span> Değişim yönetimi atlanmış, yapısal değişiklikler direnç görüyor</li>
+<li><span class="bullet">&#10006;</span> Yöneticiler stratejiyi ekibe anlatmak için ne söyleyeceğini bilmiyor</li>
+        </ul>
+      </div>
+      <div class="cs-col cs-col-solution">
+        <div class="cs-col-head">
+          <span class="cs-col-icon">&#10024;</span>
+          <span class="cs-col-title">Cozum: Derin Akademi Yaklasimi</span>
+        </div>
+        <ul class="cs-col-list">
+          <li><span class="bullet">&#10004;</span> Strateji hikayesi: tüm seviyelere uyarlanmış anlatı ve mesaj haritası</li>
+<li><span class="bullet">&#10004;</span> Çalışanların stratejiyle bağlantı kurduğu atölye serisi tasarımı</li>
+<li><span class="bullet">&#10004;</span> Yöneticileri "strateji elçisi" olarak konumlandıran lider içerik kiti</li>
+<li><span class="bullet">&#10004;</span> İzleme: strateji bilinirlik anketi ve dönemsel katılım ölçümü</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS TIMELINE -->
+<section style="padding: 80px 0;">
+  <div class="container">
+    <div class="cs-section-label">Surec</div>
+    <div class="cs-section-title">Nasil Calisiyoruz?</div>
+    <div class="cs-timeline-wrap">
+      <div class="cs-timeline-line" aria-hidden="true"></div>
+      <div class="cs-steps">
+        <div class="cs-step">
+          <div class="cs-step-num">01</div>
+          <div class="cs-step-body">
+            <div class="cs-step-title">Strateji Diyagnozu</div>
+            <div class="cs-step-desc">Mevcut strateji belgesi, iletişim materyalleri ve çalışan bilinirlik ölçümü yapılır.</div>
+          </div>
+        </div>
+<div class="cs-step">
+          <div class="cs-step-num">02</div>
+          <div class="cs-step-body">
+            <div class="cs-step-title">Mesaj Mimarisi</div>
+            <div class="cs-step-desc">Farklı seviyelere hitap eden stratejik anlatı ve anahtar mesajlar tasarlanır.</div>
+          </div>
+        </div>
+<div class="cs-step">
+          <div class="cs-step-num">03</div>
+          <div class="cs-step-body">
+            <div class="cs-step-title">Yönetici Aktivasyonu</div>
+            <div class="cs-step-desc">Stratejiyi ekibine anlatan yöneticiler için rehber, kit ve konuşma noktaları hazırlanır.</div>
+          </div>
+        </div>
+<div class="cs-step">
+          <div class="cs-step-num">04</div>
+          <div class="cs-step-body">
+            <div class="cs-step-title">Atölye Serisi</div>
+            <div class="cs-step-desc">Çalışanları stratejiyle kişisel bağlantı kurduran interaktif atölyeler düzenlenir.</div>
+          </div>
+        </div>
+<div class="cs-step">
+          <div class="cs-step-num">05</div>
+          <div class="cs-step-body">
+            <div class="cs-step-title">Bilinirlik İzleme</div>
+            <div class="cs-step-desc">Strateji anlama ve benimseme metrikleri dönemsel olarak ölçülür.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VALUE GRID -->
+<section style="padding: 0 0 80px;">
+  <div class="container">
+    <div class="cs-section-label">Kapsam</div>
+    <div class="cs-section-title">Ne Kazanirsiniz?</div>
+    <div class="cs-values-grid">
+      <div class="cs-val-card">
+          <span class="cs-val-icon">📣</span>
+          <div class="cs-val-title">Strateji İletişimi</div>
+          <div class="cs-val-desc">Her seviyeye uyarlanmış açık, anlaşılır stratejik anlatı tasarımı.</div>
+        </div>
+<div class="cs-val-card">
+          <span class="cs-val-icon">🗺️</span>
+          <div class="cs-val-title">Mesaj Mimarisi</div>
+          <div class="cs-val-desc">CEO'dan sahaya kadar tutarlı strateji mesaj haritası oluşturulur.</div>
+        </div>
+<div class="cs-val-card">
+          <span class="cs-val-icon">👥</span>
+          <div class="cs-val-title">Çalışan Katılımı</div>
+          <div class="cs-val-desc">Stratejiye duygusal bağ ve kişisel anlam kuran interaktif atölyeler.</div>
+        </div>
+<div class="cs-val-card">
+          <span class="cs-val-icon">🏆</span>
+          <div class="cs-val-title">Yönetici Kiti</div>
+          <div class="cs-val-desc">Yöneticileri strateji elçisine dönüştüren kaynak ve içerik paketi.</div>
+        </div>
+<div class="cs-val-card">
+          <span class="cs-val-icon">📊</span>
+          <div class="cs-val-title">Bilinirlik Ölçümü</div>
+          <div class="cs-val-desc">Yılda iki kez strateji bilinirlik ve benimseme anketi.</div>
+        </div>
+<div class="cs-val-card">
+          <span class="cs-val-icon">🔄</span>
+          <div class="cs-val-title">Kazanım Hikayeleri</div>
+          <div class="cs-val-desc">Stratejik kazanımların iç iletişime entegre edilmesi.</div>
+        </div>
+    </div>
+  </div>
+</section>
+
+<!-- PULL QUOTE -->
+<section style="padding: 0 0 0;">
+  <div class="container">
+    <div class="cs-quote">
+      <div class="cs-quote-text">Strateji herkesin değil, herkesin benimsediği bir yön olduğunda hakiki bir araç haline gelir.</div>
+      <div style="margin-top:20px;font-size:14px;color:var(--teal);font-weight:700;">— Hakan Selahi, Kurucu Derin Akademi</div>
+    </div>
+  </div>
+</section>
+
+<!-- TARGET AUDIENCE -->
+<section style="padding: 60px 0 30px;">
+  <div class="container">
+    <div class="cs-section-label">Kimler Icin</div>
+    <div class="cs-section-title" style="margin-bottom:20px;">Bu program kime hitap ediyor?</div>
+    <div class="cs-targets">
+      <span class="cs-target">CEO & Üst Yönetim</span>
+<span class="cs-target">İletişim Direktörleri</span>
+<span class="cs-target">CHROlar</span>
+<span class="cs-target">Orta Kademe Yöneticiler</span>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BANNER -->
+<section style="padding: 60px 0 100px;">
+  <div class="container">
+    <div class="cs-cta-banner">
+      <div class="cs-cta-title">Kurumunuz icin <span class="gradient-text">ozel cozum</span> tasarlayalim</div>
+      <p class="cs-cta-desc">Her kurum farklidir. Size ozel yaklasim, metodoloji ve uygulama planiyla yaninizdayiz.</p>
+      <div class="cs-cta-actions">
+        <button onclick="openTeklifModal()" class="btn btn-primary btn-xl">Hemen Teklif Al</button>
+        <a href="../iletisim.html" class="btn btn-ghost btn-xl">Iletisime Gec</a>
+      </div>
+      <p style="margin-top:20px;font-size:13px;color:var(--silver-dim);">&#10003; 24 Saat Icinde Yanit &nbsp; &#10003; Kuruma Ozel Cozum &nbsp; &#10003; 30+ Yil Deneyim</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="../index.html" class="nav-logo" style="display:inline-flex"><img src="../public/logos/68.png" alt="Derin Akademi" class="nav-logo-img"/></a>
+        <p class="brand-desc">Insan kaynaklari alaninda uzmanlasmis danismanlik ve egitim sirketi.</p>
+        <div class="footer-social">
+          <a class="social-btn" href="https://www.instagram.com/derinakademi/" target="_blank">&#128247;</a>
+          <a class="social-btn" href="https://www.linkedin.com/company/derinakademi/" target="_blank">in</a>
+        </div>
+      </div>
+      <div><div class="footer-col-title">Hizmetler</div><ul class="footer-links"><li><a href="../kurslar.html">Egitimlerimiz</a></li><li><a href="../danismanlik.html">Danismanliklarimiz</a></li></ul></div>
+      <div><div class="footer-col-title">Sirket</div><ul class="footer-links"><li><a href="../hakkimizda.html">Hakkimizda</a></li><li><a href="../blog.html">Blog</a></li><li><a href="../iletisim.html">Iletisim</a></li></ul></div>
+      <div><div class="footer-col-title">Iletisim</div><ul class="footer-links"><li><a href="tel:+905330193134">0 (533) 019 31 34</a></li><li><a href="mailto:derin@derinakademi.net">derin@derinakademi.net</a></li></ul></div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">&copy; 2026 Derin Akademi. Tum haklari saklidir.</div>
+      <div class="footer-legal"><a href="../gizlilik-politikasi.html">Gizlilik</a><a href="../kvkk.html">KVKK</a></div>
+    </div>
+  </div>
+</footer>
+
+<button id="back-to-top" style="position:fixed;bottom:28px;right:28px;z-index:500;width:44px;height:44px;border-radius:12px;background:var(--glass-bg);border:1px solid var(--glass-bd);color:var(--teal);font-size:18px;cursor:pointer;opacity:0;transition:var(--t-base);backdrop-filter:blur(12px);" aria-label="Yukari don">&#8593;</button>
+<div id="teklif-modal" class="teklif-modal">
+  <div class="teklif-modal-box">
+    <button class="teklif-modal-close" onclick="closeTeklifModal()">&#x2715;</button>
+    <div>
+      <div style="color:var(--teal);font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:10px;">Iletisim Bilgileri</div>
+      <h2 style="font-family:'Montserrat',sans-serif;font-size:24px;font-weight:900;line-height:1.2;margin-bottom:8px;">Hemen <span class="gradient-text">Teklif Alin</span></h2>
+      <p style="color:var(--silver);font-size:13px;line-height:1.75;margin-bottom:28px;">Danismanlik ihtiyaclarinizi paylasin, size ozel cozum tasarlayalim.</p>
+      <div style="display:flex;flex-direction:column;gap:18px;margin-bottom:28px;">
+        <div class="teklif-info-row"><div class="teklif-info-icon">&#128222;</div><div><div style="font-size:11px;color:var(--silver-dim);margin-bottom:3px;">Telefon</div><a href="tel:+905330193134" style="font-size:14px;font-weight:600;color:var(--white);text-decoration:none;">0 (533) 019 31 34</a></div></div>
+        <div class="teklif-info-row"><div class="teklif-info-icon">&#128231;</div><div><div style="font-size:11px;color:var(--silver-dim);margin-bottom:3px;">E-posta</div><a href="mailto:derin@derinakademi.net" style="font-size:14px;font-weight:600;color:var(--white);text-decoration:none;">derin@derinakademi.net</a></div></div>
+      </div>
+    </div>
+    <div>
+      <div class="teklif-field"><label>Ad Soyad *</label><input type="text" class="teklif-modal-input" placeholder="Adiniz Soyadiniz"/></div>
+      <div class="teklif-field"><label>E-posta *</label><input type="email" class="teklif-modal-input" placeholder="ornek@mail.com"/></div>
+      <div class="teklif-field"><label>Telefon *</label><input type="tel" class="teklif-modal-input" placeholder="0 5XX XXX XX XX"/></div>
+      <div class="teklif-field"><label>Talebiniz *</label><textarea class="teklif-modal-input" placeholder="Ihtiyacinizi ve beklentilerinizi yazin..." style="resize:vertical;min-height:90px;"></textarea></div>
+      <button class="btn btn-primary btn-lg" style="width:100%;justify-content:center;margin-top:4px;" onclick="showToast('Talebiniz iletildi!');closeTeklifModal();">Teklif Iste &rarr;</button>
+    </div>
+  </div>
+</div>
+<script src="../js/main.js"></script>
+<script>
+// IntersectionObserver for animations
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry, i) => {
+    if (entry.isIntersecting) {
+      const delay = entry.target.dataset.delay || 0;
+      setTimeout(() => entry.target.classList.add('visible'), parseInt(delay));
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.12 });
+
+document.querySelectorAll('.cs-step, .cs-val-card').forEach((el, i) => {
+  el.dataset.delay = i * 80;
+  observer.observe(el);
+});
+</script>
+</body>
+</html>

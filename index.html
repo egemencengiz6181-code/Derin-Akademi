@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Derin Akademi — İK Danışmanlığı &amp; Kurumsal Eğitim</title>
+  <meta name="description" content="Derin Akademi, insan kaynakları alanında uzmanlaşmış danışmanlık ve eğitim şirketidir. 40+ kurum, 30+ yıllık tecrübe."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/main.css"/>
+  <style>
+    .hero {
+      position:relative;z-index:2;min-height:100vh;
+      display:flex;align-items:center;
+      padding:calc(var(--nav-h) + 48px) 0 80px;overflow:hidden;
+    }
+    .hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;}
+    .hero-title{font-family:'Montserrat',sans-serif;font-size:clamp(38px,5vw,70px);font-weight:900;line-height:1.06;letter-spacing:-2.5px;margin-bottom:24px;}
+    .hero-title .line{display:block;}
+    .hero-desc{font-size:17px;color:var(--silver);line-height:1.78;max-width:500px;margin-bottom:40px;}
+    .hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:52px;}
+    .hero-stats{display:flex;gap:40px;padding-top:52px;border-top:1px solid var(--glass-bd);flex-wrap:wrap;}
+    .hero-stat-num{font-family:'Montserrat',sans-serif;font-size:30px;font-weight:900;display:flex;align-items:baseline;gap:2px;}
+    .hero-stat-num em{font-size:18px;color:var(--teal);font-style:normal;}
+    .hero-stat-label{font-size:13px;color:var(--silver);margin-top:3px;}
+
+    /* Orb */
+    .hero-visual{position:relative;display:flex;align-items:center;justify-content:center;height:580px;}
+    .orb-scene{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;}
+    .orb-core{position:absolute;width:270px;height:270px;border-radius:50%;background:radial-gradient(ellipse at 35% 35%,#0ff4e8 0%,#0099cc 28%,#003d80 65%,#001133 100%);box-shadow:0 0 0 1px rgba(0,200,180,0.25),0 0 50px rgba(0,200,180,0.4),0 0 120px rgba(0,150,200,0.18),inset 0 0 70px rgba(0,0,0,0.55);animation:orbFloat 7s ease-in-out infinite alternate;}
+    .orb-core::before{content:'';position:absolute;inset:8%;border-radius:50%;background:radial-gradient(circle at 32% 30%,rgba(255,255,255,0.38) 0%,transparent 52%);}
+    @keyframes orbFloat{0%{transform:translateY(0) rotate(0deg)}100%{transform:translateY(-22px) rotate(9deg)}}
+    .ring{position:absolute;border-radius:50%;border:1px solid rgba(0,200,180,0.15);}
+    .ring-1{width:370px;height:370px;border-top-color:rgba(0,200,180,0.65);animation:ringA 12s linear infinite;}
+    .ring-2{width:460px;height:460px;border-right-color:rgba(0,168,232,0.5);animation:ringB 20s linear infinite;transform:rotate(50deg);}
+    .ring-3{width:540px;height:540px;border-left-color:rgba(130,80,255,0.4);animation:ringC 30s linear infinite;transform:rotate(-35deg);}
+    @keyframes ringA{to{transform:rotate(360deg)}}
+    @keyframes ringB{from{transform:rotate(50deg)}to{transform:rotate(410deg)}}
+    @keyframes ringC{from{transform:rotate(-35deg)}to{transform:rotate(325deg)}}
+    .particle{position:absolute;border-radius:50%;background:var(--teal);animation:ptFloat ease-in-out infinite alternate;}
+    .pt1{width:8px;height:8px;top:16%;left:18%;opacity:.85;animation-duration:5s;}
+    .pt2{width:5px;height:5px;top:24%;right:16%;opacity:.6;animation-duration:7s;animation-delay:-2s;}
+    .pt3{width:10px;height:10px;bottom:20%;left:23%;opacity:.75;animation-duration:6s;animation-delay:-1s;background:#00a8e8;}
+    .pt4{width:4px;height:4px;bottom:28%;right:20%;opacity:.5;animation-duration:8s;animation-delay:-3s;}
+    .pt5{width:6px;height:6px;top:45%;left:7%;opacity:.6;animation-duration:5.5s;animation-delay:-0.5s;background:#a78bfa;}
+    .pt6{width:7px;height:7px;top:33%;right:9%;opacity:.7;animation-duration:6.5s;animation-delay:-1.5s;}
+    @keyframes ptFloat{0%{transform:translateY(0) scale(1)}100%{transform:translateY(-20px) scale(0.65)}}
+    .grid-plane{position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:620px;height:200px;overflow:hidden;opacity:0.1;pointer-events:none;}
+    .grid-plane svg{width:100%;height:100%;}
+    .float-card{position:absolute;background:rgba(7,20,40,0.88);border:1px solid var(--glass-bd);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-radius:var(--radius-md);padding:14px 18px;display:flex;align-items:center;gap:12px;box-shadow:var(--shadow-md);animation:fcFloat ease-in-out infinite alternate;}
+    @keyframes fcFloat{0%{transform:translateY(0)}100%{transform:translateY(-10px)}}
+    .fc-top{top:5%;right:0%;animation-duration:5.5s;}
+    .fc-mid{top:42%;left:-6%;animation-duration:7s;animation-delay:-1s;}
+    .fc-bot{bottom:7%;right:3%;animation-duration:6.5s;animation-delay:-2s;}
+    .fc-icon{width:38px;height:38px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;}
+    .fc-icon.t{background:rgba(0,200,180,0.15);border:1px solid rgba(0,200,180,0.3);}
+    .fc-icon.b{background:rgba(0,168,232,0.15);border:1px solid rgba(0,168,232,0.3);}
+    .fc-icon.p{background:rgba(130,80,255,0.15);border:1px solid rgba(130,80,255,0.3);}
+    .fc-label{font-size:11px;color:var(--silver);font-weight:500;}
+    .fc-val{font-size:15px;font-weight:700;font-family:'Montserrat',sans-serif;}
+
+    /* Trusted */
+    .trusted{padding:56px 0;position:relative;z-index:2;border-top:1px solid var(--glass-bd);border-bottom:1px solid var(--glass-bd);}
+    .trusted-label{text-align:center;font-size:12px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--silver-dim);margin-bottom:32px;}
+    .logo-item:hover{opacity:0.85;color:var(--silver-light);}
+
+    /* Features */
+    .features-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;}
+    /* new feat-card glass design */
+    .feat-card{
+      position:relative;padding:40px 34px 36px;
+      background:rgba(255,255,255,0.03);
+      border:1px solid rgba(255,255,255,0.07);
+      backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
+      overflow:hidden;transition:transform 0.4s ease,border-color 0.4s ease;
+      cursor:default;
+    }
+    .feat-card:first-child{border-radius:var(--radius-lg) 0 0 0;}
+    .feat-card:nth-child(3){border-radius:0 var(--radius-lg) 0 0;}
+    .feat-card:nth-child(4){border-radius:0 0 0 var(--radius-lg);}
+    .feat-card:last-child{border-radius:0 0 var(--radius-lg) 0;}
+    .feat-card:hover{transform:scale(1.03);border-color:rgba(0,200,180,0.3);z-index:2;}
+    /* spotlight layer */
+    .feat-spot{
+      position:absolute;inset:0;pointer-events:none;opacity:0;
+      background:radial-gradient(320px at var(--fx,50%) var(--fy,50%),rgba(0,200,180,0.13),rgba(0,120,255,0.08),transparent 70%);
+      transition:opacity 0.3s;
+    }
+    .feat-card:hover .feat-spot{opacity:1;}
+    /* top glow line */
+    .feat-card::before{
+      content:'';position:absolute;top:0;left:0;right:0;height:2px;
+      background:linear-gradient(90deg,transparent,var(--teal),transparent);
+      opacity:0;transition:opacity 0.4s;
+      z-index:1;
+    }
+    .feat-card:hover::before{opacity:1;}
+    /* number badge */
+    .feat-num{
+      font-family:'Montserrat',sans-serif;font-size:11px;font-weight:800;
+      letter-spacing:2px;color:var(--teal);opacity:0.7;
+      margin-bottom:24px;display:block;
+    }
+    .feat-icon-wrap{
+      width:64px;height:64px;border-radius:18px;
+      background:rgba(0,200,180,0.08);
+      border:1px solid rgba(0,200,180,0.15);
+      display:flex;align-items:center;justify-content:center;
+      font-size:28px;margin-bottom:22px;
+      transition:transform 0.4s ease,background 0.4s ease;
+      position:relative;z-index:2;
+    }
+    .feat-card:hover .feat-icon-wrap{
+      transform:scale(1.1) translateY(-2px);
+      background:rgba(0,200,180,0.16);
+      box-shadow:0 8px 32px rgba(0,200,180,0.18);
+    }
+    .feat-icon{width:52px;height:52px;border-radius:14px;margin-bottom:22px;display:flex;align-items:center;justify-content:center;font-size:22px;background:var(--teal-glow-s);border:1px solid var(--teal-border);}
+    .feat-title{font-family:'Montserrat',sans-serif;font-size:17px;font-weight:700;margin-bottom:11px;}
+    .feat-desc{font-size:14px;color:var(--silver);line-height:1.72;}
+
+    /* Paths */
+    .paths-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;}
+    .path-card{display:flex;gap:22px;align-items:flex-start;background:var(--glass-bg);border:1px solid var(--glass-bd);border-radius:var(--radius-lg);padding:30px;backdrop-filter:blur(14px);transition:var(--t-base);}
+    .path-card:hover{border-color:var(--teal-border);box-shadow:var(--shadow-md);transform:translateY(-4px);}
+    .path-icon{width:56px;height:56px;border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:24px;flex-shrink:0;}
+    .pi-teal{background:linear-gradient(135deg,rgba(0,200,180,0.18),rgba(0,200,180,0.05));border:1px solid var(--teal-border);}
+    .pi-blue{background:linear-gradient(135deg,rgba(0,168,232,0.18),rgba(0,168,232,0.05));border:1px solid rgba(0,168,232,0.28);}
+    .pi-purple{background:linear-gradient(135deg,rgba(130,80,255,0.18),rgba(130,80,255,0.05));border:1px solid rgba(130,80,255,0.28);}
+    .pi-red{background:linear-gradient(135deg,rgba(255,77,77,0.18),rgba(255,77,77,0.05));border:1px solid rgba(255,77,77,0.28);}
+    .path-cat{font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal);margin-bottom:6px;}
+    .path-title{font-family:'Montserrat',sans-serif;font-size:17px;font-weight:800;margin-bottom:8px;}
+    .path-desc{font-size:13.5px;color:var(--silver);line-height:1.65;margin-bottom:14px;}
+    .path-meta{display:flex;gap:18px;flex-wrap:wrap;}
+    .path-meta span{font-size:12px;color:var(--silver);display:flex;align-items:center;gap:5px;}
+    .path-meta span::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--teal);}
+
+    /* Instructors */
+    .instructors-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}
+    .instructor-card{background:var(--glass-bg);border:1px solid var(--glass-bd);border-radius:var(--radius-lg);padding:26px 22px;text-align:center;backdrop-filter:blur(14px);transition:var(--t-base);}
+    .instructor-card:hover{border-color:var(--teal-border);transform:translateY(-5px);box-shadow:var(--shadow-md);}
+    .inst-avatar{width:78px;height:78px;border-radius:50%;margin:0 auto 14px;display:flex;align-items:center;justify-content:center;font-size:32px;border:2px solid var(--glass-bd);background:var(--navy-light);position:relative;}
+    .inst-badge{position:absolute;bottom:0;right:0;width:22px;height:22px;border-radius:50%;border:2px solid var(--navy);display:flex;align-items:center;justify-content:center;font-size:11px;}
+    .inst-name{font-family:'Montserrat',sans-serif;font-size:15px;font-weight:800;margin-bottom:4px;}
+    .inst-role{font-size:12px;color:var(--teal);font-weight:600;margin-bottom:8px;}
+    .inst-company{font-size:12px;color:var(--silver);margin-bottom:13px;}
+    .inst-stats{display:flex;justify-content:center;gap:18px;font-size:12px;color:var(--silver);}
+    .inst-stats strong{color:var(--white);font-family:'Montserrat',sans-serif;}
+
+    /* Testimonials */
+    .testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+    .testi-card{background:var(--glass-bg);border:1px solid var(--glass-bd);border-radius:var(--radius-lg);padding:30px;backdrop-filter:blur(14px);transition:var(--t-base);}
+    .testi-card:hover{border-color:rgba(0,200,180,0.18);transform:translateY(-4px);box-shadow:var(--shadow-md);}
+    .testi-stars{color:#ffc107;font-size:14px;letter-spacing:1px;margin-bottom:12px;}
+    .testi-quote-icon{font-size:36px;color:var(--teal);opacity:0.22;line-height:1;margin-bottom:10px;font-family:Georgia,serif;}
+    .testi-text{font-size:14px;color:var(--silver);line-height:1.78;margin-bottom:24px;}
+    .testi-author{display:flex;align-items:center;gap:12px;}
+    .testi-avatar{width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:20px;border:1px solid var(--glass-bd);flex-shrink:0;}
+    .av-1{background:linear-gradient(135deg,#003f5c,#00c8b4);}
+    .av-2{background:linear-gradient(135deg,#2d004f,#7b2ff7);}
+    .av-3{background:linear-gradient(135deg,#004d26,#00e676);}
+    .testi-name{font-weight:700;font-size:14px;}
+    .testi-role{font-size:12px;color:var(--silver);margin-top:1px;}
+
+    /* CTA */
+    .cta-inner{background:linear-gradient(135deg,rgba(0,200,180,0.07) 0%,rgba(0,100,200,0.05) 100%);border:1px solid rgba(0,200,180,0.14);border-radius:var(--radius-xl);padding:90px 60px;text-align:center;position:relative;overflow:hidden;}
+    .cta-inner::before{content:'';position:absolute;top:-80px;left:50%;transform:translateX(-50%);width:600px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(0,200,180,0.1) 0%,transparent 70%);pointer-events:none;}
+    .cta-title{font-family:'Montserrat',sans-serif;font-size:clamp(28px,4vw,52px);font-weight:900;letter-spacing:-2px;margin-bottom:20px;position:relative;}
+    .cta-desc{font-size:16px;color:var(--silver);max-width:500px;margin:0 auto 42px;line-height:1.75;position:relative;}
+    .cta-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;position:relative;}
+    .cta-note{font-size:13px;color:var(--silver-dim);margin-top:20px;position:relative;}
+
+    @media(max-width:1024px){
+      .hero-grid{grid-template-columns:1fr;text-align:center;}
+      .hero-cta,.hero-stats{justify-content:center;}
+      .hero-desc{margin-left:auto;margin-right:auto;}
+      .hero-visual{height:420px;margin-top:40px;}
+      .features-grid{grid-template-columns:1fr 1fr;}
+      .feat-card:first-child,.feat-card:nth-child(3),.feat-card:nth-child(4),.feat-card:last-child{border-radius:0;}
+      .features-grid .feat-card:first-child{border-radius:var(--radius-lg) var(--radius-lg) 0 0;}
+      .features-grid .feat-card:nth-child(2){border-radius:var(--radius-lg) var(--radius-lg) 0 0;}
+      .paths-grid{grid-template-columns:1fr;}
+      .instructors-grid{grid-template-columns:1fr 1fr;}
+      .testi-grid{grid-template-columns:1fr 1fr;}
+    }
+    @media(max-width:640px){
+      .features-grid,.testi-grid{grid-template-columns:1fr;}
+      .cta-inner{padding:52px 24px;}
+      .cta-actions{flex-direction:column;align-items:center;}
+      .section-tag{display:inline-flex;}
+    }
+    /* Sectors */
+    /* macOS Dock — Sektörler */
+    .dock-outer{display:flex;justify-content:center;padding:24px 0 60px;position:relative;z-index:10;}
+    .dock-wrap{
+      display:flex;flex-direction:row;align-items:flex-end;
+      gap:0;padding:14px 16px 14px;
+      background:rgba(20,30,50,0.65);
+      backdrop-filter:blur(28px);-webkit-backdrop-filter:blur(28px);
+      border:1px solid rgba(255,255,255,0.1);
+      border-radius:26px;
+      box-shadow:0 8px 40px rgba(0,0,0,0.45),0 2px 0 rgba(255,255,255,0.06) inset,0 -1px 0 rgba(0,0,0,0.3) inset;
+      position:relative;
+      will-change:transform;
+    }
+    .dock-item{
+      display:flex;flex-direction:column;align-items:center;
+      position:relative;cursor:default;
+      padding:0 28px;
+      transform-origin:bottom center;
+      will-change:transform;
+    }
+    .dock-label{
+      position:absolute;bottom:calc(100% + 10px);
+      background:rgba(20,30,50,0.9);backdrop-filter:blur(10px);
+      border:1px solid rgba(255,255,255,0.12);
+      color:#fff;font-size:12px;font-weight:700;
+      padding:5px 12px;border-radius:8px;white-space:nowrap;
+      pointer-events:none;opacity:0;transform:translateY(6px);
+      transition:opacity 0.18s ease,transform 0.18s ease;
+      box-shadow:0 4px 16px rgba(0,0,0,0.35);
+    }
+    .dock-item:hover .dock-label{opacity:1;transform:translateY(0);}
+    .dock-icon{
+      font-size:52px;line-height:1;
+      display:block;
+      filter:drop-shadow(0 4px 12px rgba(0,0,0,0.4));
+      transition:filter 0.2s;
+    }
+    .dock-item:hover .dock-icon{filter:drop-shadow(0 6px 20px rgba(0,200,180,0.35));}
+    @media(max-width:768px){.dock-icon{font-size:36px;}.dock-wrap{padding:10px 10px;border-radius:18px;}.dock-item{padding:0 16px;}}
+    @media(max-width:480px){.dock-icon{font-size:28px;}.dock-item{padding:0 10px;}}
+    /* Founder */
+    .founder-grid{display:grid;grid-template-columns:360px 1fr;gap:64px;align-items:center;}
+    .founder-frame{border-radius:24px;background:linear-gradient(135deg,rgba(0,200,180,0.1),rgba(0,100,200,0.08));border:1px solid var(--glass-bd);display:flex;align-items:center;justify-content:center;min-height:420px;position:relative;overflow:hidden;}
+    .founder-frame img{width:100%;height:100%;object-fit:cover;border-radius:24px;}
+    .founder-sub{font-size:14px;color:var(--teal);font-weight:600;margin-bottom:20px;margin-top:6px;line-height:1.6;}
+    .founder-bio{font-size:15px;color:var(--silver);line-height:1.82;margin-bottom:22px;}
+    .founder-chips{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px;}
+    .founder-chip{padding:5px 12px;border-radius:6px;background:var(--glass-bg);border:1px solid var(--glass-bd);font-size:12px;font-weight:600;color:var(--silver);}
+    .founder-memb{font-size:12px;color:var(--silver-dim);line-height:1.7;}
+    @media(max-width:1024px){.sectors-grid{grid-template-columns:repeat(4,1fr);}.founder-grid{grid-template-columns:1fr;}}
+    @media(max-width:640px){.sectors-grid{grid-template-columns:repeat(3,1fr);}}
+  </style>
+  <!-- SEO: Open Graph -->
+  <meta property="og:type" content="website"/>
+  <meta property="og:site_name" content="Derin Akademi"/>
+  <meta property="og:title" content="Derin Akademi — İK Danışmanlığı & Kurumsal Eğitim"/>
+  <meta property="og:description" content="Derin Akademi, insan kaynakları alanında uzmanlaşmış danışmanlık ve eğitim şirketidir. 40+ kurum, 30+ yıllık tecrübe."/>
+  <meta property="og:url" content="https://derinakademi.com/"/>
+  <meta property="og:image" content="https://derinakademi.com/public/hakan%20selahi/hakan-selahi.jpg"/>
+  <meta property="og:locale" content="tr_TR"/>
+  <!-- SEO: Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="Derin Akademi — İK Danışmanlığı & Kurumsal Eğitim"/>
+  <meta name="twitter:description" content="Derin Akademi, insan kaynakları alanında uzmanlaşmış danışmanlık ve eğitim şirketidir. 40+ kurum, 30+ yıllık tecrübe."/>
+  <meta name="twitter:image" content="https://derinakademi.com/public/hakan%20selahi/hakan-selahi.jpg"/>
+  <!-- SEO: Canonical & Robots -->
+  <link rel="canonical" href="https://derinakademi.com/"/>
+  <meta name="robots" content="index, follow"/>
+</head>
+<body>
+<div class="ambient"></div>
+
+<!-- ══ NAVBAR ══ -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="public/logos/68.png" alt="Derin Akademi" class="nav-logo-img"/>
+    </a>
+    <ul class="nav-links">
+      <li><a href="kurslar.html">Eğitimlerimiz</a></li>
+      <li><a href="danismanlik.html">Danışmanlıklarımız</a></li>
+      <li><a href="hakkimizda.html">Hakkımızda</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="iletisim.html">İletişim</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button id="langToggle" onclick="daToggleLang()" class="btn btn-ghost btn-sm" style="font-weight:700;letter-spacing:1px;padding:7px 14px;min-width:52px;">EN</button>
+      <button onclick="openTeklifModal()" class="btn btn-primary btn-sm" data-i18n="nav.teklif">Özel Teklif Al</button>
+    </div>
+    <button class="menu-toggle" aria-label="Menü">☰</button>
+  </div>
+</nav>
+<div class="mobile-nav">
+  <button class="mobile-nav-close">✕</button>
+  <a href="index.html">Ana Sayfa</a>
+  <a href="kurslar.html">Eğitimlerimiz</a>
+  <a href="danismanlik.html">Danışmanlıklarımız</a>
+  <a href="hakkimizda.html">Hakkımızda</a>
+  <a href="blog.html">Blog</a>
+  <a href="iletisim.html">İletişim</a>
+  <div class="mobile-nav-actions">
+    <button onclick="openTeklifModal()" class="btn btn-primary btn-md" style="width:100%;justify-content:center">Özel Teklif Al</button>
+  </div>
+</div>
+
+<!-- ══ HERO ══ -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div>
+        <div style="margin-bottom:28px" class="reveal"><span class="section-tag">İK Danışmanlığı &amp; Kurumsal Eğitim</span></div>
+        <h1 class="hero-title reveal reveal-d1">
+          <span class="line">Kurumlar</span>
+          <span class="line gradient-text">Değişmez.</span>
+          <span class="line">Sistemler Değişir.</span>
+        </h1>
+        <p class="hero-desc reveal reveal-d2">İnsan kaynaklarını operasyonel bir destek fonksiyonundan, iş sonuçlarını etkileyen stratejik bir kaldıraca dönüştürüyoruz. Anlatan değil, çalışan sistemler kurarız.</p>
+        <div class="hero-cta reveal reveal-d3">
+          <a href="kurslar.html" class="btn btn-primary btn-lg">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>Eğitimlerimizi İncele
+          </a>
+          <a href="danismanlik.html" class="btn btn-ghost btn-lg">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>Danışmanlık
+          </a>
+        </div>
+        <div class="hero-stats reveal reveal-d4">
+          <div><div class="hero-stat-num">40<em>+</em></div><div class="hero-stat-label">Hizmet Verilen Kurum</div></div>
+          <div><div class="hero-stat-num">30<em>+</em></div><div class="hero-stat-label">Yıllık Deneyim</div></div>
+          <div><div class="hero-stat-num">98<em>%</em></div><div class="hero-stat-label">Memnuniyet</div></div>
+          <div><div class="hero-stat-num">10<em>+</em></div><div class="hero-stat-label">Eğitim Programı</div></div>
+        </div>
+      </div>
+      <div class="hero-visual reveal reveal-d2">
+        <div class="orb-scene">
+          <div class="ring ring-3"></div>
+          <div class="ring ring-2"></div>
+          <div class="ring ring-1"></div>
+          <div class="orb-core"></div>
+          <div class="particle pt1"></div><div class="particle pt2"></div>
+          <div class="particle pt3"></div><div class="particle pt4"></div>
+          <div class="particle pt5"></div><div class="particle pt6"></div>
+          <div class="grid-plane">
+            <svg viewBox="0 0 620 200" preserveAspectRatio="none">
+              <defs><linearGradient id="gg" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#00c8b4" stop-opacity="1"/><stop offset="100%" stop-color="#00c8b4" stop-opacity="0"/></linearGradient></defs>
+              <g stroke="url(#gg)" stroke-width="0.6" fill="none">
+                <line x1="0" y1="30" x2="620" y2="30"/><line x1="0" y1="65" x2="620" y2="65"/><line x1="0" y1="100" x2="620" y2="100"/><line x1="0" y1="135" x2="620" y2="135"/><line x1="0" y1="170" x2="620" y2="170"/>
+                <line x1="62" y1="0" x2="62" y2="200"/><line x1="124" y1="0" x2="124" y2="200"/><line x1="186" y1="0" x2="186" y2="200"/><line x1="248" y1="0" x2="248" y2="200"/><line x1="310" y1="0" x2="310" y2="200"/><line x1="372" y1="0" x2="372" y2="200"/><line x1="434" y1="0" x2="434" y2="200"/><line x1="496" y1="0" x2="496" y2="200"/><line x1="558" y1="0" x2="558" y2="200"/>
+              </g>
+            </svg>
+          </div>
+        </div>
+        <div class="float-card fc-top"><div class="fc-icon t">🏢</div><div><div class="fc-label">Hizmet Verilen Kurum</div><div class="fc-val">40+ Kurum</div></div></div>
+        <div class="float-card fc-mid"><div class="fc-icon b">📊</div><div><div class="fc-label">Memnuniyet Oranı</div><div class="fc-val">%98</div></div></div>
+        <div class="float-card fc-bot"><div class="fc-icon p">🎓</div><div><div class="fc-label">Sertifikalı Koç</div><div class="fc-val">ACC · ICF Üyesi</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ REFERANSLARIMIZ ══ -->
+<!-- Logo eklemek için: <span class="logo-item"><img src="img/logo-firma.svg" alt="Firma"/></span> kullanın -->
+<div class="trusted">
+  <div class="container">
+    <p class="trusted-label">Referanslarımız</p>
+  </div>
+  <div class="logos-marquee" style="margin-top:28px;">
+    <div class="logos-track">
+      <span class="logo-item"><img src="public/logos/38.png" alt=""/></span>
+      <span class="logo-item"><img src="public/logos/39.png" alt=""/></span>
+      <span class="logo-item"><img src="public/logos/40.png" alt=""/></span>
+      <span class="logo-item"><img src="public/logos/41.png" alt=""/></span>
+      <span class="logo-item"><img src="public/logos/42.png" alt=""/></span>
+      <span class="logo-item"><img src="public/logos/43.png" alt=""/></span>
+      <span class="logo-item"><img src="public/logos/44.png" alt=""/></span>
+      <span class="logo-item"><img src="public/logos/45.png" alt=""/></span>
+      <span class="logo-item"><img src="public/logos/46.png" alt=""/></span>
+      <span class="logo-item"><img src="public/logos/47.png" alt=""/></span>
+      <span class="logo-item"><img src="public/logos/48.png" alt=""/></span>
+      <span class="logo-item"><img src="public/logos/49.png" alt=""/></span>
+      <span class="logo-item"><img src="public/logos/50.png" alt=""/></span>
+      <span class="logo-item"><img src="public/logos/51.png" alt=""/></span>
+      <span class="logo-item"><img src="public/logos/52.png" alt=""/></span>
+      <span class="logo-item"><img src="public/logos/53.png" alt=""/></span>
+      <span class="logo-item"><img src="public/logos/54.png" alt=""/></span>
+      <span class="logo-item"><img src="public/logos/55.png" alt=""/></span>
+      <span class="logo-item"><img src="public/logos/56.png" alt=""/></span>
+      <span class="logo-item"><img src="public/logos/57.png" alt=""/></span>
+      <span class="logo-item"><img src="public/logos/58.png" alt=""/></span>
+      <span class="logo-item"><img src="public/logos/59.png" alt=""/></span>
+      <span class="logo-item"><img src="public/logos/60.png" alt=""/></span>
+      <span class="logo-item"><img src="public/logos/61.png" alt=""/></span>
+      <span class="logo-item"><img src="public/logos/62.png" alt=""/></span>
+      <span class="logo-item"><img src="public/logos/63.png" alt=""/></span>
+      <span class="logo-item"><img src="public/logos/64.png" alt=""/></span>
+      <span class="logo-item"><img src="public/logos/65.png" alt=""/></span>
+      <!-- duplicate for seamless loop -->
+      <span class="logo-item"><img src="public/logos/38.png" alt=""/></span>
+      <span class="logo-item"><img src="public/logos/39.png" alt=""/></span>
+      <span class="logo-item"><img src="public/logos/40.png" alt=""/></span>
+      <span class="logo-item"><img src="public/logos/41.png" alt=""/></span>
+      <span class="logo-item"><img src="public/logos/42.png" alt=""/></span>
+      <span class="logo-item"><img src="public/logos/43.png" alt=""/></span>
+      <span class="logo-item"><img src="public/logos/44.png" alt=""/></span>
+      <span class="logo-item"><img src="public/logos/45.png" alt=""/></span>
+      <span class="logo-item"><img src="public/logos/46.png" alt=""/></span>
+      <span class="logo-item"><img src="public/logos/47.png" alt=""/></span>
+      <span class="logo-item"><img src="public/logos/48.png" alt=""/></span>
+      <span class="logo-item"><img src="public/logos/49.png" alt=""/></span>
+      <span class="logo-item"><img src="public/logos/50.png" alt=""/></span>
+      <span class="logo-item"><img src="public/logos/51.png" alt=""/></span>
+      <span class="logo-item"><img src="public/logos/52.png" alt=""/></span>
+      <span class="logo-item"><img src="public/logos/53.png" alt=""/></span>
+      <span class="logo-item"><img src="public/logos/54.png" alt=""/></span>
+      <span class="logo-item"><img src="public/logos/55.png" alt=""/></span>
+      <span class="logo-item"><img src="public/logos/56.png" alt=""/></span>
+      <span class="logo-item"><img src="public/logos/57.png" alt=""/></span>
+      <span class="logo-item"><img src="public/logos/58.png" alt=""/></span>
+      <span class="logo-item"><img src="public/logos/59.png" alt=""/></span>
+      <span class="logo-item"><img src="public/logos/60.png" alt=""/></span>
+      <span class="logo-item"><img src="public/logos/61.png" alt=""/></span>
+      <span class="logo-item"><img src="public/logos/62.png" alt=""/></span>
+      <span class="logo-item"><img src="public/logos/63.png" alt=""/></span>
+      <span class="logo-item"><img src="public/logos/64.png" alt=""/></span>
+      <span class="logo-item"><img src="public/logos/65.png" alt=""/></span>
+    </div>
+  </div>
+</div>
+
+<!-- ══ STATS ══ -->
+<section class="section-pad">
+  <div class="container">
+    <div class="stats-row reveal">
+      <div class="stat-box"><div class="stat-num">40<em>+</em></div><div class="stat-label">Hizmet Verilen Kurum</div></div>
+      <div class="stat-box"><div class="stat-num">30<em>+</em></div><div class="stat-label">Yıllık Tecrübe</div></div>
+      <div class="stat-box"><div class="stat-num">10<em>+</em></div><div class="stat-label">Eğitim Programı</div></div>
+      <div class="stat-box"><div class="stat-num">7<em>+</em></div><div class="stat-label">Farklı Sektör</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FEATURES ══ -->
+<section class="section-pad" style="background:linear-gradient(180deg,rgba(0,200,180,0.025) 0%,transparent 100%);">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-tag reveal">Neden Derin Akademi?</div>
+      <h2 class="section-title reveal reveal-d1">Biz Eğitim Satmıyoruz</h2>
+      <p class="section-desc reveal reveal-d2">Kurumla birlikte dönüşümün sorumluluğunu alıyoruz. Anlatan değil, çalışan sistemler kurarız.</p>
+    </div>
+    <div class="features-grid reveal">
+
+      <div class="feat-card">
+        <div class="feat-spot"></div>
+        <span class="feat-num">01</span>
+        <div class="feat-icon-wrap">🎯</div>
+        <h3 class="feat-title">Sahadaki Uygulama Deneyimi</h3>
+        <p class="feat-desc">Akademik bilgiyi gerçek iş yaşamından beslenen içgörülerle buluşturarak, klasik kalıpların ötesinde uygulanabilir ve sürdürülebilir çözümler sunuyoruz.</p>
+      </div>
+
+      <div class="feat-card">
+        <div class="feat-spot"></div>
+        <span class="feat-num">02</span>
+        <div class="feat-icon-wrap">🏗️</div>
+        <h3 class="feat-title">Kuruma Özel Tasarım</h3>
+        <p class="feat-desc">Çözümler hazır modellerle değil; kurumun hedefleri, kültürü ve mevcut olgunluk seviyesi dikkate alınarak özel olarak tasarlanır.</p>
+      </div>
+
+      <div class="feat-card">
+        <div class="feat-spot"></div>
+        <span class="feat-num">03</span>
+        <div class="feat-icon-wrap">🔄</div>
+        <h3 class="feat-title">Davranış Dönüşümü</h3>
+        <p class="feat-desc">Yalnızca bilgi aktarmıyoruz; yönetme, karar alma ve iletişim biçimlerini köklü biçimde dönüştürmeyi hedefliyoruz.</p>
+      </div>
+
+      <div class="feat-card">
+        <div class="feat-spot"></div>
+        <span class="feat-num">04</span>
+        <div class="feat-icon-wrap">🤖</div>
+        <h3 class="feat-title">YZ Destekli Öğrenme</h3>
+        <p class="feat-desc">Yapay zekâ destekli, kuruma özel içerikler ve 7/24 erişilebilir dijital avatar desteği ile sürekli öğrenme imkânı.</p>
+      </div>
+
+      <div class="feat-card">
+        <div class="feat-spot"></div>
+        <span class="feat-num">05</span>
+        <div class="feat-icon-wrap">🎥</div>
+        <h3 class="feat-title">Esnek Eğitim Formatları</h3>
+        <p class="feat-desc">Yüz yüze sınıf eğitimlerinden online interaktif programlara kadar kurumunuzun ihtiyacına en uygun formatta.</p>
+      </div>
+
+      <div class="feat-card">
+        <div class="feat-spot"></div>
+        <span class="feat-num">06</span>
+        <div class="feat-icon-wrap">♟️</div>
+        <h3 class="feat-title">Stratejik Ortaklık</h3>
+        <p class="feat-desc">"Ne yapılmalı?" değil, "nasıl yapılacak?" sorusunun sorumluluğunu alıyoruz. Dönüşümü birlikte yönetiyoruz.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══ EĞİTİMLERİMİZ ══ -->
+<section class="section-pad" style="background:rgba(255,255,255,0.018);">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-tag reveal">Eğitimlerimiz</div>
+      <h2 class="section-title reveal reveal-d1">Davranış ve Karar<br>Biçimi Dönüşümü</h2>
+      <p class="section-desc reveal reveal-d2">Liderlikten veriye, performanstan aidiyete — kurumunuzun ihtiyacına özel eğitim programları.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px" class="reveal reveal-d1">
+      <div class="course-card">
+        <div class="course-thumb"><div class="course-thumb-bg c-bg-1"></div><div class="course-thumb-icon">🎯</div></div>
+        <div class="course-body">
+          <div class="course-category">Liderlik &amp; İletişim</div>
+          <h3 class="course-title">Mülakat Becerileri 5.0</h3>
+          <p class="course-desc">Yeni nesil işe alım. Doğru kadroyu bulmak için sistematik, davranış odaklı mülakat yöntemleri.</p>
+          <div class="course-footer" style="flex-direction:column;gap:8px;align-items:stretch;">
+            <button onclick="openTeklifModal()" class="btn btn-primary btn-sm" style="justify-content:center">Bilgi Al</button>
+            <a href="https://wa.me/905330193134" target="_blank" class="btn btn-ghost btn-sm" style="justify-content:center">💬 WhatsApp</a>
+          </div>
+        </div>
+      </div>
+      <div class="course-card">
+        <div class="course-thumb"><div class="course-thumb-bg c-bg-2"></div><div class="course-thumb-icon">📊</div></div>
+        <div class="course-body">
+          <div class="course-category">Sistem &amp; Yönetim</div>
+          <h3 class="course-title">Stratejik İK Yönetimi</h3>
+          <p class="course-desc">Geleceği kodlayan insan kaynakları. İK'yı stratejik bir değer ve güç merkezine dönüştürme yol haritası.</p>
+          <div class="course-footer" style="flex-direction:column;gap:8px;align-items:stretch;">
+            <button onclick="openTeklifModal()" class="btn btn-primary btn-sm" style="justify-content:center">Bilgi Al</button>
+            <a href="https://wa.me/905330193134" target="_blank" class="btn btn-ghost btn-sm" style="justify-content:center">💬 WhatsApp</a>
+          </div>
+        </div>
+      </div>
+      <div class="course-card">
+        <div class="course-thumb"><div class="course-thumb-bg c-bg-4"></div><div class="course-thumb-icon">🤖</div></div>
+        <div class="course-body">
+          <div class="course-category">Veri &amp; Gelecek</div>
+          <h3 class="course-title">Yapay Zekâ İK'da</h3>
+          <p class="course-desc">İnsan gücüne dijital dokunuş. YZ araçlarını İK süreçlerine entegre eden, geleceğe hazır İK ekipleri yetiştirme.</p>
+          <div class="course-footer" style="flex-direction:column;gap:8px;align-items:stretch;">
+            <button onclick="openTeklifModal()" class="btn btn-primary btn-sm" style="justify-content:center">Bilgi Al</button>
+            <a href="https://wa.me/905330193134" target="_blank" class="btn btn-ghost btn-sm" style="justify-content:center">💬 WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:40px"><a href="kurslar.html" class="btn btn-outline btn-lg">Tüm Eğitimleri Gör <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a></div>
+  </div>
+</section>
+
+<!-- ══ SEKTÖRLER ══ -->
+<section class="section-pad" id="sektorler">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-tag reveal">Çalıştığımız Sektörler</div>
+      <h2 class="section-title reveal reveal-d1">Farklı Sektörlerde<br><span class="gradient-text">Ortak Dönüşüm</span></h2>
+      <p class="section-desc reveal reveal-d2">Finans'tan tarıma, sağlıktan perakendeye — 40'tan fazla kurum ile dönüşümün sorumluluğunu birlikte taşıdık.</p>
+    </div>
+    <div class="dock-outer">
+      <div class="dock-wrap" id="sektorDock">
+        <div class="dock-item" data-label="Finans" data-i18n-label="Finance"><span class="dock-icon">💰</span><span class="dock-label" data-i18n="sector.finans">Finans</span></div>
+        <div class="dock-item" data-label="Üretim" data-i18n-label="Manufacturing"><span class="dock-icon">🏭</span><span class="dock-label" data-i18n="sector.uretim">Üretim</span></div>
+        <div class="dock-item" data-label="Sanayi" data-i18n-label="Industry"><span class="dock-icon">⚙️</span><span class="dock-label" data-i18n="sector.sanayi">Sanayi</span></div>
+        <div class="dock-item" data-label="Tarım" data-i18n-label="Agriculture"><span class="dock-icon">🌾</span><span class="dock-label" data-i18n="sector.tarim">Tarım</span></div>
+        <div class="dock-item" data-label="Sağlık" data-i18n-label="Healthcare"><span class="dock-icon">🏥</span><span class="dock-label" data-i18n="sector.saglik">Sağlık</span></div>
+        <div class="dock-item" data-label="Perakende" data-i18n-label="Retail"><span class="dock-icon">🛒</span><span class="dock-label" data-i18n="sector.perakende">Perakende</span></div>
+        <div class="dock-item" data-label="Eğitim" data-i18n-label="Education"><span class="dock-icon">📚</span><span class="dock-label" data-i18n="sector.egitim">Eğitim</span></div>
+        <div class="dock-item" data-label="Holding" data-i18n-label="Holding"><span class="dock-icon">🏢</span><span class="dock-label" data-i18n="sector.holding">Holding</span></div>
+        <div class="dock-item" data-label="İnşaat" data-i18n-label="Construction"><span class="dock-icon">🏗️</span><span class="dock-label" data-i18n="sector.insaat">İnşaat</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ TESTIMONIALS ══ -->
+<style>
+.testi-scroll-section { padding: 80px 0; overflow: hidden; position: relative; }
+.testi-scroll-section .section-head { padding: 0 20px; }
+.testi-cols-outer { position: relative; margin-top: 52px; height: 560px; overflow: hidden; mask-image: linear-gradient(to bottom, transparent 0%, black 14%, black 86%, transparent 100%); -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 14%, black 86%, transparent 100%); }
+.testi-cols-wrap { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; padding: 0 20px; max-width: 1160px; margin: 0 auto; height: 100%; }
+.testi-scroll-col { display: flex; flex-direction: column; gap: 18px; }
+.testi-scroll-col.col-1 { animation: testiScrollUp 22s linear infinite; }
+.testi-scroll-col.col-2 { animation: testiScrollUp 30s linear infinite; margin-top: -60px; }
+.testi-scroll-col.col-3 { animation: testiScrollUp 25s linear infinite; margin-top: -30px; }
+@keyframes testiScrollUp { 0% { transform: translateY(0); } 100% { transform: translateY(-50%); } }
+.tsc { background: var(--glass-bg); border: 1px solid var(--glass-bd); border-radius: var(--radius-lg); padding: 24px 26px; transition: border-color 0.25s; }
+.tsc:hover { border-color: var(--teal-border); }
+.tsc-stars { color: #f59e0b; font-size: 13px; letter-spacing: 1px; margin-bottom: 12px; }
+.tsc-text { font-size: 14px; color: var(--silver); line-height: 1.75; margin-bottom: 18px; }
+.tsc-author { display: flex; align-items: center; gap: 12px; }
+.tsc-avatar { width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Montserrat', sans-serif; font-size: 15px; font-weight: 800; flex-shrink: 0; }
+.tsc-av-a { background: linear-gradient(135deg, #0d9488, #0e7490); color: #fff; }
+.tsc-av-b { background: linear-gradient(135deg, #7c3aed, #a21caf); color: #fff; }
+.tsc-av-c { background: linear-gradient(135deg, #b45309, #d97706); color: #fff; }
+.tsc-av-d { background: linear-gradient(135deg, #0369a1, #0284c7); color: #fff; }
+.tsc-av-e { background: linear-gradient(135deg, #be123c, #e11d48); color: #fff; }
+.tsc-av-f { background: linear-gradient(135deg, #15803d, #16a34a); color: #fff; }
+.tsc-name { font-family: 'Montserrat', sans-serif; font-size: 14px; font-weight: 800; margin-bottom: 2px; }
+.tsc-role { font-size: 12px; color: var(--silver-dim); }
+.tsc-sector { display: inline-block; margin-top: 12px; padding: 3px 10px; border-radius: 50px; background: rgba(0,200,180,0.06); border: 1px solid var(--teal-border); font-size: 11px; font-weight: 700; color: var(--teal); letter-spacing: 0.5px; }
+@media(max-width: 900px) { .testi-cols-wrap { grid-template-columns: 1fr 1fr; } .testi-scroll-col.col-3 { display: none; } }
+@media(max-width: 600px) { .testi-cols-wrap { grid-template-columns: 1fr; } .testi-scroll-col.col-2 { display: none; } .testi-cols-outer { height: 480px; } }
+</style>
+
+<section class="testi-scroll-section">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-tag reveal">Başarı Hikayeleri</div>
+      <h2 class="section-title reveal reveal-d1">Onlar Değiştirdi, Sıra Sende</h2>
+      <p class="section-desc reveal reveal-d2">Gerçek hikayeler, gerçek dönüşümler. 40'tan fazla kurumdan yüzlerce profesyonelin deneyimi.</p>
+    </div>
+  </div>
+  <div class="testi-cols-outer">
+    <div class="testi-cols-wrap">
+
+      <!-- Sütun 1 -->
+      <div class="testi-scroll-col col-1">
+        <div class="tsc"><div class="tsc-stars">★★★★★</div><p class="tsc-text">Derin Akademi ile yürüttüğümüz Stratejik İK Yönetimi programı, İK ekibimizin kurumda gerçek bir stratejik konuma gelmesini sağladı. Hazır modeller değil, bize özel çözümdü.</p><div class="tsc-author"><div class="tsc-avatar tsc-av-a">AK</div><div><div class="tsc-name">Ayşe Kara</div><div class="tsc-role">İK Direktörü</div></div></div><span class="tsc-sector">Finans Sektörü</span></div>
+        <div class="tsc"><div class="tsc-stars">★★★★★</div><p class="tsc-text">Kurumsallaşma sürecimizin en kritik aşamasında Hakan Bey ile çalıştık. Aile anayasasını yazdık, governance yapısını sıfırdan kurduk. Sonuçlar inanılmaz somut.</p><div class="tsc-author"><div class="tsc-avatar tsc-av-c">AY</div><div><div class="tsc-name">Ali Yalçın</div><div class="tsc-role">CEO & Kurucu Ortak</div></div></div><span class="tsc-sector">Aile Şirketi</span></div>
+        <div class="tsc"><div class="tsc-stars">★★★★★</div><p class="tsc-text">Ücret yönetimi projemizde Derin Akademi'nin getirdiği yapı, çalışan memnuniyetimizi ve elde tutma oranımızı ölçülebilir biçimde artırdı. Sistematik ve uygulanabilir.</p><div class="tsc-author"><div class="tsc-avatar tsc-av-f">ED</div><div><div class="tsc-name">Emre Doğan</div><div class="tsc-role">Genel Müdür Yrd.</div></div></div><span class="tsc-sector">Üretim Sektörü</span></div>
+        <!-- Duplicate for seamless loop -->
+        <div class="tsc"><div class="tsc-stars">★★★★★</div><p class="tsc-text">Derin Akademi ile yürüttüğümüz Stratejik İK Yönetimi programı, İK ekibimizin kurumda gerçek bir stratejik konuma gelmesini sağladı. Hazır modeller değil, bize özel çözümdü.</p><div class="tsc-author"><div class="tsc-avatar tsc-av-a">AK</div><div><div class="tsc-name">Ayşe Kara</div><div class="tsc-role">İK Direktörü</div></div></div><span class="tsc-sector">Finans Sektörü</span></div>
+        <div class="tsc"><div class="tsc-stars">★★★★★</div><p class="tsc-text">Kurumsallaşma sürecimizin en kritik aşamasında Hakan Bey ile çalıştık. Aile anayasasını yazdık, governance yapısını sıfırdan kurduk. Sonuçlar inanılmaz somut.</p><div class="tsc-author"><div class="tsc-avatar tsc-av-c">AY</div><div><div class="tsc-name">Ali Yalçın</div><div class="tsc-role">CEO & Kurucu Ortak</div></div></div><span class="tsc-sector">Aile Şirketi</span></div>
+        <div class="tsc"><div class="tsc-stars">★★★★★</div><p class="tsc-text">Ücret yönetimi projemizde Derin Akademi'nin getirdiği yapı, çalışan memnuniyetimizi ve elde tutma oranımızı ölçülebilir biçimde artırdı. Sistematik ve uygulanabilir.</p><div class="tsc-author"><div class="tsc-avatar tsc-av-f">ED</div><div><div class="tsc-name">Emre Doğan</div><div class="tsc-role">Genel Müdür Yrd.</div></div></div><span class="tsc-sector">Üretim Sektörü</span></div>
+      </div>
+
+      <!-- Sütun 2 -->
+      <div class="testi-scroll-col col-2">
+        <div class="tsc"><div class="tsc-stars">★★★★★</div><p class="tsc-text">Mülakat Becerileri 5.0 eğitimi sonrası işe alım süreçlerimizde hata oranımız dramatik biçimde düştü. Teorik değil, sahadaki gerçek deneyimi aktardılar.</p><div class="tsc-author"><div class="tsc-avatar tsc-av-b">GD</div><div><div class="tsc-name">Gülşen Demir</div><div class="tsc-role">İnsan Kaynakları Müdürü</div></div></div><span class="tsc-sector">Perakende</span></div>
+        <div class="tsc"><div class="tsc-stars">★★★★★</div><p class="tsc-text">Yetenek yönetimi sistemimizi Derin Akademi ile sıfırdan tasarladık. 6 ay içinde kritik pozisyonlardaki çalışan devir oranı yüzde kırk düştü. Rakamlar konuşuyor.</p><div class="tsc-author"><div class="tsc-avatar tsc-av-d">EŞ</div><div><div class="tsc-name">Elif Şahin</div><div class="tsc-role">CHRO</div></div></div><span class="tsc-sector">Teknoloji</span></div>
+        <div class="tsc"><div class="tsc-stars">★★★★★</div><p class="tsc-text">Liderlik Yolculuğu programı yöneticilerimizin bakış açısını dönüştürdü. Ekip yönetiminde kullandıkları araçlar ve dil tamamen değişti. Etki 3 ay içinde görünür oldu.</p><div class="tsc-author"><div class="tsc-avatar tsc-av-e">ST</div><div><div class="tsc-name">Selin Topal</div><div class="tsc-role">İK Uzmanı</div></div></div><span class="tsc-sector">Holding</span></div>
+        <!-- Duplicate -->
+        <div class="tsc"><div class="tsc-stars">★★★★★</div><p class="tsc-text">Mülakat Becerileri 5.0 eğitimi sonrası işe alım süreçlerimizde hata oranımız dramatik biçimde düştü. Teorik değil, sahadaki gerçek deneyimi aktardılar.</p><div class="tsc-author"><div class="tsc-avatar tsc-av-b">GD</div><div><div class="tsc-name">Gülşen Demir</div><div class="tsc-role">İnsan Kaynakları Müdürü</div></div></div><span class="tsc-sector">Perakende</span></div>
+        <div class="tsc"><div class="tsc-stars">★★★★★</div><p class="tsc-text">Yetenek yönetimi sistemimizi Derin Akademi ile sıfırdan tasarladık. 6 ay içinde kritik pozisyonlardaki çalışan devir oranı yüzde kırk düştü. Rakamlar konuşuyor.</p><div class="tsc-author"><div class="tsc-avatar tsc-av-d">EŞ</div><div><div class="tsc-name">Elif Şahin</div><div class="tsc-role">CHRO</div></div></div><span class="tsc-sector">Teknoloji</span></div>
+        <div class="tsc"><div class="tsc-stars">★★★★★</div><p class="tsc-text">Liderlik Yolculuğu programı yöneticilerimizin bakış açısını dönüştürdü. Ekip yönetiminde kullandıkları araçlar ve dil tamamen değişti. Etki 3 ay içinde görünür oldu.</p><div class="tsc-author"><div class="tsc-avatar tsc-av-e">ST</div><div><div class="tsc-name">Selin Topal</div><div class="tsc-role">İK Uzmanı</div></div></div><span class="tsc-sector">Holding</span></div>
+      </div>
+
+      <!-- Sütun 3 -->
+      <div class="testi-scroll-col col-3">
+        <div class="tsc"><div class="tsc-stars">★★★★★</div><p class="tsc-text">"Biz eğitim satmıyoruz" dediklerinde şüpheyle yaklaştım. Ama gerçekten sahaya indiler. Performans sistemimizi baştan tasarladık, sonuçlar somut ve ölçülebilir oldu.</p><div class="tsc-author"><div class="tsc-avatar tsc-av-c">MY</div><div><div class="tsc-name">Murat Yıldız</div><div class="tsc-role">Genel Müdür</div></div></div><span class="tsc-sector">Üretim</span></div>
+        <div class="tsc"><div class="tsc-stars">★★★★★</div><p class="tsc-text">İşe alım süreçlerimizi baştan sona revize ettik. Artık yanlış kişiyi işe almak için harcadığımız zamanı ve maliyeti düşündüğümüzde bu yatırımın ne kadar değerli olduğunu görüyoruz.</p><div class="tsc-author"><div class="tsc-avatar tsc-av-a">SA</div><div><div class="tsc-name">Serkan Arslan</div><div class="tsc-role">İK Müdürü</div></div></div><span class="tsc-sector">Perakende</span></div>
+        <div class="tsc"><div class="tsc-stars">★★★★★</div><p class="tsc-text">Aileden kuruma geçiş sürecimizde en büyük çekincem ailevi dinamiklerin yönetime yansımasıydı. Derin Akademi bu hassas dengeyi kurumsal bir yapıyla mükemmel çözdü.</p><div class="tsc-author"><div class="tsc-avatar tsc-av-b">ZK</div><div><div class="tsc-name">Zeynep Korkmaz</div><div class="tsc-role">Kurumsallaşma Sorumlusu</div></div></div><span class="tsc-sector">İnşaat & GYO</span></div>
+        <!-- Duplicate -->
+        <div class="tsc"><div class="tsc-stars">★★★★★</div><p class="tsc-text">"Biz eğitim satmıyoruz" dediklerinde şüpheyle yaklaştım. Ama gerçekten sahaya indiler. Performans sistemimizi baştan tasarladık, sonuçlar somut ve ölçülebilir oldu.</p><div class="tsc-author"><div class="tsc-avatar tsc-av-c">MY</div><div><div class="tsc-name">Murat Yıldız</div><div class="tsc-role">Genel Müdür</div></div></div><span class="tsc-sector">Üretim</span></div>
+        <div class="tsc"><div class="tsc-stars">★★★★★</div><p class="tsc-text">İşe alım süreçlerimizi baştan sona revize ettik. Artık yanlış kişiyi işe almak için harcadığımız zamanı ve maliyeti düşündüğümüzde bu yatırımın ne kadar değerli olduğunu görüyoruz.</p><div class="tsc-author"><div class="tsc-avatar tsc-av-a">SA</div><div><div class="tsc-name">Serkan Arslan</div><div class="tsc-role">İK Müdürü</div></div></div><span class="tsc-sector">Perakende</span></div>
+        <div class="tsc"><div class="tsc-stars">★★★★★</div><p class="tsc-text">Aileden kuruma geçiş sürecimizde en büyük çekincem ailevi dinamiklerin yönetime yansımasıydı. Derin Akademi bu hassas dengeyi kurumsal bir yapıyla mükemmel çözdü.</p><div class="tsc-author"><div class="tsc-avatar tsc-av-b">ZK</div><div><div class="tsc-name">Zeynep Korkmaz</div><div class="tsc-role">Kurumsallaşma Sorumlusu</div></div></div><span class="tsc-sector">İnşaat & GYO</span></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══ KURUCU ══ -->
+<section class="section-pad" style="border-top:1px solid var(--glass-bd);">
+  <div class="container">
+    <div class="founder-grid">
+      <div class="founder-frame reveal" style="overflow:hidden;background:var(--glass-bg);border:1px solid var(--glass-bd);display:flex;align-items:center;justify-content:center;">
+        <img src="public/hakan selahi/hakan-selahi.jpg" alt="Hakan Selahi"
+             style="width:100%;height:100%;object-fit:cover;object-position:top center;"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+        <span style="font-size:90px;opacity:0.3;display:none;width:100%;height:100%;align-items:center;justify-content:center;">👤</span>
+      </div>
+      <div>
+        <div class="section-tag reveal">Kurucumuz</div>
+        <h2 class="section-title reveal reveal-d1">Hakan Selahi</h2>
+        <p class="founder-sub reveal reveal-d2">30+ Yıllık Tecrübeyle İK Stratejisti · ACC Koç · Kurumsallaşma Danışmanı ve Eğitmeni</p>
+        <p class="founder-bio reveal reveal-d3">Derin Akademi'nin kurucusu Hakan Selahi liderliğinde, bugüne kadar hem yerli hem de yabancı sermayeli kırktan fazla şirkete uzmanlık alanlarında danışmanlık ve kuruma özel eğitimler sunulmuştur. CHRO ve İK Direktörlüğü deneyimiyle HSBC, Deutsche Bank, Acıbadem Sağlık gibi önde gelen kurumlarda liderlik yapmış; kurumsallaşma, performans ve yetenek yönetimi alanlarında derinlemesine uzmanlık kazanmıştır.</p>
+        <div class="founder-chips reveal reveal-d4">
+          <span class="founder-chip">HSBC</span>
+          <span class="founder-chip">Deutsche Bank</span>
+          <span class="founder-chip">Acıbadem Sağlık</span>
+          <span class="founder-chip">CHRO Deneyimi</span>
+        </div>
+        <p class="founder-memb reveal reveal-d5">🎓 Adler ACC Sertifikalı Koç &nbsp;·&nbsp; NLP Uygulayıcısı &nbsp;·&nbsp; TEGEP Üyesi &nbsp;·&nbsp; ICF Üyesi</p>
+        <div style="display:flex;gap:14px;flex-wrap:wrap;margin-top:24px;" class="reveal">
+          <button onclick="openTeklifModal()" class="btn btn-primary btn-lg">Teklif Al</button>
+          <a href="hakkimizda.html" class="btn btn-ghost btn-lg">Daha Fazla</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CTA ══ -->
+<section class="section-pad">
+  <div class="container">
+    <div class="cta-inner reveal">
+      <h2 class="cta-title">Dönüşümün<br/><span class="gradient-text">Zamanı Geldi.</span></h2>
+      <p class="cta-desc">İnsan kaynağınızı stratejik bir değere dönüştürmek için ilk adımı atalım. Kurumunuza özel çözümler için bize ulaşın.</p>
+      <div class="cta-actions">
+        <button onclick="openTeklifModal()" class="btn btn-primary btn-xl"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>Özel Teklif Al</button>
+        <a href="iletisim.html" class="btn btn-ghost btn-xl">İletişime Geç</a>
+      </div>
+      <p class="cta-note">✓ 24 Saat İçinde Yanıt &nbsp; ✓ Kuruma Özel Çözüm</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FOOTER ══ -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo" style="display:inline-flex"><img src="public/logos/68.png" alt="Derin Akademi" class="nav-logo-img"/></a>
+        <p class="brand-desc">İnsan kaynakları alanında uzmanlaşmış danışmanlık ve eğitim şirketi. Anlatan değil, çalışan sistemler kurarız.</p>
+        <div class="footer-social">
+          <a class="social-btn" href="https://www.instagram.com/derinakademi/" target="_blank">📷</a>
+          <a class="social-btn" href="https://www.linkedin.com/company/derinakademi/" target="_blank">in</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Hizmetler</div>
+        <ul class="footer-links">
+          <li><a href="kurslar.html">Eğitimlerimiz</a></li>
+          <li><a href="danismanlik.html">Danışmanlıklarımız</a></li>
+          <li><a href="kurslar.html">Kurumsal Eğitim</a></li>
+          <li><a href="danismanlik.html">Kurumsallaşma</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Şirket</div>
+        <ul class="footer-links">
+          <li><a href="hakkimizda.html">Hakkımızda</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="kariyer.html">Kariyer</a></li>
+          <li><a href="iletisim.html">İletişim</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Bülten</div>
+        <div class="footer-newsletter">
+          <p>İK gündemindeki gelişmelerden ve eğitimlerimizden haberdar ol.</p>
+          <div class="newsletter-form"><input type="email" class="newsletter-input" placeholder="E-posta"/><button class="btn btn-primary btn-sm" onclick="showToast('Abone oldunuz! 🎉')">→</button></div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2026 Derin Akademi. Tüm hakları saklıdır. &nbsp;<a href="https://reneedesignlab.com/tr" target="_blank" style="color:var(--silver-dim);text-decoration:none;" onmouseover="this.style.color='var(--silver)'" onmouseout="this.style.color='var(--silver-dim)'">by Renee DesignLab</a></div>
+      <div class="footer-legal"><a href="gizlilik-politikasi.html">Gizlilik Politikası</a><a href="kullanim-kosullari.html">Kullanım Koşulları</a><a href="kvkk.html">KVKK</a><a href="cerezler.html">Çerezler</a></div>
+    </div>
+  </div>
+</footer>
+
+<button id="back-to-top" style="position:fixed;bottom:28px;right:28px;z-index:500;width:44px;height:44px;border-radius:12px;background:var(--glass-bg);border:1px solid var(--glass-bd);color:var(--teal);font-size:18px;cursor:pointer;opacity:0;transition:var(--t-base);backdrop-filter:blur(12px);" aria-label="Yukarı dön">↑</button>
+
+<!-- ══ ÖZEL TEKLİF MODAL ══ -->
+<div id="teklif-modal" class="teklif-modal">
+  <div class="teklif-modal-box">
+    <button class="teklif-modal-close" onclick="closeTeklifModal()">✕</button>
+    <!-- Sol: İletişim Bilgileri -->
+    <div>
+      <div style="color:var(--teal);font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:10px;">İletişim Bilgileri</div>
+      <h2 style="font-family:'Montserrat',sans-serif;font-size:24px;font-weight:900;line-height:1.2;margin-bottom:8px;">Hemen <span class="gradient-text">Teklif Alın</span></h2>
+      <p style="color:var(--silver);font-size:13px;line-height:1.75;margin-bottom:28px;">Eğitim ihtiyaçlarınızı paylaşın, size özel program ve teklif oluşturalım.</p>
+      <div style="display:flex;flex-direction:column;gap:18px;margin-bottom:28px;">
+        <div class="teklif-info-row"><div class="teklif-info-icon">📞</div><div><div style="font-size:11px;color:var(--silver-dim);margin-bottom:3px;">Telefon</div><a href="tel:+905330193134" style="font-size:14px;font-weight:600;color:var(--white);text-decoration:none;">0 (533) 019 31 34</a></div></div>
+        <div class="teklif-info-row"><div class="teklif-info-icon">📧</div><div><div style="font-size:11px;color:var(--silver-dim);margin-bottom:3px;">E-posta</div><a href="mailto:derin@derinakademi.net" style="font-size:14px;font-weight:600;color:var(--white);text-decoration:none;">derin@derinakademi.net</a></div></div>
+        <div class="teklif-info-row"><div class="teklif-info-icon">📍</div><div><div style="font-size:11px;color:var(--silver-dim);margin-bottom:3px;">Adres</div><div style="font-size:13px;color:var(--silver);line-height:1.6;">İçerenköy Mah. Topçu İbrahim Sokak Quick Tower Sitesi No:8-10D Ataşehir, İstanbul 34752</div></div></div>
+      </div>
+      <div style="display:flex;gap:10px;">
+        <a href="https://www.instagram.com/derinakademi/" target="_blank" style="display:flex;align-items:center;gap:6px;padding:8px 14px;border-radius:8px;background:var(--glass-bg);border:1px solid var(--glass-bd);font-size:12px;font-weight:600;color:var(--silver);text-decoration:none;">📷 Instagram</a>
+        <a href="https://www.linkedin.com/company/derinakademi/" target="_blank" style="display:flex;align-items:center;gap:6px;padding:8px 14px;border-radius:8px;background:var(--glass-bg);border:1px solid var(--glass-bd);font-size:12px;font-weight:600;color:var(--silver);text-decoration:none;">in LinkedIn</a>
+      </div>
+    </div>
+    <!-- Sağ: Form -->
+    <div>
+      <div class="teklif-field"><label>Ad Soyad *</label><input type="text" class="teklif-modal-input" placeholder="Adınız Soyadınız"/></div>
+      <div class="teklif-field"><label>E-posta *</label><input type="email" class="teklif-modal-input" placeholder="ornek@mail.com"/></div>
+      <div class="teklif-field"><label>Telefon *</label><input type="tel" class="teklif-modal-input" placeholder="0 5XX XXX XX XX"/></div>
+      <div class="teklif-field"><label>Kurum / Şirket (İsteğe Bağlı)</label><input type="text" class="teklif-modal-input" placeholder="Şirketinizin adı"/></div>
+      <div class="teklif-field"><label>Talebiniz *</label><textarea class="teklif-modal-input" placeholder="İhtiyacınızı, beklentilerinizi ve sorularınızı yazın..." style="resize:vertical;min-height:100px;"></textarea></div>
+      <button class="btn btn-primary btn-lg" style="width:100%;justify-content:center;margin-top:4px;" onclick="showToast('Talebiniz iletildi! 🎉 En kısa sürede sizinle iletişime geçeceğiz.');closeTeklifModal();">Teklif İste →</button>
+    </div>
+  </div>
+</div>
+
+<script src="js/main.js"></script>
+<script src="js/i18n.js"></script>
+<script>
+/* ── macOS Dock ── */
+(function(){
+  var dock=document.getElementById('sektorDock');
+  if(!dock)return;
+  var items=Array.from(dock.querySelectorAll('.dock-item'));
+  var BASE=60,MAX_SCALE=1.9,RANGE=180,LERP=0.18;
+  var targets=items.map(()=>1),currents=items.map(()=>1);
+  var mouseX=null,raf=null;
+
+  function cosScale(dist){
+    if(Math.abs(dist)>RANGE)return 1;
+    return 1+(MAX_SCALE-1)*((1-Math.cos(Math.PI*(1-Math.abs(dist)/RANGE)))/2);
+  }
+
+  function getItemCenters(){
+    var dRect=dock.getBoundingClientRect();
+    return items.map(function(it){
+      var r=it.getBoundingClientRect();
+      return r.left+r.width/2-dRect.left;
+    });
+  }
+
+  function tick(){
+    var changed=false;
+    var centers=getItemCenters();
+    items.forEach(function(it,i){
+      var dist=mouseX!==null?mouseX-centers[i]:9999;
+      targets[i]=mouseX!==null?cosScale(dist):1;
+      var diff=targets[i]-currents[i];
+      if(Math.abs(diff)>0.002){currents[i]+=diff*LERP;changed=true;}
+      else currents[i]=targets[i];
+      var s=currents[i];
+      var lift=mouseX!==null?Math.max(0,(s-1)*40):0;
+      it.style.transform='translateY(-'+lift.toFixed(1)+'px) scale('+s.toFixed(3)+')';
+      it.style.zIndex=Math.round(s*10);
+    });
+    if(changed)raf=requestAnimationFrame(tick);
+    else raf=null;
+  }
+
+  dock.addEventListener('mousemove',function(e){
+    var r=dock.getBoundingClientRect();
+    mouseX=e.clientX-r.left;
+    if(!raf)raf=requestAnimationFrame(tick);
+  });
+  dock.addEventListener('mouseleave',function(){
+    mouseX=null;
+    if(!raf)raf=requestAnimationFrame(tick);
+  });
+
+  /* Feature cards spotlight (keep existing) */
+  document.querySelectorAll('.feat-card').forEach(function(card){
+    var spot=card.querySelector('.feat-spot');
+    if(!spot)return;
+    card.addEventListener('mousemove',function(e){
+      var r=card.getBoundingClientRect();
+      card.style.setProperty('--fx',((e.clientX-r.left)/r.width*100).toFixed(1)+'%');
+      card.style.setProperty('--fy',((e.clientY-r.top)/r.height*100).toFixed(1)+'%');
+    });
+    card.addEventListener('mouseleave',function(){card.style.removeProperty('--fx');card.style.removeProperty('--fy');});
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mülakat Becerileri 5.0 — Derin Akademi</title>
+  <meta name="description" content="Yeni nesil işe alım becerileri. Sistematik davranış odaklı mülakat yöntemleriyle doğru kadroyu bulun.. Derin Akademi kurumsal eğitim programı."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="../css/main.css"/>
+  <style>
+    .detail-hero{padding:120px 0 60px;position:relative;}
+    .breadcrumb{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--silver-dim);margin-bottom:24px;}
+    .breadcrumb a{color:var(--silver-dim);text-decoration:none;transition:color 0.2s;}
+    .breadcrumb a:hover{color:var(--teal);}
+    .breadcrumb-sep{opacity:0.4;}
+    .detail-category{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--teal);margin-bottom:12px;}
+    .detail-title{font-family:'Montserrat',sans-serif;font-size:clamp(32px,5vw,60px);font-weight:900;letter-spacing:-2px;line-height:1.05;margin-bottom:16px;}
+    .detail-subtitle{font-size:18px;color:var(--silver);line-height:1.65;max-width:640px;margin-bottom:36px;}
+    .detail-actions{display:flex;gap:14px;flex-wrap:wrap;}
+    .detail-hero-inner{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;}
+    .detail-img{border-radius:var(--radius-xl);overflow:hidden;aspect-ratio:16/10;}
+    .detail-img img{width:100%;height:100%;object-fit:cover;display:block;}
+    .detail-body{padding:80px 0;}
+    .detail-grid{display:grid;grid-template-columns:1fr 340px;gap:56px;align-items:start;}
+    .detail-desc{font-size:16px;color:var(--silver);line-height:1.85;}
+    .detail-desc p{margin-bottom:20px;}
+    .detail-desc h3{font-family:'Montserrat',sans-serif;font-size:20px;font-weight:800;color:var(--white);margin:36px 0 14px;}
+    .outcomes-box{background:var(--glass-bg);border:1px solid var(--glass-bd);border-radius:var(--radius-lg);padding:32px;backdrop-filter:blur(14px);position:sticky;top:calc(var(--nav-h)+24px);}
+    .outcomes-title{font-family:'Montserrat',sans-serif;font-size:14px;font-weight:800;text-transform:uppercase;letter-spacing:1px;color:var(--silver);margin-bottom:22px;}
+    .outcome-item{display:flex;gap:12px;align-items:flex-start;margin-bottom:14px;font-size:14px;color:var(--silver-light);line-height:1.5;}
+    .outcome-check{color:var(--teal);font-weight:700;flex-shrink:0;margin-top:1px;}
+    .target-section{margin-top:32px;padding-top:24px;border-top:1px solid var(--glass-bd);}
+    .target-label{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--silver-dim);margin-bottom:12px;}
+    .target-tags{display:flex;flex-wrap:wrap;gap:8px;}
+    .target-tag{font-size:12px;font-weight:600;padding:6px 12px;border-radius:50px;background:var(--glass-bg);border:1px solid var(--glass-bd);color:var(--silver);}
+    .cta-section{background:linear-gradient(135deg,rgba(0,200,180,0.07),rgba(0,100,200,0.05));border:1px solid rgba(0,200,180,0.14);border-radius:var(--radius-xl);padding:60px;text-align:center;margin:80px 0 0;}
+    @media(max-width:1024px){.detail-hero-inner{grid-template-columns:1fr;}.detail-grid{grid-template-columns:1fr;}.outcomes-box{position:static;}}
+    @media(max-width:640px){.detail-hero{padding:100px 0 40px;}.detail-title{font-size:32px;letter-spacing:-1px;}}
+  </style>
+  <!-- SEO: Open Graph -->
+  <meta property="og:type" content="website"/>
+  <meta property="og:site_name" content="Derin Akademi"/>
+  <meta property="og:title" content="Mülakat Becerileri 5.0 — Derin Akademi"/>
+  <meta property="og:description" content="Yeni nesil işe alım becerileri. Sistematik davranış odaklı mülakat yöntemleriyle doğru kadroyu bulun.. Derin Akademi kurumsal eğitim programı."/>
+  <meta property="og:url" content="https://derinakademi.com/egitimler/mulakat-becerileri.html"/>
+  <meta property="og:image" content="https://derinakademi.com/public/hakan%20selahi/hakan-selahi.jpg"/>
+  <meta property="og:locale" content="tr_TR"/>
+  <!-- SEO: Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="Mülakat Becerileri 5.0 — Derin Akademi"/>
+  <meta name="twitter:description" content="Yeni nesil işe alım becerileri. Sistematik davranış odaklı mülakat yöntemleriyle doğru kadroyu bulun.. Derin Akademi kurumsal eğitim programı."/>
+  <meta name="twitter:image" content="https://derinakademi.com/public/hakan%20selahi/hakan-selahi.jpg"/>
+  <!-- SEO: Canonical & Robots -->
+  <link rel="canonical" href="https://derinakademi.com/egitimler/mulakat-becerileri.html"/>
+  <meta name="robots" content="index, follow"/>
+</head>
+<body>
+<div class="ambient"></div>
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-logo"><img src="../public/logos/68.png" alt="Derin Akademi" class="nav-logo-img"/></a>
+    <ul class="nav-links">
+      <li><a href="../kurslar.html" class="active">Eğitimlerimiz</a></li>
+      <li><a href="../danismanlik.html">Danışmanlıklarımız</a></li>
+      <li><a href="../hakkimizda.html">Hakkımızda</a></li>
+      <li><a href="../blog.html">Blog</a></li>
+      <li><a href="../iletisim.html">İletişim</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button onclick="openTeklifModal()" class="btn btn-primary btn-sm">Özel Teklif Al</button>
+    </div>
+    <button class="menu-toggle">☰</button>
+  </div>
+</nav>
+<div class="mobile-nav">
+  <button class="mobile-nav-close">✕</button>
+  <a href="../index.html">Ana Sayfa</a>
+  <a href="../kurslar.html" class="active">Eğitimlerimiz</a>
+  <a href="../danismanlik.html">Danışmanlıklarımız</a>
+  <a href="../hakkimizda.html">Hakkımızda</a>
+  <a href="../blog.html">Blog</a>
+  <a href="../iletisim.html">İletişim</a>
+  <div class="mobile-nav-actions">
+    <button onclick="openTeklifModal()" class="btn btn-primary btn-md" style="width:100%;justify-content:center">Özel Teklif Al</button>
+  </div>
+</div>
+
+<!-- ══ HERO ══ -->
+<div class="detail-hero">
+  <div class="container">
+    <nav class="breadcrumb" aria-label="breadcrumb">
+      <a href="../index.html">Ana Sayfa</a>
+      <span class="breadcrumb-sep">›</span>
+      <a href="../kurslar.html">Eğitimlerimiz</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>Mülakat Becerileri 5.0</span>
+    </nav>
+    <div class="detail-hero-inner">
+      <div>
+        <div class="detail-category">Sistem & Yönetim</div>
+        <h1 class="detail-title">🎯 Mülakat Becerileri 5.0</h1>
+        <p class="detail-subtitle">Yeni nesil işe alım becerileri. Sistematik davranış odaklı mülakat yöntemleriyle doğru kadroyu bulun.</p>
+        <div class="detail-actions">
+          <button onclick="openTeklifModal()" class="btn btn-primary btn-lg">Bilgi Al →</button>
+          <a href="https://wa.me/905330193134" target="_blank" class="btn btn-ghost btn-lg">💬 WhatsApp</a>
+        </div>
+      </div>
+      <div class="detail-img">
+        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=500&fit=crop&q=80" alt="Mülakat Becerileri 5.0"/>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ BODY ══ -->
+<div class="detail-body">
+  <div class="container">
+    <div class="detail-grid">
+      <div class="detail-desc">
+        <p>İşe alım, bir kurumun geleceğine yapacağı en kritik yatırımdır. Yanlış bir işe alım kararının maliyeti, kişinin yıllık maaşının 3–5 katına ulaşabiliyor. Oysa çoğu mülakat süreci sezgisel, yapılandırılmamış ve değerlendirici önyargılarına açık biçimde yürütülüyor.</p>
+
+<p><strong>Mülakat Becerileri 5.0</strong>, bu riski minimize eden, bilimsel temelli ve uygulamalı bir mülakat eğitimidir. "5.0" ifadesi, programın dijital araçlar, yapay zekâ destekli değerlendirmeler ve Z kuşağı dinamiklerini de kapsadığını simgeler.</p>
+
+<h3>Eğitimin İçeriği</h3>
+<p>Yapılandırılmış mülakat tasarımı, STAR (Durum-Görev-Aksiyon-Sonuç) yöntemi ile davranışsal sorular, yetkinlik bazlı değerlendirme, kişilik uyum değerlendirme araçları, değerlendirici önyargıları ve nasıl önleneceği, dijital/online mülakat teknikleri ve aday deneyimi tasarımı konuları ele alınır.</p>
+
+<h3>Sahadan Pratik</h3>
+<p>Eğitimin önemli bir bölümü gerçek mülakat senaryolarının simülasyonu üzerine kuruludur. Katılımcılar hem mülakat yapan hem de aday rolü üstlenerek geri bildirim alır. Program sonunda her katılımcı kendi departmanı için kullanıma hazır soru havuzu ve değerlendirme formu çıkarır.</p>
+      </div>
+      <div>
+        <div class="outcomes-box">
+          <div class="outcomes-title">Neler Kazanacaksınız?</div>
+          <div class="outcome-item"><span class="outcome-check">✓</span><span>Yapılandırılmış mülakat formları tasarlamak</span></div><div class="outcome-item"><span class="outcome-check">✓</span><span>STAR yöntemiyle davranışsal sorular sormak</span></div><div class="outcome-item"><span class="outcome-check">✓</span><span>Değerlendirici önyargılarını fark etmek ve yönetmek</span></div><div class="outcome-item"><span class="outcome-check">✓</span><span>Yetkinlik bazlı skorlama sistemleri kullanmak</span></div><div class="outcome-item"><span class="outcome-check">✓</span><span>Aday deneyimini iyileştirmek</span></div><div class="outcome-item"><span class="outcome-check">✓</span><span>Online mülakatları etkili yönetmek</span></div>
+          <div class="target-section">
+            <div class="target-label">Kimler İçin?</div>
+            <div class="target-tags">
+              <div class="target-tag">İK Uzmanları ve Yöneticileri</div><div class="target-tag">İşe Alım Ekipleri</div><div class="target-tag">Departman Yöneticileri</div><div class="target-tag">Yeni Yöneticiler</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cta-section">
+      <div class="section-tag" style="justify-content:center;margin-bottom:16px;">Kurumunuza Özel</div>
+      <h2 style="font-family:'Montserrat',sans-serif;font-size:clamp(22px,3vw,38px);font-weight:900;letter-spacing:-1px;margin-bottom:16px;">Mülakat Becerileri 5.0 Eğitimini <span class="gradient-text">Kurumunuza Uyarlayalım</span></h2>
+      <p style="color:var(--silver);max-width:480px;margin:0 auto 32px;font-size:15px;line-height:1.75;">İhtiyaçlarınızı ve hedeflerinizi paylaşın, size özel program ve teklif hazırlayalım.</p>
+      <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;">
+        <button onclick="openTeklifModal()" class="btn btn-primary btn-lg">Özel Teklif Al</button>
+        <a href="https://wa.me/905330193134" target="_blank" class="btn btn-ghost btn-lg">💬 WhatsApp'tan Ulaş</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="../index.html" class="nav-logo" style="display:inline-flex"><img src="../public/logos/68.png" alt="Derin Akademi" class="nav-logo-img"/></a>
+        <p class="brand-desc">İnsan kaynakları alanında uzmanlaşmış danışmanlık ve eğitim şirketi. Anlatan değil, çalışan sistemler kurarız.</p>
+        <div class="footer-social">
+          <a class="social-btn" href="https://www.instagram.com/derinakademi/" target="_blank">📷</a>
+          <a class="social-btn" href="https://www.linkedin.com/company/derinakademi/" target="_blank">in</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Hizmetler</div>
+        <ul class="footer-links">
+          <li><a href="../kurslar.html">Eğitimlerimiz</a></li>
+          <li><a href="../danismanlik.html">Danışmanlıklarımız</a></li>
+          <li><a href="../kurslar.html">Kurumsal Eğitim</a></li>
+          <li><a href="../danismanlik.html">Kurumsallaşma</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Şirket</div>
+        <ul class="footer-links">
+          <li><a href="../hakkimizda.html">Hakkımızda</a></li>
+          <li><a href="../blog.html">Blog</a></li>
+          <li><a href="../kariyer.html">Kariyer</a></li>
+          <li><a href="../iletisim.html">İletişim</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Bülten</div>
+        <div class="footer-newsletter">
+          <p>İK gündemindeki gelişmelerden ve eğitimlerimizden haberdar ol.</p>
+          <div class="newsletter-form"><input type="email" class="newsletter-input" placeholder="E-posta"/><button class="btn btn-primary btn-sm" onclick="showToast('Abone oldunuz! 🎉')">→</button></div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2026 Derin Akademi. Tüm hakları saklıdır. &nbsp;<a href="https://reneedesignlab.com/tr" target="_blank" style="color:var(--silver-dim);text-decoration:none;" onmouseover="this.style.color='var(--silver)'" onmouseout="this.style.color='var(--silver-dim)'">by Renee DesignLab</a></div>
+      <div class="footer-legal"><a href="../gizlilik-politikasi.html">Gizlilik Politikası</a><a href="../kullanim-kosullari.html">Kullanım Koşulları</a><a href="../kvkk.html">KVKK</a><a href="../cerezler.html">Çerezler</a></div>
+    </div>
+  </div>
+</footer>
+
+<button id="back-to-top" style="position:fixed;bottom:28px;right:28px;z-index:500;width:44px;height:44px;border-radius:12px;background:var(--glass-bg);border:1px solid var(--glass-bd);color:var(--teal);font-size:18px;cursor:pointer;opacity:0;transition:var(--t-base);backdrop-filter:blur(12px);" aria-label="Yukarı dön">↑</button>
+
+<!-- MODAL -->
+<div id="teklif-modal" class="teklif-modal">
+  <div class="teklif-modal-box">
+    <button class="teklif-modal-close" onclick="closeTeklifModal()">✕</button>
+    <div>
+      <div style="color:var(--teal);font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:10px;">İletişim Bilgileri</div>
+      <h2 style="font-family:'Montserrat',sans-serif;font-size:24px;font-weight:900;line-height:1.2;margin-bottom:8px;">Hemen <span class="gradient-text">Teklif Alın</span></h2>
+      <p style="color:var(--silver);font-size:13px;line-height:1.75;margin-bottom:28px;">İhtiyaçlarınızı paylaşın, size özel program ve teklif oluşturalım.</p>
+      <div style="display:flex;flex-direction:column;gap:18px;margin-bottom:28px;">
+        <div class="teklif-info-row"><div class="teklif-info-icon">📞</div><div><div style="font-size:11px;color:var(--silver-dim);margin-bottom:3px;">Telefon</div><a href="tel:+905330193134" style="font-size:14px;font-weight:600;color:var(--white);text-decoration:none;">0 (533) 019 31 34</a></div></div>
+        <div class="teklif-info-row"><div class="teklif-info-icon">📧</div><div><div style="font-size:11px;color:var(--silver-dim);margin-bottom:3px;">E-posta</div><a href="mailto:derin@derinakademi.net" style="font-size:14px;font-weight:600;color:var(--white);text-decoration:none;">derin@derinakademi.net</a></div></div>
+        <div class="teklif-info-row"><div class="teklif-info-icon">📍</div><div><div style="font-size:11px;color:var(--silver-dim);margin-bottom:3px;">Adres</div><div style="font-size:13px;color:var(--silver);line-height:1.6;">İçerenköy Mah. Topçu İbrahim Sokak Quick Tower Sitesi No:8-10D Ataşehir, İstanbul 34752</div></div></div>
+      </div>
+      <div style="display:flex;gap:10px;">
+        <a href="https://www.instagram.com/derinakademi/" target="_blank" style="display:flex;align-items:center;gap:6px;padding:8px 14px;border-radius:8px;background:var(--glass-bg);border:1px solid var(--glass-bd);font-size:12px;font-weight:600;color:var(--silver);text-decoration:none;">📷 Instagram</a>
+        <a href="https://www.linkedin.com/company/derinakademi/" target="_blank" style="display:flex;align-items:center;gap:6px;padding:8px 14px;border-radius:8px;background:var(--glass-bg);border:1px solid var(--glass-bd);font-size:12px;font-weight:600;color:var(--silver);text-decoration:none;">in LinkedIn</a>
+      </div>
+    </div>
+    <div>
+      <div class="teklif-field"><label>Ad Soyad *</label><input type="text" class="teklif-modal-input" placeholder="Adınız Soyadınız"/></div>
+      <div class="teklif-field"><label>E-posta *</label><input type="email" class="teklif-modal-input" placeholder="ornek@mail.com"/></div>
+      <div class="teklif-field"><label>Telefon *</label><input type="tel" class="teklif-modal-input" placeholder="0 5XX XXX XX XX"/></div>
+      <div class="teklif-field"><label>Kurum / Şirket (İsteğe Bağlı)</label><input type="text" class="teklif-modal-input" placeholder="Şirketinizin adı"/></div>
+      <div class="teklif-field"><label>Talebiniz *</label><textarea class="teklif-modal-input" placeholder="İhtiyacınızı ve beklentilerinizi yazın..." style="resize:vertical;min-height:100px;"></textarea></div>
+      <button class="btn btn-primary btn-lg" style="width:100%;justify-content:center;margin-top:4px;" onclick="showToast('Talebiniz iletildi! 🎉');closeTeklifModal();">Teklif İste →</button>
+    </div>
+  </div>
+</div>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

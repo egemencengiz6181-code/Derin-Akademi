@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://derinakademi.com/sitemap.xml

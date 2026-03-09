@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Danışmanlıklarımız — Derin Akademi</title>
+  <meta name="description" content="Derin Akademi kurumsal danışmanlık hizmetleri. İK stratejisi, yetenek yönetimi, performans, ücret ve organizasyonel dönüşüm alanlarında kuruma özel çözümler."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/main.css"/>
+  <style>
+    /* ── Consulting Cards ── */
+    .consulting-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;}
+    a.consulting-card{display:flex;flex-direction:column;gap:0;text-decoration:none;color:inherit;}
+    .consulting-card{background:var(--glass-bg);border:1px solid var(--glass-bd);border-radius:var(--radius-lg);padding:36px 32px;display:flex;flex-direction:column;gap:0;transition:var(--t-base);backdrop-filter:blur(14px);position:relative;overflow:hidden;}
+    .consulting-card::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(0,200,180,0.04),transparent);opacity:0;transition:var(--t-base);}
+    .consulting-card:hover{border-color:var(--teal-border);transform:translateY(-6px);box-shadow:0 24px 60px rgba(0,0,0,0.35);}
+    .consulting-card:hover::before{opacity:1;}
+    .c-number{font-family:'Montserrat',sans-serif;font-size:11px;font-weight:800;color:var(--teal);letter-spacing:2px;text-transform:uppercase;margin-bottom:14px;display:block;}
+    .c-icon{font-size:36px;margin-bottom:18px;display:block;}
+    .c-title{font-family:'Montserrat',sans-serif;font-size:18px;font-weight:900;letter-spacing:-0.5px;line-height:1.3;color:var(--white);margin-bottom:10px;}
+    .c-sub{font-size:13px;font-weight:600;color:var(--teal);margin-bottom:14px;}
+    .c-desc{font-size:14px;color:var(--silver);line-height:1.75;flex:1;margin-bottom:24px;}
+    .c-actions{display:flex;gap:10px;flex-wrap:wrap;}
+    /* ── Approach Section ── */
+    .approach-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+    .approach-card{background:var(--glass-bg);border:1px solid var(--glass-bd);border-radius:var(--radius-lg);padding:32px;text-align:center;transition:var(--t-base);}
+    .approach-card:hover{border-color:var(--teal-border);transform:translateY(-4px);}
+    .approach-icon{font-size:40px;display:block;margin-bottom:16px;}
+    .approach-title{font-family:'Montserrat',sans-serif;font-size:15px;font-weight:800;color:var(--white);margin-bottom:10px;}
+    .approach-desc{font-size:13px;color:var(--silver);line-height:1.7;}
+    /* ── Stats strip ── */
+    .danismanlik-stats{padding:40px 0;border-bottom:1px solid var(--glass-bd);position:relative;z-index:2;}
+    .danismanlik-stats .stats-row{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--glass-bd);border:1px solid var(--glass-bd);border-radius:var(--radius-lg);overflow:hidden;}
+    .danismanlik-stats .stat-box{background:var(--navy-card);padding:28px 20px;text-align:center;}
+    /* ── Responsive ── */
+    @media(max-width:1024px){.consulting-grid{grid-template-columns:1fr 1fr;}.approach-grid{grid-template-columns:1fr 1fr;}.danismanlik-stats .stats-row{grid-template-columns:repeat(3,1fr);}}
+    @media(max-width:640px){.consulting-grid{grid-template-columns:1fr;}.approach-grid{grid-template-columns:1fr;}.c-actions{flex-direction:column;}.danismanlik-stats .stats-row{grid-template-columns:1fr 1fr;}}
+    /* Center lone last card in 3-col grid */
+    .consulting-grid .consulting-card:last-child:nth-child(3n+1){grid-column:2;}
+  </style>
+  <!-- SEO: Open Graph -->
+  <meta property="og:type" content="website"/>
+  <meta property="og:site_name" content="Derin Akademi"/>
+  <meta property="og:title" content="Danışmanlıklarımız — Derin Akademi"/>
+  <meta property="og:description" content="Derin Akademi kurumsal danışmanlık hizmetleri. İK stratejisi, yetenek yönetimi, performans, ücret ve organizasyonel dönüşüm alanlarında kuruma özel çözümler."/>
+  <meta property="og:url" content="https://derinakademi.com/danismanlik.html"/>
+  <meta property="og:image" content="https://derinakademi.com/public/hakan%20selahi/hakan-selahi.jpg"/>
+  <meta property="og:locale" content="tr_TR"/>
+  <!-- SEO: Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="Danışmanlıklarımız — Derin Akademi"/>
+  <meta name="twitter:description" content="Derin Akademi kurumsal danışmanlık hizmetleri. İK stratejisi, yetenek yönetimi, performans, ücret ve organizasyonel dönüşüm alanlarında kuruma özel çözümler."/>
+  <meta name="twitter:image" content="https://derinakademi.com/public/hakan%20selahi/hakan-selahi.jpg"/>
+  <!-- SEO: Canonical & Robots -->
+  <link rel="canonical" href="https://derinakademi.com/danismanlik.html"/>
+  <meta name="robots" content="index, follow"/>
+</head>
+<body>
+<div class="ambient"></div>
+
+<!-- ══ NAVBAR ══ -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><img src="public/logos/68.png" alt="Derin Akademi" class="nav-logo-img"/></a>
+    <ul class="nav-links">
+      <li><a href="kurslar.html">Eğitimlerimiz</a></li>
+      <li><a href="danismanlik.html" class="active">Danışmanlıklarımız</a></li>
+      <li><a href="hakkimizda.html">Hakkımızda</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="iletisim.html">İletişim</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button id="langToggle" onclick="daToggleLang()" class="btn btn-ghost btn-sm" style="font-weight:700;letter-spacing:1px;padding:7px 14px;min-width:52px;">EN</button>
+      <button onclick="openTeklifModal()" class="btn btn-primary btn-sm">Özel Teklif Al</button>
+    </div>
+    <button class="menu-toggle">☰</button>
+  </div>
+</nav>
+<div class="mobile-nav">
+  <button class="mobile-nav-close">✕</button>
+  <a href="index.html">Ana Sayfa</a>
+  <a href="kurslar.html">Eğitimlerimiz</a>
+  <a href="danismanlik.html" class="active">Danışmanlıklarımız</a>
+  <a href="hakkimizda.html">Hakkımızda</a>
+  <a href="blog.html">Blog</a>
+  <a href="iletisim.html">İletişim</a>
+  <div class="mobile-nav-actions">
+    <button onclick="openTeklifModal()" class="btn btn-primary btn-md" style="width:100%;justify-content:center">Özel Teklif Al</button>
+  </div>
+</div>
+
+<!-- ══ PAGE HERO ══ -->
+<section class="page-hero">
+  <div class="container">
+    <div class="section-tag">Kurumsal Dönüşüm</div>
+    <h1 class="page-hero-title">Danışmanlıklarımız</h1>
+    <p class="page-hero-desc">Stratejiyi sunumdan sahaya indiriyoruz. Rapor üretmeye değil, uygulanabilirlik sağlamaya odaklanır; kurumunuzla birlikte inşa eder, birlikte ölçeriz.</p>
+  </div>
+</section>
+
+<!-- ══ STATS ══ -->
+<div class="danismanlik-stats">
+  <div class="container">
+    <div class="stats-row">
+      <div class="stat-box"><div class="stat-num">10<em>+</em></div><div class="stat-label">Danışmanlık Alanı</div></div>
+      <div class="stat-box"><div class="stat-num">40<em>+</em></div><div class="stat-label">Hizmet Verilen Kurum</div></div>
+      <div class="stat-box"><div class="stat-num">30<em>+</em></div><div class="stat-label">Yıllık Deneyim</div></div>
+      <div class="stat-box"><div class="stat-num">7<em>+</em></div><div class="stat-label">Sektör</div></div>
+      <div class="stat-box"><div class="stat-num">98<em>%</em></div><div class="stat-label">Müşteri Memnuniyeti</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ DANIŞMANLIKLAR ══ -->
+<section class="section-pad">
+  <div class="container">
+
+    <div class="section-head reveal">
+      <div class="section-tag">10 Danışmanlık Programı</div>
+      <h2 class="section-title">Kurumunuza Özel <span class="gradient-text">Çözüm Alanları</span></h2>
+      <p class="section-desc">Her danışmanlık programı, kurumunuzun gerçeklerine ve hedeflerine göre özelleştirilen sistematik bir müdahale sürecidir.</p>
+    </div>
+
+    <div class="consulting-grid reveal">
+
+      <!-- 1 -->
+      <div class="consulting-card" onclick="location.href='danismanliklar/aileden-kuruma.html'" style="cursor:pointer">
+        <span class="c-number">01 — Kurumsal Dönüşüm</span>
+        <span class="c-icon">🏛️</span>
+        <div class="c-title">Aileden Kuruma</div>
+        <div class="c-sub">Sürdürülebilir Başarının Yol Haritası</div>
+        <p class="c-desc">Aile şirketlerinin kurumsal yönetim modeline geçiş sürecini yapılandırır; roller, sorumluluklar ve karar mekanizmalarını profesyonelleştiririz.</p>
+        <div class="c-actions">
+          <button onclick="event.stopPropagation();openTeklifModal()" class="btn btn-primary btn-sm">Bilgi Al</button>
+          <a href="https://wa.me/905330193134" target="_blank" onclick="event.stopPropagation()" class="btn btn-ghost btn-sm">💬 WhatsApp</a>
+        </div>
+      </div>
+
+      <!-- 2 -->
+      <div class="consulting-card" onclick="location.href='danismanliklar/gelecege-hazir-kadro.html'" style="cursor:pointer">
+        <span class="c-number">02 — İnsan Kaynakları Planlaması</span>
+        <span class="c-icon">🗺️</span>
+        <div class="c-title">Geleceğe Hazır Kadro</div>
+        <div class="c-sub">Stratejik İK Planlaması</div>
+        <p class="c-desc">Kurumun orta ve uzun vadeli hedeflerine paralel, doğru sayıda ve yetkinlikte kadroyu bugünden planlar; işgücü boşluklarını ve fazlalıklarını önceden görünür kılarız.</p>
+        <div class="c-actions">
+          <button onclick="event.stopPropagation();openTeklifModal()" class="btn btn-primary btn-sm">Bilgi Al</button>
+          <a href="https://wa.me/905330193134" target="_blank" onclick="event.stopPropagation()" class="btn btn-ghost btn-sm">💬 WhatsApp</a>
+        </div>
+      </div>
+
+      <!-- 3 -->
+      <div class="consulting-card" onclick="location.href='danismanliklar/stratejiyi-gundelik-hayata.html'" style="cursor:pointer">
+        <span class="c-number">03 — Strateji Uygulama</span>
+        <span class="c-icon">🎯</span>
+        <div class="c-title">Stratejiyi Gündelik Hayata İndirmek</div>
+        <div class="c-sub">Hedeflerle Yönetim Modeli</div>
+        <p class="c-desc">Üst yönetimin vizyon ve stratejilerini, tüm organizasyon katmanlarında günlük iş yapış biçimine dönüştüren hedef hiyerarşisi, gösterge tabloları ve izleme mekanizmaları kurarız.</p>
+        <div class="c-actions">
+          <button onclick="event.stopPropagation();openTeklifModal()" class="btn btn-primary btn-sm">Bilgi Al</button>
+          <a href="https://wa.me/905330193134" target="_blank" onclick="event.stopPropagation()" class="btn btn-ghost btn-sm">💬 WhatsApp</a>
+        </div>
+      </div>
+
+      <!-- 4 -->
+      <div class="consulting-card" onclick="location.href='danismanliklar/yetenek-yonetimi.html'" style="cursor:pointer">
+        <span class="c-number">04 — Yetenek Yönetimi</span>
+        <span class="c-icon">💎</span>
+        <div class="c-title">Yetenek Avından Yetenek Tutkusuna</div>
+        <div class="c-sub">Potansiyeli Keşfet ve Yönet</div>
+        <p class="c-desc">İşe alım süreçlerini optimize etmekle kalmaz; kurumda var olan gizli yetenekleri keşfeder, gelişim yolakları tasarlar ve elde tutma stratejileri oluştururuz.</p>
+        <div class="c-actions">
+          <button onclick="event.stopPropagation();openTeklifModal()" class="btn btn-primary btn-sm">Bilgi Al</button>
+          <a href="https://wa.me/905330193134" target="_blank" onclick="event.stopPropagation()" class="btn btn-ghost btn-sm">💬 WhatsApp</a>
+        </div>
+      </div>
+
+      <!-- 5 -->
+      <div class="consulting-card" onclick="location.href='danismanliklar/gelisimi-olc.html'" style="cursor:pointer">
+        <span class="c-number">05 — Performans Yönetimi</span>
+        <span class="c-icon">📊</span>
+        <div class="c-title">Gelişimi Ölç, Başarıyı Yönet</div>
+        <div class="c-sub">360° Performans Sistemi</div>
+        <p class="c-desc">Çalışan performansını yalnızca yıllık değerlendirmeye indirgemez; sürekli geri bildirim döngüleri, yetkinlik çerçeveleri ve gelişim planlarıyla bütünleşik bir sistem tasarlarız.</p>
+        <div class="c-actions">
+          <button onclick="event.stopPropagation();openTeklifModal()" class="btn btn-primary btn-sm">Bilgi Al</button>
+          <a href="https://wa.me/905330193134" target="_blank" onclick="event.stopPropagation()" class="btn btn-ghost btn-sm">💬 WhatsApp</a>
+        </div>
+      </div>
+
+      <!-- 6 -->
+      <div class="consulting-card" onclick="location.href='danismanliklar/iceriden-guclen.html'" style="cursor:pointer">
+        <span class="c-number">06 — İç Yetenek Geliştirme</span>
+        <span class="c-icon">🌱</span>
+        <div class="c-title">İçeriden Güçlen</div>
+        <div class="c-sub">Kurum İçi Gelişim Akademisi Tasarımı</div>
+        <p class="c-desc">Kurumunuzun kendi eğitim kapasitesini inşa eder; iç eğitmen sistemleri, bilgi transferi mekanizmaları ve öğrenen organizasyon kültürü oluştururuz.</p>
+        <div class="c-actions">
+          <button onclick="event.stopPropagation();openTeklifModal()" class="btn btn-primary btn-sm">Bilgi Al</button>
+          <a href="https://wa.me/905330193134" target="_blank" onclick="event.stopPropagation()" class="btn btn-ghost btn-sm">💬 WhatsApp</a>
+        </div>
+      </div>
+
+      <!-- 7 -->
+      <div class="consulting-card" onclick="location.href='danismanliklar/adaletli-ucret.html'" style="cursor:pointer">
+        <span class="c-number">07 — Ücret Yönetimi</span>
+        <span class="c-icon">⚖️</span>
+        <div class="c-title">Adaletli ve Şeffaf Ücretin Mimarisi</div>
+        <div class="c-sub">Ücret Yönetimi Tasarımı</div>
+        <p class="c-desc">İş değerleme, piyasa kıyaslama ve iç eşitlik analizlerini bir arada kullanarak kurumunuza özgü, savunulabilir ve çalışan güveni yaratan ücret sistemleri tasarlarız.</p>
+        <div class="c-actions">
+          <button onclick="event.stopPropagation();openTeklifModal()" class="btn btn-primary btn-sm">Bilgi Al</button>
+          <a href="https://wa.me/905330193134" target="_blank" onclick="event.stopPropagation()" class="btn btn-ghost btn-sm">💬 WhatsApp</a>
+        </div>
+      </div>
+
+      <!-- 8 -->
+      <div class="consulting-card" onclick="location.href='danismanliklar/ucret-stratejisi.html'" style="cursor:pointer">
+        <span class="c-number">08 — Ücret Stratejisi</span>
+        <span class="c-icon">💰</span>
+        <div class="c-title">Ücret Stratejisi ve Bant Yapısı</div>
+        <div class="c-sub">Değer Yaratan İşe Değer Biçmek</div>
+        <p class="c-desc">Kariyer aşamalarını, pazar verilerini ve kurum kültürünü birleştirerek bütünsel ücret paketleri ve ücret bantları oluştururuz; hem yeteneği çeken hem bütçeyi koruyan bir denge kurarız.</p>
+        <div class="c-actions">
+          <button onclick="event.stopPropagation();openTeklifModal()" class="btn btn-primary btn-sm">Bilgi Al</button>
+          <a href="https://wa.me/905330193134" target="_blank" onclick="event.stopPropagation()" class="btn btn-ghost btn-sm">💬 WhatsApp</a>
+        </div>
+      </div>
+
+      <!-- 9 -->
+      <div class="consulting-card" onclick="location.href='danismanliklar/hoshin-kanri.html'" style="cursor:pointer">
+        <span class="c-number">09 — Strateji Operasyonalizasyonu</span>
+        <span class="c-icon">🧭</span>
+        <div class="c-title">Hoshin Kanri ile Stratejiyi Hayata Geçirmek</div>
+        <div class="c-sub">Vizyonu Operasyona Dönüştür</div>
+        <p class="c-desc">Japon yönetim felsefesinden beslenen Hoshin Kanri metodolojisiyle, kurumun uzun vadeli hedeflerini departmandan bireye kadar hizalayarak yürütme gücünü artırırız.</p>
+        <div class="c-actions">
+          <button onclick="event.stopPropagation();openTeklifModal()" class="btn btn-primary btn-sm">Bilgi Al</button>
+          <a href="https://wa.me/905330193134" target="_blank" onclick="event.stopPropagation()" class="btn btn-ghost btn-sm">💬 WhatsApp</a>
+        </div>
+      </div>
+
+      <!-- 10 -->
+      <div class="consulting-card" onclick="location.href='danismanliklar/dogru-ise-dogru-kadro.html'" style="cursor:pointer">
+        <span class="c-number">10 — Organizasyon Tasarımı</span>
+        <span class="c-icon">🔍</span>
+        <div class="c-title">Doğru İşe Doğru Kadro</div>
+        <div class="c-sub">İş Analizi ve Norm Kadro Mühendisliği</div>
+        <p class="c-desc">Her pozisyonu işin gerçek gereksinimlerine göre tanımlar; görev, yetki ve sorumlulukları netleştirir, norm kadro analizleriyle organizasyon verimliliğini optimize ederiz.</p>
+        <div class="c-actions">
+          <button onclick="event.stopPropagation();openTeklifModal()" class="btn btn-primary btn-sm">Bilgi Al</button>
+          <a href="https://wa.me/905330193134" target="_blank" onclick="event.stopPropagation()" class="btn btn-ghost btn-sm">💬 WhatsApp</a>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ══ YAKLAŞIM ══ -->
+<section class="section-pad" style="background:linear-gradient(180deg,rgba(0,200,180,0.03),transparent);">
+  <div class="container">
+
+    <div class="section-head reveal">
+      <div class="section-tag">Danışmanlık Felsefemiz</div>
+      <h2 class="section-title">Stratejiyi Sunumdan <span class="gradient-text">Sahaya İndiriyoruz</span></h2>
+      <p class="section-desc">Güzel sunumlar, kalın raporlar ve teorik öneriler üretmiyoruz. Kurumunuzun gerçeklerine dokunan, uygulanabilir ve ölçülebilir sistemler kuruyoruz.</p>
+    </div>
+
+    <div class="approach-grid reveal">
+      <div class="approach-card">
+        <span class="approach-icon">🔬</span>
+        <div class="approach-title">Tanı Önce, Çözüm Sonra</div>
+        <p class="approach-desc">Probleminizi derinlemesine analiz etmeden çözüm önermiyoruz. Her danışmanlık süreci, kurumunuzu anlamakla başlar.</p>
+      </div>
+      <div class="approach-card">
+        <span class="approach-icon">🤝</span>
+        <div class="approach-title">Seninle İnşa Ederiz</div>
+        <p class="approach-desc">Çözümleri dışarıdan dayatmıyor, kurumunuzun içindeki insanlarla birlikte tasarlıyoruz. Sahiplenme kalıcılığı getirir.</p>
+      </div>
+      <div class="approach-card">
+        <span class="approach-icon">📐</span>
+        <div class="approach-title">Kuruma Özel Her Zaman</div>
+        <p class="approach-desc">Hazır şablon çözümler sunmuyoruz. Her müdahale, kurumunuzun kültürü, büyüklüğü ve sektörüne göre özelleştirilir.</p>
+      </div>
+      <div class="approach-card">
+        <span class="approach-icon">📈</span>
+        <div class="approach-title">Ölçülemeyen Değişmez</div>
+        <p class="approach-desc">Her danışmanlık sürecinde başarı kriterleri ve ölçüm mekanizmalarını baştan tanımlarız. Sonuçları birlikte izleriz.</p>
+      </div>
+      <div class="approach-card">
+        <span class="approach-icon">🔄</span>
+        <div class="approach-title">Sürekli Öğrenen Sistem</div>
+        <p class="approach-desc">Danışmanlık bittiğinde kurumu terk etmiyoruz. Kurumunuzun kendi kendine öğrenen ve adapte olan bir yapıya kavuşmasını sağlarız.</p>
+      </div>
+      <div class="approach-card">
+        <span class="approach-icon">⚡</span>
+        <div class="approach-title">Sahadaki 30 Yıl</div>
+        <p class="approach-desc">Önerilerimiz akademik değil, sahadaki deneyimden beslenir. Kurucumuz Hakan Selahi'nin 30+ yıllık pratik bilgisi her projede aktif rol oynar.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══ CTA ══ -->
+<section class="section-pad reveal">
+  <div class="container">
+    <div style="background:linear-gradient(135deg,rgba(0,200,180,0.08),rgba(0,100,200,0.06));border:1px solid rgba(0,200,180,0.18);border-radius:var(--radius-xl);padding:80px 60px;text-align:center;">
+      <div class="section-tag" style="justify-content:center;margin-bottom:20px;">Ücretsiz Ön Görüşme</div>
+      <h2 style="font-family:'Montserrat',sans-serif;font-size:clamp(28px,4vw,52px);font-weight:900;letter-spacing:-2px;line-height:1.05;margin-bottom:20px;">
+        Dönüşümünüzü<br/><span class="gradient-text">Birlikte Tasarlayalım</span>
+      </h2>
+      <p style="color:var(--silver);max-width:520px;margin:0 auto 36px;font-size:16px;line-height:1.75;">Hangi alandan ihtiyacınız olduğunu paylaşın, size özel danışmanlık programı ve yaklaşım önerelim. İlk görüşme ücretsizdir.</p>
+      <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-bottom:24px;">
+        <button onclick="openTeklifModal()" class="btn btn-primary btn-lg">Hemen Başlayalım →</button>
+        <a href="https://wa.me/905330193134" target="_blank" class="btn btn-ghost btn-lg">💬 WhatsApp'tan Yazın</a>
+      </div>
+      <div style="display:flex;gap:32px;justify-content:center;flex-wrap:wrap;">
+        <span style="font-size:13px;color:var(--silver);display:flex;align-items:center;gap:8px;"><span style="color:var(--teal);">✓</span> Kuruma Özel Çözüm</span>
+        <span style="font-size:13px;color:var(--silver);display:flex;align-items:center;gap:8px;"><span style="color:var(--teal);">✓</span> Ücretsiz Ön Görüşme</span>
+        <span style="font-size:13px;color:var(--silver);display:flex;align-items:center;gap:8px;"><span style="color:var(--teal);">✓</span> 40+ Kurum Deneyimi</span>
+        <span style="font-size:13px;color:var(--silver);display:flex;align-items:center;gap:8px;"><span style="color:var(--teal);">✓</span> Uygulanabilir Sistemler</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FOOTER ══ -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo" style="display:inline-flex"><img src="public/logos/68.png" alt="Derin Akademi" class="nav-logo-img"/></a>
+        <p class="brand-desc">İnsan kaynakları alanında uzmanlaşmış danışmanlık ve eğitim şirketi. Anlatan değil, çalışan sistemler kurarız.</p>
+        <div class="footer-social">
+          <a class="social-btn" href="https://www.instagram.com/derinakademi/" target="_blank">📷</a>
+          <a class="social-btn" href="https://www.linkedin.com/company/derinakademi/" target="_blank">in</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Hizmetler</div>
+        <ul class="footer-links">
+          <li><a href="kurslar.html">Eğitimlerimiz</a></li>
+          <li><a href="danismanlik.html">Danışmanlıklarımız</a></li>
+          <li><a href="kurslar.html">Kurumsal Eğitim</a></li>
+          <li><a href="danismanlik.html">Kurumsallaşma</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Şirket</div>
+        <ul class="footer-links">
+          <li><a href="hakkimizda.html">Hakkımızda</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="kariyer.html">Kariyer</a></li>
+          <li><a href="iletisim.html">İletişim</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Bülten</div>
+        <div class="footer-newsletter">
+          <p>İK gündemindeki gelişmelerden ve eğitimlerimizden haberdar ol.</p>
+          <div class="newsletter-form"><input type="email" class="newsletter-input" placeholder="E-posta"/><button class="btn btn-primary btn-sm" onclick="showToast('Abone oldunuz! 🎉')">→</button></div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2026 Derin Akademi. Tüm hakları saklıdır. &nbsp;<a href="https://reneedesignlab.com/tr" target="_blank" style="color:var(--silver-dim);text-decoration:none;" onmouseover="this.style.color='var(--silver)'" onmouseout="this.style.color='var(--silver-dim)'">by Renee DesignLab</a></div>
+      <div class="footer-legal"><a href="gizlilik-politikasi.html">Gizlilik Politikası</a><a href="kullanim-kosullari.html">Kullanım Koşulları</a><a href="kvkk.html">KVKK</a><a href="cerezler.html">Çerezler</a></div>
+    </div>
+  </div>
+</footer>
+
+<button id="back-to-top" style="position:fixed;bottom:28px;right:28px;z-index:500;width:44px;height:44px;border-radius:12px;background:var(--glass-bg);border:1px solid var(--glass-bd);color:var(--teal);font-size:18px;cursor:pointer;opacity:0;transition:var(--t-base);backdrop-filter:blur(12px);">↑</button>
+
+<script src="js/main.js"></script>
+
+<!-- ══ ÖZEL TEKLİF MODAL ══ -->
+<div id="teklif-modal" class="teklif-modal">
+  <div class="teklif-modal-box">
+    <button class="teklif-modal-close" onclick="closeTeklifModal()">✕</button>
+    <div>
+      <div style="color:var(--teal);font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:10px;">İletişim Bilgileri</div>
+      <h2 style="font-family:'Montserrat',sans-serif;font-size:24px;font-weight:900;line-height:1.2;margin-bottom:8px;">Hemen <span class="gradient-text">Teklif Alın</span></h2>
+      <p style="color:var(--silver);font-size:13px;line-height:1.75;margin-bottom:28px;">Danışmanlık ihtiyaçlarınızı paylaşın, size özel program ve teklif oluşturalım.</p>
+      <div style="display:flex;flex-direction:column;gap:18px;margin-bottom:28px;">
+        <div class="teklif-info-row"><div class="teklif-info-icon">📞</div><div><div style="font-size:11px;color:var(--silver-dim);margin-bottom:3px;">Telefon</div><a href="tel:+905330193134" style="font-size:14px;font-weight:600;color:var(--white);text-decoration:none;">0 (533) 019 31 34</a></div></div>
+        <div class="teklif-info-row"><div class="teklif-info-icon">📧</div><div><div style="font-size:11px;color:var(--silver-dim);margin-bottom:3px;">E-posta</div><a href="mailto:derin@derinakademi.net" style="font-size:14px;font-weight:600;color:var(--white);text-decoration:none;">derin@derinakademi.net</a></div></div>
+        <div class="teklif-info-row"><div class="teklif-info-icon">📍</div><div><div style="font-size:11px;color:var(--silver-dim);margin-bottom:3px;">Adres</div><div style="font-size:13px;color:var(--silver);line-height:1.6;">İçerenköy Mah. Topçu İbrahim Sokak Quick Tower Sitesi No:8-10D Ataşehir, İstanbul 34752</div></div></div>
+      </div>
+      <div style="display:flex;gap:10px;">
+        <a href="https://www.instagram.com/derinakademi/" target="_blank" style="display:flex;align-items:center;gap:6px;padding:8px 14px;border-radius:8px;background:var(--glass-bg);border:1px solid var(--glass-bd);font-size:12px;font-weight:600;color:var(--silver);text-decoration:none;">📷 Instagram</a>
+        <a href="https://www.linkedin.com/company/derinakademi/" target="_blank" style="display:flex;align-items:center;gap:6px;padding:8px 14px;border-radius:8px;background:var(--glass-bg);border:1px solid var(--glass-bd);font-size:12px;font-weight:600;color:var(--silver);text-decoration:none;">in LinkedIn</a>
+      </div>
+    </div>
+    <div>
+      <div class="teklif-field"><label>Ad Soyad *</label><input type="text" class="teklif-modal-input" placeholder="Adınız Soyadınız"/></div>
+      <div class="teklif-field"><label>E-posta *</label><input type="email" class="teklif-modal-input" placeholder="ornek@mail.com"/></div>
+      <div class="teklif-field"><label>Telefon *</label><input type="tel" class="teklif-modal-input" placeholder="0 5XX XXX XX XX"/></div>
+      <div class="teklif-field"><label>Kurum / Şirket (İsteğe Bağlı)</label><input type="text" class="teklif-modal-input" placeholder="Şirketinizin adı"/></div>
+      <div class="teklif-field"><label>Talebiniz *</label><textarea class="teklif-modal-input" placeholder="Danışmanlık ihtiyacınızı ve beklentilerinizi yazın..." style="resize:vertical;min-height:100px;"></textarea></div>
+      <button class="btn btn-primary btn-lg" style="width:100%;justify-content:center;margin-top:4px;" onclick="showToast('Talebiniz iletildi! 🎉');closeTeklifModal();">Teklif İste →</button>
+    </div>
+  </div>
+</div>
+<script src="js/i18n.js"></script>
+</body>
+</html>
