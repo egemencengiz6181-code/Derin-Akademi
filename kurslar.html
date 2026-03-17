@@ -6,6 +6,7 @@
   <meta name="description" content="380+ profesyonel kurs. Yapay zeka, web geliştirme, veri bilimi, siber güvenlik ve daha fazlası."/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
   <link rel="stylesheet" href="css/main.css"/>
   <style>
     .catalog-layout{display:grid;grid-template-columns:280px 1fr;gap:40px;align-items:start;}
@@ -47,25 +48,6 @@
     @media(max-width:1024px){.catalog-layout{grid-template-columns:1fr;}.sidebar{position:static;}.courses-grid-3{grid-template-columns:1fr 1fr;}}
     @media(max-width:640px){.courses-grid-3{grid-template-columns:1fr;}.path-banner{flex-direction:column;}.results-header{flex-direction:column;align-items:flex-start;}}
 
-    /* ── Evervault Cipher Effect ── */
-    .ev-noise {
-      position:absolute;inset:0;z-index:2;
-      font-family:'Courier New',monospace;font-size:9px;font-weight:700;
-      line-height:1.25;word-break:break-all;overflow:hidden;
-      padding:8px;color:#fff;pointer-events:none;
-      opacity:0;transition:opacity 0.35s;
-      -webkit-mask-image:radial-gradient(220px at var(--mx,50%) var(--my,50%),black,transparent);
-      mask-image:radial-gradient(220px at var(--mx,50%) var(--my,50%),black,transparent);
-    }
-    .ev-spot {
-      position:absolute;inset:0;z-index:3;pointer-events:none;
-      background:radial-gradient(240px at var(--mx,50%) var(--my,50%),rgba(16,185,129,0.45),rgba(59,130,246,0.3),transparent 80%);
-      opacity:0;transition:opacity 0.35s;
-      mix-blend-mode:overlay;
-    }
-    .course-thumb:hover .ev-noise,
-    .course-thumb:hover .ev-spot { opacity:1; }
-    .course-thumb { cursor:default; }
   </style>
   <!-- SEO: Open Graph -->
   <meta property="og:type" content="website"/>
@@ -94,11 +76,13 @@
     <ul class="nav-links">
       <li><a href="kurslar.html" class="active">Eğitimlerimiz</a></li>
       <li><a href="danismanlik.html">Danışmanlıklarımız</a></li>
-      <li><a href="hakkimizda.html">Hakkımızda</a></li>
-      <li><a href="blog.html">Blog</a></li>
+      <li><a href="hakkimizda.html">Kurumsal</a></li>
+      <li><a href="referanslar.html">Referanslarımız</a></li>
+      <li><a href="blog.html">Deneyimlerimiz</a></li>
       <li><a href="iletisim.html">İletişim</a></li>
     </ul>
     <div class="nav-actions">
+      <button id="darkModeToggle" onclick="toggleDarkMode()" class="btn btn-ghost btn-sm" style="font-weight:700;letter-spacing:1px;padding:7px 14px;min-width:52px;" title="Dark/Light Mode">🌙</button>
       <button id="langToggle" onclick="daToggleLang()" class="btn btn-ghost btn-sm" style="font-weight:700;letter-spacing:1px;padding:7px 14px;min-width:52px;">EN</button>
       <button onclick="openTeklifModal()" class="btn btn-primary btn-sm">Özel Teklif Al</button>
     </div>
@@ -108,7 +92,7 @@
 <div class="mobile-nav">
   <button class="mobile-nav-close">✕</button>
   <a href="index.html">Ana Sayfa</a><a href="kurslar.html" class="active">Eğitimlerimiz</a><a href="danismanlik.html">Danışmanlıklarımız</a>
-  <a href="hakkimizda.html">Hakkımızda</a><a href="blog.html">Blog</a><a href="iletisim.html">İletişim</a>
+  <a href="hakkimizda.html">Kurumsal</a><a href="referanslar.html">Referanslarımız</a><a href="blog.html">Deneyimlerimiz</a><a href="iletisim.html">İletişim</a>
   <div class="mobile-nav-actions">
     <button onclick="openTeklifModal()" class="btn btn-primary btn-md" style="width:100%;justify-content:center">Özel Teklif Al</button>
   </div>
@@ -118,7 +102,7 @@
 <div class="page-hero">
   <div class="container">
     <div class="page-hero-tag reveal"><span class="section-tag">Eğitim Programları</span></div>
-    <h1 class="page-hero-title reveal reveal-d1">Eğitimlerimiz</h1>
+    <h1 class="page-hero-title reveal reveal-d1">Anlatan değil<br/><span class="gradient-text">Çalışan Sistemler Kuruyoruz</span></h1>
     <p class="page-hero-desc reveal reveal-d2">Davranış ve karar biçimi dönüşümü için tasarlanmış kurumsal eğitim programları. Her program kurumunuza özel uyarlanır.</p>
   </div>
 </div>
@@ -147,10 +131,10 @@
         <h2 style="font-family:'Montserrat',sans-serif;font-size:20px;font-weight:800;">Liderlik &amp; İletişim</h2>
         <div style="flex:1;height:1px;background:var(--glass-bd);margin-left:8px;"></div>
       </div>
-      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;">
+      <div class="courses-grid-3">
 
         <div class="course-card">
-          <div class="course-thumb"><div class="course-thumb-bg c-bg-1"></div><div class="course-thumb-icon">🎯</div></div>
+          <div class="course-thumb"><div class="course-thumb-bg c-bg-1"></div><i class="fas fa-crosshairs course-thumb-icon"></i></div>
           <div class="course-body">
             <div class="course-category">Liderlik &amp; İletişim</div>
             <a href="egitimler/yeni-nesil-liderlik.html" style="text-decoration:none;color:inherit;"><h3 class="course-title" style="transition:color 0.2s;" onmouseover="this.style.color='var(--teal)'" onmouseout="this.style.color=''">Yeni Nesil Liderlik</h3></a>
@@ -163,7 +147,7 @@
         </div>
 
         <div class="course-card">
-          <div class="course-thumb"><div class="course-thumb-bg c-bg-2"></div><div class="course-thumb-icon">🗣️</div></div>
+          <div class="course-thumb"><div class="course-thumb-bg c-bg-2"></div><i class="fas fa-comment course-thumb-icon"></i></div>
           <div class="course-body">
             <div class="course-category">Liderlik &amp; İletişim</div>
             <a href="egitimler/haddini-bildirme.html" style="text-decoration:none;color:inherit;"><h3 class="course-title" style="transition:color 0.2s;" onmouseover="this.style.color='var(--teal)'" onmouseout="this.style.color=''">Haddini Bildirme</h3></a>
@@ -176,7 +160,7 @@
         </div>
 
         <div class="course-card">
-          <div class="course-thumb"><div class="course-thumb-bg c-bg-3"></div><div class="course-thumb-icon">🤝</div></div>
+          <div class="course-thumb"><div class="course-thumb-bg c-bg-3"></div><i class="fas fa-handshake course-thumb-icon"></i></div>
           <div class="course-body">
             <div class="course-category">Liderlik &amp; İletişim</div>
             <a href="egitimler/kapsayan-kazanir.html" style="text-decoration:none;color:inherit;"><h3 class="course-title" style="transition:color 0.2s;" onmouseover="this.style.color='var(--teal)'" onmouseout="this.style.color=''">Kapsayan Kazanır</h3></a>
@@ -194,14 +178,14 @@
     <!-- Sistem & Yönetim -->
     <div style="margin-bottom:48px;">
       <div style="display:flex;align-items:center;gap:12px;margin-bottom:28px;">
-        <span style="font-size:22px">⚙️</span>
+        <i class="fas fa-cog" style="font-size:22px;color:var(--teal)"></i>
         <h2 style="font-family:'Montserrat',sans-serif;font-size:20px;font-weight:800;">Sistem &amp; Yönetim</h2>
         <div style="flex:1;height:1px;background:var(--glass-bd);margin-left:8px;"></div>
       </div>
-      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;">
+      <div class="courses-grid-3">
 
         <div class="course-card">
-          <div class="course-thumb"><div class="course-thumb-bg c-bg-4"></div><div class="course-thumb-icon">🎯</div></div>
+          <div class="course-thumb"><div class="course-thumb-bg c-bg-4"></div><i class="fas fa-crosshairs course-thumb-icon"></i></div>
           <div class="course-body">
             <div class="course-category">Sistem &amp; Yönetim</div>
             <a href="egitimler/mulakat-becerileri.html" style="text-decoration:none;color:inherit;"><h3 class="course-title" style="transition:color 0.2s;" onmouseover="this.style.color='var(--teal)'" onmouseout="this.style.color=''">Mülakat Becerileri 5.0</h3></a>
@@ -214,7 +198,7 @@
         </div>
 
         <div class="course-card">
-          <div class="course-thumb"><div class="course-thumb-bg c-bg-5"></div><div class="course-thumb-icon">📊</div></div>
+          <div class="course-thumb"><div class="course-thumb-bg c-bg-5"></div><i class="fas fa-chart-bar course-thumb-icon"></i></div>
           <div class="course-body">
             <div class="course-category">Sistem &amp; Yönetim</div>
             <a href="egitimler/stratejik-ik-yonetimi.html" style="text-decoration:none;color:inherit;"><h3 class="course-title" style="transition:color 0.2s;" onmouseover="this.style.color='var(--teal)'" onmouseout="this.style.color=''">Stratejik İK Yönetimi</h3></a>
@@ -227,7 +211,7 @@
         </div>
 
         <div class="course-card">
-          <div class="course-thumb"><div class="course-thumb-bg c-bg-6"></div><div class="course-thumb-icon">🌟</div></div>
+          <div class="course-thumb"><div class="course-thumb-bg c-bg-6"></div><i class="fas fa-star course-thumb-icon"></i></div>
           <div class="course-body">
             <div class="course-category">Sistem &amp; Yönetim</div>
             <a href="egitimler/performans-360.html" style="text-decoration:none;color:inherit;"><h3 class="course-title" style="transition:color 0.2s;" onmouseover="this.style.color='var(--teal)'" onmouseout="this.style.color=''">Performans 360</h3></a>
@@ -240,7 +224,7 @@
         </div>
 
         <div class="course-card">
-          <div class="course-thumb"><div class="course-thumb-bg c-bg-7"></div><div class="course-thumb-icon">💰</div></div>
+          <div class="course-thumb"><div class="course-thumb-bg c-bg-7"></div><i class="fas fa-money-bill-wave course-thumb-icon"></i></div>
           <div class="course-body">
             <div class="course-category">Sistem &amp; Yönetim</div>
             <a href="egitimler/ucretin-otesi.html" style="text-decoration:none;color:inherit;"><h3 class="course-title" style="transition:color 0.2s;" onmouseover="this.style.color='var(--teal)'" onmouseout="this.style.color=''">Ücretin Ötesi</h3></a>
@@ -253,7 +237,7 @@
         </div>
 
         <div class="course-card">
-          <div class="course-thumb"><div class="course-thumb-bg c-bg-8"></div><div class="course-thumb-icon">👥</div></div>
+          <div class="course-thumb"><div class="course-thumb-bg c-bg-8"></div><i class="fas fa-people-group course-thumb-icon"></i></div>
           <div class="course-body">
             <div class="course-category">Sistem &amp; Yönetim</div>
             <a href="egitimler/aidiyet-tasarimi.html" style="text-decoration:none;color:inherit;"><h3 class="course-title" style="transition:color 0.2s;" onmouseover="this.style.color='var(--teal)'" onmouseout="this.style.color=''">Aidiyet Tasarımı</h3></a>
@@ -266,7 +250,7 @@
         </div>
 
         <div class="course-card">
-          <div class="course-thumb"><div class="course-thumb-bg c-bg-9"></div><div class="course-thumb-icon">📊</div></div>
+          <div class="course-thumb"><div class="course-thumb-bg c-bg-9"></div><i class="fas fa-chart-bar course-thumb-icon"></i></div>
           <div class="course-body">
             <div class="course-category">Sistem &amp; Yönetim</div>
             <a href="egitimler/veriye-donusen-insan.html" style="text-decoration:none;color:inherit;"><h3 class="course-title" style="transition:color 0.2s;" onmouseover="this.style.color='var(--teal)'" onmouseout="this.style.color=''">Veriye Dönüşen İnsan</h3></a>
@@ -284,14 +268,14 @@
     <!-- Veri & Gelecek -->
     <div style="margin-bottom:48px;">
       <div style="display:flex;align-items:center;gap:12px;margin-bottom:28px;">
-        <span style="font-size:22px">🤖</span>
+        <i class="fas fa-robot" style="font-size:22px;color:var(--teal)"></i>
         <h2 style="font-family:'Montserrat',sans-serif;font-size:20px;font-weight:800;">Veri &amp; Gelecek</h2>
         <div style="flex:1;height:1px;background:var(--glass-bd);margin-left:8px;"></div>
       </div>
-      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;">
+      <div class="courses-grid-3">
 
         <div class="course-card">
-          <div class="course-thumb"><div class="course-thumb-bg c-bg-4"></div><div class="course-thumb-icon">🤖</div></div>
+          <div class="course-thumb"><div class="course-thumb-bg c-bg-4"></div><i class="fas fa-robot course-thumb-icon"></i></div>
           <div class="course-body">
             <div class="course-category">Veri &amp; Gelecek</div>
             <a href="egitimler/yapay-zeka-ikda.html" style="text-decoration:none;color:inherit;"><h3 class="course-title" style="transition:color 0.2s;" onmouseover="this.style.color='var(--teal)'" onmouseout="this.style.color=''">Yapay Zekâ İK'da</h3></a>
@@ -330,7 +314,7 @@
         <p class="brand-desc">İnsan kaynakları alanında uzmanlaşmış danışmanlık ve eğitim şirketi. Anlatan değil, çalışan sistemler kurarız.</p>
         <div class="footer-social">
           <a class="social-btn" href="https://www.instagram.com/derinakademi/" target="_blank">📷</a>
-          <a class="social-btn" href="https://www.linkedin.com/company/derinakademi/" target="_blank">in</a>
+          <a class="social-btn" href="https://www.linkedin.com/in/hakan-selahi-001969/" target="_blank">in</a>
         </div>
       </div>
       <div>
@@ -345,8 +329,8 @@
       <div>
         <div class="footer-col-title">Şirket</div>
         <ul class="footer-links">
-          <li><a href="hakkimizda.html">Hakkımızda</a></li>
-          <li><a href="blog.html">Blog</a></li>
+          <li><a href="hakkimizda.html">Kurumsal</a></li>
+          <li><a href="blog.html">Deneyimlerimiz</a></li>
           <li><a href="kariyer.html">Kariyer</a></li>
           <li><a href="iletisim.html">İletişim</a></li>
         </ul>
@@ -369,36 +353,6 @@
 <button id="back-to-top" style="position:fixed;bottom:28px;right:28px;z-index:500;width:44px;height:44px;border-radius:12px;background:var(--glass-bg);border:1px solid var(--glass-bd);color:var(--teal);font-size:18px;cursor:pointer;opacity:0;transition:var(--t-base);backdrop-filter:blur(12px);">↑</button>
 
 <script src="js/main.js"></script>
-<script>
-(function(){
-  var C='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*';
-  function randStr(n){var s='';for(var i=0;i<n;i++)s+=C[Math.floor(Math.random()*C.length)];return s;}
-  document.querySelectorAll('.course-thumb').forEach(function(thumb){
-    var noise=document.createElement('div');
-    noise.className='ev-noise';
-    noise.textContent=randStr(900);
-    thumb.appendChild(noise);
-    var spot=document.createElement('div');
-    spot.className='ev-spot';
-    thumb.appendChild(spot);
-    /* Move icon to very end so DOM order + z-index both keep it on top */
-    var icon=thumb.querySelector('.course-thumb-icon');
-    if(icon) thumb.appendChild(icon);
-    thumb.addEventListener('mousemove',function(e){
-      var r=thumb.getBoundingClientRect();
-      var x=((e.clientX-r.left)/r.width*100).toFixed(1)+'%';
-      var y=((e.clientY-r.top)/r.height*100).toFixed(1)+'%';
-      thumb.style.setProperty('--mx',x);
-      thumb.style.setProperty('--my',y);
-      noise.textContent=randStr(900);
-    });
-    thumb.addEventListener('mouseleave',function(){
-      thumb.style.removeProperty('--mx');
-      thumb.style.removeProperty('--my');
-    });
-  });
-})();
-</script>
 
 <!-- ══ ÖZEL TEKLİF MODAL ══ -->
 <div id="teklif-modal" class="teklif-modal">
@@ -415,7 +369,7 @@
       </div>
       <div style="display:flex;gap:10px;">
         <a href="https://www.instagram.com/derinakademi/" target="_blank" style="display:flex;align-items:center;gap:6px;padding:8px 14px;border-radius:8px;background:var(--glass-bg);border:1px solid var(--glass-bd);font-size:12px;font-weight:600;color:var(--silver);text-decoration:none;">📷 Instagram</a>
-        <a href="https://www.linkedin.com/company/derinakademi/" target="_blank" style="display:flex;align-items:center;gap:6px;padding:8px 14px;border-radius:8px;background:var(--glass-bg);border:1px solid var(--glass-bd);font-size:12px;font-weight:600;color:var(--silver);text-decoration:none;">in LinkedIn</a>
+        <a href="https://www.linkedin.com/in/hakan-selahi-001969/" target="_blank" style="display:flex;align-items:center;gap:6px;padding:8px 14px;border-radius:8px;background:var(--glass-bg);border:1px solid var(--glass-bd);font-size:12px;font-weight:600;color:var(--silver);text-decoration:none;">in LinkedIn</a>
       </div>
     </div>
     <div>

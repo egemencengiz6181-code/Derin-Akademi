@@ -2,8 +2,8 @@
 <html lang="tr">
 <head>
   <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Blog — Derin Akademi | İK &amp; Liderlik İçerikleri</title>
-  <meta name="description" content="İnsan kaynakları, liderlik, performans yönetimi ve kurumsallaşma üzerine derinlemesine içerikler."/>
+  <title>Deneyimlerimiz — Derin Akademi | İK & Liderlik İçerikleri</title>
+  <meta name="description" content="İnsan kaynakları, liderlik, performans yönetimi ve kurumsallaşma üzerine derinlemesine yazılar ve video içerikleri."/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="css/main.css"/>
@@ -59,20 +59,26 @@
     .pagination { display: flex; gap: 8px; justify-content: center; margin-top: 48px; }
     .page-btn { width: 40px; height: 40px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 700; cursor: pointer; border: 1px solid var(--glass-bd); background: var(--glass-bg); color: var(--silver); transition: var(--t-fast); }
     .page-btn.active, .page-btn:hover { background: var(--teal); border-color: var(--teal); color: #fff; }
+    /* Founder Corner */
+    .founder-corner-section { padding: 64px 0; border-top: 1px solid var(--glass-bd); border-bottom: 1px solid var(--glass-bd); background: linear-gradient(135deg, rgba(0,200,180,0.02), rgba(0,100,200,0.02)); }
+    .founder-corner-grid { display: grid; grid-template-columns: 280px 1fr; gap: 48px; align-items: center; }
+    .founder-image { border-radius: var(--radius-xl); overflow: hidden; min-height: 360px; background: var(--glass-bg); border: 1px solid var(--glass-bd); }
+    .founder-content h2 { margin-bottom: 6px; }
     @media(max-width:960px) { .blog-layout { grid-template-columns: 1fr; } .sidebar { display: none; } }
+    @media(max-width:768px) { .founder-corner-grid { grid-template-columns: 1fr; gap: 32px; } .founder-image { min-height: 300px; } }
     @media(max-width:640px) { .posts-grid { grid-template-columns: 1fr; } .featured-body { padding: 22px 20px; } }
   </style>
   <!-- SEO: Open Graph -->
   <meta property="og:type" content="website"/>
   <meta property="og:site_name" content="Derin Akademi"/>
-  <meta property="og:title" content="Blog — Derin Akademi | İK & Liderlik İçerikleri"/>
+  <meta property="og:title" content="Deneyimlerimiz — Derin Akademi | İK & Liderlik İçerikleri"/>
   <meta property="og:description" content="İnsan kaynakları, liderlik, performans yönetimi ve kurumsallaşma üzerine derinlemesine içerikler."/>
   <meta property="og:url" content="https://derinakademi.com/blog.html"/>
   <meta property="og:image" content="https://derinakademi.com/public/hakan%20selahi/hakan-selahi.jpg"/>
   <meta property="og:locale" content="tr_TR"/>
   <!-- SEO: Twitter Card -->
   <meta name="twitter:card" content="summary_large_image"/>
-  <meta name="twitter:title" content="Blog — Derin Akademi | İK & Liderlik İçerikleri"/>
+  <meta name="twitter:title" content="Deneyimlerimiz — Derin Akademi | İK & Liderlik İçerikleri"/>
   <meta name="twitter:description" content="İnsan kaynakları, liderlik, performans yönetimi ve kurumsallaşma üzerine derinlemesine içerikler."/>
   <meta name="twitter:image" content="https://derinakademi.com/public/hakan%20selahi/hakan-selahi.jpg"/>
   <!-- SEO: Canonical & Robots -->
@@ -85,41 +91,75 @@
   <div class="nav-inner">
     <a href="index.html" class="nav-logo"><img src="public/logos/68.png" alt="Derin Akademi" class="nav-logo-img"/></a>
     <ul class="nav-links">
-      <li><a href="kurslar.html">Egitimlerimiz</a></li>
-      <li><a href="danismanlik.html">Danismanliklarimiz</a></li>
-      <li><a href="hakkimizda.html">Hakkimizda</a></li>
-      <li><a href="blog.html" class="active">Blog</a></li>
-      <li><a href="iletisim.html">Iletisim</a></li>
+      <li><a href="kurslar.html">Eğitimlerimiz</a></li>
+      <li><a href="danismanlik.html">Danışmanlıklarımız</a></li>
+      <li><a href="hakkimizda.html">Kurumsal</a></li>
+      <li><a href="referanslar.html">Referanslarımız</a></li>
+      <li><a href="blog.html" class="active">Deneyimlerimiz</a></li>
+      <li><a href="iletisim.html">İletişim</a></li>
     </ul>
-    <div class="nav-actions"><button id="langToggle" onclick="daToggleLang()" class="btn btn-ghost btn-sm" style="font-weight:700;letter-spacing:1px;padding:7px 14px;min-width:52px;">EN</button><button onclick="openTeklifModal()" class="btn btn-primary btn-sm">Özel Teklif Al</button></div>
+    <div class="nav-actions">
+      <button id="darkModeToggle" onclick="toggleDarkMode()" class="btn btn-ghost btn-sm" style="font-weight:700;letter-spacing:1px;padding:7px 14px;min-width:52px;" title="Dark/Light Mode">🌙</button>
+      <button id="langToggle" onclick="daToggleLang()" class="btn btn-ghost btn-sm" style="font-weight:700;letter-spacing:1px;padding:7px 14px;min-width:52px;">EN</button>
+      <button onclick="openTeklifModal()" class="btn btn-primary btn-sm">Özel Teklif Al</button>
+    </div>
     <button class="menu-toggle">&#9776;</button>
   </div>
 </nav>
 <div class="mobile-nav">
-  <button class="mobile-nav-close">&#x2715;</button>
-  <a href="index.html">Ana Sayfa</a><a href="kurslar.html">Egitimlerimiz</a><a href="danismanlik.html">Danismanliklarimiz</a>
-  <a href="hakkimizda.html">Hakkimizda</a><a href="blog.html">Blog</a><a href="iletisim.html">Iletisim</a>
-  <div class="mobile-nav-actions"><button onclick="openTeklifModal()" class="btn btn-primary btn-md" style="width:100%;justify-content:center">Ozel Teklif Al</button></div>
+  <button class="mobile-nav-close">✕</button>
+  <a href="index.html">Ana Sayfa</a>
+  <a href="kurslar.html">Eğitimlerimiz</a>
+  <a href="danismanlik.html">Danışmanlıklarımız</a>
+  <a href="hakkimizda.html">Kurumsal</a>
+  <a href="referanslar.html">Referanslarımız</a>
+  <a href="blog.html" class="active">Deneyimlerimiz</a>
+  <a href="iletisim.html">İletişim</a>
+  <div class="mobile-nav-actions">
+    <button onclick="openTeklifModal()" class="btn btn-primary btn-md" style="width:100%;justify-content:center">Özel Teklif Al</button>
+  </div>
 </div>
 
 <div class="page-hero">
   <div class="container">
-    <div class="page-hero-tag reveal"><span class="section-tag">Icgoru &amp; Perspektif</span></div>
-    <h1 class="page-hero-title reveal reveal-d1">IK ve Liderlik<br/><span class="gradient-text">Uzerine Derin Dusunceler</span></h1>
-    <p class="page-hero-desc reveal reveal-d2">Sahadan gelen gozlemler, arastirmaya dayali cikarimlar ve kurumsal donusum uzerine gercek icgorular.</p>
+    <div class="page-hero-tag reveal"><span class="section-tag">Deneyimlerimiz</span></div>
+    <h1 class="page-hero-title reveal reveal-d1">İK ve Liderlik<br/><span class="gradient-text">Üzerine Derin Düşünceler</span></h1>
+    <p class="page-hero-desc reveal reveal-d2">Sahadan gelen gözlemler, araştırmaya dayalı çıkarımlar ve kurumsal dönüşüm üzerine gerçek içgörüler.</p>
   </div>
 </div>
+
+<!-- ══ FOUNDER CORNER ══ -->
+<section class="founder-corner-section">
+  <div class="container">
+    <div class="founder-corner-grid">
+      <div class="founder-image">
+        <img src="public/hakan selahi/hakan-selahi.jpg" alt="Hakan Selahi" style="width:100%;height:100%;object-fit:cover;object-position:top center;" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+        <span style="font-size:90px;opacity:0.3;display:none;width:100%;height:100%;align-items:center;justify-content:center;">👤</span>
+      </div>
+      <div class="founder-content">
+        <div class="section-tag reveal">Kurucumuz</div>
+        <h2 class="section-title reveal reveal-d1">Hakan Selahi</h2>
+        <p style="color:var(--teal);font-weight:600;margin-bottom:14px;margin-top:6px;line-height:1.6;" class="reveal reveal-d2">İK Stratejisti · ACC Koç · Kurumsallaşma Danışmanı</p>
+        <p style="font-size:14px;color:var(--silver);line-height:1.8;margin-bottom:20px;" class="reveal reveal-d3">30+ yıllık tecrübe ile insan kaynakları alanında yüzlerce kurumu stratejik dönüşüm sürecinde yönetmiştir. Bu yazılar da ona ait derinlemesine düşünceler, sahadan gelen gözlemler ve kurumsal yaşamın gerçek içgörüleridir.</p>
+        <a href="hakkimizda.html" class="btn btn-ghost btn-md reveal" style="width:fit-content;">Hakkında Daha Fazla →</a>
+      </div>
+    </div>
+  </div>
+</section>
 
 <section class="section-pad">
   <div class="container">
     <div class="blog-filter reveal">
-      <button class="filter-tab active" onclick="filterPosts('tumu', this)">Tumu</button>
+      <h2 style="font-size:24px;font-weight:900;margin-bottom:20px;color:var(--white);">Yazılarımız</h2>
+      <div style="display:flex;flex-wrap:wrap;gap:10px;">
+        <button class="filter-tab active" onclick="filterPosts('tumu', this)">Tumu</button>
       <button class="filter-tab" onclick="filterPosts('liderlik', this)">&#127919; Liderlik</button>
       <button class="filter-tab" onclick="filterPosts('ise-alim', this)">&#128101; Ise Alim</button>
       <button class="filter-tab" onclick="filterPosts('performans', this)">&#128200; Performans</button>
       <button class="filter-tab" onclick="filterPosts('stratejik-ik', this)">&#129517; Stratejik IK</button>
-      <button class="filter-tab" onclick="filterPosts('yz-ik', this)">&#129302; YZ &amp; IK</button>
-      <button class="filter-tab" onclick="filterPosts('kurumsal', this)">&#127963; Kurumsal</button>
+        <button class="filter-tab" onclick="filterPosts('yz-ik', this)">&#129302; YZ &amp; IK</button>
+        <button class="filter-tab" onclick="filterPosts('kurumsal', this)">&#127963; Kurumsal</button>
+      </div>
     </div>
 
     <div class="blog-layout">
@@ -179,6 +219,42 @@
               <h3 class="post-title"><a href="blog/isgucku-planlamasi-2026.html">Isgucku Planlamasi 2026: Neden Simdi Baslamalisiniz?</a></h3>
               <p class="post-excerpt">Demografik dalgalanmalar, teknoloji yetkinlik boslukları ve belirsiz ekonomik tabloda proaktif kadro planlamasinin onemi.</p>
               <div class="post-footer"><span class="post-date">Subat 2025 &middot; 7 dk</span><a href="blog/isgucku-planlamasi-2026.html" class="post-read">Oku &rarr;</a></div>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top:80px;padding-top:60px;border-top:1px solid var(--glass-bd);">
+          <h2 style="font-size:24px;font-weight:900;margin-bottom:40px;color:var(--white);">Video İçerikleri</h2>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:24px;">
+            <div style="aspect-ratio:9/16;background:linear-gradient(135deg,rgba(0,200,180,0.1),rgba(0,100,200,0.08));border:1px solid var(--glass-bd);border-radius:var(--radius-lg);display:flex;align-items:center;justify-content:center;flex-direction:column;color:var(--silver);font-size:14px;text-align:center;padding:20px;">
+              <div style="font-size:48px;margin-bottom:12px;">▶</div>
+              <div style="font-weight:600;">Video 1</div>
+              <div style="font-size:12px;margin-top:8px;opacity:0.7;">Yükleme bekleniyor</div>
+            </div>
+            <div style="aspect-ratio:9/16;background:linear-gradient(135deg,rgba(0,200,180,0.1),rgba(0,100,200,0.08));border:1px solid var(--glass-bd);border-radius:var(--radius-lg);display:flex;align-items:center;justify-content:center;flex-direction:column;color:var(--silver);font-size:14px;text-align:center;padding:20px;">
+              <div style="font-size:48px;margin-bottom:12px;">▶</div>
+              <div style="font-weight:600;">Video 2</div>
+              <div style="font-size:12px;margin-top:8px;opacity:0.7;">Yükleme bekleniyor</div>
+            </div>
+            <div style="aspect-ratio:9/16;background:linear-gradient(135deg,rgba(0,200,180,0.1),rgba(0,100,200,0.08));border:1px solid var(--glass-bd);border-radius:var(--radius-lg);display:flex;align-items:center;justify-content:center;flex-direction:column;color:var(--silver);font-size:14px;text-align:center;padding:20px;">
+              <div style="font-size:48px;margin-bottom:12px;">▶</div>
+              <div style="font-weight:600;">Video 3</div>
+              <div style="font-size:12px;margin-top:8px;opacity:0.7;">Yükleme bekleniyor</div>
+            </div>
+            <div style="aspect-ratio:9/16;background:linear-gradient(135deg,rgba(0,200,180,0.1),rgba(0,100,200,0.08));border:1px solid var(--glass-bd);border-radius:var(--radius-lg);display:flex;align-items:center;justify-content:center;flex-direction:column;color:var(--silver);font-size:14px;text-align:center;padding:20px;">
+              <div style="font-size:48px;margin-bottom:12px;">▶</div>
+              <div style="font-weight:600;">Video 4</div>
+              <div style="font-size:12px;margin-top:8px;opacity:0.7;">Yükleme bekleniyor</div>
+            </div>
+            <div style="aspect-ratio:9/16;background:linear-gradient(135deg,rgba(0,200,180,0.1),rgba(0,100,200,0.08));border:1px solid var(--glass-bd);border-radius:var(--radius-lg);display:flex;align-items:center;justify-content:center;flex-direction:column;color:var(--silver);font-size:14px;text-align:center;padding:20px;">
+              <div style="font-size:48px;margin-bottom:12px;">▶</div>
+              <div style="font-weight:600;">Video 5</div>
+              <div style="font-size:12px;margin-top:8px;opacity:0.7;">Yükleme bekleniyor</div>
+            </div>
+            <div style="aspect-ratio:9/16;background:linear-gradient(135deg,rgba(0,200,180,0.1),rgba(0,100,200,0.08));border:1px solid var(--glass-bd);border-radius:var(--radius-lg);display:flex;align-items:center;justify-content:center;flex-direction:column;color:var(--silver);font-size:14px;text-align:center;padding:20px;">
+              <div style="font-size:48px;margin-bottom:12px;">▶</div>
+              <div style="font-weight:600;">Video 6</div>
+              <div style="font-size:12px;margin-top:8px;opacity:0.7;">Yükleme bekleniyor</div>
             </div>
           </div>
         </div>
@@ -245,7 +321,7 @@
         <p class="brand-desc">Insan kaynaklari alaninda uzmanlasmis danismanlik ve egitim sirketi. Anlatan degil, calisan sistemler kurariz.</p>
         <div class="footer-social">
           <a class="social-btn" href="https://www.instagram.com/derinakademi/" target="_blank">&#128247;</a>
-          <a class="social-btn" href="https://www.linkedin.com/company/derinakademi/" target="_blank">in</a>
+          <a class="social-btn" href="https://www.linkedin.com/in/hakan-selahi-001969/" target="_blank">in</a>
         </div>
       </div>
       <div>
@@ -258,8 +334,8 @@
       <div>
         <div class="footer-col-title">Sirket</div>
         <ul class="footer-links">
-          <li><a href="hakkimizda.html">Hakkimizda</a></li>
-          <li><a href="blog.html">Blog</a></li>
+          <li><a href="hakkimizda.html">Kurumsal</a></li>
+          <li><a href="blog.html">Deneyimlerimiz</a></li>
           <li><a href="kariyer.html">Kariyer</a></li>
           <li><a href="iletisim.html">Iletisim</a></li>
         </ul>

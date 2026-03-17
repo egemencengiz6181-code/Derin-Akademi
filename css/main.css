@@ -8,10 +8,10 @@ html { scroll-behavior: smooth; font-size: 16px; }
 
 /* ─── CSS VARIABLES ───────────────────────────────────────────── */
 :root {
-  --navy:        #030d1f;
-  --navy-mid:    #071428;
-  --navy-light:  #0d1f3c;
-  --navy-card:   #091525;
+  --navy:        #0f1b35;
+  --navy-mid:    #1a2847;
+  --navy-light:  #243852;
+  --navy-card:   #18234a;
   --teal:        #00c8b4;
   --teal-dim:    #007f72;
   --teal-glow:   rgba(0,200,180,0.18);
@@ -43,6 +43,64 @@ html { scroll-behavior: smooth; font-size: 16px; }
   --t-base:      all 0.35s cubic-bezier(0.25,0.8,0.25,1);
   --t-slow:      all 0.55s cubic-bezier(0.25,0.8,0.25,1);
   --nav-h:       72px;
+}
+
+/* ─── DARK MODE ──────────────────────────────────────────────── */
+body.dark-mode {
+  --navy:        #0a0f1a;
+  --navy-mid:    #0f1428;
+  --navy-light:  #1a2438;
+  --navy-card:   #121930;
+}
+
+/* ─── WHATSAPP BUTTON ─────────────────────────────────────────── */
+.whatsapp-btn {
+  position: fixed;
+  bottom: 28px;
+  left: 28px;
+  z-index: 499;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #25d366, #128c7e);
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+  transition: var(--t-base);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+}
+.whatsapp-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 30px rgba(37, 211, 102, 0.6);
+}
+.whatsapp-btn-close {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  width: 22px;
+  height: 22px;
+  background: var(--danger);
+  border-radius: 50%;
+  border: none;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--t-fast);
+}
+.whatsapp-btn-close:hover {
+  background: #ff3333;
+  transform: rotate(90deg);
+}
+.whatsapp-btn.hidden {
+  display: none !important;
 }
 
 /* ─── BASE ────────────────────────────────────────────────────── */
@@ -167,7 +225,7 @@ section { position: relative; z-index: 2; }
 }
 .logo-text { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 18px; color: var(--white); }
 .logo-text span { color: var(--teal); }
-.nav-logo-img { height: 58px; width: auto; display: block; object-fit: contain; }
+.nav-logo-img { height: 64px; width: auto; display: block; object-fit: contain; }
 
 .nav-links { display: flex; align-items: center; gap: 6px; }
 .nav-links a {
@@ -437,15 +495,6 @@ footer {
   display: flex; align-items: center; justify-content: center;
   transition: transform 0.4s ease;
   transform: translateZ(0);
-}
-.course-thumb-icon::before {
-  content: '';
-  position: absolute; inset: 0;
-  border-radius: 50%;
-  background: rgba(10,18,35,0.78);
-  border: 1px solid rgba(255,255,255,0.1);
-  box-shadow: 0 6px 32px rgba(0,0,0,0.5);
-  z-index: 0;
 }
 .course-thumb-icon .thumb-emoji {
   position: relative;

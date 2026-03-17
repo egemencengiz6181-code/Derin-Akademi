@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Referanslar — Derin Akademi</title>
+  <meta name="description" content="40+ kurumun güveni. Derin Akademi'nin referansları ve çalıştığı kurumlar."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/main.css"/>
+  <style>
+    .partners-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:32px;max-width:1200px;margin:0 auto;}
+    .partner-item{background:var(--glass-bg);border:1px solid var(--glass-bd);border-radius:var(--radius-lg);padding:28px;display:flex;align-items:center;justify-content:center;min-height:140px;transition:var(--t-base);}
+    .partner-item:hover{border-color:var(--teal-border);transform:translateY(-4px);box-shadow:0 8px 24px rgba(0,200,180,0.15);}
+    .partner-item img{max-width:100%;max-height:80px;object-fit:contain;opacity:0.8;transition:opacity 0.3s;}
+    .partner-item:hover img{opacity:1;}
+    @media(max-width:1024px){.partners-grid{grid-template-columns:repeat(4,1fr);}}
+    @media(max-width:768px){.partners-grid{grid-template-columns:repeat(3,1fr);gap:20px;}}
+    @media(max-width:640px){.partners-grid{grid-template-columns:repeat(2,1fr);gap:16px;}.partner-item{padding:20px;min-height:120px;}}
+    /* Testimonials Scroll */
+    .testi-scroll-section { padding: 80px 0; overflow: hidden; position: relative; }
+    .testi-scroll-section .section-head { padding: 0 20px; }
+    .testi-cols-outer { position: relative; margin-top: 52px; height: 560px; overflow: hidden; mask-image: linear-gradient(to bottom, transparent 0%, black 14%, black 86%, transparent 100%); -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 14%, black 86%, transparent 100%); }
+    .testi-cols-wrap { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; padding: 0 20px; max-width: 1160px; margin: 0 auto; height: 100%; }
+    .testi-scroll-col { display: flex; flex-direction: column; gap: 18px; }
+    .testi-scroll-col.col-1 { animation: testiScrollUp 22s linear infinite; }
+    .testi-scroll-col.col-2 { animation: testiScrollUp 30s linear infinite; margin-top: -60px; }
+    .testi-scroll-col.col-3 { animation: testiScrollUp 25s linear infinite; margin-top: -30px; }
+    @keyframes testiScrollUp { 0% { transform: translateY(0); } 100% { transform: translateY(-50%); } }
+    .tsc { background: var(--glass-bg); border: 1px solid var(--glass-bd); border-radius: var(--radius-lg); padding: 24px 26px; transition: border-color 0.25s; }
+    .tsc:hover { border-color: var(--teal-border); }
+    .tsc-stars { color: #f59e0b; font-size: 13px; letter-spacing: 1px; margin-bottom: 12px; }
+    .tsc-text { font-size: 14px; color: var(--silver); line-height: 1.75; margin-bottom: 18px; }
+    .tsc-author { display: flex; align-items: center; gap: 12px; }
+    .tsc-avatar{width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Montserrat',sans-serif;font-size:15px;font-weight:800;flex-shrink:0;}
+    .tsc-av-a{background:linear-gradient(135deg,#0d9488,#0e7490);color:#fff;}
+    .tsc-av-b{background:linear-gradient(135deg,#7c3aed,#a21caf);color:#fff;}
+    .tsc-av-c{background:linear-gradient(135deg,#b45309,#d97706);color:#fff;}
+    .tsc-av-d{background:linear-gradient(135deg,#0369a1,#0284c7);color:#fff;}
+    .tsc-av-e{background:linear-gradient(135deg,#be123c,#e11d48);color:#fff;}
+    .tsc-av-f{background:linear-gradient(135deg,#15803d,#16a34a);color:#fff;}
+    .tsc-name { font-family: 'Montserrat', sans-serif; font-size: 14px; font-weight: 800; margin-bottom: 2px; }
+    .tsc-role { font-size: 12px; color: var(--silver-dim); }
+    .tsc-sector { display: inline-block; margin-top: 12px; padding: 3px 10px; border-radius: 50px; background: rgba(0,200,180,0.06); border: 1px solid var(--teal-border); font-size: 11px; font-weight: 700; color: var(--teal); letter-spacing: 0.5px; }
+    @media(max-width: 900px) { .testi-cols-wrap { grid-template-columns: 1fr 1fr; } .testi-scroll-col.col-3 { display: none; } }
+    @media(max-width: 600px) { .testi-cols-wrap { grid-template-columns: 1fr; } .testi-scroll-col.col-2 { display: none; } .testi-cols-outer { height: 480px; } }
+  </style>
+  <!-- SEO: Open Graph -->
+  <meta property="og:type" content="website"/>
+  <meta property="og:site_name" content="Derin Akademi"/>
+  <meta property="og:title" content="Referanslar — Derin Akademi"/>
+  <meta property="og:description" content="40+ kurumun güveni. Derin Akademi'nin referansları ve çalıştığı kurumlar."/>
+  <meta property="og:url" content="https://derinakademi.com/referanslar.html"/>
+  <meta property="og:image" content="https://derinakademi.com/public/hakan%20selahi/hakan-selahi.jpg"/>
+  <meta property="og:locale" content="tr_TR"/>
+  <!-- SEO: Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="Referanslar — Derin Akademi"/>
+  <meta name="twitter:description" content="40+ kurumun güveni. Derin Akademi'nin referansları ve çalıştığı kurumlar."/>
+  <meta name="twitter:image" content="https://derinakademi.com/public/hakan%20selahi/hakan-selahi.jpg"/>
+  <!-- SEO: Canonical & Robots -->
+  <link rel="canonical" href="https://derinakademi.com/referanslar.html"/>
+  <meta name="robots" content="index, follow"/>
+</head>
+<body>
+<div class="ambient"></div>
+
+<!-- ══ NAVBAR ══ -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><img src="public/logos/68.png" alt="Derin Akademi" class="nav-logo-img"/></a>
+    <ul class="nav-links">
+      <li><a href="kurslar.html">Eğitimlerimiz</a></li>
+      <li><a href="danismanlik.html">Danışmanlıklarımız</a></li>
+      <li><a href="hakkimizda.html">Kurumsal</a></li>
+      <li><a href="referanslar.html" class="active">Referanslarımız</a></li>
+      <li><a href="blog.html">Deneyimlerimiz</a></li>
+      <li><a href="iletisim.html">İletişim</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button id="darkModeToggle" onclick="toggleDarkMode()" class="btn btn-ghost btn-sm" style="font-weight:700;letter-spacing:1px;padding:7px 14px;min-width:52px;" title="Dark/Light Mode">🌙</button>
+      <button id="langToggle" onclick="daToggleLang()" class="btn btn-ghost btn-sm" style="font-weight:700;letter-spacing:1px;padding:7px 14px;min-width:52px;">EN</button>
+      <button onclick="openTeklifModal()" class="btn btn-primary btn-sm">Özel Teklif Al</button>
+    </div>
+    <button class="menu-toggle">☰</button>
+  </div>
+</nav>
+<div class="mobile-nav">
+  <button class="mobile-nav-close">✕</button>
+  <a href="index.html">Ana Sayfa</a><a href="kurslar.html">Eğitimlerimiz</a><a href="danismanlik.html">Danışmanlıklarımız</a>
+  <a href="hakkimizda.html">Kurumsal</a><a href="referanslar.html" class="active">Referanslarımız</a><a href="blog.html">Deneyimlerimiz</a><a href="iletisim.html">İletişim</a>
+  <div class="mobile-nav-actions">
+    <button onclick="openTeklifModal()" class="btn btn-primary btn-md" style="width:100%;justify-content:center">Özel Teklif Al</button>
+  </div>
+</div>
+
+<!-- ══ PAGE HERO ══ -->
+<div class="page-hero">
+  <div class="container">
+    <div class="page-hero-tag reveal"><span class="section-tag">Referanslarımız</span></div>
+    <h1 class="page-hero-title reveal reveal-d1">40+ Kurumun<br>Güveni</h1>
+    <p class="page-hero-desc reveal reveal-d2">Finans, sağlık, üretim, perakende ve daha birçok sektörde kurumlarla çalıştık ve değer yaratmaya devam ediyoruz.</p>
+  </div>
+</div>
+
+<!-- ══ PARTNERS ══ -->
+<section class="section-pad">
+  <div class="container">
+    <div style="margin-bottom:48px;">
+      <h2 class="section-title reveal reveal-d1" style="text-align:center;margin-bottom:56px;">Hizmet Verdiğimiz<br><span class="gradient-text">Kurumlar</span></h2>
+      <div class="partners-grid">
+        <div class="partner-item reveal"><img src="public/logos/38.png" alt=""/></div>
+        <div class="partner-item reveal reveal-d1"><img src="public/logos/39.png" alt=""/></div>
+        <div class="partner-item reveal reveal-d2"><img src="public/logos/40.png" alt=""/></div>
+        <div class="partner-item reveal reveal-d3"><img src="public/logos/41.png" alt=""/></div>
+        <div class="partner-item reveal"><img src="public/logos/42.png" alt=""/></div>
+        <div class="partner-item reveal reveal-d1"><img src="public/logos/43.png" alt=""/></div>
+        <div class="partner-item reveal reveal-d2"><img src="public/logos/44.png" alt=""/></div>
+        <div class="partner-item reveal reveal-d3"><img src="public/logos/45.png" alt=""/></div>
+        <div class="partner-item reveal"><img src="public/logos/46.png" alt=""/></div>
+        <div class="partner-item reveal reveal-d1"><img src="public/logos/47.png" alt=""/></div>
+        <div class="partner-item reveal reveal-d2"><img src="public/logos/48.png" alt=""/></div>
+        <div class="partner-item reveal reveal-d3"><img src="public/logos/49.png" alt=""/></div>
+        <div class="partner-item reveal"><img src="public/logos/50.png" alt=""/></div>
+        <div class="partner-item reveal reveal-d1"><img src="public/logos/51.png" alt=""/></div>
+        <div class="partner-item reveal reveal-d2"><img src="public/logos/52.png" alt=""/></div>
+        <div class="partner-item reveal reveal-d3"><img src="public/logos/53.png" alt=""/></div>
+        <div class="partner-item reveal"><img src="public/logos/54.png" alt=""/></div>
+        <div class="partner-item reveal reveal-d1"><img src="public/logos/55.png" alt=""/></div>
+        <div class="partner-item reveal reveal-d2"><img src="public/logos/56.png" alt=""/></div>
+        <div class="partner-item reveal reveal-d3"><img src="public/logos/57.png" alt=""/></div>
+        <div class="partner-item reveal"><img src="public/logos/58.png" alt=""/></div>
+        <div class="partner-item reveal reveal-d1"><img src="public/logos/59.png" alt=""/></div>
+        <div class="partner-item reveal reveal-d2"><img src="public/logos/60.png" alt=""/></div>
+        <div class="partner-item reveal reveal-d3"><img src="public/logos/61.png" alt=""/></div>
+        <div class="partner-item reveal"><img src="public/logos/62.png" alt=""/></div>
+        <div class="partner-item reveal reveal-d1"><img src="public/logos/63.png" alt=""/></div>
+        <div class="partner-item reveal reveal-d2"><img src="public/logos/64.png" alt=""/></div>
+        <div class="partner-item reveal reveal-d3"><img src="public/logos/65.png" alt=""/></div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ TESTIMONIALS ══ -->
+<section class="testi-scroll-section">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-tag reveal">Başarı Hikayeleri</div>
+      <h2 class="section-title reveal reveal-d1">Onlar Değiştirdi, Sıra Sende</h2>
+      <p class="section-desc reveal reveal-d2">Gerçek hikayeler, gerçek dönüşümler. 40'tan fazla kurumdan yüzlerce profesyonelin deneyimi.</p>
+    </div>
+  </div>
+  <div class="testi-cols-outer">
+    <div class="testi-cols-wrap">
+
+      <!-- Sütun 1 -->
+      <div class="testi-scroll-col col-1">
+        <div class="tsc"><div class="tsc-stars">★★★★★</div><p class="tsc-text">Derin Akademi ile yürüttüğümüz Stratejik İK Yönetimi programı, İK ekibimizin kurumda gerçek bir stratejik konuma gelmesini sağladı. Hazır modeller değil, bize özel çözümdü.</p><div class="tsc-author"><div class="tsc-avatar tsc-av-a">AK</div><div><div class="tsc-name">Ayşe Kara</div><div class="tsc-role">İK Direktörü</div></div></div><span class="tsc-sector">Finans Sektörü</span></div>
+        <div class="tsc"><div class="tsc-stars">★★★★★</div><p class="tsc-text">Kurumsallaşma sürecimizin en kritik aşamasında Hakan Bey ile çalıştık. Aile anayasasını yazdık, governance yapısını sıfırdan kurduk. Sonuçlar inanılmaz somut.</p><div class="tsc-author"><div class="tsc-avatar tsc-av-c">AY</div><div><div class="tsc-name">Ali Yalçın</div><div class="tsc-role">CEO & Kurucu Ortak</div></div></div><span class="tsc-sector">Aile Şirketi</span></div>
+        <div class="tsc"><div class="tsc-stars">★★★★★</div><p class="tsc-text">Ücret yönetimi projemizde Derin Akademi'nin getirdiği yapı, çalışan memnuniyetimizi ve elde tutma oranımızı ölçülebilir biçimde artırdı. Sistematik ve uygulanabilir.</p><div class="tsc-author"><div class="tsc-avatar tsc-av-f">ED</div><div><div class="tsc-name">Emre Doğan</div><div class="tsc-role">Genel Müdür Yrd.</div></div></div><span class="tsc-sector">Üretim Sektörü</span></div>
+      </div>
+
+      <!-- Sütun 2 -->
+      <div class="testi-scroll-col col-2">
+        <div class="tsc"><div class="tsc-stars">★★★★★</div><p class="tsc-text">Mülakat Becerileri 5.0 eğitimi sonrası işe alım süreçlerimizde hata oranımız dramatik biçimde düştü. Teorik değil, sahadaki gerçek deneyimi aktardılar.</p><div class="tsc-author"><div class="tsc-avatar tsc-av-b">GD</div><div><div class="tsc-name">Gülşen Demir</div><div class="tsc-role">İnsan Kaynakları Müdürü</div></div></div><span class="tsc-sector">Perakende</span></div>
+        <div class="tsc"><div class="tsc-stars">★★★★★</div><p class="tsc-text">Yetenek yönetimi sistemimizi Derin Akademi ile sıfırdan tasarladık. 6 ay içinde kritik pozisyonlardaki çalışan devir oranı yüzde kırk düştü. Rakamlar konuşuyor.</p><div class="tsc-author"><div class="tsc-avatar tsc-av-d">EŞ</div><div><div class="tsc-name">Elif Şahin</div><div class="tsc-role">CHRO</div></div></div><span class="tsc-sector">Teknoloji</span></div>
+        <div class="tsc"><div class="tsc-stars">★★★★★</div><p class="tsc-text">Liderlik Yolculuğu programı yöneticilerimizin bakış açısını dönüştürdü. Ekip yönetiminde kullandıkları araçlar ve dil tamamen değişti. Etki 3 ay içinde görünür oldu.</p><div class="tsc-author"><div class="tsc-avatar tsc-av-e">ST</div><div><div class="tsc-name">Selin Topal</div><div class="tsc-role">İK Uzmanı</div></div></div><span class="tsc-sector">Holding</span></div>
+      </div>
+
+      <!-- Sütun 3 -->
+      <div class="testi-scroll-col col-3">
+        <div class="tsc"><div class="tsc-stars">★★★★★</div><p class="tsc-text">"Biz eğitim satmıyoruz" dediklerinde şüpheyle yaklaştım. Ama gerçekten sahaya indiler. Performans sistemimizi baştan tasarladık, sonuçlar somut ve ölçülebilir oldu.</p><div class="tsc-author"><div class="tsc-avatar tsc-av-c">MY</div><div><div class="tsc-name">Murat Yıldız</div><div class="tsc-role">Genel Müdür</div></div></div><span class="tsc-sector">Üretim</span></div>
+        <div class="tsc"><div class="tsc-stars">★★★★★</div><p class="tsc-text">İşe alım süreçlerimizi baştan sona revize ettik. Artık yanlış kişiyi işe almak için harcadığımız zamanı ve maliyeti düşündüğümüzde bu yatırımın ne kadar değerli olduğunu görüyoruz.</p><div class="tsc-author"><div class="tsc-avatar tsc-av-a">SA</div><div><div class="tsc-name">Serkan Arslan</div><div class="tsc-role">İK Müdürü</div></div></div><span class="tsc-sector">Perakende</span></div>
+        <div class="tsc"><div class="tsc-stars">★★★★★</div><p class="tsc-text">Aileden kuruma geçiş sürecimizde en büyük çekincem ailevi dinamiklerin yönetime yansımasıydı. Derin Akademi bu hassas dengeyi kurumsal bir yapıyla mükemmel çözdü.</p><div class="tsc-author"><div class="tsc-avatar tsc-av-b">ZK</div><div><div class="tsc-name">Zeynep Korkmaz</div><div class="tsc-role">Kurumsallaşma Sorumlusu</div></div></div><span class="tsc-sector">İnşaat & GYO</span></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══ FOOTER ══ -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo" style="display:inline-flex"><img src="public/logos/68.png" alt="Derin Akademi" class="nav-logo-img"/></a>
+        <p class="brand-desc">İnsan kaynakları alanında uzmanlaşmış danışmanlık ve eğitim şirketi. Anlatan değil, çalışan sistemler kurarız.</p>
+        <div class="footer-social">
+          <a class="social-btn" href="https://www.instagram.com/derinakademi/" target="_blank">📷</a>
+          <a class="social-btn" href="https://www.linkedin.com/in/hakan-selahi-001969/" target="_blank">in</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Hizmetler</div>
+        <ul class="footer-links">
+          <li><a href="kurslar.html">Eğitimlerimiz</a></li>
+          <li><a href="danismanlik.html">Danışmanlıklarımız</a></li>
+          <li><a href="kurslar.html">Kurumsal Eğitim</a></li>
+          <li><a href="danismanlik.html">Kurumsallaşma</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Şirket</div>
+        <ul class="footer-links">
+          <li><a href="hakkimizda.html">Kurumsal</a></li>
+          <li><a href="blog.html">Deneyimlerimiz</a></li>
+          <li><a href="kariyer.html">Kariyer</a></li>
+          <li><a href="iletisim.html">İletişim</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Bülten</div>
+        <div class="footer-newsletter">
+          <p>İK gündemindeki gelişmelerden ve eğitimlerimizden haberdar ol.</p>
+          <div class="newsletter-form"><input type="email" class="newsletter-input" placeholder="E-posta"/><button class="btn btn-primary btn-sm" onclick="showToast('Abone oldunuz! 🎉')">→</button></div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2026 Derin Akademi. Tüm hakları saklıdır. &nbsp;<a href="https://reneedesignlab.com/tr" target="_blank" style="color:var(--silver-dim);text-decoration:none;" onmouseover="this.style.color='var(--silver)'" onmouseout="this.style.color='var(--silver-dim)'">by Renee DesignLab</a></div>
+      <div class="footer-legal"><a href="gizlilik-politikasi.html">Gizlilik Politikası</a><a href="kullanim-kosullari.html">Kullanım Koşulları</a><a href="kvkk.html">KVKK</a><a href="cerezler.html">Çerezler</a></div>
+    </div>
+  </div>
+</footer>
+
+<button id="back-to-top" style="position:fixed;bottom:28px;right:28px;z-index:500;width:44px;height:44px;border-radius:12px;background:var(--glass-bg);border:1px solid var(--glass-bd);color:var(--teal);font-size:18px;cursor:pointer;opacity:0;transition:var(--t-base);backdrop-filter:blur(12px);">↑</button>
+
+<script src="js/main.js"></script>
+<script src="js/i18n.js"></script>
+
+<!-- ══ ÖZEL TEKLİF MODAL ══ -->
+<div id="teklif-modal" class="teklif-modal">
+  <div class="teklif-modal-box">
+    <button class="teklif-modal-close" onclick="closeTeklifModal()">✕</button>
+    <div>
+      <div style="color:var(--teal);font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:10px;">İletişim Bilgileri</div>
+      <h2 style="font-family:'Montserrat',sans-serif;font-size:24px;font-weight:900;line-height:1.2;margin-bottom:8px;">Hemen <span class="gradient-text">Teklif Alın</span></h2>
+      <p style="color:var(--silver);font-size:13px;line-height:1.75;margin-bottom:28px;">Eğitim ihtiyaçlarınızı paylaşın, size özel program ve teklif oluşturalım.</p>
+      <div style="display:flex;flex-direction:column;gap:18px;margin-bottom:28px;">
+        <div class="teklif-info-row"><div class="teklif-info-icon">📞</div><div><div style="font-size:11px;color:var(--silver-dim);margin-bottom:3px;">Telefon</div><a href="tel:+905330193134" style="font-size:14px;font-weight:600;color:var(--white);text-decoration:none;">0 (533) 019 31 34</a></div></div>
+        <div class="teklif-info-row"><div class="teklif-info-icon">📧</div><div><div style="font-size:11px;color:var(--silver-dim);margin-bottom:3px;">E-posta</div><a href="mailto:derin@derinakademi.net" style="font-size:14px;font-weight:600;color:var(--white);text-decoration:none;">derin@derinakademi.net</a></div></div>
+        <div class="teklif-info-row"><div class="teklif-info-icon">📍</div><div><div style="font-size:11px;color:var(--silver-dim);margin-bottom:3px;">Adres</div><div style="font-size:13px;color:var(--silver);line-height:1.6;">İçerenköy Mah. Topçu İbrahim Sokak Quick Tower Sitesi No:8-10D Ataşehir, İstanbul 34752</div></div></div>
+      </div>
+      <div style="display:flex;gap:10px;">
+        <a href="https://www.instagram.com/derinakademi/" target="_blank" style="display:flex;align-items:center;gap:6px;padding:8px 14px;border-radius:8px;background:var(--glass-bg);border:1px solid var(--glass-bd);font-size:12px;font-weight:600;color:var(--silver);text-decoration:none;">📷 Instagram</a>
+        <a href="https://www.linkedin.com/in/hakan-selahi-001969/" target="_blank" style="display:flex;align-items:center;gap:6px;padding:8px 14px;border-radius:8px;background:var(--glass-bg);border:1px solid var(--glass-bd);font-size:12px;font-weight:600;color:var(--silver);text-decoration:none;">in LinkedIn</a>
+      </div>
+    </div>
+    <div>
+      <div class="teklif-field"><label>Ad Soyad *</label><input type="text" class="teklif-modal-input" placeholder="Adınız Soyadınız"/></div>
+      <div class="teklif-field"><label>E-posta *</label><input type="email" class="teklif-modal-input" placeholder="ornek@mail.com"/></div>
+      <div class="teklif-field"><label>Telefon *</label><input type="tel" class="teklif-modal-input" placeholder="0 5XX XXX XX XX"/></div>
+      <div class="teklif-field"><label>Kurum / Şirket (İsteğe Bağlı)</label><input type="text" class="teklif-modal-input" placeholder="Şirketinizin adı"/></div>
+      <div class="teklif-field"><label>Talebiniz *</label><textarea class="teklif-modal-input" placeholder="İhtiyacınızı ve beklentilerinizi yazın..." style="resize:vertical;min-height:100px;"></textarea></div>
+      <button class="btn btn-primary btn-lg" style="width:100%;justify-content:center;margin-top:4px;" onclick="showToast('Talebiniz iletildi! 🎉');closeTeklifModal();">Teklif İste →</button>
+    </div>
+  </div>
+</div>
+</body>
+</html>

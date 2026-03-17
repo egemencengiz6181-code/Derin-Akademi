@@ -6,6 +6,7 @@
   <meta name="description" content="Derin Akademi kurumsal danışmanlık hizmetleri. İK stratejisi, yetenek yönetimi, performans, ücret ve organizasyonel dönüşüm alanlarında kuruma özel çözümler."/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
   <link rel="stylesheet" href="css/main.css"/>
   <style>
     /* ── Consulting Cards ── */
@@ -28,15 +29,37 @@
     .approach-icon{font-size:40px;display:block;margin-bottom:16px;}
     .approach-title{font-family:'Montserrat',sans-serif;font-size:15px;font-weight:800;color:var(--white);margin-bottom:10px;}
     .approach-desc{font-size:13px;color:var(--silver);line-height:1.7;}
-    /* ── Stats strip ── */
-    .danismanlik-stats{padding:40px 0;border-bottom:1px solid var(--glass-bd);position:relative;z-index:2;}
-    .danismanlik-stats .stats-row{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--glass-bd);border:1px solid var(--glass-bd);border-radius:var(--radius-lg);overflow:hidden;}
-    .danismanlik-stats .stat-box{background:var(--navy-card);padding:28px 20px;text-align:center;}
+    /* ── Stats Cards New ── */
+    .danismanlik-stats{padding:60px 0;border-bottom:1px solid var(--glass-bd);border-top:1px solid var(--glass-bd);position:relative;z-index:2;background:linear-gradient(180deg,rgba(0,200,180,0.01),rgba(0,100,200,0.01));}
+    .stats-cards-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:20px;}
+    .stat-card-glass{background:var(--glass-bg);border:1px solid var(--glass-bd);border-radius:var(--radius-lg);padding:28px 24px;display:flex;align-items:center;gap:18px;transition:var(--t-base);backdrop-filter:blur(14px);position:relative;overflow:hidden;cursor:default;}
+    .stat-card-glass::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(0,200,180,0.06),transparent);opacity:0;transition:var(--t-base);pointer-events:none;}
+    .stat-card-glass:hover{border-color:var(--teal-border);transform:translateY(-4px);box-shadow:0 12px 48px rgba(0,200,180,0.12);}
+    .stat-card-glass:hover::before{opacity:1;}
+    .stat-icon-box{width:60px;height:60px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:28px;flex-shrink:0;border:1px solid var(--glass-bd);}
+    .stat-icon-box.teal{background:rgba(0,200,180,0.12);border-color:rgba(0,200,180,0.25);}
+    .stat-icon-box.blue{background:rgba(0,168,232,0.12);border-color:rgba(0,168,232,0.25);}
+    .stat-icon-box.purple{background:rgba(130,80,255,0.12);border-color:rgba(130,80,255,0.25);}
+    .stat-content{display:flex;flex-direction:column;gap:4px;}
+    .stat-value{font-family:'Montserrat',sans-serif;font-size:24px;font-weight:900;color:var(--teal);line-height:1;}
+    .stat-text{font-size:13px;color:var(--silver);font-weight:500;line-height:1.4;}
     /* ── Responsive ── */
-    @media(max-width:1024px){.consulting-grid{grid-template-columns:1fr 1fr;}.approach-grid{grid-template-columns:1fr 1fr;}.danismanlik-stats .stats-row{grid-template-columns:repeat(3,1fr);}}
-    @media(max-width:640px){.consulting-grid{grid-template-columns:1fr;}.approach-grid{grid-template-columns:1fr;}.c-actions{flex-direction:column;}.danismanlik-stats .stats-row{grid-template-columns:1fr 1fr;}}
+    @media(max-width:1200px){.stats-cards-grid{grid-template-columns:repeat(3,1fr);gap:16px;}}
+    @media(max-width:1024px){.consulting-grid{grid-template-columns:1fr 1fr;}.approach-grid{grid-template-columns:1fr 1fr;}.stats-cards-grid{grid-template-columns:repeat(2,1fr);gap:16px;}.consulting-grid .consulting-card:last-child:nth-child(3n+1){grid-column:auto;}}
+    @media(max-width:768px){.stats-cards-grid{grid-template-columns:1fr;gap:12px;}.stat-card-glass{padding:20px 16px;gap:14px;}.stat-icon-box{width:52px;height:52px;font-size:24px;}.stat-value{font-size:20px;}.stat-text{font-size:12px;}}
+    @media(max-width:640px){.consulting-grid{grid-template-columns:1fr;}.approach-grid{grid-template-columns:1fr;}.c-actions{flex-direction:column;}.stats-cards-grid{grid-template-columns:1fr;gap:10px;}.stat-card-glass{padding:16px 12px;gap:12px;}.stat-icon-box{width:44px;height:44px;font-size:20px;}.stat-value{font-size:18px;}.stat-text{font-size:11px;}}
     /* Center lone last card in 3-col grid */
     .consulting-grid .consulting-card:last-child:nth-child(3n+1){grid-column:2;}
+    /* Sectors Grid */
+    .sectors-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;padding:20px 0 32px;}
+    .sector-card{background:var(--glass-bg);border:1px solid var(--glass-bd);border-radius:var(--radius-lg);padding:20px 16px;display:flex;flex-direction:column;align-items:center;text-align:center;transition:var(--t-base);cursor:default;}
+    .sector-card:hover{border-color:var(--teal-border);transform:translateY(-4px);background:linear-gradient(135deg,rgba(0,200,180,0.1),rgba(0,100,200,0.06));}
+    .sector-icon{font-size:36px;color:var(--teal);margin-bottom:10px;transition:var(--t-base);}
+    .sector-card:hover .sector-icon{color:var(--blue);font-size:42px;}
+    .sector-label{font-family:'Montserrat',sans-serif;font-size:13px;font-weight:700;color:var(--white);}
+    @media(max-width:1024px){.sectors-grid{grid-template-columns:repeat(3,1fr);}}
+    @media(max-width:768px){.sectors-grid{grid-template-columns:repeat(2,1fr);gap:12px;padding:16px 0 24px;}.sector-card{padding:16px 12px;}.sector-icon{font-size:32px;}.sector-card:hover .sector-icon{font-size:38px;}.sector-label{font-size:12px;}}
+    @media(max-width:480px){.sectors-grid{grid-template-columns:1fr;gap:10px;padding:12px 0 20px;}.sector-card{padding:14px 10px;}.sector-icon{font-size:28px;}.sector-card:hover .sector-icon{font-size:34px;}.sector-label{font-size:11px;}}
   </style>
   <!-- SEO: Open Graph -->
   <meta property="og:type" content="website"/>
@@ -65,11 +88,13 @@
     <ul class="nav-links">
       <li><a href="kurslar.html">Eğitimlerimiz</a></li>
       <li><a href="danismanlik.html" class="active">Danışmanlıklarımız</a></li>
-      <li><a href="hakkimizda.html">Hakkımızda</a></li>
-      <li><a href="blog.html">Blog</a></li>
+      <li><a href="hakkimizda.html">Kurumsal</a></li>
+      <li><a href="referanslar.html">Referanslarımız</a></li>
+      <li><a href="blog.html">Deneyimlerimiz</a></li>
       <li><a href="iletisim.html">İletişim</a></li>
     </ul>
     <div class="nav-actions">
+      <button id="darkModeToggle" onclick="toggleDarkMode()" class="btn btn-ghost btn-sm" style="font-weight:700;letter-spacing:1px;padding:7px 14px;min-width:52px;" title="Dark/Light Mode">🌙</button>
       <button id="langToggle" onclick="daToggleLang()" class="btn btn-ghost btn-sm" style="font-weight:700;letter-spacing:1px;padding:7px 14px;min-width:52px;">EN</button>
       <button onclick="openTeklifModal()" class="btn btn-primary btn-sm">Özel Teklif Al</button>
     </div>
@@ -81,8 +106,8 @@
   <a href="index.html">Ana Sayfa</a>
   <a href="kurslar.html">Eğitimlerimiz</a>
   <a href="danismanlik.html" class="active">Danışmanlıklarımız</a>
-  <a href="hakkimizda.html">Hakkımızda</a>
-  <a href="blog.html">Blog</a>
+  <a href="hakkimizda.html">Kurumsal</a>
+  <a href="blog.html">Deneyimlerimiz</a>
   <a href="iletisim.html">İletişim</a>
   <div class="mobile-nav-actions">
     <button onclick="openTeklifModal()" class="btn btn-primary btn-md" style="width:100%;justify-content:center">Özel Teklif Al</button>
@@ -90,23 +115,23 @@
 </div>
 
 <!-- ══ PAGE HERO ══ -->
-<section class="page-hero">
+<div class="page-hero">
   <div class="container">
-    <div class="section-tag">Kurumsal Dönüşüm</div>
-    <h1 class="page-hero-title">Danışmanlıklarımız</h1>
-    <p class="page-hero-desc">Stratejiyi sunumdan sahaya indiriyoruz. Rapor üretmeye değil, uygulanabilirlik sağlamaya odaklanır; kurumunuzla birlikte inşa eder, birlikte ölçeriz.</p>
+    <div class="page-hero-tag reveal"><span class="section-tag">Kurumsal Danışmanlık</span></div>
+    <h1 class="page-hero-title reveal reveal-d1">Ne Yapmak Değil,<br/><span class="gradient-text">Nasıl Yapılacağı.</span></h1>
+    <p class="page-hero-desc reveal reveal-d2">Tavsiye vermekle kalmaz; kurumunuzun içine girerek dönüşümün sahaya iniş noktasını birlikte tasarlar ve yönetiriz.</p>
   </div>
-</section>
+</div>
 
-<!-- ══ STATS ══ -->
-<div class="danismanlik-stats">
+<!-- ══ STATS STRIP ══ -->
+<div style="position:relative;z-index:2;padding:40px 0;border-bottom:1px solid var(--glass-bd);">
   <div class="container">
-    <div class="stats-row">
-      <div class="stat-box"><div class="stat-num">10<em>+</em></div><div class="stat-label">Danışmanlık Alanı</div></div>
-      <div class="stat-box"><div class="stat-num">40<em>+</em></div><div class="stat-label">Hizmet Verilen Kurum</div></div>
-      <div class="stat-box"><div class="stat-num">30<em>+</em></div><div class="stat-label">Yıllık Deneyim</div></div>
-      <div class="stat-box"><div class="stat-num">7<em>+</em></div><div class="stat-label">Sektör</div></div>
-      <div class="stat-box"><div class="stat-num">98<em>%</em></div><div class="stat-label">Müşteri Memnuniyeti</div></div>
+    <div style="display:flex;gap:40px;justify-content:center;flex-wrap:wrap;">
+      <div style="text-align:center"><div style="font-family:'Montserrat',sans-serif;font-size:24px;font-weight:800">10<span style="color:var(--teal)">+</span></div><div style="font-size:13px;color:var(--silver)">Danışmanlık Alanı</div></div>
+      <div style="text-align:center"><div style="font-family:'Montserrat',sans-serif;font-size:24px;font-weight:800">40<span style="color:var(--teal)">+</span></div><div style="font-size:13px;color:var(--silver)">Hizmet Verilen Kurum</div></div>
+      <div style="text-align:center"><div style="font-family:'Montserrat',sans-serif;font-size:24px;font-weight:800">30<span style="color:var(--teal)">+</span></div><div style="font-size:13px;color:var(--silver)">Yıllık Deneyim</div></div>
+      <div style="text-align:center"><div style="font-family:'Montserrat',sans-serif;font-size:24px;font-weight:800">7<span style="color:var(--teal)">+</span></div><div style="font-size:13px;color:var(--silver)">Farklı Sektör</div></div>
+      <div style="text-align:center"><div style="font-family:'Montserrat',sans-serif;font-size:24px;font-weight:800">98<span style="color:var(--teal)">%</span></div><div style="font-size:13px;color:var(--silver)">Müşteri Memnuniyeti</div></div>
     </div>
   </div>
 </div>
@@ -126,7 +151,7 @@
       <!-- 1 -->
       <div class="consulting-card" onclick="location.href='danismanliklar/aileden-kuruma.html'" style="cursor:pointer">
         <span class="c-number">01 — Kurumsal Dönüşüm</span>
-        <span class="c-icon">🏛️</span>
+        <i class="fas fa-building c-icon"></i>
         <div class="c-title">Aileden Kuruma</div>
         <div class="c-sub">Sürdürülebilir Başarının Yol Haritası</div>
         <p class="c-desc">Aile şirketlerinin kurumsal yönetim modeline geçiş sürecini yapılandırır; roller, sorumluluklar ve karar mekanizmalarını profesyonelleştiririz.</p>
@@ -139,7 +164,7 @@
       <!-- 2 -->
       <div class="consulting-card" onclick="location.href='danismanliklar/gelecege-hazir-kadro.html'" style="cursor:pointer">
         <span class="c-number">02 — İnsan Kaynakları Planlaması</span>
-        <span class="c-icon">🗺️</span>
+        <i class="fas fa-map c-icon"></i>
         <div class="c-title">Geleceğe Hazır Kadro</div>
         <div class="c-sub">Stratejik İK Planlaması</div>
         <p class="c-desc">Kurumun orta ve uzun vadeli hedeflerine paralel, doğru sayıda ve yetkinlikte kadroyu bugünden planlar; işgücü boşluklarını ve fazlalıklarını önceden görünür kılarız.</p>
@@ -152,7 +177,7 @@
       <!-- 3 -->
       <div class="consulting-card" onclick="location.href='danismanliklar/stratejiyi-gundelik-hayata.html'" style="cursor:pointer">
         <span class="c-number">03 — Strateji Uygulama</span>
-        <span class="c-icon">🎯</span>
+        <i class="fas fa-crosshairs c-icon"></i>
         <div class="c-title">Stratejiyi Gündelik Hayata İndirmek</div>
         <div class="c-sub">Hedeflerle Yönetim Modeli</div>
         <p class="c-desc">Üst yönetimin vizyon ve stratejilerini, tüm organizasyon katmanlarında günlük iş yapış biçimine dönüştüren hedef hiyerarşisi, gösterge tabloları ve izleme mekanizmaları kurarız.</p>
@@ -165,7 +190,7 @@
       <!-- 4 -->
       <div class="consulting-card" onclick="location.href='danismanliklar/yetenek-yonetimi.html'" style="cursor:pointer">
         <span class="c-number">04 — Yetenek Yönetimi</span>
-        <span class="c-icon">💎</span>
+        <i class="fas fa-gem c-icon"></i>
         <div class="c-title">Yetenek Avından Yetenek Tutkusuna</div>
         <div class="c-sub">Potansiyeli Keşfet ve Yönet</div>
         <p class="c-desc">İşe alım süreçlerini optimize etmekle kalmaz; kurumda var olan gizli yetenekleri keşfeder, gelişim yolakları tasarlar ve elde tutma stratejileri oluştururuz.</p>
@@ -178,7 +203,7 @@
       <!-- 5 -->
       <div class="consulting-card" onclick="location.href='danismanliklar/gelisimi-olc.html'" style="cursor:pointer">
         <span class="c-number">05 — Performans Yönetimi</span>
-        <span class="c-icon">📊</span>
+        <i class="fas fa-chart-bar c-icon"></i>
         <div class="c-title">Gelişimi Ölç, Başarıyı Yönet</div>
         <div class="c-sub">360° Performans Sistemi</div>
         <p class="c-desc">Çalışan performansını yalnızca yıllık değerlendirmeye indirgemez; sürekli geri bildirim döngüleri, yetkinlik çerçeveleri ve gelişim planlarıyla bütünleşik bir sistem tasarlarız.</p>
@@ -191,7 +216,7 @@
       <!-- 6 -->
       <div class="consulting-card" onclick="location.href='danismanliklar/iceriden-guclen.html'" style="cursor:pointer">
         <span class="c-number">06 — İç Yetenek Geliştirme</span>
-        <span class="c-icon">🌱</span>
+        <i class="fas fa-leaf c-icon"></i>
         <div class="c-title">İçeriden Güçlen</div>
         <div class="c-sub">Kurum İçi Gelişim Akademisi Tasarımı</div>
         <p class="c-desc">Kurumunuzun kendi eğitim kapasitesini inşa eder; iç eğitmen sistemleri, bilgi transferi mekanizmaları ve öğrenen organizasyon kültürü oluştururuz.</p>
@@ -204,7 +229,7 @@
       <!-- 7 -->
       <div class="consulting-card" onclick="location.href='danismanliklar/adaletli-ucret.html'" style="cursor:pointer">
         <span class="c-number">07 — Ücret Yönetimi</span>
-        <span class="c-icon">⚖️</span>
+        <i class="fas fa-scale-balanced c-icon"></i>
         <div class="c-title">Adaletli ve Şeffaf Ücretin Mimarisi</div>
         <div class="c-sub">Ücret Yönetimi Tasarımı</div>
         <p class="c-desc">İş değerleme, piyasa kıyaslama ve iç eşitlik analizlerini bir arada kullanarak kurumunuza özgü, savunulabilir ve çalışan güveni yaratan ücret sistemleri tasarlarız.</p>
@@ -217,7 +242,7 @@
       <!-- 8 -->
       <div class="consulting-card" onclick="location.href='danismanliklar/ucret-stratejisi.html'" style="cursor:pointer">
         <span class="c-number">08 — Ücret Stratejisi</span>
-        <span class="c-icon">💰</span>
+        <i class="fas fa-money-bill-wave c-icon"></i>
         <div class="c-title">Ücret Stratejisi ve Bant Yapısı</div>
         <div class="c-sub">Değer Yaratan İşe Değer Biçmek</div>
         <p class="c-desc">Kariyer aşamalarını, pazar verilerini ve kurum kültürünü birleştirerek bütünsel ücret paketleri ve ücret bantları oluştururuz; hem yeteneği çeken hem bütçeyi koruyan bir denge kurarız.</p>
@@ -230,7 +255,7 @@
       <!-- 9 -->
       <div class="consulting-card" onclick="location.href='danismanliklar/hoshin-kanri.html'" style="cursor:pointer">
         <span class="c-number">09 — Strateji Operasyonalizasyonu</span>
-        <span class="c-icon">🧭</span>
+        <i class="fas fa-compass c-icon"></i>
         <div class="c-title">Hoshin Kanri ile Stratejiyi Hayata Geçirmek</div>
         <div class="c-sub">Vizyonu Operasyona Dönüştür</div>
         <p class="c-desc">Japon yönetim felsefesinden beslenen Hoshin Kanri metodolojisiyle, kurumun uzun vadeli hedeflerini departmandan bireye kadar hizalayarak yürütme gücünü artırırız.</p>
@@ -243,7 +268,7 @@
       <!-- 10 -->
       <div class="consulting-card" onclick="location.href='danismanliklar/dogru-ise-dogru-kadro.html'" style="cursor:pointer">
         <span class="c-number">10 — Organizasyon Tasarımı</span>
-        <span class="c-icon">🔍</span>
+        <i class="fas fa-magnifying-glass c-icon"></i>
         <div class="c-title">Doğru İşe Doğru Kadro</div>
         <div class="c-sub">İş Analizi ve Norm Kadro Mühendisliği</div>
         <p class="c-desc">Her pozisyonu işin gerçek gereksinimlerine göre tanımlar; görev, yetki ve sorumlulukları netleştirir, norm kadro analizleriyle organizasyon verimliliğini optimize ederiz.</p>
@@ -255,6 +280,28 @@
 
     </div>
 
+  </div>
+</section>
+
+<!-- ══ SEKTÖRLER ══ -->
+<section class="section-pad" style="border-top:1px solid var(--glass-bd);">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-tag reveal" style="justify-content:center">Çalıştığımız Sektörler</div>
+      <h2 class="section-title reveal reveal-d1" style="text-align:center;">Farklı Sektörlerde<br><span class="gradient-text">Ortak Dönüşüm</span></h2>
+      <p class="section-desc reveal reveal-d2" style="text-align:center;">Finans, üretim, sanayi, tarım, sağlık, perakende ve eğitim başta olmak üzere birbirinden farklı pek çok sektörde kurumlarla çalıştık.</p>
+    </div>
+    <div class="sectors-grid">
+        <div class="sector-card reveal"><i class="fas fa-landmark sector-icon"></i><div class="sector-label">Finans</div></div>
+        <div class="sector-card reveal reveal-d1"><i class="fas fa-industry sector-icon"></i><div class="sector-label">Üretim</div></div>
+        <div class="sector-card reveal reveal-d2"><i class="fas fa-gears sector-icon"></i><div class="sector-label">Sanayi</div></div>
+        <div class="sector-card reveal reveal-d3"><i class="fas fa-leaf sector-icon"></i><div class="sector-label">Tarım</div></div>
+        <div class="sector-card reveal reveal-d4"><i class="fas fa-hospital sector-icon"></i><div class="sector-label">Sağlık</div></div>
+        <div class="sector-card reveal reveal-d1"><i class="fas fa-shopping-cart sector-icon"></i><div class="sector-label">Perakende</div></div>
+        <div class="sector-card reveal reveal-d2"><i class="fas fa-book sector-icon"></i><div class="sector-label">Eğitim</div></div>
+        <div class="sector-card reveal reveal-d3"><i class="fas fa-building sector-icon"></i><div class="sector-label">Holding</div></div>
+        <div class="sector-card reveal reveal-d4"><i class="fas fa-helmet-safety sector-icon"></i><div class="sector-label">İnşaat</div></div>
+    </div>
   </div>
 </section>
 
@@ -270,32 +317,32 @@
 
     <div class="approach-grid reveal">
       <div class="approach-card">
-        <span class="approach-icon">🔬</span>
+        <i class="fas fa-flask approach-icon"></i>
         <div class="approach-title">Tanı Önce, Çözüm Sonra</div>
         <p class="approach-desc">Probleminizi derinlemesine analiz etmeden çözüm önermiyoruz. Her danışmanlık süreci, kurumunuzu anlamakla başlar.</p>
       </div>
       <div class="approach-card">
-        <span class="approach-icon">🤝</span>
+        <i class="fas fa-handshake approach-icon"></i>
         <div class="approach-title">Seninle İnşa Ederiz</div>
         <p class="approach-desc">Çözümleri dışarıdan dayatmıyor, kurumunuzun içindeki insanlarla birlikte tasarlıyoruz. Sahiplenme kalıcılığı getirir.</p>
       </div>
       <div class="approach-card">
-        <span class="approach-icon">📐</span>
+        <i class="fas fa-ruler approach-icon"></i>
         <div class="approach-title">Kuruma Özel Her Zaman</div>
         <p class="approach-desc">Hazır şablon çözümler sunmuyoruz. Her müdahale, kurumunuzun kültürü, büyüklüğü ve sektörüne göre özelleştirilir.</p>
       </div>
       <div class="approach-card">
-        <span class="approach-icon">📈</span>
+        <i class="fas fa-chart-line approach-icon"></i>
         <div class="approach-title">Ölçülemeyen Değişmez</div>
         <p class="approach-desc">Her danışmanlık sürecinde başarı kriterleri ve ölçüm mekanizmalarını baştan tanımlarız. Sonuçları birlikte izleriz.</p>
       </div>
       <div class="approach-card">
-        <span class="approach-icon">🔄</span>
+        <i class="fas fa-sync approach-icon"></i>
         <div class="approach-title">Sürekli Öğrenen Sistem</div>
         <p class="approach-desc">Danışmanlık bittiğinde kurumu terk etmiyoruz. Kurumunuzun kendi kendine öğrenen ve adapte olan bir yapıya kavuşmasını sağlarız.</p>
       </div>
       <div class="approach-card">
-        <span class="approach-icon">⚡</span>
+        <i class="fas fa-bolt approach-icon"></i>
         <div class="approach-title">Sahadaki 30 Yıl</div>
         <p class="approach-desc">Önerilerimiz akademik değil, sahadaki deneyimden beslenir. Kurucumuz Hakan Selahi'nin 30+ yıllık pratik bilgisi her projede aktif rol oynar.</p>
       </div>
@@ -336,7 +383,7 @@
         <p class="brand-desc">İnsan kaynakları alanında uzmanlaşmış danışmanlık ve eğitim şirketi. Anlatan değil, çalışan sistemler kurarız.</p>
         <div class="footer-social">
           <a class="social-btn" href="https://www.instagram.com/derinakademi/" target="_blank">📷</a>
-          <a class="social-btn" href="https://www.linkedin.com/company/derinakademi/" target="_blank">in</a>
+          <a class="social-btn" href="https://www.linkedin.com/in/hakan-selahi-001969/" target="_blank">in</a>
         </div>
       </div>
       <div>
@@ -351,8 +398,8 @@
       <div>
         <div class="footer-col-title">Şirket</div>
         <ul class="footer-links">
-          <li><a href="hakkimizda.html">Hakkımızda</a></li>
-          <li><a href="blog.html">Blog</a></li>
+          <li><a href="hakkimizda.html">Kurumsal</a></li>
+          <li><a href="blog.html">Deneyimlerimiz</a></li>
           <li><a href="kariyer.html">Kariyer</a></li>
           <li><a href="iletisim.html">İletişim</a></li>
         </ul>
@@ -391,7 +438,7 @@
       </div>
       <div style="display:flex;gap:10px;">
         <a href="https://www.instagram.com/derinakademi/" target="_blank" style="display:flex;align-items:center;gap:6px;padding:8px 14px;border-radius:8px;background:var(--glass-bg);border:1px solid var(--glass-bd);font-size:12px;font-weight:600;color:var(--silver);text-decoration:none;">📷 Instagram</a>
-        <a href="https://www.linkedin.com/company/derinakademi/" target="_blank" style="display:flex;align-items:center;gap:6px;padding:8px 14px;border-radius:8px;background:var(--glass-bg);border:1px solid var(--glass-bd);font-size:12px;font-weight:600;color:var(--silver);text-decoration:none;">in LinkedIn</a>
+        <a href="https://www.linkedin.com/in/hakan-selahi-001969/" target="_blank" style="display:flex;align-items:center;gap:6px;padding:8px 14px;border-radius:8px;background:var(--glass-bg);border:1px solid var(--glass-bd);font-size:12px;font-weight:600;color:var(--silver);text-decoration:none;">in LinkedIn</a>
       </div>
     </div>
     <div>

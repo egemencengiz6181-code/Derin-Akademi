@@ -13,13 +13,30 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* ── 2. ACTIVE NAV LINK ─────────────────────────────────────── */
-  const currentPage = location.pathname.split('/').pop() || 'index.html';
-  document.querySelectorAll('#navbar .nav-links a, .mobile-nav a').forEach(link => {
-    const href = link.getAttribute('href');
-    if (href === currentPage || (currentPage === '' && href === 'index.html')) {
-      link.classList.add('active');
-    }
-  });
+  function setActiveLink() {
+    const currentPath = location.pathname;
+    const currentFile = currentPath.split('/').pop() || 'index.html';
+    
+    // Tüm nav linklerinin active sınıfını kaldır
+    document.querySelectorAll('#navbar .nav-links a, .mobile-nav a').forEach(link => {
+      link.classList.remove('active');
+    });
+    
+    // Şu anki sayfaya uygun linkini aktif yap
+    document.querySelectorAll('#navbar .nav-links a, .mobile-nav a').forEach(link => {
+      const href = link.getAttribute('href');
+      // Direkt dosya eşleşmesi veya index.html için
+      if (href === currentFile || 
+          (currentFile === '' && href === 'index.html') ||
+          ((currentFile === 'blog.html' || currentPath.includes('/blog/')) && href === 'blog.html')) {
+        link.classList.add('active');
+      }
+    });
+  }
+  
+  // Sayfa yüklendiğinde ve popstate'de çağır
+  setActiveLink();
+  window.addEventListener('popstate', setActiveLink);
 
   /* ── 3. SCROLL REVEAL ───────────────────────────────────────── */
   const revealObs = new IntersectionObserver((entries) => {
@@ -153,3 +170,25 @@ document.addEventListener('click', function(e) {
 document.addEventListener('keydown', function(e) {
   if (e.key === 'Escape') window.closeTeklifModal();
 });
+
+/* ─── Dark Mode Toggle ─── */
+window.toggleDarkMode = function() {
+  const isDark = document.body.classList.toggle('dark-mode');
+  localStorage.setItem('darkMode', isDark ? 'true' : 'false');
+  const btn = document.getElementById('darkModeToggle');
+  if (btn) btn.innerHTML = isDark ? '☀️' : '🌙';
+};
+
+/* ─── Init Dark Mode ─── */
+if (localStorage.getItem('darkMode') === 'true') {
+  document.body.classList.add('dark-mode');
+  const btn = document.getElementById('darkModeToggle');
+  if (btn) btn.innerHTML = '☀️';
+}
+
+/* ─── Close WhatsApp Button ─── */
+window.closeWhatsappBtn = function(e) {
+  e.preventDefault();
+  e.stopPropagation();
+  document.getElementById('whatsapp-btn').classList.add('hidden');
+};

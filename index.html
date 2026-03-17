@@ -7,8 +7,7 @@
   <meta name="description" content="Derin Akademi, insan kaynakları alanında uzmanlaşmış danışmanlık ve eğitim şirketidir. 40+ kurum, 30+ yıllık tecrübe."/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="css/main.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet"/>  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>  <link rel="stylesheet" href="css/main.css"/>
   <style>
     .hero {
       position:relative;z-index:2;min-height:100vh;
@@ -20,15 +19,59 @@
     .hero-title .line{display:block;}
     .hero-desc{font-size:17px;color:var(--silver);line-height:1.78;max-width:500px;margin-bottom:40px;}
     .hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:52px;}
-    .hero-stats{display:flex;gap:40px;padding-top:52px;border-top:1px solid var(--glass-bd);flex-wrap:wrap;}
-    .hero-stat-num{font-family:'Montserrat',sans-serif;font-size:30px;font-weight:900;display:flex;align-items:baseline;gap:2px;}
-    .hero-stat-num em{font-size:18px;color:var(--teal);font-style:normal;}
-    .hero-stat-label{font-size:13px;color:var(--silver);margin-top:3px;}
+    .hero-stats{padding-top:52px;border-top:1px solid var(--glass-bd);margin-top:20px;}
+    .hero-stats-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;}
+    .hero-stat-card{background:var(--glass-bg);border:1px solid var(--glass-bd);border-radius:var(--radius-lg);padding:24px 20px;display:flex;align-items:center;gap:16px;transition:var(--t-base);backdrop-filter:blur(14px);position:relative;overflow:hidden;cursor:default;}
+    .hero-visual-stats .hero-stat-card{padding:18px 16px;gap:12px;}
+    .hero-stat-card::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(0,200,180,0.06),transparent);opacity:0;transition:var(--t-base);pointer-events:none;}
+    .hero-stat-card:hover{border-color:var(--teal-border);transform:translateY(-3px);box-shadow:0 10px 40px rgba(0,200,180,0.1);}
+    .hero-stat-card:hover::before{opacity:1;}
+    .hero-stat-icon{width:52px;height:52px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:24px;flex-shrink:0;border:1px solid var(--glass-bd);}
+    .hero-visual-stats .hero-stat-icon{width:44px;height:44px;font-size:18px;}
+    .hero-stat-icon.teal{background:rgba(0,200,180,0.12);border-color:rgba(0,200,180,0.25);}
+    .hero-stat-icon.blue{background:rgba(0,168,232,0.12);border-color:rgba(0,168,232,0.25);}
+    .hero-stat-info{display:flex;flex-direction:column;gap:3px;}
+    .hero-stat-value{font-family:'Montserrat',sans-serif;font-size:20px;font-weight:900;color:var(--teal);line-height:1;}
+    .hero-visual-stats .hero-stat-value{font-size:18px;}
+    .hero-stat-text{font-size:12px;color:var(--silver);font-weight:500;line-height:1.3;}
+    .hero-visual-stats .hero-stat-text{font-size:11px;}
 
     /* Orb */
-    .hero-visual{position:relative;display:flex;align-items:center;justify-content:center;height:580px;}
+    .hero-visual{position:relative;display:flex;align-items:center;justify-content:center;height:580px;flex-direction:column;}
+    .hero-visual-stats{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);display:flex;flex-direction:column;gap:10px;width:300px;z-index:10;}
+    .hero-vis-strip{
+      position:relative;
+      background:linear-gradient(135deg,rgba(0,200,180,0.07) 0%,rgba(3,10,28,0.82) 60%);
+      border:1px solid rgba(0,200,180,0.18);
+      border-left:2px solid rgba(0,200,180,0.6);
+      border-radius:12px;
+      padding:12px 18px 12px 16px;
+      display:flex;align-items:center;gap:13px;
+      backdrop-filter:blur(28px);-webkit-backdrop-filter:blur(28px);
+      box-shadow:0 4px 24px rgba(0,0,0,0.35),inset 0 1px 0 rgba(255,255,255,0.04);
+      color:var(--silver);font-size:13px;font-weight:500;
+      transition:border-color 0.3s,box-shadow 0.3s,transform 0.3s;
+      white-space:nowrap;overflow:hidden;
+    }
+    .hero-vis-strip::before{
+      content:'';
+      position:absolute;top:0;left:0;right:0;bottom:0;
+      background:radial-gradient(ellipse at 0% 50%,rgba(0,200,180,0.12) 0%,transparent 65%);
+      pointer-events:none;border-radius:inherit;
+    }
+    .hero-vis-strip:hover{
+      border-color:rgba(0,200,180,0.45);
+      border-left-color:var(--teal);
+      box-shadow:0 6px 32px rgba(0,200,180,0.15),inset 0 1px 0 rgba(255,255,255,0.06);
+      transform:translateX(3px);
+    }
+    .hero-vis-strip strong{color:var(--teal);font-family:'Montserrat',sans-serif;font-weight:900;font-size:16px;letter-spacing:-0.5px;}
+    .hvs-icon{font-size:18px;flex-shrink:0;filter:drop-shadow(0 0 6px rgba(0,200,180,0.5));}
+    .hvs-text{display:flex;flex-direction:column;gap:1px;}
+    .hvs-val{font-family:'Montserrat',sans-serif;font-size:16px;font-weight:900;color:var(--teal);line-height:1;letter-spacing:-0.5px;}
+    .hvs-label{font-size:11px;color:var(--silver);font-weight:500;line-height:1.3;}
     .orb-scene{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;}
-    .orb-core{position:absolute;width:270px;height:270px;border-radius:50%;background:radial-gradient(ellipse at 35% 35%,#0ff4e8 0%,#0099cc 28%,#003d80 65%,#001133 100%);box-shadow:0 0 0 1px rgba(0,200,180,0.25),0 0 50px rgba(0,200,180,0.4),0 0 120px rgba(0,150,200,0.18),inset 0 0 70px rgba(0,0,0,0.55);animation:orbFloat 7s ease-in-out infinite alternate;}
+    .orb-core{display:block;position:absolute;width:270px;height:270px;border-radius:50%;background:radial-gradient(ellipse at 35% 35%,#0ff4e8 0%,#0099cc 28%,#003d80 65%,#001133 100%);box-shadow:0 0 0 1px rgba(0,200,180,0.25),0 0 50px rgba(0,200,180,0.4),0 0 120px rgba(0,150,200,0.18),inset 0 0 70px rgba(0,0,0,0.55);animation:orbFloat 7s ease-in-out infinite alternate;}
     .orb-core::before{content:'';position:absolute;inset:8%;border-radius:50%;background:radial-gradient(circle at 32% 30%,rgba(255,255,255,0.38) 0%,transparent 52%);}
     @keyframes orbFloat{0%{transform:translateY(0) rotate(0deg)}100%{transform:translateY(-22px) rotate(9deg)}}
     .ring{position:absolute;border-radius:50%;border:1px solid rgba(0,200,180,0.15);}
@@ -48,7 +91,7 @@
     @keyframes ptFloat{0%{transform:translateY(0) scale(1)}100%{transform:translateY(-20px) scale(0.65)}}
     .grid-plane{position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:620px;height:200px;overflow:hidden;opacity:0.1;pointer-events:none;}
     .grid-plane svg{width:100%;height:100%;}
-    .float-card{position:absolute;background:rgba(7,20,40,0.88);border:1px solid var(--glass-bd);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-radius:var(--radius-md);padding:14px 18px;display:flex;align-items:center;gap:12px;box-shadow:var(--shadow-md);animation:fcFloat ease-in-out infinite alternate;}
+    .float-card{display:none;position:absolute;background:rgba(7,20,40,0.88);border:1px solid var(--glass-bd);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-radius:var(--radius-md);padding:14px 18px;align-items:center;gap:12px;box-shadow:var(--shadow-md);animation:fcFloat ease-in-out infinite alternate;}
     @keyframes fcFloat{0%{transform:translateY(0)}100%{transform:translateY(-10px)}}
     .fc-top{top:5%;right:0%;animation-duration:5.5s;}
     .fc-mid{top:42%;left:-6%;animation-duration:7s;animation-delay:-1s;}
@@ -64,22 +107,31 @@
     .trusted{padding:56px 0;position:relative;z-index:2;border-top:1px solid var(--glass-bd);border-bottom:1px solid var(--glass-bd);}
     .trusted-label{text-align:center;font-size:12px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--silver-dim);margin-bottom:32px;}
     .logo-item:hover{opacity:0.85;color:var(--silver-light);}
+    /* Hero Stats Strip */
+    .hero-stats-strip{display:none;}
+    .strip-item{text-align:center;width:100%;flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:0 10px;}
+    .strip-item-num{font-family:'Montserrat',sans-serif;font-size:24px;font-weight:900;color:var(--teal);margin-bottom:4px;}
+    .strip-item-label{font-size:10px;color:var(--silver);font-weight:600;line-height:1.3;}
 
     /* Features */
-    .features-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;}
+    .features-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:20px;margin:0 auto;}
     /* new feat-card glass design */
     .feat-card{
-      position:relative;padding:40px 34px 36px;
+      position:relative;padding:36px 28px 32px;
       background:rgba(255,255,255,0.03);
       border:1px solid rgba(255,255,255,0.07);
+      border-radius:var(--radius-lg);
       backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
       overflow:hidden;transition:transform 0.4s ease,border-color 0.4s ease;
       cursor:default;
     }
-    .feat-card:first-child{border-radius:var(--radius-lg) 0 0 0;}
-    .feat-card:nth-child(3){border-radius:0 var(--radius-lg) 0 0;}
-    .feat-card:nth-child(4){border-radius:0 0 0 var(--radius-lg);}
-    .feat-card:last-child{border-radius:0 0 var(--radius-lg) 0;}
+    .feat-card:nth-child(1){grid-column:span 4;}
+    .feat-card:nth-child(2){grid-column:span 4;}
+    .feat-card:nth-child(3){grid-column:span 4;}
+    .feat-card:nth-child(4){grid-column:span 3;}
+    .feat-card:nth-child(5){grid-column:span 3;}
+    .feat-card:nth-child(6){grid-column:span 3;}
+    .feat-card:nth-child(7){grid-column:span 3;}
     .feat-card:hover{transform:scale(1.03);border-color:rgba(0,200,180,0.3);z-index:2;}
     /* spotlight layer */
     .feat-spot{
@@ -110,6 +162,7 @@
       font-size:28px;margin-bottom:22px;
       transition:transform 0.4s ease,background 0.4s ease;
       position:relative;z-index:2;
+      color:var(--teal);
     }
     .feat-card:hover .feat-icon-wrap{
       transform:scale(1.1) translateY(-2px);
@@ -173,64 +226,57 @@
 
     @media(max-width:1024px){
       .hero-grid{grid-template-columns:1fr;text-align:center;}
-      .hero-cta,.hero-stats{justify-content:center;}
+      .hero-cta{justify-content:center;}
       .hero-desc{margin-left:auto;margin-right:auto;}
       .hero-visual{height:420px;margin-top:40px;}
-      .features-grid{grid-template-columns:1fr 1fr;}
-      .feat-card:first-child,.feat-card:nth-child(3),.feat-card:nth-child(4),.feat-card:last-child{border-radius:0;}
-      .features-grid .feat-card:first-child{border-radius:var(--radius-lg) var(--radius-lg) 0 0;}
-      .features-grid .feat-card:nth-child(2){border-radius:var(--radius-lg) var(--radius-lg) 0 0;}
+      .hero-visual-stats{position:static;width:100%;transform:none;display:flex;flex-direction:column;gap:8px;margin-top:24px;}
+      .features-grid{grid-template-columns:repeat(6,1fr);gap:16px;}
+      .features-grid .feat-card:nth-child(1),.features-grid .feat-card:nth-child(2),.features-grid .feat-card:nth-child(3){grid-column:span 2;}
+      .features-grid .feat-card:nth-child(4),.features-grid .feat-card:nth-child(5),.features-grid .feat-card:nth-child(6),.features-grid .feat-card:nth-child(7){grid-column:span 3;}
       .paths-grid{grid-template-columns:1fr;}
       .instructors-grid{grid-template-columns:1fr 1fr;}
       .testi-grid{grid-template-columns:1fr 1fr;}
     }
+    @media(max-width:768px){
+      .features-grid{grid-template-columns:1fr 1fr;gap:14px;}
+      .features-grid .feat-card:nth-child(n){grid-column:span 1;}
+      /* Scale down orb rings so they don't overflow viewport */
+      .ring-1{width:240px;height:240px;}
+      .ring-2{width:300px;height:300px;}
+      .ring-3{width:350px;height:350px;}
+      .hero-visual{height:340px;}
+      .grid-plane{width:380px;}
+      .courses-grid{grid-template-columns:1fr 1fr !important;gap:16px !important;}
+    }
     @media(max-width:640px){
+      .hero-visual-stats{width:100%;max-width:none;}
+      .hero-vis-strip{font-size:12px;padding:10px 14px 10px 13px;gap:10px;}
+      .hvs-val{font-size:14px;}
+      .hvs-icon{font-size:16px;}
+      .hero-cta{gap:10px;margin-bottom:32px;}
+      .hero-desc{font-size:15px;}
       .features-grid,.testi-grid{grid-template-columns:1fr;}
+      .features-grid .feat-card:nth-child(n){grid-column:span 1;}
       .cta-inner{padding:52px 24px;}
       .cta-actions{flex-direction:column;align-items:center;}
       .section-tag{display:inline-flex;}
+      /* Hide orb rings on small mobile, just show the strips */
+      .orb-scene{display:none;}
+      .hero-visual{height:auto;}
+      .courses-grid{grid-template-columns:1fr !important;gap:16px !important;}
+      .ref-logo-card{height:68px;padding:10px 18px;}
+      .ref-logo-card img{height:42px;max-width:120px;}
     }
-    /* Sectors */
-    /* macOS Dock — Sektörler */
-    .dock-outer{display:flex;justify-content:center;padding:24px 0 60px;position:relative;z-index:10;}
-    .dock-wrap{
-      display:flex;flex-direction:row;align-items:flex-end;
-      gap:0;padding:14px 16px 14px;
-      background:rgba(20,30,50,0.65);
-      backdrop-filter:blur(28px);-webkit-backdrop-filter:blur(28px);
-      border:1px solid rgba(255,255,255,0.1);
-      border-radius:26px;
-      box-shadow:0 8px 40px rgba(0,0,0,0.45),0 2px 0 rgba(255,255,255,0.06) inset,0 -1px 0 rgba(0,0,0,0.3) inset;
-      position:relative;
-      will-change:transform;
-    }
-    .dock-item{
-      display:flex;flex-direction:column;align-items:center;
-      position:relative;cursor:default;
-      padding:0 28px;
-      transform-origin:bottom center;
-      will-change:transform;
-    }
-    .dock-label{
-      position:absolute;bottom:calc(100% + 10px);
-      background:rgba(20,30,50,0.9);backdrop-filter:blur(10px);
-      border:1px solid rgba(255,255,255,0.12);
-      color:#fff;font-size:12px;font-weight:700;
-      padding:5px 12px;border-radius:8px;white-space:nowrap;
-      pointer-events:none;opacity:0;transform:translateY(6px);
-      transition:opacity 0.18s ease,transform 0.18s ease;
-      box-shadow:0 4px 16px rgba(0,0,0,0.35);
-    }
-    .dock-item:hover .dock-label{opacity:1;transform:translateY(0);}
-    .dock-icon{
-      font-size:52px;line-height:1;
-      display:block;
-      filter:drop-shadow(0 4px 12px rgba(0,0,0,0.4));
-      transition:filter 0.2s;
-    }
-    .dock-item:hover .dock-icon{filter:drop-shadow(0 6px 20px rgba(0,200,180,0.35));}
-    @media(max-width:768px){.dock-icon{font-size:36px;}.dock-wrap{padding:10px 10px;border-radius:18px;}.dock-item{padding:0 16px;}}
-    @media(max-width:480px){.dock-icon{font-size:28px;}.dock-item{padding:0 10px;}}
+    /* Sectors Grid */
+    .sectors-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;padding:20px 0 40px;}
+    .sector-card{background:var(--glass-bg);border:1px solid var(--glass-bd);border-radius:var(--radius-lg);padding:20px 16px;display:flex;flex-direction:column;align-items:center;text-align:center;transition:var(--t-base);cursor:default;}
+    .sector-card:hover{border-color:var(--teal-border);transform:translateY(-4px);background:linear-gradient(135deg,rgba(0,200,180,0.1),rgba(0,100,200,0.06));}
+    .sector-icon{font-size:36px;color:var(--teal);margin-bottom:10px;transition:var(--t-base);}
+    .sector-card:hover .sector-icon{color:var(--blue);font-size:42px;}
+    .sector-label{font-family:'Montserrat',sans-serif;font-size:13px;font-weight:700;color:var(--white);}
+    @media(max-width:1024px){.sectors-grid{grid-template-columns:repeat(3,1fr);}}
+    @media(max-width:768px){.sectors-grid{grid-template-columns:repeat(2,1fr);gap:12px;padding:16px 0 32px;}.sector-card{padding:16px 12px;}.sector-icon{font-size:32px;}.sector-card:hover .sector-icon{font-size:38px;}.sector-label{font-size:12px;}}
+    @media(max-width:480px){.sectors-grid{grid-template-columns:1fr;gap:10px;padding:12px 0 28px;}.sector-card{padding:14px 10px;}.sector-icon{font-size:28px;}.sector-card:hover .sector-icon{font-size:34px;}.sector-label{font-size:11px;}}
     /* Founder */
     .founder-grid{display:grid;grid-template-columns:360px 1fr;gap:64px;align-items:center;}
     .founder-frame{border-radius:24px;background:linear-gradient(135deg,rgba(0,200,180,0.1),rgba(0,100,200,0.08));border:1px solid var(--glass-bd);display:flex;align-items:center;justify-content:center;min-height:420px;position:relative;overflow:hidden;}
@@ -272,12 +318,12 @@
     <ul class="nav-links">
       <li><a href="kurslar.html">Eğitimlerimiz</a></li>
       <li><a href="danismanlik.html">Danışmanlıklarımız</a></li>
-      <li><a href="hakkimizda.html">Hakkımızda</a></li>
-      <li><a href="blog.html">Blog</a></li>
+      <li><a href="hakkimizda.html">Kurumsal</a></li>
+      <li><a href="referanslar.html">Referanslarımız</a></li>
+      <li><a href="blog.html">Deneyimlerimiz</a></li>
       <li><a href="iletisim.html">İletişim</a></li>
     </ul>
-    <div class="nav-actions">
-      <button id="langToggle" onclick="daToggleLang()" class="btn btn-ghost btn-sm" style="font-weight:700;letter-spacing:1px;padding:7px 14px;min-width:52px;">EN</button>
+    <div class="nav-actions">      <button id="darkModeToggle" onclick="toggleDarkMode()" class="btn btn-ghost btn-sm" style="font-weight:700;letter-spacing:1px;padding:7px 14px;min-width:52px;" title="Dark/Light Mode">🌙</button>      <button id="langToggle" onclick="daToggleLang()" class="btn btn-ghost btn-sm" style="font-weight:700;letter-spacing:1px;padding:7px 14px;min-width:52px;">EN</button>
       <button onclick="openTeklifModal()" class="btn btn-primary btn-sm" data-i18n="nav.teklif">Özel Teklif Al</button>
     </div>
     <button class="menu-toggle" aria-label="Menü">☰</button>
@@ -288,8 +334,8 @@
   <a href="index.html">Ana Sayfa</a>
   <a href="kurslar.html">Eğitimlerimiz</a>
   <a href="danismanlik.html">Danışmanlıklarımız</a>
-  <a href="hakkimizda.html">Hakkımızda</a>
-  <a href="blog.html">Blog</a>
+  <a href="hakkimizda.html">Kurumsal</a>
+  <a href="blog.html">Deneyimlerimiz</a>
   <a href="iletisim.html">İletişim</a>
   <div class="mobile-nav-actions">
     <button onclick="openTeklifModal()" class="btn btn-primary btn-md" style="width:100%;justify-content:center">Özel Teklif Al</button>
@@ -316,19 +362,12 @@
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>Danışmanlık
           </a>
         </div>
-        <div class="hero-stats reveal reveal-d4">
-          <div><div class="hero-stat-num">40<em>+</em></div><div class="hero-stat-label">Hizmet Verilen Kurum</div></div>
-          <div><div class="hero-stat-num">30<em>+</em></div><div class="hero-stat-label">Yıllık Deneyim</div></div>
-          <div><div class="hero-stat-num">98<em>%</em></div><div class="hero-stat-label">Memnuniyet</div></div>
-          <div><div class="hero-stat-num">10<em>+</em></div><div class="hero-stat-label">Eğitim Programı</div></div>
-        </div>
       </div>
       <div class="hero-visual reveal reveal-d2">
         <div class="orb-scene">
           <div class="ring ring-3"></div>
           <div class="ring ring-2"></div>
           <div class="ring ring-1"></div>
-          <div class="orb-core"></div>
           <div class="particle pt1"></div><div class="particle pt2"></div>
           <div class="particle pt3"></div><div class="particle pt4"></div>
           <div class="particle pt5"></div><div class="particle pt6"></div>
@@ -342,153 +381,179 @@
             </svg>
           </div>
         </div>
-        <div class="float-card fc-top"><div class="fc-icon t">🏢</div><div><div class="fc-label">Hizmet Verilen Kurum</div><div class="fc-val">40+ Kurum</div></div></div>
-        <div class="float-card fc-mid"><div class="fc-icon b">📊</div><div><div class="fc-label">Memnuniyet Oranı</div><div class="fc-val">%98</div></div></div>
-        <div class="float-card fc-bot"><div class="fc-icon p">🎓</div><div><div class="fc-label">Sertifikalı Koç</div><div class="fc-val">ACC · ICF Üyesi</div></div></div>
+        <div class="hero-visual-stats">
+          <div class="hero-vis-strip"><span class="hvs-icon">🏢</span><span class="hvs-text"><span class="hvs-val">40+</span><span class="hvs-label">Hizmet Verilen Kurum</span></span></div>
+          <div class="hero-vis-strip"><span class="hvs-icon">📅</span><span class="hvs-text"><span class="hvs-val">30+</span><span class="hvs-label">Yıllık Deneyim</span></span></div>
+          <div class="hero-vis-strip"><span class="hvs-icon">📚</span><span class="hvs-text"><span class="hvs-val">10+</span><span class="hvs-label">Eğitim Programı</span></span></div>
+          <div class="hero-vis-strip"><span class="hvs-icon">🎯</span><span class="hvs-text"><span class="hvs-val">7+</span><span class="hvs-label">Farklı Sektör</span></span></div>
+          <div class="hero-vis-strip"><span class="hvs-icon">⭐</span><span class="hvs-text"><span class="hvs-val">98%</span><span class="hvs-label">Müşteri Memnuniyeti</span></span></div>
+        </div>
       </div>
     </div>
-  </div>
-</section>
 
-<!-- ══ REFERANSLARIMIZ ══ -->
-<!-- Logo eklemek için: <span class="logo-item"><img src="img/logo-firma.svg" alt="Firma"/></span> kullanın -->
-<div class="trusted">
-  <div class="container">
-    <p class="trusted-label">Referanslarımız</p>
-  </div>
-  <div class="logos-marquee" style="margin-top:28px;">
-    <div class="logos-track">
-      <span class="logo-item"><img src="public/logos/38.png" alt=""/></span>
-      <span class="logo-item"><img src="public/logos/39.png" alt=""/></span>
-      <span class="logo-item"><img src="public/logos/40.png" alt=""/></span>
-      <span class="logo-item"><img src="public/logos/41.png" alt=""/></span>
-      <span class="logo-item"><img src="public/logos/42.png" alt=""/></span>
-      <span class="logo-item"><img src="public/logos/43.png" alt=""/></span>
-      <span class="logo-item"><img src="public/logos/44.png" alt=""/></span>
-      <span class="logo-item"><img src="public/logos/45.png" alt=""/></span>
-      <span class="logo-item"><img src="public/logos/46.png" alt=""/></span>
-      <span class="logo-item"><img src="public/logos/47.png" alt=""/></span>
-      <span class="logo-item"><img src="public/logos/48.png" alt=""/></span>
-      <span class="logo-item"><img src="public/logos/49.png" alt=""/></span>
-      <span class="logo-item"><img src="public/logos/50.png" alt=""/></span>
-      <span class="logo-item"><img src="public/logos/51.png" alt=""/></span>
-      <span class="logo-item"><img src="public/logos/52.png" alt=""/></span>
-      <span class="logo-item"><img src="public/logos/53.png" alt=""/></span>
-      <span class="logo-item"><img src="public/logos/54.png" alt=""/></span>
-      <span class="logo-item"><img src="public/logos/55.png" alt=""/></span>
-      <span class="logo-item"><img src="public/logos/56.png" alt=""/></span>
-      <span class="logo-item"><img src="public/logos/57.png" alt=""/></span>
-      <span class="logo-item"><img src="public/logos/58.png" alt=""/></span>
-      <span class="logo-item"><img src="public/logos/59.png" alt=""/></span>
-      <span class="logo-item"><img src="public/logos/60.png" alt=""/></span>
-      <span class="logo-item"><img src="public/logos/61.png" alt=""/></span>
-      <span class="logo-item"><img src="public/logos/62.png" alt=""/></span>
-      <span class="logo-item"><img src="public/logos/63.png" alt=""/></span>
-      <span class="logo-item"><img src="public/logos/64.png" alt=""/></span>
-      <span class="logo-item"><img src="public/logos/65.png" alt=""/></span>
-      <!-- duplicate for seamless loop -->
-      <span class="logo-item"><img src="public/logos/38.png" alt=""/></span>
-      <span class="logo-item"><img src="public/logos/39.png" alt=""/></span>
-      <span class="logo-item"><img src="public/logos/40.png" alt=""/></span>
-      <span class="logo-item"><img src="public/logos/41.png" alt=""/></span>
-      <span class="logo-item"><img src="public/logos/42.png" alt=""/></span>
-      <span class="logo-item"><img src="public/logos/43.png" alt=""/></span>
-      <span class="logo-item"><img src="public/logos/44.png" alt=""/></span>
-      <span class="logo-item"><img src="public/logos/45.png" alt=""/></span>
-      <span class="logo-item"><img src="public/logos/46.png" alt=""/></span>
-      <span class="logo-item"><img src="public/logos/47.png" alt=""/></span>
-      <span class="logo-item"><img src="public/logos/48.png" alt=""/></span>
-      <span class="logo-item"><img src="public/logos/49.png" alt=""/></span>
-      <span class="logo-item"><img src="public/logos/50.png" alt=""/></span>
-      <span class="logo-item"><img src="public/logos/51.png" alt=""/></span>
-      <span class="logo-item"><img src="public/logos/52.png" alt=""/></span>
-      <span class="logo-item"><img src="public/logos/53.png" alt=""/></span>
-      <span class="logo-item"><img src="public/logos/54.png" alt=""/></span>
-      <span class="logo-item"><img src="public/logos/55.png" alt=""/></span>
-      <span class="logo-item"><img src="public/logos/56.png" alt=""/></span>
-      <span class="logo-item"><img src="public/logos/57.png" alt=""/></span>
-      <span class="logo-item"><img src="public/logos/58.png" alt=""/></span>
-      <span class="logo-item"><img src="public/logos/59.png" alt=""/></span>
-      <span class="logo-item"><img src="public/logos/60.png" alt=""/></span>
-      <span class="logo-item"><img src="public/logos/61.png" alt=""/></span>
-      <span class="logo-item"><img src="public/logos/62.png" alt=""/></span>
-      <span class="logo-item"><img src="public/logos/63.png" alt=""/></span>
-      <span class="logo-item"><img src="public/logos/64.png" alt=""/></span>
-      <span class="logo-item"><img src="public/logos/65.png" alt=""/></span>
+    <!-- Referanslar Kayan Logo Şeridi -->
+    <div class="ref-scroll-wrap reveal reveal-d4">
+      <div class="ref-scroll-label">Güvenilen Kurumlar &amp; Referanslar</div>
+      <div class="ref-scroll-track">
+        <div class="ref-scroll-inner">
+          <div class="ref-logo-card"><img src="public/logos/38.png" alt="Referans"/></div>
+          <div class="ref-logo-card"><img src="public/logos/39.png" alt="Referans"/></div>
+          <div class="ref-logo-card"><img src="public/logos/40.png" alt="Referans"/></div>
+          <div class="ref-logo-card"><img src="public/logos/41.png" alt="Referans"/></div>
+          <div class="ref-logo-card"><img src="public/logos/42.png" alt="Referans"/></div>
+          <div class="ref-logo-card"><img src="public/logos/43.png" alt="Referans"/></div>
+          <div class="ref-logo-card"><img src="public/logos/44.png" alt="Referans"/></div>
+          <div class="ref-logo-card"><img src="public/logos/45.png" alt="Referans"/></div>
+          <div class="ref-logo-card"><img src="public/logos/46.png" alt="Referans"/></div>
+          <div class="ref-logo-card"><img src="public/logos/47.png" alt="Referans"/></div>
+          <div class="ref-logo-card"><img src="public/logos/48.png" alt="Referans"/></div>
+          <div class="ref-logo-card"><img src="public/logos/49.png" alt="Referans"/></div>
+          <div class="ref-logo-card"><img src="public/logos/50.png" alt="Referans"/></div>
+          <div class="ref-logo-card"><img src="public/logos/51.png" alt="Referans"/></div>
+          <div class="ref-logo-card"><img src="public/logos/52.png" alt="Referans"/></div>
+          <div class="ref-logo-card"><img src="public/logos/53.png" alt="Referans"/></div>
+          <div class="ref-logo-card"><img src="public/logos/54.png" alt="Referans"/></div>
+          <div class="ref-logo-card"><img src="public/logos/55.png" alt="Referans"/></div>
+          <div class="ref-logo-card"><img src="public/logos/56.png" alt="Referans"/></div>
+          <div class="ref-logo-card"><img src="public/logos/57.png" alt="Referans"/></div>
+          <div class="ref-logo-card"><img src="public/logos/58.png" alt="Referans"/></div>
+          <div class="ref-logo-card"><img src="public/logos/59.png" alt="Referans"/></div>
+          <div class="ref-logo-card"><img src="public/logos/60.png" alt="Referans"/></div>
+          <div class="ref-logo-card"><img src="public/logos/61.png" alt="Referans"/></div>
+          <div class="ref-logo-card"><img src="public/logos/62.png" alt="Referans"/></div>
+          <div class="ref-logo-card"><img src="public/logos/63.png" alt="Referans"/></div>
+          <div class="ref-logo-card"><img src="public/logos/64.png" alt="Referans"/></div>
+          <div class="ref-logo-card"><img src="public/logos/65.png" alt="Referans"/></div>
+          <div class="ref-logo-card"><img src="public/logos/67.png" alt="Referans"/></div>
+          <!-- duplicate for seamless loop -->
+          <div class="ref-logo-card"><img src="public/logos/38.png" alt="Referans"/></div>
+          <div class="ref-logo-card"><img src="public/logos/39.png" alt="Referans"/></div>
+          <div class="ref-logo-card"><img src="public/logos/40.png" alt="Referans"/></div>
+          <div class="ref-logo-card"><img src="public/logos/41.png" alt="Referans"/></div>
+          <div class="ref-logo-card"><img src="public/logos/42.png" alt="Referans"/></div>
+          <div class="ref-logo-card"><img src="public/logos/43.png" alt="Referans"/></div>
+          <div class="ref-logo-card"><img src="public/logos/44.png" alt="Referans"/></div>
+          <div class="ref-logo-card"><img src="public/logos/45.png" alt="Referans"/></div>
+          <div class="ref-logo-card"><img src="public/logos/46.png" alt="Referans"/></div>
+          <div class="ref-logo-card"><img src="public/logos/47.png" alt="Referans"/></div>
+          <div class="ref-logo-card"><img src="public/logos/48.png" alt="Referans"/></div>
+          <div class="ref-logo-card"><img src="public/logos/49.png" alt="Referans"/></div>
+          <div class="ref-logo-card"><img src="public/logos/50.png" alt="Referans"/></div>
+          <div class="ref-logo-card"><img src="public/logos/51.png" alt="Referans"/></div>
+          <div class="ref-logo-card"><img src="public/logos/52.png" alt="Referans"/></div>
+          <div class="ref-logo-card"><img src="public/logos/53.png" alt="Referans"/></div>
+          <div class="ref-logo-card"><img src="public/logos/54.png" alt="Referans"/></div>
+          <div class="ref-logo-card"><img src="public/logos/55.png" alt="Referans"/></div>
+          <div class="ref-logo-card"><img src="public/logos/56.png" alt="Referans"/></div>
+          <div class="ref-logo-card"><img src="public/logos/57.png" alt="Referans"/></div>
+          <div class="ref-logo-card"><img src="public/logos/58.png" alt="Referans"/></div>
+          <div class="ref-logo-card"><img src="public/logos/59.png" alt="Referans"/></div>
+          <div class="ref-logo-card"><img src="public/logos/60.png" alt="Referans"/></div>
+          <div class="ref-logo-card"><img src="public/logos/61.png" alt="Referans"/></div>
+          <div class="ref-logo-card"><img src="public/logos/62.png" alt="Referans"/></div>
+          <div class="ref-logo-card"><img src="public/logos/63.png" alt="Referans"/></div>
+          <div class="ref-logo-card"><img src="public/logos/64.png" alt="Referans"/></div>
+          <div class="ref-logo-card"><img src="public/logos/65.png" alt="Referans"/></div>
+          <div class="ref-logo-card"><img src="public/logos/67.png" alt="Referans"/></div>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
-
-<!-- ══ STATS ══ -->
-<section class="section-pad">
-  <div class="container">
-    <div class="stats-row reveal">
-      <div class="stat-box"><div class="stat-num">40<em>+</em></div><div class="stat-label">Hizmet Verilen Kurum</div></div>
-      <div class="stat-box"><div class="stat-num">30<em>+</em></div><div class="stat-label">Yıllık Tecrübe</div></div>
-      <div class="stat-box"><div class="stat-num">10<em>+</em></div><div class="stat-label">Eğitim Programı</div></div>
-      <div class="stat-box"><div class="stat-num">7<em>+</em></div><div class="stat-label">Farklı Sektör</div></div>
-    </div>
+    <style>
+      .ref-scroll-wrap{padding-top:52px;border-top:1px solid var(--glass-bd);margin-top:8px;overflow:hidden;}
+      .ref-scroll-label{text-align:center;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--silver-dim);margin-bottom:24px;}
+      .ref-scroll-track{overflow:hidden;mask-image:linear-gradient(to right,transparent 0%,black 8%,black 92%,transparent 100%);-webkit-mask-image:linear-gradient(to right,transparent 0%,black 8%,black 92%,transparent 100%);padding:10px 0;}
+      .ref-scroll-inner{display:flex;align-items:center;gap:16px;width:max-content;animation:refScroll 40s linear infinite;}
+      .ref-scroll-inner:hover{animation-play-state:paused;}
+      .ref-logo-card{
+        display:flex;align-items:center;justify-content:center;
+        height:80px;padding:14px 24px;
+        background:rgba(255,255,255,0.04);
+        border:1px solid rgba(255,255,255,0.07);
+        border-radius:12px;
+        backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+        transition:border-color 0.25s,background 0.25s,transform 0.25s,box-shadow 0.25s;
+        flex-shrink:0;
+      }
+      .ref-logo-card:hover{
+        border-color:rgba(0,200,180,0.35);
+        background:rgba(255,255,255,0.08);
+        transform:translateY(-3px);
+        box-shadow:0 8px 24px rgba(0,200,180,0.12);
+      }
+      .ref-logo-card img{
+        height:52px;width:auto;max-width:150px;
+        object-fit:contain;
+        filter:brightness(0) invert(1);
+        opacity:0.5;
+        transition:opacity 0.25s,filter 0.25s;
+      }
+      .ref-logo-card:hover img{
+        opacity:0.92;
+        filter:brightness(0) invert(1);
+      }
+      @keyframes refScroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+    </style>
   </div>
 </section>
 
 <!-- ══ FEATURES ══ -->
-<section class="section-pad" style="background:linear-gradient(180deg,rgba(0,200,180,0.025) 0%,transparent 100%);">
+<section class="section-pad" id="features">
   <div class="container">
     <div class="section-head">
-      <div class="section-tag reveal">Neden Derin Akademi?</div>
-      <h2 class="section-title reveal reveal-d1">Biz Eğitim Satmıyoruz</h2>
-      <p class="section-desc reveal reveal-d2">Kurumla birlikte dönüşümün sorumluluğunu alıyoruz. Anlatan değil, çalışan sistemler kurarız.</p>
+      <div class="section-tag reveal">Fark Yaratan Unsurlar</div>
+      <h2 class="section-title reveal reveal-d1">Neden Derin Akademi?</h2>
+      <p class="section-desc reveal reveal-d2">Hazır paket eğitimler değil; kurumunuza özel, ölçülebilir ve sürdürülebilir çözümler.</p>
     </div>
-    <div class="features-grid reveal">
-
-      <div class="feat-card">
+    <div class="features-grid">
+      <div class="feat-card reveal">
         <div class="feat-spot"></div>
         <span class="feat-num">01</span>
-        <div class="feat-icon-wrap">🎯</div>
-        <h3 class="feat-title">Sahadaki Uygulama Deneyimi</h3>
-        <p class="feat-desc">Akademik bilgiyi gerçek iş yaşamından beslenen içgörülerle buluşturarak, klasik kalıpların ötesinde uygulanabilir ve sürdürülebilir çözümler sunuyoruz.</p>
+        <div class="feat-icon-wrap"><i class="fas fa-bullseye"></i></div>
+        <h3 class="feat-title">Sonuç Odaklı Yaklaşım</h3>
+        <p class="feat-desc">Her proje, somut iş çıktılarına ve ölçülebilir dönüşüme bağlı hedeflerle başlar. Eğitim veya danışmanlık değil, gerçek değişim.</p>
       </div>
-
-      <div class="feat-card">
+      <div class="feat-card reveal reveal-d1">
         <div class="feat-spot"></div>
         <span class="feat-num">02</span>
-        <div class="feat-icon-wrap">🏗️</div>
+        <div class="feat-icon-wrap"><i class="fas fa-building"></i></div>
         <h3 class="feat-title">Kuruma Özel Tasarım</h3>
         <p class="feat-desc">Çözümler hazır modellerle değil; kurumun hedefleri, kültürü ve mevcut olgunluk seviyesi dikkate alınarak özel olarak tasarlanır.</p>
       </div>
-
-      <div class="feat-card">
+      <div class="feat-card reveal reveal-d2">
         <div class="feat-spot"></div>
         <span class="feat-num">03</span>
-        <div class="feat-icon-wrap">🔄</div>
+        <div class="feat-icon-wrap"><i class="fas fa-sync"></i></div>
         <h3 class="feat-title">Davranış Dönüşümü</h3>
         <p class="feat-desc">Yalnızca bilgi aktarmıyoruz; yönetme, karar alma ve iletişim biçimlerini köklü biçimde dönüştürmeyi hedefliyoruz.</p>
       </div>
-
-      <div class="feat-card">
+      <div class="feat-card reveal reveal-d1">
         <div class="feat-spot"></div>
         <span class="feat-num">04</span>
-        <div class="feat-icon-wrap">🤖</div>
+        <div class="feat-icon-wrap"><i class="fas fa-robot"></i></div>
         <h3 class="feat-title">YZ Destekli Öğrenme</h3>
         <p class="feat-desc">Yapay zekâ destekli, kuruma özel içerikler ve 7/24 erişilebilir dijital avatar desteği ile sürekli öğrenme imkânı.</p>
       </div>
-
-      <div class="feat-card">
+      <div class="feat-card reveal reveal-d2">
         <div class="feat-spot"></div>
         <span class="feat-num">05</span>
-        <div class="feat-icon-wrap">🎥</div>
+        <div class="feat-icon-wrap"><i class="fas fa-video"></i></div>
         <h3 class="feat-title">Esnek Eğitim Formatları</h3>
         <p class="feat-desc">Yüz yüze sınıf eğitimlerinden online interaktif programlara kadar kurumunuzun ihtiyacına en uygun formatta.</p>
       </div>
-
-      <div class="feat-card">
+      <div class="feat-card reveal reveal-d1">
         <div class="feat-spot"></div>
         <span class="feat-num">06</span>
-        <div class="feat-icon-wrap">♟️</div>
-        <h3 class="feat-title">Stratejik Ortaklık</h3>
-        <p class="feat-desc">"Ne yapılmalı?" değil, "nasıl yapılacak?" sorusunun sorumluluğunu alıyoruz. Dönüşümü birlikte yönetiyoruz.</p>
+        <div class="feat-icon-wrap"><i class="fas fa-flask"></i></div>
+        <h3 class="feat-title">Sahadaki Uygulama Deneyimi</h3>
+        <p class="feat-desc">Akademik bilgiyi gerçek iş yaşamından beslenen içgörülerle buluşturarak, klasik kalıpların ötesinde uygulanabilir çözümler sunuyoruz.</p>
       </div>
-
+      <div class="feat-card reveal reveal-d2">
+        <div class="feat-spot"></div>
+        <span class="feat-num">07</span>
+        <div class="feat-icon-wrap"><i class="fas fa-chart-line"></i></div>
+        <h3 class="feat-title">Ölçülebilen Eğitim Çıktıları</h3>
+        <p class="feat-desc">Somut metriklere dayalı başarı takibi, performans dönüşümü ve iş çıktılarına doğrudan etki eden sonuçlar hedefleriz.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -501,9 +566,9 @@
       <h2 class="section-title reveal reveal-d1">Davranış ve Karar<br>Biçimi Dönüşümü</h2>
       <p class="section-desc reveal reveal-d2">Liderlikten veriye, performanstan aidiyete — kurumunuzun ihtiyacına özel eğitim programları.</p>
     </div>
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px" class="reveal reveal-d1">
+    <div class="courses-grid reveal reveal-d1" style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px">
       <div class="course-card">
-        <div class="course-thumb"><div class="course-thumb-bg c-bg-1"></div><div class="course-thumb-icon">🎯</div></div>
+        <div class="course-thumb"><div class="course-thumb-bg c-bg-1"></div><i class="fas fa-crosshairs course-thumb-icon"></i></div>
         <div class="course-body">
           <div class="course-category">Liderlik &amp; İletişim</div>
           <h3 class="course-title">Mülakat Becerileri 5.0</h3>
@@ -515,7 +580,7 @@
         </div>
       </div>
       <div class="course-card">
-        <div class="course-thumb"><div class="course-thumb-bg c-bg-2"></div><div class="course-thumb-icon">📊</div></div>
+        <div class="course-thumb"><div class="course-thumb-bg c-bg-2"></div><i class="fas fa-chart-bar course-thumb-icon"></i></div>
         <div class="course-body">
           <div class="course-category">Sistem &amp; Yönetim</div>
           <h3 class="course-title">Stratejik İK Yönetimi</h3>
@@ -527,7 +592,7 @@
         </div>
       </div>
       <div class="course-card">
-        <div class="course-thumb"><div class="course-thumb-bg c-bg-4"></div><div class="course-thumb-icon">🤖</div></div>
+        <div class="course-thumb"><div class="course-thumb-bg c-bg-4"></div><i class="fas fa-robot course-thumb-icon"></i></div>
         <div class="course-body">
           <div class="course-category">Veri &amp; Gelecek</div>
           <h3 class="course-title">Yapay Zekâ İK'da</h3>
@@ -551,18 +616,16 @@
       <h2 class="section-title reveal reveal-d1">Farklı Sektörlerde<br><span class="gradient-text">Ortak Dönüşüm</span></h2>
       <p class="section-desc reveal reveal-d2">Finans'tan tarıma, sağlıktan perakendeye — 40'tan fazla kurum ile dönüşümün sorumluluğunu birlikte taşıdık.</p>
     </div>
-    <div class="dock-outer">
-      <div class="dock-wrap" id="sektorDock">
-        <div class="dock-item" data-label="Finans" data-i18n-label="Finance"><span class="dock-icon">💰</span><span class="dock-label" data-i18n="sector.finans">Finans</span></div>
-        <div class="dock-item" data-label="Üretim" data-i18n-label="Manufacturing"><span class="dock-icon">🏭</span><span class="dock-label" data-i18n="sector.uretim">Üretim</span></div>
-        <div class="dock-item" data-label="Sanayi" data-i18n-label="Industry"><span class="dock-icon">⚙️</span><span class="dock-label" data-i18n="sector.sanayi">Sanayi</span></div>
-        <div class="dock-item" data-label="Tarım" data-i18n-label="Agriculture"><span class="dock-icon">🌾</span><span class="dock-label" data-i18n="sector.tarim">Tarım</span></div>
-        <div class="dock-item" data-label="Sağlık" data-i18n-label="Healthcare"><span class="dock-icon">🏥</span><span class="dock-label" data-i18n="sector.saglik">Sağlık</span></div>
-        <div class="dock-item" data-label="Perakende" data-i18n-label="Retail"><span class="dock-icon">🛒</span><span class="dock-label" data-i18n="sector.perakende">Perakende</span></div>
-        <div class="dock-item" data-label="Eğitim" data-i18n-label="Education"><span class="dock-icon">📚</span><span class="dock-label" data-i18n="sector.egitim">Eğitim</span></div>
-        <div class="dock-item" data-label="Holding" data-i18n-label="Holding"><span class="dock-icon">🏢</span><span class="dock-label" data-i18n="sector.holding">Holding</span></div>
-        <div class="dock-item" data-label="İnşaat" data-i18n-label="Construction"><span class="dock-icon">🏗️</span><span class="dock-label" data-i18n="sector.insaat">İnşaat</span></div>
-      </div>
+    <div class="sectors-grid">
+      <div class="sector-card reveal" data-i18n-label="Finance"><i class="fas fa-landmark sector-icon"></i><span class="sector-label" data-i18n="sector.finans">Finans</span></div>
+      <div class="sector-card reveal reveal-d1" data-i18n-label="Manufacturing"><i class="fas fa-industry sector-icon"></i><span class="sector-label" data-i18n="sector.uretim">Üretim</span></div>
+      <div class="sector-card reveal reveal-d2" data-i18n-label="Industry"><i class="fas fa-gears sector-icon"></i><span class="sector-label" data-i18n="sector.sanayi">Sanayi</span></div>
+      <div class="sector-card reveal reveal-d3" data-i18n-label="Agriculture"><i class="fas fa-leaf sector-icon"></i><span class="sector-label" data-i18n="sector.tarim">Tarım</span></div>
+      <div class="sector-card reveal reveal-d4" data-i18n-label="Healthcare"><i class="fas fa-hospital sector-icon"></i><span class="sector-label" data-i18n="sector.saglik">Sağlık</span></div>
+      <div class="sector-card reveal reveal-d1" data-i18n-label="Retail"><i class="fas fa-shopping-cart sector-icon"></i><span class="sector-label" data-i18n="sector.perakende">Perakende</span></div>
+      <div class="sector-card reveal reveal-d2" data-i18n-label="Education"><i class="fas fa-book sector-icon"></i><span class="sector-label" data-i18n="sector.egitim">Eğitim</span></div>
+      <div class="sector-card reveal reveal-d3" data-i18n-label="Holding"><i class="fas fa-building sector-icon"></i><span class="sector-label" data-i18n="sector.holding">Holding</span></div>
+      <div class="sector-card reveal reveal-d4" data-i18n-label="Construction"><i class="fas fa-helmet-safety sector-icon"></i><span class="sector-label" data-i18n="sector.insaat">İnşaat</span></div>
     </div>
   </div>
 </section>
@@ -645,37 +708,6 @@
   </div>
 </section>
 
-<!-- ══ KURUCU ══ -->
-<section class="section-pad" style="border-top:1px solid var(--glass-bd);">
-  <div class="container">
-    <div class="founder-grid">
-      <div class="founder-frame reveal" style="overflow:hidden;background:var(--glass-bg);border:1px solid var(--glass-bd);display:flex;align-items:center;justify-content:center;">
-        <img src="public/hakan selahi/hakan-selahi.jpg" alt="Hakan Selahi"
-             style="width:100%;height:100%;object-fit:cover;object-position:top center;"
-             onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
-        <span style="font-size:90px;opacity:0.3;display:none;width:100%;height:100%;align-items:center;justify-content:center;">👤</span>
-      </div>
-      <div>
-        <div class="section-tag reveal">Kurucumuz</div>
-        <h2 class="section-title reveal reveal-d1">Hakan Selahi</h2>
-        <p class="founder-sub reveal reveal-d2">30+ Yıllık Tecrübeyle İK Stratejisti · ACC Koç · Kurumsallaşma Danışmanı ve Eğitmeni</p>
-        <p class="founder-bio reveal reveal-d3">Derin Akademi'nin kurucusu Hakan Selahi liderliğinde, bugüne kadar hem yerli hem de yabancı sermayeli kırktan fazla şirkete uzmanlık alanlarında danışmanlık ve kuruma özel eğitimler sunulmuştur. CHRO ve İK Direktörlüğü deneyimiyle HSBC, Deutsche Bank, Acıbadem Sağlık gibi önde gelen kurumlarda liderlik yapmış; kurumsallaşma, performans ve yetenek yönetimi alanlarında derinlemesine uzmanlık kazanmıştır.</p>
-        <div class="founder-chips reveal reveal-d4">
-          <span class="founder-chip">HSBC</span>
-          <span class="founder-chip">Deutsche Bank</span>
-          <span class="founder-chip">Acıbadem Sağlık</span>
-          <span class="founder-chip">CHRO Deneyimi</span>
-        </div>
-        <p class="founder-memb reveal reveal-d5">🎓 Adler ACC Sertifikalı Koç &nbsp;·&nbsp; NLP Uygulayıcısı &nbsp;·&nbsp; TEGEP Üyesi &nbsp;·&nbsp; ICF Üyesi</p>
-        <div style="display:flex;gap:14px;flex-wrap:wrap;margin-top:24px;" class="reveal">
-          <button onclick="openTeklifModal()" class="btn btn-primary btn-lg">Teklif Al</button>
-          <a href="hakkimizda.html" class="btn btn-ghost btn-lg">Daha Fazla</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- ══ CTA ══ -->
 <section class="section-pad">
   <div class="container">
@@ -700,7 +732,7 @@
         <p class="brand-desc">İnsan kaynakları alanında uzmanlaşmış danışmanlık ve eğitim şirketi. Anlatan değil, çalışan sistemler kurarız.</p>
         <div class="footer-social">
           <a class="social-btn" href="https://www.instagram.com/derinakademi/" target="_blank">📷</a>
-          <a class="social-btn" href="https://www.linkedin.com/company/derinakademi/" target="_blank">in</a>
+          <a class="social-btn" href="https://www.linkedin.com/in/hakan-selahi-001969/" target="_blank">in</a>
         </div>
       </div>
       <div>
@@ -715,8 +747,8 @@
       <div>
         <div class="footer-col-title">Şirket</div>
         <ul class="footer-links">
-          <li><a href="hakkimizda.html">Hakkımızda</a></li>
-          <li><a href="blog.html">Blog</a></li>
+          <li><a href="hakkimizda.html">Kurumsal</a></li>
+          <li><a href="blog.html">Deneyimlerimiz</a></li>
           <li><a href="kariyer.html">Kariyer</a></li>
           <li><a href="iletisim.html">İletişim</a></li>
         </ul>
@@ -738,6 +770,12 @@
 
 <button id="back-to-top" style="position:fixed;bottom:28px;right:28px;z-index:500;width:44px;height:44px;border-radius:12px;background:var(--glass-bg);border:1px solid var(--glass-bd);color:var(--teal);font-size:18px;cursor:pointer;opacity:0;transition:var(--t-base);backdrop-filter:blur(12px);" aria-label="Yukarı dön">↑</button>
 
+<!-- ══ WHATSAPP BUTTON ══ -->
+<a id="whatsapp-btn" href="https://wa.me/905330193134?text=Merhaba%20Derin%20Akademi" target="_blank" class="whatsapp-btn" title="WhatsApp ile iletişim kurun">
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M17.471 3.528C15.602 1.532 12.845.5 9.988.5 5.131.5 1.134 4.382 1.134 9.107c0 1.6.419 3.165 1.198 4.555L.5 23.5l4.943-1.546C7.113 23.5 8.547 24 10.048 24c4.909 0 8.907-3.881 8.907-8.606 0-2.306-.794-4.462-2.241-6.172zm-7.48 13.62c-1.349 0-2.671-.33-3.851-.937l-.276-.15-2.866.893.913-2.769-.174-.294C2.368 11.895 2.032 10.52 2.032 9.107c0-4.159 3.429-7.544 7.644-7.544 2.038 0 3.955.766 5.392 2.157 1.413 1.366 2.188 3.187 2.188 5.125 0 4.159-3.43 7.544-7.765 7.544zm4.175-5.66s-.243-.386-1.055-.646-.886-.234-1.02-.247-.236-.038-.407.152-.523.645-.641.775-.118.179-.236.191-.167.013-.299-.025-.525-.146-1.001-.577-.369-.333-.618-.74-.062-.121-.015-.229.047-.075.191-.248.143-.167.214-.274.013-.032.02-.076.007-.058-.038-.121-.075-.18-.281-.4-.188-.189-.374-.207-.5-.211h-.428c-.14 0-.36.052-.548.26-.188.206-.717.691-.717 1.688 0 .997.734 1.96 836.84 2.118 1.106.157 2.061-.11 2.748-.708.484-.423.856-1.024.952-1.662.048-.319.002-1.039-.081-1.344z"/></svg>
+  <button class="whatsapp-btn-close" onclick="closeWhatsappBtn(event)">✕</button>
+</a>
+
 <!-- ══ ÖZEL TEKLİF MODAL ══ -->
 <div id="teklif-modal" class="teklif-modal">
   <div class="teklif-modal-box">
@@ -754,7 +792,7 @@
       </div>
       <div style="display:flex;gap:10px;">
         <a href="https://www.instagram.com/derinakademi/" target="_blank" style="display:flex;align-items:center;gap:6px;padding:8px 14px;border-radius:8px;background:var(--glass-bg);border:1px solid var(--glass-bd);font-size:12px;font-weight:600;color:var(--silver);text-decoration:none;">📷 Instagram</a>
-        <a href="https://www.linkedin.com/company/derinakademi/" target="_blank" style="display:flex;align-items:center;gap:6px;padding:8px 14px;border-radius:8px;background:var(--glass-bg);border:1px solid var(--glass-bd);font-size:12px;font-weight:600;color:var(--silver);text-decoration:none;">in LinkedIn</a>
+        <a href="https://www.linkedin.com/in/hakan-selahi-001969/" target="_blank" style="display:flex;align-items:center;gap:6px;padding:8px 14px;border-radius:8px;background:var(--glass-bg);border:1px solid var(--glass-bd);font-size:12px;font-weight:600;color:var(--silver);text-decoration:none;">in LinkedIn</a>
       </div>
     </div>
     <!-- Sağ: Form -->
@@ -772,56 +810,7 @@
 <script src="js/main.js"></script>
 <script src="js/i18n.js"></script>
 <script>
-/* ── macOS Dock ── */
 (function(){
-  var dock=document.getElementById('sektorDock');
-  if(!dock)return;
-  var items=Array.from(dock.querySelectorAll('.dock-item'));
-  var BASE=60,MAX_SCALE=1.9,RANGE=180,LERP=0.18;
-  var targets=items.map(()=>1),currents=items.map(()=>1);
-  var mouseX=null,raf=null;
-
-  function cosScale(dist){
-    if(Math.abs(dist)>RANGE)return 1;
-    return 1+(MAX_SCALE-1)*((1-Math.cos(Math.PI*(1-Math.abs(dist)/RANGE)))/2);
-  }
-
-  function getItemCenters(){
-    var dRect=dock.getBoundingClientRect();
-    return items.map(function(it){
-      var r=it.getBoundingClientRect();
-      return r.left+r.width/2-dRect.left;
-    });
-  }
-
-  function tick(){
-    var changed=false;
-    var centers=getItemCenters();
-    items.forEach(function(it,i){
-      var dist=mouseX!==null?mouseX-centers[i]:9999;
-      targets[i]=mouseX!==null?cosScale(dist):1;
-      var diff=targets[i]-currents[i];
-      if(Math.abs(diff)>0.002){currents[i]+=diff*LERP;changed=true;}
-      else currents[i]=targets[i];
-      var s=currents[i];
-      var lift=mouseX!==null?Math.max(0,(s-1)*40):0;
-      it.style.transform='translateY(-'+lift.toFixed(1)+'px) scale('+s.toFixed(3)+')';
-      it.style.zIndex=Math.round(s*10);
-    });
-    if(changed)raf=requestAnimationFrame(tick);
-    else raf=null;
-  }
-
-  dock.addEventListener('mousemove',function(e){
-    var r=dock.getBoundingClientRect();
-    mouseX=e.clientX-r.left;
-    if(!raf)raf=requestAnimationFrame(tick);
-  });
-  dock.addEventListener('mouseleave',function(){
-    mouseX=null;
-    if(!raf)raf=requestAnimationFrame(tick);
-  });
-
   /* Feature cards spotlight (keep existing) */
   document.querySelectorAll('.feat-card').forEach(function(card){
     var spot=card.querySelector('.feat-spot');
