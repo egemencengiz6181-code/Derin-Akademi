@@ -59,14 +59,14 @@
       <img src="public/logos/68.png" alt="Derin Akademi" class="nav-logo-img"/>
     </a>
     <ul class="nav-links">
-      <li><a href="kurslar.html">Eğitimlerimiz</a></li>
-      <li><a href="danismanlik.html">Danışmanlıklarımız</a></li>
-      <li><a href="hakkimizda.html">Hakkımızda</a></li>
-      <li><a href="blog.html">Deneyimlerimiz</a></li>
-      <li><a href="iletisim.html">İletişim</a></li>
+      <li><a data-i18n="nav.egitimler" href="kurslar.html">Eğitimlerimiz</a></li>
+      <li><a data-i18n="nav.danismanlik" href="danismanlik.html">Danışmanlıklarımız</a></li>
+      <li><a data-i18n="nav.hakkimizda" href="hakkimizda.html">Kurumsal</a></li>
+      <li><a data-i18n="nav.blog" href="blog.html">Deneyimlerimiz</a></li>
+      <li><a data-i18n="nav.iletisim" href="iletisim.html">İletişim</a></li>
     </ul>
     <div class="nav-actions">
-      <button onclick="openTeklifModal()" class="btn btn-primary btn-sm">Özel Teklif Al</button>
+      <button id="langToggle" onclick="daToggleLang()" class="btn btn-ghost btn-sm" style="font-weight:700;letter-spacing:1px;padding:7px 14px;min-width:52px;">EN</button>      <button onclick="openTeklifModal()" class="btn btn-primary btn-sm">Özel Teklif Al</button>
     </div>
     <button class="menu-toggle">☰</button>
   </div>
@@ -199,32 +199,32 @@
     <div class="footer-grid">
       <div class="footer-brand">
         <a href="index.html" class="nav-logo" style="display:inline-flex"><img src="public/logos/68.png" alt="Derin Akademi" class="nav-logo-img"/></a>
-        <p class="brand-desc">İnsan kaynakları alanında uzmanlaşmış danışmanlık ve eğitim şirketi. Anlatan değil, çalışan sistemler kurarız.</p>
+        <p class="brand-desc" data-i18n="shared.footer.brandesc">İnsan kaynakları alanında uzmanlaşmış danışmanlık ve eğitim şirketi. Anlatan değil, çalışan sistemler kurarız.</p>
         <div class="footer-social">
           <a class="social-btn" href="https://www.instagram.com/derinakademi/" target="_blank">📷</a>
           <a class="social-btn" href="https://www.linkedin.com/in/hakan-selahi-001969/" target="_blank">in</a>
         </div>
       </div>
       <div>
-        <div class="footer-col-title">Hizmetler</div>
+        <div class="footer-col-title" data-i18n="shared.footer.hizmetler">Hizmetler</div>
         <ul class="footer-links">
-          <li><a href="kurslar.html">Eğitimlerimiz</a></li>
-          <li><a href="danismanlik.html">Danışmanlıklarımız</a></li>
+          <li><a data-i18n="nav.egitimler" href="kurslar.html">Eğitimlerimiz</a></li>
+          <li><a data-i18n="nav.danismanlik" href="danismanlik.html">Danışmanlıklarımız</a></li>
           <li><a href="kurslar.html">Kurumsal Eğitim</a></li>
           <li><a href="danismanlik.html">Kurumsallaşma</a></li>
         </ul>
       </div>
       <div>
-        <div class="footer-col-title">Şirket</div>
+        <div class="footer-col-title" data-i18n="shared.footer.sirket">Şirket</div>
         <ul class="footer-links">
-          <li><a href="hakkimizda.html">Kurumsal</a></li>
-          <li><a href="blog.html">Deneyimlerimiz</a></li>
+          <li><a data-i18n="nav.hakkimizda" href="hakkimizda.html">Kurumsal</a></li>
+          <li><a data-i18n="nav.blog" href="blog.html">Deneyimlerimiz</a></li>
           <li><a href="kariyer.html">Kariyer</a></li>
-          <li><a href="iletisim.html">İletişim</a></li>
+          <li><a data-i18n="nav.iletisim" href="iletisim.html">İletişim</a></li>
         </ul>
       </div>
       <div>
-        <div class="footer-col-title">Bülten</div>
+        <div class="footer-col-title" data-i18n="shared.footer.bulten">Bülten</div>
         <div class="footer-newsletter">
           <p>İK gündemindeki gelişmelerden ve eğitimlerimizden haberdar ol.</p>
           <div class="newsletter-form"><input type="email" class="newsletter-input" placeholder="E-posta"/><button class="btn btn-primary btn-sm" onclick="showToast('Abone oldunuz! 🎉')">→</button></div>
@@ -232,8 +232,8 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <div class="footer-copy">© 2026 Derin Akademi. Tüm hakları saklıdır. &nbsp;<a href="https://reneedesignlab.com/tr" target="_blank" style="color:var(--silver-dim);text-decoration:none;" onmouseover="this.style.color='var(--silver)'" onmouseout="this.style.color='var(--silver-dim)'">by Renee DesignLab</a></div>
-      <div class="footer-legal"><a href="gizlilik-politikasi.html">Gizlilik Politikası</a><a href="kullanim-kosullari.html">Kullanım Koşulları</a><a href="kvkk.html">KVKK</a><a href="cerezler.html">Çerezler</a></div>
+      <div class="footer-copy" data-i18n="shared.footer.copy">© 2026 Derin Akademi. Tüm hakları saklıdır. &nbsp;<a href="https://reneedesignlab.com/tr" target="_blank" style="color:var(--silver-dim);text-decoration:none;" onmouseover="this.style.color='var(--silver)'" onmouseout="this.style.color='var(--silver-dim)'">by Renee DesignLab</a></div>
+      <div class="footer-legal"><a href="gizlilik-politikasi.html" data-i18n="shared.footer.gizlilik">Gizlilik Politikası</a><a href="kullanim-kosullari.html" data-i18n="shared.footer.kullanim">Kullanım Koşulları</a><a href="kvkk.html" data-i18n="shared.footer.kvkk">KVKK</a><a href="cerezler.html" data-i18n="shared.footer.cerezler">Çerezler</a></div>
     </div>
   </div>
 </footer>
@@ -259,6 +259,7 @@
     </div>
   </div>
 </div>
+<script src="js/i18n.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

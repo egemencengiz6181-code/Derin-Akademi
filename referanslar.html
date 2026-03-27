@@ -31,14 +31,8 @@
     .tsc-stars { color: #f59e0b; font-size: 13px; letter-spacing: 1px; margin-bottom: 12px; }
     .tsc-text { font-size: 14px; color: var(--silver); line-height: 1.75; margin-bottom: 18px; }
     .tsc-author { display: flex; align-items: center; gap: 12px; }
-    .tsc-avatar{width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Montserrat',sans-serif;font-size:15px;font-weight:800;flex-shrink:0;}
-    .tsc-av-a{background:linear-gradient(135deg,#0d9488,#0e7490);color:#fff;}
-    .tsc-av-b{background:linear-gradient(135deg,#7c3aed,#a21caf);color:#fff;}
-    .tsc-av-c{background:linear-gradient(135deg,#b45309,#d97706);color:#fff;}
-    .tsc-av-d{background:linear-gradient(135deg,#0369a1,#0284c7);color:#fff;}
-    .tsc-av-e{background:linear-gradient(135deg,#be123c,#e11d48);color:#fff;}
-    .tsc-av-f{background:linear-gradient(135deg,#15803d,#16a34a);color:#fff;}
-    .tsc-name { font-family: 'Montserrat', sans-serif; font-size: 14px; font-weight: 800; margin-bottom: 2px; }
+        .tsc-avatar{width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;background:#0077B5;}
+.tsc-name { font-family: 'Montserrat', sans-serif; font-size: 14px; font-weight: 800; margin-bottom: 2px; }
     .tsc-role { font-size: 12px; color: var(--silver-dim); }
     .tsc-sector { display: inline-block; margin-top: 12px; padding: 3px 10px; border-radius: 50px; background: rgba(0,200,180,0.06); border: 1px solid var(--teal-border); font-size: 11px; font-weight: 700; color: var(--teal); letter-spacing: 0.5px; }
     @media(max-width: 900px) { .testi-cols-wrap { grid-template-columns: 1fr 1fr; } .testi-scroll-col.col-3 { display: none; } }
@@ -69,12 +63,12 @@
   <div class="nav-inner">
     <a href="index.html" class="nav-logo"><img src="public/logos/68.png" alt="Derin Akademi" class="nav-logo-img"/></a>
     <ul class="nav-links">
-      <li><a href="kurslar.html">Eğitimlerimiz</a></li>
-      <li><a href="danismanlik.html">Danışmanlıklarımız</a></li>
-      <li><a href="hakkimizda.html">Kurumsal</a></li>
+      <li><a data-i18n="nav.egitimler" href="kurslar.html">Eğitimlerimiz</a></li>
+      <li><a data-i18n="nav.danismanlik" href="danismanlik.html">Danışmanlıklarımız</a></li>
+      <li><a data-i18n="nav.hakkimizda" href="hakkimizda.html">Kurumsal</a></li>
       <li><a href="referanslar.html" class="active">Referanslarımız</a></li>
-      <li><a href="blog.html">Deneyimlerimiz</a></li>
-      <li><a href="iletisim.html">İletişim</a></li>
+      <li><a data-i18n="nav.blog" href="blog.html">Deneyimlerimiz</a></li>
+      <li><a data-i18n="nav.iletisim" href="iletisim.html">İletişim</a></li>
     </ul>
     <div class="nav-actions">
       <button id="darkModeToggle" onclick="toggleDarkMode()" class="btn btn-ghost btn-sm" style="font-weight:700;letter-spacing:1px;padding:7px 14px;min-width:52px;" title="Dark/Light Mode">🌙</button>
@@ -86,8 +80,8 @@
 </nav>
 <div class="mobile-nav">
   <button class="mobile-nav-close">✕</button>
-  <a href="index.html">Ana Sayfa</a><a href="kurslar.html">Eğitimlerimiz</a><a href="danismanlik.html">Danışmanlıklarımız</a>
-  <a href="hakkimizda.html">Kurumsal</a><a href="referanslar.html" class="active">Referanslarımız</a><a href="blog.html">Deneyimlerimiz</a><a href="iletisim.html">İletişim</a>
+  <a data-i18n="nav.anasayfa" href="index.html">Ana Sayfa</a><a data-i18n="nav.egitimler" href="kurslar.html">Eğitimlerimiz</a><a data-i18n="nav.danismanlik" href="danismanlik.html">Danışmanlıklarımız</a>
+  <a data-i18n="nav.hakkimizda" href="hakkimizda.html">Kurumsal</a><a href="referanslar.html" class="active">Referanslarımız</a><a data-i18n="nav.blog" href="blog.html">Deneyimlerimiz</a><a data-i18n="nav.iletisim" href="iletisim.html">İletişim</a>
   <div class="mobile-nav-actions">
     <button onclick="openTeklifModal()" class="btn btn-primary btn-md" style="width:100%;justify-content:center">Özel Teklif Al</button>
   </div>
@@ -96,9 +90,9 @@
 <!-- ══ PAGE HERO ══ -->
 <div class="page-hero">
   <div class="container">
-    <div class="page-hero-tag reveal"><span class="section-tag">Referanslarımız</span></div>
-    <h1 class="page-hero-title reveal reveal-d1">40+ Kurumun<br>Güveni</h1>
-    <p class="page-hero-desc reveal reveal-d2">Finans, sağlık, üretim, perakende ve daha birçok sektörde kurumlarla çalıştık ve değer yaratmaya devam ediyoruz.</p>
+    <div class="page-hero-tag reveal"><span class="section-tag" data-i18n="ref.hero.tag">Referanslarımız</span></div>
+    <h1 class="page-hero-title reveal reveal-d1" data-i18n-html="ref.hero.title">40+ Kurumun<br>Güveni</h1>
+    <p class="page-hero-desc reveal reveal-d2" data-i18n="ref.hero.desc">Finans, sağlık, üretim, perakende ve daha birçok sektörde kurumlarla çalıştık ve değer yaratmaya devam ediyoruz.</p>
   </div>
 </div>
 
@@ -106,7 +100,7 @@
 <section class="section-pad">
   <div class="container">
     <div style="margin-bottom:48px;">
-      <h2 class="section-title reveal reveal-d1" style="text-align:center;margin-bottom:56px;">Hizmet Verdiğimiz<br><span class="gradient-text">Kurumlar</span></h2>
+      <h2 class="section-title reveal reveal-d1" style="text-align:center;margin-bottom:56px;" data-i18n-html="ref.kurumlar.title">Hizmet Verdiğimiz<br><span class="gradient-text">Kurumlar</span></h2>
       <div class="partners-grid">
         <div class="partner-item reveal"><img src="public/logos/38.png" alt=""/></div>
         <div class="partner-item reveal reveal-d1"><img src="public/logos/39.png" alt=""/></div>
@@ -146,9 +140,9 @@
 <section class="testi-scroll-section">
   <div class="container">
     <div class="section-head">
-      <div class="section-tag reveal">Başarı Hikayeleri</div>
-      <h2 class="section-title reveal reveal-d1">Onlar Değiştirdi, Sıra Sende</h2>
-      <p class="section-desc reveal reveal-d2">Gerçek hikayeler, gerçek dönüşümler. 40'tan fazla kurumdan yüzlerce profesyonelin deneyimi.</p>
+      <div class="section-tag reveal" data-i18n="ref.testi.tag">Başarı Hikayeleri</div>
+      <h2 class="section-title reveal reveal-d1" data-i18n="ref.testi.title">Onlar Değiştirdi, Sıra Sende</h2>
+      <p class="section-desc reveal reveal-d2" data-i18n="ref.testi.desc">Gerçek hikayeler, gerçek dönüşümler. 40'tan fazla kurumdan yüzlerce profesyonelin deneyimi.</p>
     </div>
   </div>
   <div class="testi-cols-outer">
@@ -156,23 +150,27 @@
 
       <!-- Sütun 1 -->
       <div class="testi-scroll-col col-1">
-        <div class="tsc"><div class="tsc-stars">★★★★★</div><p class="tsc-text">Derin Akademi ile yürüttüğümüz Stratejik İK Yönetimi programı, İK ekibimizin kurumda gerçek bir stratejik konuma gelmesini sağladı. Hazır modeller değil, bize özel çözümdü.</p><div class="tsc-author"><div class="tsc-avatar tsc-av-a">AK</div><div><div class="tsc-name">Ayşe Kara</div><div class="tsc-role">İK Direktörü</div></div></div><span class="tsc-sector">Finans Sektörü</span></div>
-        <div class="tsc"><div class="tsc-stars">★★★★★</div><p class="tsc-text">Kurumsallaşma sürecimizin en kritik aşamasında Hakan Bey ile çalıştık. Aile anayasasını yazdık, governance yapısını sıfırdan kurduk. Sonuçlar inanılmaz somut.</p><div class="tsc-author"><div class="tsc-avatar tsc-av-c">AY</div><div><div class="tsc-name">Ali Yalçın</div><div class="tsc-role">CEO & Kurucu Ortak</div></div></div><span class="tsc-sector">Aile Şirketi</span></div>
-        <div class="tsc"><div class="tsc-stars">★★★★★</div><p class="tsc-text">Ücret yönetimi projemizde Derin Akademi'nin getirdiği yapı, çalışan memnuniyetimizi ve elde tutma oranımızı ölçülebilir biçimde artırdı. Sistematik ve uygulanabilir.</p><div class="tsc-author"><div class="tsc-avatar tsc-av-f">ED</div><div><div class="tsc-name">Emre Doğan</div><div class="tsc-role">Genel Müdür Yrd.</div></div></div><span class="tsc-sector">Üretim Sektörü</span></div>
+        <div class="tsc"><div class="tsc-stars">★★★★★</div><p class="tsc-text" data-i18n="tsc.tamay.text">Verimli birliktelik için teşekkürler Derin Akademi &amp; Hakan Selahi 🙏 Düşündürücü bir yazı, tebrikler 👏🏻</p><div class="tsc-author"><div class="tsc-avatar"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></div><div><div class="tsc-name">A. Fatih Tamay</div><div class="tsc-role" data-i18n="tsc.tamay.role">Yönetim Kurulu Üyesi</div></div></div></div>
+        <div class="tsc"><div class="tsc-stars">★★★★★</div><p class="tsc-text" data-i18n="tsc.nilay.text">Hakan Bey, kolaylıklar dilerim. Sizinle çalışan İK uzmanları çok şanslı, sizden öğrenecek çok şey var.</p><div class="tsc-author"><div class="tsc-avatar"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></div><div><div class="tsc-name">Nilay A.</div><div class="tsc-role" data-i18n="tsc.nilay.role">İnsan Kaynakları Yönetimi</div></div></div></div>
+        <!-- Duplicate for seamless loop -->
+        <div class="tsc"><div class="tsc-stars">★★★★★</div><p class="tsc-text" data-i18n="tsc.tamay.text">Verimli birliktelik için teşekkürler Derin Akademi &amp; Hakan Selahi 🙏 Düşündürücü bir yazı, tebrikler 👏🏻</p><div class="tsc-author"><div class="tsc-avatar"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></div><div><div class="tsc-name">A. Fatih Tamay</div><div class="tsc-role" data-i18n="tsc.tamay.role">Yönetim Kurulu Üyesi</div></div></div></div>
+        <div class="tsc"><div class="tsc-stars">★★★★★</div><p class="tsc-text" data-i18n="tsc.nilay.text">Hakan Bey, kolaylıklar dilerim. Sizinle çalışan İK uzmanları çok şanslı, sizden öğrenecek çok şey var.</p><div class="tsc-author"><div class="tsc-avatar"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></div><div><div class="tsc-name">Nilay A.</div><div class="tsc-role" data-i18n="tsc.nilay.role">İnsan Kaynakları Yönetimi</div></div></div></div>
       </div>
 
       <!-- Sütun 2 -->
       <div class="testi-scroll-col col-2">
-        <div class="tsc"><div class="tsc-stars">★★★★★</div><p class="tsc-text">Mülakat Becerileri 5.0 eğitimi sonrası işe alım süreçlerimizde hata oranımız dramatik biçimde düştü. Teorik değil, sahadaki gerçek deneyimi aktardılar.</p><div class="tsc-author"><div class="tsc-avatar tsc-av-b">GD</div><div><div class="tsc-name">Gülşen Demir</div><div class="tsc-role">İnsan Kaynakları Müdürü</div></div></div><span class="tsc-sector">Perakende</span></div>
-        <div class="tsc"><div class="tsc-stars">★★★★★</div><p class="tsc-text">Yetenek yönetimi sistemimizi Derin Akademi ile sıfırdan tasarladık. 6 ay içinde kritik pozisyonlardaki çalışan devir oranı yüzde kırk düştü. Rakamlar konuşuyor.</p><div class="tsc-author"><div class="tsc-avatar tsc-av-d">EŞ</div><div><div class="tsc-name">Elif Şahin</div><div class="tsc-role">CHRO</div></div></div><span class="tsc-sector">Teknoloji</span></div>
-        <div class="tsc"><div class="tsc-stars">★★★★★</div><p class="tsc-text">Liderlik Yolculuğu programı yöneticilerimizin bakış açısını dönüştürdü. Ekip yönetiminde kullandıkları araçlar ve dil tamamen değişti. Etki 3 ay içinde görünür oldu.</p><div class="tsc-author"><div class="tsc-avatar tsc-av-e">ST</div><div><div class="tsc-name">Selin Topal</div><div class="tsc-role">İK Uzmanı</div></div></div><span class="tsc-sector">Holding</span></div>
+        <div class="tsc"><div class="tsc-stars">★★★★★</div><p class="tsc-text" data-i18n="tsc.burak.text">Hakan Beyler ile Bayer Cropscience stratejik partneri olarak iki farklı projede çalışma imkanımız oldu. Alanında uzmanlığı ve çözüm odaklı yaklaşımıyla her zaman fark yarattı. Danışmanlık sürecinde sunduğu değerli bakış açıları gerçekten ilham verici idi. Başarılarının devamını dilerim.</p><div class="tsc-author"><div class="tsc-avatar"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></div><div><div class="tsc-name">Burak Esentepe</div><div class="tsc-role" data-i18n="tsc.burak.role">Ziraat Mühendisi</div></div></div></div>
+        <div class="tsc"><div class="tsc-stars">★★★★★</div><p class="tsc-text" data-i18n="tsc.neslihan.text">Kesinlikle katılıyorum. Hakan Bey çok iyi bir öğreticidir.</p><div class="tsc-author"><div class="tsc-avatar"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></div><div><div class="tsc-name">Neslihan Ürer Turan</div><div class="tsc-role" data-i18n="tsc.neslihan.role">BMI İstanbul Sales &amp; Business</div></div></div></div>
+        <!-- Duplicate -->
+        <div class="tsc"><div class="tsc-stars">★★★★★</div><p class="tsc-text" data-i18n="tsc.burak.text">Hakan Beyler ile Bayer Cropscience stratejik partneri olarak iki farklı projede çalışma imkanımız oldu. Alanında uzmanlığı ve çözüm odaklı yaklaşımıyla her zaman fark yarattı. Danışmanlık sürecinde sunduğu değerli bakış açıları gerçekten ilham verici idi. Başarılarının devamını dilerim.</p><div class="tsc-author"><div class="tsc-avatar"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></div><div><div class="tsc-name">Burak Esentepe</div><div class="tsc-role" data-i18n="tsc.burak.role">Ziraat Mühendisi</div></div></div></div>
+        <div class="tsc"><div class="tsc-stars">★★★★★</div><p class="tsc-text" data-i18n="tsc.neslihan.text">Kesinlikle katılıyorum. Hakan Bey çok iyi bir öğreticidir.</p><div class="tsc-author"><div class="tsc-avatar"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></div><div><div class="tsc-name">Neslihan Ürer Turan</div><div class="tsc-role" data-i18n="tsc.neslihan.role">BMI İstanbul Sales &amp; Business</div></div></div></div>
       </div>
 
       <!-- Sütun 3 -->
       <div class="testi-scroll-col col-3">
-        <div class="tsc"><div class="tsc-stars">★★★★★</div><p class="tsc-text">"Biz eğitim satmıyoruz" dediklerinde şüpheyle yaklaştım. Ama gerçekten sahaya indiler. Performans sistemimizi baştan tasarladık, sonuçlar somut ve ölçülebilir oldu.</p><div class="tsc-author"><div class="tsc-avatar tsc-av-c">MY</div><div><div class="tsc-name">Murat Yıldız</div><div class="tsc-role">Genel Müdür</div></div></div><span class="tsc-sector">Üretim</span></div>
-        <div class="tsc"><div class="tsc-stars">★★★★★</div><p class="tsc-text">İşe alım süreçlerimizi baştan sona revize ettik. Artık yanlış kişiyi işe almak için harcadığımız zamanı ve maliyeti düşündüğümüzde bu yatırımın ne kadar değerli olduğunu görüyoruz.</p><div class="tsc-author"><div class="tsc-avatar tsc-av-a">SA</div><div><div class="tsc-name">Serkan Arslan</div><div class="tsc-role">İK Müdürü</div></div></div><span class="tsc-sector">Perakende</span></div>
-        <div class="tsc"><div class="tsc-stars">★★★★★</div><p class="tsc-text">Aileden kuruma geçiş sürecimizde en büyük çekincem ailevi dinamiklerin yönetime yansımasıydı. Derin Akademi bu hassas dengeyi kurumsal bir yapıyla mükemmel çözdü.</p><div class="tsc-author"><div class="tsc-avatar tsc-av-b">ZK</div><div><div class="tsc-name">Zeynep Korkmaz</div><div class="tsc-role">Kurumsallaşma Sorumlusu</div></div></div><span class="tsc-sector">İnşaat & GYO</span></div>
+        <div class="tsc"><div class="tsc-stars">★★★★★</div><p class="tsc-text" data-i18n="tsc.onur.text">Harika bir program! Kriz zamanlarında güçlü kalmak için stratejik İnsan Kaynakları yaklaşımının önemini vurgulayan bu eğitimin ve Derin Akademi'nin diğer programlarının, Hakan Bey'in uzmanlığı ile iş dünyası çalışanlarını ve organizasyonları geliştirdiğini bizzat deneyimledim. Değişen ekonomik koşullara adaptasyon ve doğru yetenekleri konumlandırma konusundaki süreçleri çok önemseyen bir lider olarak, katılımcılar için bu tarz programların çok faydalı olacağına inanıyorum. Hakan Selahi sizi tebrik ederim 👏🏻</p><div class="tsc-author"><div class="tsc-avatar"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></div><div><div class="tsc-name">Onur Çamili</div><div class="tsc-role" data-i18n="tsc.onur.role">Bayer Crop Science East Mediterranean</div></div></div></div>
+        <!-- Duplicate -->
+        <div class="tsc"><div class="tsc-stars">★★★★★</div><p class="tsc-text" data-i18n="tsc.onur.text">Harika bir program! Kriz zamanlarında güçlü kalmak için stratejik İnsan Kaynakları yaklaşımının önemini vurgulayan bu eğitimin ve Derin Akademi'nin diğer programlarının, Hakan Bey'in uzmanlığı ile iş dünyası çalışanlarını ve organizasyonları geliştirdiğini bizzat deneyimledim. Değişen ekonomik koşullara adaptasyon ve doğru yetenekleri konumlandırma konusundaki süreçleri çok önemseyen bir lider olarak, katılımcılar için bu tarz programların çok faydalı olacağına inanıyorum. Hakan Selahi sizi tebrik ederim 👏🏻</p><div class="tsc-author"><div class="tsc-avatar"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></div><div><div class="tsc-name">Onur Çamili</div><div class="tsc-role" data-i18n="tsc.onur.role">Bayer Crop Science East Mediterranean</div></div></div></div>
       </div>
 
     </div>
@@ -185,32 +183,32 @@
     <div class="footer-grid">
       <div class="footer-brand">
         <a href="index.html" class="nav-logo" style="display:inline-flex"><img src="public/logos/68.png" alt="Derin Akademi" class="nav-logo-img"/></a>
-        <p class="brand-desc">İnsan kaynakları alanında uzmanlaşmış danışmanlık ve eğitim şirketi. Anlatan değil, çalışan sistemler kurarız.</p>
+        <p class="brand-desc" data-i18n="shared.footer.brandesc">İnsan kaynakları alanında uzmanlaşmış danışmanlık ve eğitim şirketi. Anlatan değil, çalışan sistemler kurarız.</p>
         <div class="footer-social">
           <a class="social-btn" href="https://www.instagram.com/derinakademi/" target="_blank">📷</a>
           <a class="social-btn" href="https://www.linkedin.com/in/hakan-selahi-001969/" target="_blank">in</a>
         </div>
       </div>
       <div>
-        <div class="footer-col-title">Hizmetler</div>
+        <div class="footer-col-title" data-i18n="shared.footer.hizmetler">Hizmetler</div>
         <ul class="footer-links">
-          <li><a href="kurslar.html">Eğitimlerimiz</a></li>
-          <li><a href="danismanlik.html">Danışmanlıklarımız</a></li>
+          <li><a data-i18n="nav.egitimler" href="kurslar.html">Eğitimlerimiz</a></li>
+          <li><a data-i18n="nav.danismanlik" href="danismanlik.html">Danışmanlıklarımız</a></li>
           <li><a href="kurslar.html">Kurumsal Eğitim</a></li>
           <li><a href="danismanlik.html">Kurumsallaşma</a></li>
         </ul>
       </div>
       <div>
-        <div class="footer-col-title">Şirket</div>
+        <div class="footer-col-title" data-i18n="shared.footer.sirket">Şirket</div>
         <ul class="footer-links">
-          <li><a href="hakkimizda.html">Kurumsal</a></li>
-          <li><a href="blog.html">Deneyimlerimiz</a></li>
+          <li><a data-i18n="nav.hakkimizda" href="hakkimizda.html">Kurumsal</a></li>
+          <li><a data-i18n="nav.blog" href="blog.html">Deneyimlerimiz</a></li>
           <li><a href="kariyer.html">Kariyer</a></li>
-          <li><a href="iletisim.html">İletişim</a></li>
+          <li><a data-i18n="nav.iletisim" href="iletisim.html">İletişim</a></li>
         </ul>
       </div>
       <div>
-        <div class="footer-col-title">Bülten</div>
+        <div class="footer-col-title" data-i18n="shared.footer.bulten">Bülten</div>
         <div class="footer-newsletter">
           <p>İK gündemindeki gelişmelerden ve eğitimlerimizden haberdar ol.</p>
           <div class="newsletter-form"><input type="email" class="newsletter-input" placeholder="E-posta"/><button class="btn btn-primary btn-sm" onclick="showToast('Abone oldunuz! 🎉')">→</button></div>
@@ -218,8 +216,8 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <div class="footer-copy">© 2026 Derin Akademi. Tüm hakları saklıdır. &nbsp;<a href="https://reneedesignlab.com/tr" target="_blank" style="color:var(--silver-dim);text-decoration:none;" onmouseover="this.style.color='var(--silver)'" onmouseout="this.style.color='var(--silver-dim)'">by Renee DesignLab</a></div>
-      <div class="footer-legal"><a href="gizlilik-politikasi.html">Gizlilik Politikası</a><a href="kullanim-kosullari.html">Kullanım Koşulları</a><a href="kvkk.html">KVKK</a><a href="cerezler.html">Çerezler</a></div>
+      <div class="footer-copy" data-i18n="shared.footer.copy">© 2026 Derin Akademi. Tüm hakları saklıdır. &nbsp;<a href="https://reneedesignlab.com/tr" target="_blank" style="color:var(--silver-dim);text-decoration:none;" onmouseover="this.style.color='var(--silver)'" onmouseout="this.style.color='var(--silver-dim)'">by Renee DesignLab</a></div>
+      <div class="footer-legal"><a href="gizlilik-politikasi.html" data-i18n="shared.footer.gizlilik">Gizlilik Politikası</a><a href="kullanim-kosullari.html" data-i18n="shared.footer.kullanim">Kullanım Koşulları</a><a href="kvkk.html" data-i18n="shared.footer.kvkk">KVKK</a><a href="cerezler.html" data-i18n="shared.footer.cerezler">Çerezler</a></div>
     </div>
   </div>
 </footer>
@@ -234,7 +232,7 @@
   <div class="teklif-modal-box">
     <button class="teklif-modal-close" onclick="closeTeklifModal()">✕</button>
     <div>
-      <div style="color:var(--teal);font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:10px;">İletişim Bilgileri</div>
+      <div style="color:var(--teal);font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:10px;" data-i18n="shared.modal.contact">İletişim Bilgileri</div>
       <h2 style="font-family:'Montserrat',sans-serif;font-size:24px;font-weight:900;line-height:1.2;margin-bottom:8px;">Hemen <span class="gradient-text">Teklif Alın</span></h2>
       <p style="color:var(--silver);font-size:13px;line-height:1.75;margin-bottom:28px;">Eğitim ihtiyaçlarınızı paylaşın, size özel program ve teklif oluşturalım.</p>
       <div style="display:flex;flex-direction:column;gap:18px;margin-bottom:28px;">

@@ -1,13 +1,14 @@
 <!DOCTYPE html>
+
 <html lang="tr">
 <head>
-  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Performans Yönetiminde Yapılan 5 Kritik Hata — Derin Akademi Blog</title>
-  <meta name="description" content="Yıllık değerlendirme döngüsünden hedef belirsizliğine, halo etkisinden geri bildirim eksikliğine kadar kurumların tekrarladığı performans yönetimi hat"/>
-  <link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="../css/main.css"/>
-  <style>
+<meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Performans Yönetiminde Yapılan 5 Kritik Hata — Derin Akademi Blog</title>
+<meta content="Yıllık değerlendirme döngüsünden hedef belirsizliğine, halo etkisinden geri bildirim eksikliğine kadar kurumların tekrarladığı performans yönetimi hat" name="description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;family=Montserrat:wght@400;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="../css/main.css" rel="stylesheet"/>
+<style>
   .article-layout { display: grid; grid-template-columns: 1fr 300px; gap: 56px; margin-top: 48px; }
   .article-cover { width: 100%; height: 420px; object-fit: cover; border-radius: var(--radius-xl); margin-bottom: 40px; display: block; }
   .article-meta { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; flex-wrap: wrap; }
@@ -39,83 +40,81 @@
   .related-title a:hover { color: var(--white); }
   @media(max-width:900px) { .article-layout { grid-template-columns: 1fr; } .art-sidebar { display: none; } }
 </style>
-  <!-- SEO: Open Graph -->
-  <meta property="og:type" content="website"/>
-  <meta property="og:site_name" content="Derin Akademi"/>
-  <meta property="og:title" content="Performans Yönetiminde Yapılan 5 Kritik Hata — Derin Akademi Blog"/>
-  <meta property="og:description" content="Yıllık değerlendirme döngüsünden hedef belirsizliğine, halo etkisinden geri bildirim eksikliğine kadar kurumların tekrarladığı performans yönetimi hat"/>
-  <meta property="og:url" content="https://derinakademi.com/blog/performans-yonetimi-hatalar.html"/>
-  <meta property="og:image" content="https://derinakademi.com/public/hakan%20selahi/hakan-selahi.jpg"/>
-  <meta property="og:locale" content="tr_TR"/>
-  <!-- SEO: Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image"/>
-  <meta name="twitter:title" content="Performans Yönetiminde Yapılan 5 Kritik Hata — Derin Akademi Blog"/>
-  <meta name="twitter:description" content="Yıllık değerlendirme döngüsünden hedef belirsizliğine, halo etkisinden geri bildirim eksikliğine kadar kurumların tekrarladığı performans yönetimi hat"/>
-  <meta name="twitter:image" content="https://derinakademi.com/public/hakan%20selahi/hakan-selahi.jpg"/>
-  <!-- SEO: Canonical & Robots -->
-  <link rel="canonical" href="https://derinakademi.com/blog/performans-yonetimi-hatalar.html"/>
-  <meta name="robots" content="index, follow"/>
+<!-- SEO: Open Graph -->
+<meta content="website" property="og:type"/>
+<meta content="Derin Akademi" property="og:site_name"/>
+<meta content="Performans Yönetiminde Yapılan 5 Kritik Hata — Derin Akademi Blog" property="og:title"/>
+<meta content="Yıllık değerlendirme döngüsünden hedef belirsizliğine, halo etkisinden geri bildirim eksikliğine kadar kurumların tekrarladığı performans yönetimi hat" property="og:description"/>
+<meta content="https://derinakademi.com/blog/performans-yonetimi-hatalar.html" property="og:url"/>
+<meta content="https://derinakademi.com/public/hakan%20selahi/hakan-selahi.jpg" property="og:image"/>
+<meta content="tr_TR" property="og:locale"/>
+<!-- SEO: Twitter Card -->
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Performans Yönetiminde Yapılan 5 Kritik Hata — Derin Akademi Blog" name="twitter:title"/>
+<meta content="Yıllık değerlendirme döngüsünden hedef belirsizliğine, halo etkisinden geri bildirim eksikliğine kadar kurumların tekrarladığı performans yönetimi hat" name="twitter:description"/>
+<meta content="https://derinakademi.com/public/hakan%20selahi/hakan-selahi.jpg" name="twitter:image"/>
+<!-- SEO: Canonical & Robots -->
+<link href="https://derinakademi.com/blog/performans-yonetimi-hatalar.html" rel="canonical"/>
+<meta content="index, follow" name="robots"/>
 </head>
 <body>
 <div class="ambient"></div>
 <nav id="navbar">
-  <div class="nav-inner">
-    <a href="../index.html" class="nav-logo"><img src="../public/logos/68.png" alt="Derin Akademi" class="nav-logo-img"/></a>
-    <ul class="nav-links">
-      <li><a href="../kurslar.html">Eğitimlerimiz</a></li>
-      <li><a href="../danismanlik.html">Danışmanlıklarımız</a></li>
-      <li><a href="../hakkimizda.html">Kurumsal</a></li>
-      <li><a href="../blog.html" class="active">Deneyimlerimiz</a></li>
-      <li><a href="../iletisim.html">İletişim</a></li>
-    </ul>
-    <div class="nav-actions"><button onclick="openTeklifModal()" class="btn btn-primary btn-sm">Özel Teklif Al</button></div>
-    <button class="menu-toggle">☰</button>
-  </div>
+<div class="nav-inner">
+<a class="nav-logo" href="../index.html"><img alt="Derin Akademi" class="nav-logo-img" src="../public/logos/68.png"/></a>
+<ul class="nav-links">
+<li><a data-i18n="nav.egitimler" href="../kurslar.html">Eğitimlerimiz</a></li>
+<li><a data-i18n="nav.danismanlik" href="../danismanlik.html">Danışmanlıklarımız</a></li>
+<li><a data-i18n="nav.hakkimizda" href="../hakkimizda.html">Kurumsal</a></li>
+<li><a class="active" data-i18n="nav.blog" href="../blog.html">Deneyimlerimiz</a></li>
+<li><a data-i18n="nav.iletisim" href="../iletisim.html">İletişim</a></li>
+</ul>
+<div class="nav-actions"><button id="langToggle" onclick="daToggleLang()" class="btn btn-ghost btn-sm" style="font-weight:700;letter-spacing:1px;padding:7px 14px;min-width:52px;">EN</button><button class="btn btn-primary btn-sm" data-i18n="nav.teklif" onclick="openTeklifModal()" data-i18n="nav.teklif">Özel Teklif Al</button></div>
+<button class="menu-toggle">☰</button>
+</div>
 </nav>
 <div class="mobile-nav">
-  <button class="mobile-nav-close">✕</button>
-  <a href="../index.html">Ana Sayfa</a><a href="../kurslar.html">Eğitimlerimiz</a><a href="../danismanlik.html">Danışmanlıklarımız</a>
-  <a href="../hakkimizda.html">Kurumsal</a><a href="../blog.html">Blog</a><a href="../iletisim.html">İletişim</a>
-  <div class="mobile-nav-actions"><button onclick="openTeklifModal()" class="btn btn-primary btn-md" style="width:100%;justify-content:center">Özel Teklif Al</button></div>
+<button class="mobile-nav-close">✕</button>
+<a data-i18n="nav.anasayfa" href="../index.html">Ana Sayfa</a><a data-i18n="nav.egitimler" href="../kurslar.html">Eğitimlerimiz</a><a data-i18n="nav.danismanlik" href="../danismanlik.html">Danışmanlıklarımız</a>
+<a data-i18n="nav.hakkimizda" href="../hakkimizda.html">Kurumsal</a><a data-i18n="nav.blog" href="../blog.html">Deneyimlerimiz</a><a data-i18n="nav.iletisim" href="../iletisim.html">İletişim</a>
+<div class="mobile-nav-actions"><button class="btn btn-primary btn-md" data-i18n="nav.teklif" onclick="openTeklifModal()" style="width:100%;justify-content:center">Özel Teklif Al</button></div>
 </div>
-
 <!-- ══ ARTICLE HERO ══ -->
 <div class="page-hero" style="padding: 110px 0 50px;">
-  <div class="container">
-    <nav style="font-size:13px;color:var(--silver-dim);margin-bottom:24px;">
-      <a href="../index.html" style="color:var(--silver-dim);text-decoration:none;">Ana Sayfa</a>
-      &rsaquo; <a href="../blog.html" style="color:var(--silver-dim);text-decoration:none;">Blog</a>
-      &rsaquo; <span style="color:var(--silver);">📊 Performans</span>
-    </nav>
-    <div class="article-meta">
-      <span class="art-cat">📊 Performans</span>
-      <span class="art-dot"></span>
-      <span class="art-date">Nisan 2025</span>
-      <span class="art-dot"></span>
-      <span class="art-read">8 dk okuma</span>
-    </div>
-    <h1 class="article-title">Performans Yönetiminde Yapılan 5 Kritik Hata</h1>
-  </div>
+<div class="container">
+<nav style="font-size:13px;color:var(--silver-dim);margin-bottom:24px;">
+<a href="../index.html" style="color:var(--silver-dim);text-decoration:none;">Ana Sayfa</a>
+      › <a href="../blog.html" style="color:var(--silver-dim);text-decoration:none;">Blog</a>
+      › <span style="color:var(--silver);">📊 Performans</span>
+</nav>
+<div class="article-meta">
+<span class="art-cat" data-i18n="blog.perf.category">📊 Performans</span>
+<span class="art-dot"></span>
+<span class="art-date" data-i18n="blog.perf.date">Nisan 2025</span>
+<span class="art-dot"></span>
+<span class="art-read" data-i18n="blog.perf.read">8 dk okuma</span>
 </div>
-
+<h1 class="article-title" data-i18n="blog.perf.title">Performans Yönetiminde Yapılan 5 Kritik Hata</h1>
+</div>
+</div>
 <!-- ══ ARTICLE CONTENT ══ -->
 <section style="padding: 0 0 80px;">
-  <div class="container">
-    <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=1200&q=80&auto=format&fit=crop" alt="Performans değerlendirme toplantısı" class="article-cover"/>
-    <div class="article-layout">
-      <article>
-        <p class="article-lead">Yıllık değerlendirme döngüsünden hedef belirsizliğine, halo etkisinden geri bildirim eksikliğine kadar kurumların tekrarladığı performans yönetimi hataları ve bunlardan nasıl çıkılır.</p>
-        <div class="article-body">
-          <h2>Neden Performans Sistemleri Çalışmıyor?</h2>
-<p>Kurumların büyük çoğunluğu bir performans yönetim sistemi işletiyor. Ama bu sistemlerin gerçekten çalıştığını düşünen çalışan oranı son derece düşük. Gallup araştırmalarına göre çalışanların yalnızca %14&apos;ü performans değerlendirmelerinin gelişimlerini olumlu etkilediğini düşünüyor.</p>
+<div class="container">
+<img alt="Performans değerlendirme toplantısı" class="article-cover" src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=1200&amp;q=80&amp;auto=format&amp;fit=crop"/>
+<div class="article-layout">
+<article>
+<p class="article-lead" data-i18n="blog.perf.lead">Yıllık değerlendirme döngüsünden hedef belirsizliğine, halo etkisinden geri bildirim eksikliğine kadar kurumların tekrarladığı performans yönetimi hataları ve bunlardan nasıl çıkılır.</p>
+<div class="article-body">
+<h2>Neden Performans Sistemleri Çalışmıyor?</h2>
+<p>Kurumların büyük çoğunluğu bir performans yönetim sistemi işletiyor. Ama bu sistemlerin gerçekten çalıştığını düşünen çalışan oranı son derece düşük. Gallup araştırmalarına göre çalışanların yalnızca %14'ü performans değerlendirmelerinin gelişimlerini olumlu etkilediğini düşünüyor.</p>
 <p>Bu rakamın bu kadar düşük olması tesadüf değil. Kurumlar yıllardır aynı hataları tekrarlıyor. Bu yazıda en yaygın beş hatayı ele alıyoruz.</p>
-<img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=900&q=80&auto=format&fit=crop" alt="Takım performansı değerlendirme" class="article-img"/>
+<img alt="Takım performansı değerlendirme" class="article-img" src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=900&amp;q=80&amp;auto=format&amp;fit=crop"/>
 <h2>Hata 1: Yıllık Döngüye Kilitlenmek</h2>
 <p>Yıllık performans değerlendirmesi, hâlâ pek çok kurumun ana ritmidir. Oysa aylarca bekleyen, tek bir formu dolduran ve yöneticinin sübjektif kanaatine bırakılan bu sistem, hem çalışan hem de yönetici için anlamlı olmaktan çıkmıştır.</p>
-<p>Araştırmalar, düzenli ve sık geri bildirimin yıllık değerlendirmeden çok daha güçlü bir gelişim ivmesi yarattığını kanıtlıyor. Çözüm: Aylık ya da çeyreklik <strong>performans check-in&apos;lerini</strong> sisteme entegre edin.</p>
+<p>Araştırmalar, düzenli ve sık geri bildirimin yıllık değerlendirmeden çok daha güçlü bir gelişim ivmesi yarattığını kanıtlıyor. Çözüm: Aylık ya da çeyreklik <strong>performans check-in'lerini</strong> sisteme entegre edin.</p>
 <h2>Hata 2: Hedeflerin Muğlaklığı</h2>
 <p>"Müşteri memnuniyetini artır", "daha iyi iletişim kur", "proaktif ol". Bunlar hedef değil, temennidir. SMART kriterlerinden (Spesifik, Ölçülebilir, Ulaşılabilir, İlgili, Zamanlı) uzak hedefler belirlenen bir sistemde çalışanlar kendilerini neye göre değerlendireceğini bilemez.</p>
-<p>OKR (Objectives & Key Results) metodolojisi bu boşluğu doldurmak için giderek daha fazla tercih ediliyor. OKR&apos;lar hem yönsel (objective) hem de somut ölçüm kriterlerini (key results) bir arada tanımlıyor.</p>
+<p>OKR (Objectives &amp; Key Results) metodolojisi bu boşluğu doldurmak için giderek daha fazla tercih ediliyor. OKR'lar hem yönsel (objective) hem de somut ölçüm kriterlerini (key results) bir arada tanımlıyor.</p>
 <blockquote class="article-quote">"Muğlak hedef, muğlak sonuç doğurur. Netlik, performans kültürünün ön koşuludur."</blockquote>
 <h2>Hata 3: Halo ve Horn Etkisi</h2>
 <p>Bir çalışanın tek bir alandaki olumlu performansının, tüm boyutlarda yüksek puan almasına yol açmasına <strong>halo etkisi</strong> denir. Tersi de geçerlidir: <strong>Horn etkisi</strong> ise tek bir olumsuz izlenimin tüm değerlendirmeyi gölgelemesidir.</p>
@@ -127,102 +126,100 @@
 <p>Değerlendirme sonrasında belirlenen gelişim planları çoğunlukla dosyalanıp unutulur. Çalışan beklediği desteği görmez, yönetici takip etmez. Bu döngü her yıl tekrarlandığında çalışan sisteme güvenini tamamen yitirir.</p>
 <p>Bir performans sistemini anlamlı kılan, değerlendirme anının kalitesi değil, sonrasında gerçekleşen eylemlerdir. Gelişim planlarını takvime bağlamak ve düzenli kontrol noktaları koymak, tek başına sisteme inanırlık kazandırır.</p>
 <h2>Nereden Başlamalı?</h2>
-<p>Performans yönetim sisteminizi köklü biçimde değiştirmeniz gerekmiyor. Küçük ama tutarlı adımlar büyük fark yaratır: OKR&apos;a geçiş, aylık check-in ritüeli ve değerlendirici eğitimi bu adımların en kritik üçlüsüdür.</p>
-        </div>
-        <div class="article-tags">
-          <span class="art-tag">Performans</span><span class="art-tag">OKR</span><span class="art-tag">360 Değerlendirme</span><span class="art-tag">SMART Hedef</span><span class="art-tag">Geri Bildirim</span><span class="art-tag">Yönetici Eğitimi</span>
-        </div>
-        <!-- Yazar -->
-        <div style="display:flex;align-items:center;gap:16px;margin-top:48px;padding:28px;background:var(--glass-bg);border:1px solid var(--glass-bd);border-radius:var(--radius-lg);">
-          <div style="width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,#0d9488,#0e7490);display:flex;align-items:center;justify-content:center;font-family:'Montserrat',sans-serif;font-size:20px;font-weight:900;color:#fff;flex-shrink:0;">HS</div>
-          <div>
-            <div style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:15px;margin-bottom:4px;">Hakan Selahi</div>
-            <div style="font-size:13px;color:var(--silver);">30+ Yıllık İK Uzmanı · Kurucu, Derin Akademi · ACC Koç · TEGEP &amp; ICF Üyesi</div>
-          </div>
-        </div>
-        <!-- Navigation -->
-        <div style="display:flex;justify-content:space-between;margin-top:48px;padding-top:28px;border-top:1px solid var(--glass-bd);">
-          <a href="../blog.html" style="font-size:14px;font-weight:600;color:var(--teal);text-decoration:none;">← Tüm Yazılar</a>
-          <button onclick="openTeklifModal()" style="font-size:14px;font-weight:600;color:var(--teal);background:none;border:none;cursor:pointer;padding:0;">Danışmanlık Al →</button>
-        </div>
-      </article>
-
-      <!-- Sidebar -->
-      <aside class="art-sidebar">
-        <!-- Yazar kartı -->
-        <div class="art-widget">
-          <div class="art-widget-title">✍️ Yazar Hakkında</div>
-          <p style="font-size:13px;color:var(--silver);line-height:1.65;margin-bottom:12px;">Hakan Selahi, 30+ yıllık İK yönetimi ve danışmanlık deneyimiyle Derin Akademi&apos;nin kurucusudur. TEGEP ve ICF üyesidir.</p>
-          <a href="../hakkimizda.html" style="font-size:13px;color:var(--teal);text-decoration:none;font-weight:600;">Kurumsal Hakkında →</a>
-        </div>
-        <!-- İlgili içerik -->
-        <div class="art-widget">
-          <div class="art-widget-title">📚 İlgili İçerik</div>
-          <div class="related-item"><div class="related-num">01</div><div class="related-title"><a href="../egitimler/performans-360.html">Performans & 360 Derece</a></div></div><div class="related-item"><div class="related-num">02</div><div class="related-title"><a href="../egitimler/stratejik-ik.html">Stratejik İK Yönetimi</a></div></div><div class="related-item"><div class="related-num">03</div><div class="related-title"><a href="../danismanliklar/performans-yonetimi.html">Performans Yönetimi Danışmanlık</a></div></div>
-        </div>
-        <!-- CTA -->
-        <div class="art-widget art-cta">
-          <div style="font-size:32px;margin-bottom:12px;">🎯</div>
-          <div class="art-widget-title" style="text-align:center;">Danışmanlık Alın</div>
-          <p style="font-size:13px;color:var(--silver);line-height:1.6;margin-bottom:16px;text-align:center;">İK süreçlerinizi stratejik avantaja dönüştürmek için konuşalım.</p>
-          <button onclick="openTeklifModal()" class="btn btn-primary btn-sm" style="width:100%;justify-content:center;">Teklif Al →</button>
-        </div>
-        <!-- Newsletter -->
-        <div class="art-widget">
-          <div class="art-widget-title">📬 Bülten</div>
-          <p style="font-size:13px;color:var(--silver);margin-bottom:14px;line-height:1.6;">Yeni yazılardan haberdar olmak için abone olun.</p>
-          <input type="email" class="nl-input" placeholder="E-posta" style="width:100%;background:rgba(255,255,255,0.04);border:1px solid var(--glass-bd);border-radius:var(--radius-sm);padding:11px 14px;color:var(--white);font-size:13px;outline:none;margin-bottom:10px;box-sizing:border-box;"/>
-          <button class="btn btn-primary btn-sm" style="width:100%;justify-content:center;" onclick="showToast('Abone oldunuz! 🎉')">Abone Ol</button>
-        </div>
-      </aside>
-    </div>
-  </div>
-</section>
-
-<footer>
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <a href="../index.html" class="nav-logo" style="display:inline-flex"><img src="../public/logos/68.png" alt="Derin Akademi" class="nav-logo-img"/></a>
-        <p class="brand-desc">İnsan kaynakları alanında uzmanlaşmış danışmanlık ve eğitim şirketi.</p>
-        <div class="footer-social">
-          <a class="social-btn" href="https://www.instagram.com/derinakademi/" target="_blank">📷</a>
-          <a class="social-btn" href="https://www.linkedin.com/in/hakan-selahi-001969/" target="_blank">in</a>
-        </div>
-      </div>
-      <div><div class="footer-col-title">Hizmetler</div><ul class="footer-links"><li><a href="../kurslar.html">Eğitimlerimiz</a></li><li><a href="../danismanlik.html">Danışmanlıklarımız</a></li></ul></div>
-      <div><div class="footer-col-title">Şirket</div><ul class="footer-links"><li><a href="../hakkimizda.html">Kurumsal</a></li><li><a href="../blog.html">Blog</a></li><li><a href="../iletisim.html">İletişim</a></li></ul></div>
-      <div><div class="footer-col-title">İletişim</div><ul class="footer-links"><li><a href="tel:+905330193134">0 (533) 019 31 34</a></li><li><a href="mailto:derin@derinakademi.net">derin@derinakademi.net</a></li></ul></div>
-    </div>
-    <div class="footer-bottom">
-      <div class="footer-copy">© 2026 Derin Akademi. Tüm hakları saklıdır.</div>
-      <div class="footer-legal"><a href="../gizlilik-politikasi.html">Gizlilik</a><a href="../kvkk.html">KVKK</a></div>
-    </div>
-  </div>
-</footer>
-
-<button id="back-to-top" style="position:fixed;bottom:28px;right:28px;z-index:500;width:44px;height:44px;border-radius:12px;background:var(--glass-bg);border:1px solid var(--glass-bd);color:var(--teal);font-size:18px;cursor:pointer;opacity:0;transition:var(--t-base);backdrop-filter:blur(12px);" aria-label="Yukarı dön">↑</button>
-<div id="teklif-modal" class="teklif-modal">
-  <div class="teklif-modal-box">
-    <button class="teklif-modal-close" onclick="closeTeklifModal()">✕</button>
-    <div>
-      <div style="color:var(--teal);font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:10px;">İletişim Bilgileri</div>
-      <h2 style="font-family:'Montserrat',sans-serif;font-size:24px;font-weight:900;line-height:1.2;margin-bottom:8px;">Hemen <span class="gradient-text">Teklif Alın</span></h2>
-      <p style="color:var(--silver);font-size:13px;line-height:1.75;margin-bottom:28px;">Eğitim ihtiyaçlarınızı paylaşın, size özel program ve teklif oluşturalım.</p>
-      <div style="display:flex;flex-direction:column;gap:18px;margin-bottom:28px;">
-        <div class="teklif-info-row"><div class="teklif-info-icon">📞</div><div><div style="font-size:11px;color:var(--silver-dim);margin-bottom:3px;">Telefon</div><a href="tel:+905330193134" style="font-size:14px;font-weight:600;color:var(--white);text-decoration:none;">0 (533) 019 31 34</a></div></div>
-        <div class="teklif-info-row"><div class="teklif-info-icon">📧</div><div><div style="font-size:11px;color:var(--silver-dim);margin-bottom:3px;">E-posta</div><a href="mailto:derin@derinakademi.net" style="font-size:14px;font-weight:600;color:var(--white);text-decoration:none;">derin@derinakademi.net</a></div></div>
-      </div>
-    </div>
-    <div>
-      <div class="teklif-field"><label>Ad Soyad *</label><input type="text" class="teklif-modal-input" placeholder="Adınız Soyadınız"/></div>
-      <div class="teklif-field"><label>E-posta *</label><input type="email" class="teklif-modal-input" placeholder="ornek@mail.com"/></div>
-      <div class="teklif-field"><label>Telefon *</label><input type="tel" class="teklif-modal-input" placeholder="0 5XX XXX XX XX"/></div>
-      <div class="teklif-field"><label>Talebiniz *</label><textarea class="teklif-modal-input" placeholder="İhtiyacınızı yazın..." style="resize:vertical;min-height:80px;"></textarea></div>
-      <button class="btn btn-primary btn-lg" style="width:100%;justify-content:center;margin-top:4px;" onclick="showToast('Talebiniz iletildi! 🎉');closeTeklifModal();">Teklif İste →</button>
-    </div>
-  </div>
+<p>Performans yönetim sisteminizi köklü biçimde değiştirmeniz gerekmiyor. Küçük ama tutarlı adımlar büyük fark yaratır: OKR'a geçiş, aylık check-in ritüeli ve değerlendirici eğitimi bu adımların en kritik üçlüsüdür.</p>
 </div>
+<div class="article-tags">
+<span class="art-tag">Performans</span><span class="art-tag">OKR</span><span class="art-tag">360 Değerlendirme</span><span class="art-tag">SMART Hedef</span><span class="art-tag">Geri Bildirim</span><span class="art-tag">Yönetici Eğitimi</span>
+</div>
+<!-- Yazar -->
+<div style="display:flex;align-items:center;gap:16px;margin-top:48px;padding:28px;background:var(--glass-bg);border:1px solid var(--glass-bd);border-radius:var(--radius-lg);">
+<div style="width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,#0d9488,#0e7490);display:flex;align-items:center;justify-content:center;font-family:'Montserrat',sans-serif;font-size:20px;font-weight:900;color:#fff;flex-shrink:0;">HS</div>
+<div>
+<div style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:15px;margin-bottom:4px;">Hakan Selahi</div>
+<div style="font-size:13px;color:var(--silver);">30+ Yıllık İK Uzmanı · Kurucu, Derin Akademi · ACC Koç · TEGEP &amp; ICF Üyesi</div>
+</div>
+</div>
+<!-- Navigation -->
+<div style="display:flex;justify-content:space-between;margin-top:48px;padding-top:28px;border-top:1px solid var(--glass-bd);">
+<a href="../blog.html" style="font-size:14px;font-weight:600;color:var(--teal);text-decoration:none;">← Tüm Yazılar</a>
+<button onclick="openTeklifModal()" style="font-size:14px;font-weight:600;color:var(--teal);background:none;border:none;cursor:pointer;padding:0;">Danışmanlık Al →</button>
+</div>
+</article>
+<!-- Sidebar -->
+<aside class="art-sidebar">
+<!-- Yazar kartı -->
+<div class="art-widget">
+<div class="art-widget-title" data-i18n="shared.sidebar.author">✍️ Yazar Hakkında</div>
+<p style="font-size:13px;color:var(--silver);line-height:1.65;margin-bottom:12px;">Hakan Selahi, 30+ yıllık İK yönetimi ve danışmanlık deneyimiyle Derin Akademi'nin kurucusudur. TEGEP ve ICF üyesidir.</p>
+<a href="../hakkimizda.html" style="font-size:13px;color:var(--teal);text-decoration:none;font-weight:600;">Kurumsal Hakkında →</a>
+</div>
+<!-- İlgili içerik -->
+<div class="art-widget">
+<div class="art-widget-title">📚 İlgili İçerik</div>
+<div class="related-item"><div class="related-num">01</div><div class="related-title"><a href="../egitimler/performans-360.html">Performans &amp; 360 Derece</a></div></div><div class="related-item"><div class="related-num">02</div><div class="related-title"><a href="../egitimler/stratejik-ik.html">Stratejik İK Yönetimi</a></div></div><div class="related-item"><div class="related-num">03</div><div class="related-title"><a href="../danismanliklar/performans-yonetimi.html">Performans Yönetimi Danışmanlık</a></div></div>
+</div>
+<!-- CTA -->
+<div class="art-widget art-cta">
+<div style="font-size:32px;margin-bottom:12px;">🎯</div>
+<div class="art-widget-title" data-i18n="shared.sidebar.consulting" style="text-align:center;">Danışmanlık Alın</div>
+<p data-i18n="shared.sidebar.cta.desc" style="font-size:13px;color:var(--silver);line-height:1.6;margin-bottom:16px;text-align:center;">İK süreçlerinizi stratejik avantaja dönüştürmek için konuşalım.</p>
+<button class="btn btn-primary btn-sm" onclick="openTeklifModal()" style="width:100%;justify-content:center;">Teklif Al →</button>
+</div>
+<!-- Newsletter -->
+<div class="art-widget">
+<div class="art-widget-title" data-i18n="shared.newsletter.title">📬 Bülten</div>
+<p style="font-size:13px;color:var(--silver);margin-bottom:14px;line-height:1.6;">Yeni yazılardan haberdar olmak için abone olun.</p>
+<input class="nl-input" placeholder="E-posta" style="width:100%;background:rgba(255,255,255,0.04);border:1px solid var(--glass-bd);border-radius:var(--radius-sm);padding:11px 14px;color:var(--white);font-size:13px;outline:none;margin-bottom:10px;box-sizing:border-box;" type="email"/>
+<button class="btn btn-primary btn-sm" onclick="showToast('Abone oldunuz! 🎉')" style="width:100%;justify-content:center;">Abone Ol</button>
+</div>
+</aside>
+</div>
+</div>
+</section>
+<footer>
+<div class="container">
+<div class="footer-grid">
+<div class="footer-brand">
+<a class="nav-logo" href="../index.html" style="display:inline-flex"><img alt="Derin Akademi" class="nav-logo-img" src="../public/logos/68.png"/></a>
+<p class="brand-desc" data-i18n="shared.footer.brandesc1">İnsan kaynakları alanında uzmanlaşmış danışmanlık ve eğitim şirketi.</p>
+<div class="footer-social">
+<a class="social-btn" href="https://www.instagram.com/derinakademi/" target="_blank">📷</a>
+<a class="social-btn" href="https://www.linkedin.com/in/hakan-selahi-001969/" target="_blank">in</a>
+</div>
+</div>
+<div><div class="footer-col-title" data-i18n="shared.footer.hizmetler">Hizmetler</div><ul class="footer-links"><li><a data-i18n="nav.egitimler" href="../kurslar.html">Eğitimlerimiz</a></li><li><a data-i18n="nav.danismanlik" href="../danismanlik.html">Danışmanlıklarımız</a></li></ul></div>
+<div><div class="footer-col-title" data-i18n="shared.footer.sirket">Şirket</div><ul class="footer-links"><li><a data-i18n="nav.hakkimizda" href="../hakkimizda.html">Kurumsal</a></li><li><a data-i18n="nav.blog" href="../blog.html">Deneyimlerimiz</a></li><li><a data-i18n="nav.iletisim" href="../iletisim.html">İletişim</a></li></ul></div>
+<div><div class="footer-col-title" data-i18n="shared.footer.iletisim">İletişim</div><ul class="footer-links"><li><a href="tel:+905330193134">0 (533) 019 31 34</a></li><li><a href="mailto:derin@derinakademi.net">derin@derinakademi.net</a></li></ul></div>
+</div>
+<div class="footer-bottom">
+<div class="footer-copy" data-i18n="shared.footer.copy">© 2026 Derin Akademi. Tüm hakları saklıdır.</div>
+<div class="footer-legal"><a data-i18n="shared.footer.gizlilik" href="../gizlilik-politikasi.html" data-i18n="shared.footer.gizlilik">Gizlilik Politikası</a><a data-i18n="shared.footer.kvkk" href="../kvkk.html" data-i18n="shared.footer.kvkk">KVKK</a></div>
+</div>
+</div>
+</footer>
+<button aria-label="Yukarı dön" id="back-to-top" style="position:fixed;bottom:28px;right:28px;z-index:500;width:44px;height:44px;border-radius:12px;background:var(--glass-bg);border:1px solid var(--glass-bd);color:var(--teal);font-size:18px;cursor:pointer;opacity:0;transition:var(--t-base);backdrop-filter:blur(12px);">↑</button>
+<div class="teklif-modal" id="teklif-modal">
+<div class="teklif-modal-box">
+<button class="teklif-modal-close" onclick="closeTeklifModal()">✕</button>
+<div>
+<div style="color:var(--teal);font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:10px;" data-i18n="shared.modal.contact">İletişim Bilgileri</div>
+<h2 style="font-family:'Montserrat',sans-serif;font-size:24px;font-weight:900;line-height:1.2;margin-bottom:8px;">Hemen <span class="gradient-text">Teklif Alın</span></h2>
+<p style="color:var(--silver);font-size:13px;line-height:1.75;margin-bottom:28px;">Eğitim ihtiyaçlarınızı paylaşın, size özel program ve teklif oluşturalım.</p>
+<div style="display:flex;flex-direction:column;gap:18px;margin-bottom:28px;">
+<div class="teklif-info-row"><div class="teklif-info-icon">📞</div><div><div style="font-size:11px;color:var(--silver-dim);margin-bottom:3px;">Telefon</div><a href="tel:+905330193134" style="font-size:14px;font-weight:600;color:var(--white);text-decoration:none;">0 (533) 019 31 34</a></div></div>
+<div class="teklif-info-row"><div class="teklif-info-icon">📧</div><div><div style="font-size:11px;color:var(--silver-dim);margin-bottom:3px;">E-posta</div><a href="mailto:derin@derinakademi.net" style="font-size:14px;font-weight:600;color:var(--white);text-decoration:none;">derin@derinakademi.net</a></div></div>
+</div>
+</div>
+<div>
+<div class="teklif-field"><label>Ad Soyad *</label><input class="teklif-modal-input" placeholder="Adınız Soyadınız" type="text"/></div>
+<div class="teklif-field"><label>E-posta *</label><input class="teklif-modal-input" placeholder="ornek@mail.com" type="email"/></div>
+<div class="teklif-field"><label>Telefon *</label><input class="teklif-modal-input" placeholder="0 5XX XXX XX XX" type="tel"/></div>
+<div class="teklif-field"><label>Talebiniz *</label><textarea class="teklif-modal-input" placeholder="İhtiyacınızı yazın..." style="resize:vertical;min-height:80px;"></textarea></div>
+<button class="btn btn-primary btn-lg" onclick="showToast('Talebiniz iletildi! 🎉');closeTeklifModal();" style="width:100%;justify-content:center;margin-top:4px;">Teklif İste →</button>
+</div>
+</div>
+</div>
+<script src="../js/i18n.js"></script>
 <script src="../js/main.js"></script>
 </body>
 </html>

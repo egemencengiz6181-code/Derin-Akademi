@@ -86,12 +86,12 @@
   <div class="nav-inner">
     <a href="index.html" class="nav-logo"><img src="public/logos/68.png" alt="Derin Akademi" class="nav-logo-img"/></a>
     <ul class="nav-links">
-      <li><a href="kurslar.html">Eğitimlerimiz</a></li>
+      <li><a data-i18n="nav.egitimler" href="kurslar.html">Eğitimlerimiz</a></li>
       <li><a href="danismanlik.html" class="active">Danışmanlıklarımız</a></li>
-      <li><a href="hakkimizda.html">Kurumsal</a></li>
-      <li><a href="referanslar.html">Referanslarımız</a></li>
-      <li><a href="blog.html">Deneyimlerimiz</a></li>
-      <li><a href="iletisim.html">İletişim</a></li>
+      <li><a data-i18n="nav.hakkimizda" href="hakkimizda.html">Kurumsal</a></li>
+      <li><a data-i18n="nav.referanslar" href="referanslar.html">Referanslarımız</a></li>
+      <li><a data-i18n="nav.blog" href="blog.html">Deneyimlerimiz</a></li>
+      <li><a data-i18n="nav.iletisim" href="iletisim.html">İletişim</a></li>
     </ul>
     <div class="nav-actions">
       <button id="darkModeToggle" onclick="toggleDarkMode()" class="btn btn-ghost btn-sm" style="font-weight:700;letter-spacing:1px;padding:7px 14px;min-width:52px;" title="Dark/Light Mode">🌙</button>
@@ -103,12 +103,12 @@
 </nav>
 <div class="mobile-nav">
   <button class="mobile-nav-close">✕</button>
-  <a href="index.html">Ana Sayfa</a>
-  <a href="kurslar.html">Eğitimlerimiz</a>
+  <a data-i18n="nav.anasayfa" href="index.html">Ana Sayfa</a>
+  <a data-i18n="nav.egitimler" href="kurslar.html">Eğitimlerimiz</a>
   <a href="danismanlik.html" class="active">Danışmanlıklarımız</a>
-  <a href="hakkimizda.html">Kurumsal</a>
-  <a href="blog.html">Deneyimlerimiz</a>
-  <a href="iletisim.html">İletişim</a>
+  <a data-i18n="nav.hakkimizda" href="hakkimizda.html">Kurumsal</a>
+  <a data-i18n="nav.blog" href="blog.html">Deneyimlerimiz</a>
+  <a data-i18n="nav.iletisim" href="iletisim.html">İletişim</a>
   <div class="mobile-nav-actions">
     <button onclick="openTeklifModal()" class="btn btn-primary btn-md" style="width:100%;justify-content:center">Özel Teklif Al</button>
   </div>
@@ -117,9 +117,9 @@
 <!-- ══ PAGE HERO ══ -->
 <div class="page-hero">
   <div class="container">
-    <div class="page-hero-tag reveal"><span class="section-tag">İK Danışmanlığı</span></div>
-    <h1 class="page-hero-title reveal reveal-d1">İK ve Yönetim<br/><span class="gradient-text">Değişimi Danışmanlığı</span></h1>
-    <p class="page-hero-desc reveal reveal-d2">İnsan kaynakları sistemlerini stratejik ve sürdürülebilir hale getiren danışmanlık alanları. Kurumların ihtiyaçlarına göre farklı başlıklarda planlanabilir.</p>
+    <div class="page-hero-tag reveal"><span class="section-tag" data-i18n="danis.hero.tag">İK Danışmanlığı</span></div>
+    <h1 class="page-hero-title reveal reveal-d1" data-i18n-html="danis.hero.title">İK ve Yönetim<br/><span class="gradient-text">Değişimi Danışmanlığı</span></h1>
+    <p class="page-hero-desc reveal reveal-d2" data-i18n="danis.hero.desc">İnsan kaynakları sistemlerini stratejik ve sürdürülebilir hale getiren danışmanlık alanları. Kurumların ihtiyaçlarına göre farklı başlıklarda planlanabilir.</p>
   </div>
 </div>
 
@@ -127,11 +127,11 @@
 <div style="position:relative;z-index:2;padding:40px 0;border-bottom:1px solid var(--glass-bd);">
   <div class="container">
     <div style="display:flex;gap:40px;justify-content:center;flex-wrap:wrap;">
-      <div style="text-align:center"><div style="font-family:'Montserrat',sans-serif;font-size:24px;font-weight:800">8</div><div style="font-size:13px;color:var(--silver)">Danışmanlık Alanı</div></div>
-      <div style="text-align:center"><div style="font-family:'Montserrat',sans-serif;font-size:24px;font-weight:800">40<span style="color:var(--teal)">+</span></div><div style="font-size:13px;color:var(--silver)">Hizmet Verilen Kurum</div></div>
-      <div style="text-align:center"><div style="font-family:'Montserrat',sans-serif;font-size:24px;font-weight:800">30<span style="color:var(--teal)">+</span></div><div style="font-size:13px;color:var(--silver)">Yıllık Deneyim</div></div>
-      <div style="text-align:center"><div style="font-family:'Montserrat',sans-serif;font-size:24px;font-weight:800">7<span style="color:var(--teal)">+</span></div><div style="font-size:13px;color:var(--silver)">Farklı Sektör</div></div>
-      <div style="text-align:center"><div style="font-family:'Montserrat',sans-serif;font-size:24px;font-weight:800">98<span style="color:var(--teal)">%</span></div><div style="font-size:13px;color:var(--silver)">Müşteri Memnuniyeti</div></div>
+      <div style="text-align:center"><div style="font-family:'Montserrat',sans-serif;font-size:24px;font-weight:800">8</div><div style="font-size:13px;color:var(--silver)" data-i18n="danis.stat.alan">Danışmanlık Alanı</div></div>
+      <div style="text-align:center"><div style="font-family:'Montserrat',sans-serif;font-size:24px;font-weight:800">40<span style="color:var(--teal)">+</span></div><div style="font-size:13px;color:var(--silver)" data-i18n="danis.stat.kurum">Hizmet Verilen Kurum</div></div>
+      <div style="text-align:center"><div style="font-family:'Montserrat',sans-serif;font-size:24px;font-weight:800">30<span style="color:var(--teal)">+</span></div><div style="font-size:13px;color:var(--silver)" data-i18n="danis.stat.deneyim">Yıllık Deneyim</div></div>
+      <div style="text-align:center"><div style="font-family:'Montserrat',sans-serif;font-size:24px;font-weight:800">7<span style="color:var(--teal)">+</span></div><div style="font-size:13px;color:var(--silver)" data-i18n="danis.stat.sektor">Farklı Sektör</div></div>
+      <div style="text-align:center"><div style="font-family:'Montserrat',sans-serif;font-size:24px;font-weight:800">98<span style="color:var(--teal)">%</span></div><div style="font-size:13px;color:var(--silver)" data-i18n="danis.stat.memnuniyet">Müşteri Memnuniyeti</div></div>
     </div>
   </div>
 </div>
@@ -141,42 +141,42 @@
   <div class="container">
 
     <div class="section-head reveal">
-      <div class="section-tag">8 Danışmanlık Programı</div>
-      <h2 class="section-title">Kurumunuza Özel <span class="gradient-text">Çözüm Alanları</span></h2>
-      <p class="section-desc">Her danışmanlık çalışması, kurumunuzun ihtiyaçlarına göre farklı başlıklarda planlanabilir.</p>
+      <div class="section-tag" data-i18n="danis.section.tag">8 Danışmanlık Programı</div>
+      <h2 class="section-title" data-i18n-html="danis.section.title">Kurumunuza Özel <span class="gradient-text">Çözüm Alanları</span></h2>
+      <p class="section-desc" data-i18n="danis.section.desc">Her danışmanlık çalışması, kurumunuzun ihtiyaçlarına göre farklı başlıklarda planlanabilir.</p>
     </div>
 
     <!-- Liderlik & Organizasyon Gelişimi -->
     <div style="margin-bottom:48px;">
       <div style="display:flex;align-items:center;gap:12px;margin-bottom:28px;">
         <span style="font-size:22px">🏛️</span>
-        <h2 style="font-family:'Montserrat',sans-serif;font-size:20px;font-weight:800;">Liderlik &amp; Organizasyon Gelişimi</h2>
+        <h2 style="font-family:'Montserrat',sans-serif;font-size:20px;font-weight:800;" data-i18n="danis.cat.liderlik">Liderlik &amp; Organizasyon Gelişimi</h2>
         <div style="flex:1;height:1px;background:var(--glass-bd);margin-left:8px;"></div>
       </div>
       <div class="consulting-grid reveal">
 
       <!-- 1 -->
       <div class="consulting-card" onclick="location.href='danismanliklar/hoshin-kanri.html'" style="cursor:pointer">
-        <span class="c-number">01 — Liderlik &amp; Organizasyon Gelişimi</span>
+        <span class="c-number" data-i18n="danis.hoshin.num">01 — Liderlik &amp; Organizasyon Gelişimi</span>
         <i class="fas fa-compass c-icon"></i>
-        <div class="c-title">Vizyon, Misyon ve Strateji Tasarımı</div>
-        <div class="c-sub">Kurumsal Yönü Netleştirmek</div>
-        <p class="c-desc">Kurumların uzun vadeli yönünü netleştiren vizyon ve misyonun oluşturulması, stratejik hedeflerin belirlenmesi ve operasyonel hedeflere dönüştürülmesi.</p>
+        <div class="c-title" data-i18n="danis.hoshin.title">Vizyon, Misyon ve Strateji Tasarımı</div>
+        <div class="c-sub" data-i18n="danis.hoshin.sub">Kurumsal Yönü Netleştirmek</div>
+        <p class="c-desc" data-i18n="danis.hoshin.desc">Kurumların uzun vadeli yönünü netleştiren vizyon ve misyonun oluşturulması, stratejik hedeflerin belirlenmesi ve operasyonel hedeflere dönüştürülmesi.</p>
         <div class="c-actions">
-          <button onclick="event.stopPropagation();openTeklifModal()" class="btn btn-primary btn-sm">Bilgi Al</button>
+          <button onclick="event.stopPropagation();openTeklifModal()" class="btn btn-primary btn-sm" data-i18n="shared.btn.bilgial">Bilgi Al</button>
           <a href="https://wa.me/905330193134" target="_blank" onclick="event.stopPropagation()" class="btn btn-ghost btn-sm">💬 WhatsApp</a>
         </div>
       </div>
 
       <!-- 2 -->
       <div class="consulting-card" onclick="location.href='danismanliklar/aileden-kuruma.html'" style="cursor:pointer">
-        <span class="c-number">02 — Liderlik &amp; Organizasyon Gelişimi</span>
+        <span class="c-number" data-i18n="danis.aileden.num">02 — Liderlik &amp; Organizasyon Gelişimi</span>
         <i class="fas fa-building c-icon"></i>
-        <div class="c-title">Aile Şirketlerinden Kurumsal Yönetime Geçiş</div>
-        <div class="c-sub">Sürdürülebilir Büyümenin Yol Haritası</div>
-        <p class="c-desc">Aile şirketlerinde sürdürülebilir büyümeyi destekleyen kurumsal yönetim yapısının oluşturulması ve profesyonel yönetim sistemlerinin kurulması.</p>
+        <div class="c-title" data-i18n="danis.aileden.title">Aile Şirketlerinden Kurumsal Yönetime Geçiş</div>
+        <div class="c-sub" data-i18n="danis.aileden.sub">Sürdürülebilir Büyümenin Yol Haritası</div>
+        <p class="c-desc" data-i18n="danis.aileden.desc">Aile şirketlerinde sürdürülebilir büyümeyi destekleyen kurumsal yönetim yapısının oluşturulması ve profesyonel yönetim sistemlerinin kurulması.</p>
         <div class="c-actions">
-          <button onclick="event.stopPropagation();openTeklifModal()" class="btn btn-primary btn-sm">Bilgi Al</button>
+          <button onclick="event.stopPropagation();openTeklifModal()" class="btn btn-primary btn-sm" data-i18n="shared.btn.bilgial">Bilgi Al</button>
           <a href="https://wa.me/905330193134" target="_blank" onclick="event.stopPropagation()" class="btn btn-ghost btn-sm">💬 WhatsApp</a>
         </div>
       </div>
@@ -188,59 +188,59 @@
     <div style="margin-bottom:48px;">
       <div style="display:flex;align-items:center;gap:12px;margin-bottom:28px;">
         <span style="font-size:22px">⚙️</span>
-        <h2 style="font-family:'Montserrat',sans-serif;font-size:20px;font-weight:800;">Sistem &amp; Yönetim</h2>
+        <h2 style="font-family:'Montserrat',sans-serif;font-size:20px;font-weight:800;" data-i18n="danis.cat.sistem">Sistem &amp; Yönetim</h2>
         <div style="flex:1;height:1px;background:var(--glass-bd);margin-left:8px;"></div>
       </div>
       <div class="consulting-grid reveal">
 
       <!-- 3 -->
       <div class="consulting-card" onclick="location.href='danismanliklar/gelecege-hazir-kadro.html'" style="cursor:pointer">
-        <span class="c-number">03 — Sistem &amp; Yönetim</span>
+        <span class="c-number" data-i18n="danis.kadro.num">03 — Sistem &amp; Yönetim</span>
         <i class="fas fa-sitemap c-icon"></i>
-        <div class="c-title">İK Planlama ve Organizasyon Tasarımı</div>
-        <div class="c-sub">Büyümeye Uygun Yapı Tasarımı</div>
-        <p class="c-desc">Kurumların büyüme hedeflerini destekleyen organizasyon yapısının ve insan kaynağı planlamasının oluşturulması.</p>
+        <div class="c-title" data-i18n="danis.kadro.title">İK Planlama ve Organizasyon Tasarımı</div>
+        <div class="c-sub" data-i18n="danis.kadro.sub">Büyümeye Uygun Yapı Tasarımı</div>
+        <p class="c-desc" data-i18n="danis.kadro.desc">Kurumların büyüme hedeflerini destekleyen organizasyon yapısının ve insan kaynağı planlamasının oluşturulması.</p>
         <div class="c-actions">
-          <button onclick="event.stopPropagation();openTeklifModal()" class="btn btn-primary btn-sm">Bilgi Al</button>
+          <button onclick="event.stopPropagation();openTeklifModal()" class="btn btn-primary btn-sm" data-i18n="shared.btn.bilgial">Bilgi Al</button>
           <a href="https://wa.me/905330193134" target="_blank" onclick="event.stopPropagation()" class="btn btn-ghost btn-sm">💬 WhatsApp</a>
         </div>
       </div>
 
       <!-- 4 -->
       <div class="consulting-card" onclick="location.href='danismanliklar/gelisimi-olc.html'" style="cursor:pointer">
-        <span class="c-number">04 — Sistem &amp; Yönetim</span>
+        <span class="c-number" data-i18n="danis.olc.num">04 — Sistem &amp; Yönetim</span>
         <i class="fas fa-chart-bar c-icon"></i>
-        <div class="c-title">Performans Yönetim Sistemi Kurulumu</div>
-        <div class="c-sub">Strateji ile Uyumlu Performans</div>
-        <p class="c-desc">Bireysel ve ekip performansını kurum stratejisiyle uyumlu şekilde ölçen ve geliştiren sürdürülebilir bir performans yönetim sistemi kurmak.</p>
+        <div class="c-title" data-i18n="danis.olc.title">Performans Yönetim Sistemi Kurulumu</div>
+        <div class="c-sub" data-i18n="danis.olc.sub">Strateji ile Uyumlu Performans</div>
+        <p class="c-desc" data-i18n="danis.olc.desc">Bireysel ve ekip performansını kurum stratejisiyle uyumlu şekilde ölçen ve geliştiren sürdürülebilir bir performans yönetim sistemi kurmak.</p>
         <div class="c-actions">
-          <button onclick="event.stopPropagation();openTeklifModal()" class="btn btn-primary btn-sm">Bilgi Al</button>
+          <button onclick="event.stopPropagation();openTeklifModal()" class="btn btn-primary btn-sm" data-i18n="shared.btn.bilgial">Bilgi Al</button>
           <a href="https://wa.me/905330193134" target="_blank" onclick="event.stopPropagation()" class="btn btn-ghost btn-sm">💬 WhatsApp</a>
         </div>
       </div>
 
       <!-- 5 -->
       <div class="consulting-card" onclick="location.href='danismanliklar/ucret-stratejisi.html'" style="cursor:pointer">
-        <span class="c-number">05 — Sistem &amp; Yönetim</span>
+        <span class="c-number" data-i18n="danis.ucret.num">05 — Sistem &amp; Yönetim</span>
         <i class="fas fa-scale-balanced c-icon"></i>
-        <div class="c-title">Ücret ve Yan Haklar Sistemi Tasarımı</div>
-        <div class="c-sub">Adil ve Rekabetçi Ücret Yapısı</div>
-        <p class="c-desc">Kurumlarda sürdürülebilir, adil ve rekabetçi bir ücret ve yan haklar sistemi oluşturarak çalışan bağlılığını ve performansı desteklemek.</p>
+        <div class="c-title" data-i18n="danis.ucret.title">Ücret ve Yan Haklar Sistemi Tasarımı</div>
+        <div class="c-sub" data-i18n="danis.ucret.sub">Adil ve Rekabetçi Ücret Yapısı</div>
+        <p class="c-desc" data-i18n="danis.ucret.desc">Kurumlarda sürdürülebilir, adil ve rekabetçi bir ücret ve yan haklar sistemi oluşturarak çalışan bağlılığını ve performansı desteklemek.</p>
         <div class="c-actions">
-          <button onclick="event.stopPropagation();openTeklifModal()" class="btn btn-primary btn-sm">Bilgi Al</button>
+          <button onclick="event.stopPropagation();openTeklifModal()" class="btn btn-primary btn-sm" data-i18n="shared.btn.bilgial">Bilgi Al</button>
           <a href="https://wa.me/905330193134" target="_blank" onclick="event.stopPropagation()" class="btn btn-ghost btn-sm">💬 WhatsApp</a>
         </div>
       </div>
 
       <!-- 6 -->
       <div class="consulting-card" onclick="location.href='danismanliklar/yetenek-yonetimi.html'" style="cursor:pointer">
-        <span class="c-number">06 — Sistem &amp; Yönetim</span>
+        <span class="c-number" data-i18n="danis.yetenek.num">06 — Sistem &amp; Yönetim</span>
         <i class="fas fa-gem c-icon"></i>
-        <div class="c-title">İşe Alım ve Yetenek Yönetimi Sistemi</div>
-        <div class="c-sub">Doğru Yetenekleri Çekmek ve Geliştirmek</div>
-        <p class="c-desc">Kurumların doğru yetenekleri çekmesini, geliştirmesini ve elde tutmasını sağlayan sistematik bir yetenek yönetimi yaklaşımı kurmak.</p>
+        <div class="c-title" data-i18n="danis.yetenek.title">İşe Alım ve Yetenek Yönetimi Sistemi</div>
+        <div class="c-sub" data-i18n="danis.yetenek.sub">Doğru Yetenekleri Çekmek ve Geliştirmek</div>
+        <p class="c-desc" data-i18n="danis.yetenek.desc">Kurumların doğru yetenekleri çekmesini, geliştirmesini ve elde tutmasını sağlayan sistematik bir yetenek yönetimi yaklaşımı kurmak.</p>
         <div class="c-actions">
-          <button onclick="event.stopPropagation();openTeklifModal()" class="btn btn-primary btn-sm">Bilgi Al</button>
+          <button onclick="event.stopPropagation();openTeklifModal()" class="btn btn-primary btn-sm" data-i18n="shared.btn.bilgial">Bilgi Al</button>
           <a href="https://wa.me/905330193134" target="_blank" onclick="event.stopPropagation()" class="btn btn-ghost btn-sm">💬 WhatsApp</a>
         </div>
       </div>
@@ -252,20 +252,20 @@
     <div style="margin-bottom:48px;">
       <div style="display:flex;align-items:center;gap:12px;margin-bottom:28px;">
         <span style="font-size:22px">📊</span>
-        <h2 style="font-family:'Montserrat',sans-serif;font-size:20px;font-weight:800;">Veri Odaklı İK</h2>
+        <h2 style="font-family:'Montserrat',sans-serif;font-size:20px;font-weight:800;" data-i18n="danis.cat.veri">Veri Odaklı İK</h2>
         <div style="flex:1;height:1px;background:var(--glass-bd);margin-left:8px;"></div>
       </div>
       <div class="consulting-grid reveal">
 
       <!-- 7 -->
       <div class="consulting-card" onclick="location.href='danismanliklar/iceriden-guclen.html'" style="cursor:pointer">
-        <span class="c-number">07 — Veri Odaklı İK</span>
+        <span class="c-number" data-i18n="danis.guclen.num">07 — Veri Odaklı İK</span>
         <i class="fas fa-database c-icon"></i>
-        <div class="c-title">İK Analitiği Altyapısı Kurulumu</div>
-        <div class="c-sub">Veri Destekli İK Kararları</div>
-        <p class="c-desc">İnsan kaynakları kararlarının veri ile desteklenmesini sağlayan analitik altyapıyı kurmak.</p>
+        <div class="c-title" data-i18n="danis.guclen.title">İK Analitiği Altyapısı Kurulumu</div>
+        <div class="c-sub" data-i18n="danis.guclen.sub">Veri Destekli İK Kararları</div>
+        <p class="c-desc" data-i18n="danis.guclen.desc">İnsan kaynakları kararlarının veri ile desteklenmesini sağlayan analitik altyapıyı kurmak.</p>
         <div class="c-actions">
-          <button onclick="event.stopPropagation();openTeklifModal()" class="btn btn-primary btn-sm">Bilgi Al</button>
+          <button onclick="event.stopPropagation();openTeklifModal()" class="btn btn-primary btn-sm" data-i18n="shared.btn.bilgial">Bilgi Al</button>
           <a href="https://wa.me/905330193134" target="_blank" onclick="event.stopPropagation()" class="btn btn-ghost btn-sm">💬 WhatsApp</a>
         </div>
       </div>
@@ -277,20 +277,20 @@
     <div style="margin-bottom:48px;">
       <div style="display:flex;align-items:center;gap:12px;margin-bottom:28px;">
         <span style="font-size:22px">🤖</span>
-        <h2 style="font-family:'Montserrat',sans-serif;font-size:20px;font-weight:800;">Yapay Zekâ ve Geleceğin İK'sı</h2>
+        <h2 style="font-family:'Montserrat',sans-serif;font-size:20px;font-weight:800;" data-i18n="danis.cat.yz">Yapay Zekâ ve Geleceğin İK'sı</h2>
         <div style="flex:1;height:1px;background:var(--glass-bd);margin-left:8px;"></div>
       </div>
       <div class="consulting-grid reveal">
 
       <!-- 8 -->
       <div class="consulting-card" onclick="location.href='danismanliklar/stratejiyi-gundelik-hayata.html'" style="cursor:pointer">
-        <span class="c-number">08 — Yapay Zekâ ve Geleceğin İK'sı</span>
+        <span class="c-number" data-i18n="danis.strateji.num">08 — Yapay Zekâ ve Geleceğin İK'sı</span>
         <i class="fas fa-robot c-icon"></i>
-        <div class="c-title">İK Süreçlerinde Yapay Zekâ Uygulamaları</div>
-        <div class="c-sub">Geleceğe Hazır İK Fonksiyonu</div>
-        <p class="c-desc">Yapay zekâ araçlarının insan kaynakları süreçlerine entegre edilmesini sağlayarak verimlilik ve karar kalitesini artırmak.</p>
+        <div class="c-title" data-i18n="danis.strateji.title">İK Süreçlerinde Yapay Zekâ Uygulamaları</div>
+        <div class="c-sub" data-i18n="danis.strateji.sub">Geleceğe Hazır İK Fonksiyonu</div>
+        <p class="c-desc" data-i18n="danis.strateji.desc">Yapay zekâ araçlarının insan kaynakları süreçlerine entegre edilmesini sağlayarak verimlilik ve karar kalitesini artırmak.</p>
         <div class="c-actions">
-          <button onclick="event.stopPropagation();openTeklifModal()" class="btn btn-primary btn-sm">Bilgi Al</button>
+          <button onclick="event.stopPropagation();openTeklifModal()" class="btn btn-primary btn-sm" data-i18n="shared.btn.bilgial">Bilgi Al</button>
           <a href="https://wa.me/905330193134" target="_blank" onclick="event.stopPropagation()" class="btn btn-ghost btn-sm">💬 WhatsApp</a>
         </div>
       </div>
@@ -305,9 +305,9 @@
 <section class="section-pad" style="border-top:1px solid var(--glass-bd);">
   <div class="container">
     <div class="section-head">
-      <div class="section-tag reveal" style="justify-content:center">Çalıştığımız Sektörler</div>
-      <h2 class="section-title reveal reveal-d1" style="text-align:center;">Farklı Sektörlerde<br><span class="gradient-text">Ortak Dönüşüm</span></h2>
-      <p class="section-desc reveal reveal-d2" style="text-align:center;">Finans, üretim, sanayi, tarım, sağlık, perakende ve eğitim başta olmak üzere birbirinden farklı pek çok sektörde kurumlarla çalıştık.</p>
+      <div class="section-tag reveal" style="justify-content:center" data-i18n="danis.sectors.tag">Çalıştığımız Sektörler</div>
+      <h2 class="section-title reveal reveal-d1" style="text-align:center;" data-i18n-html="danis.sectors.title">Farklı Sektörlerde<br><span class="gradient-text">Ortak Dönüşüm</span></h2>
+      <p class="section-desc reveal reveal-d2" style="text-align:center;" data-i18n="danis.sectors.desc">Finans, üretim, sanayi, tarım, sağlık, perakende ve eğitim başta olmak üzere birbirinden farklı pek çok sektörde kurumlarla çalıştık.</p>
     </div>
     <div class="sectors-grid">
         <div class="sector-card reveal"><i class="fas fa-landmark sector-icon"></i><div class="sector-label">Finans</div></div>
@@ -328,41 +328,41 @@
   <div class="container">
 
     <div class="section-head reveal">
-      <div class="section-tag">Danışmanlık Felsefemiz</div>
-      <h2 class="section-title">Stratejiyi Sunumdan <span class="gradient-text">Sahaya İndiriyoruz</span></h2>
-      <p class="section-desc">Güzel sunumlar, kalın raporlar ve teorik öneriler üretmiyoruz. Kurumunuzun gerçeklerine dokunan, uygulanabilir ve ölçülebilir sistemler kuruyoruz.</p>
+      <div class="section-tag" data-i18n="danis.approach.tag">Danışmanlık Felsefemiz</div>
+      <h2 class="section-title" data-i18n-html="danis.approach.title">Stratejiyi Sunumdan <span class="gradient-text">Sahaya İndiriyoruz</span></h2>
+      <p class="section-desc" data-i18n="danis.approach.desc">Güzel sunumlar, kalın raporlar ve teorik öneriler üretmiyoruz. Kurumunuzun gerçeklerine dokunan, uygulanabilir ve ölçülebilir sistemler kuruyoruz.</p>
     </div>
 
     <div class="approach-grid reveal">
       <div class="approach-card">
         <i class="fas fa-flask approach-icon"></i>
-        <div class="approach-title">Tanı Önce, Çözüm Sonra</div>
-        <p class="approach-desc">Probleminizi derinlemesine analiz etmeden çözüm önermiyoruz. Her danışmanlık süreci, kurumunuzu anlamakla başlar.</p>
+        <div class="approach-title" data-i18n="danis.approach.1.title">Tanı Önce, Çözüm Sonra</div>
+        <p class="approach-desc" data-i18n="danis.approach.1.desc">Probleminizi derinlemesine analiz etmeden çözüm önermiyoruz. Her danışmanlık süreci, kurumunuzu anlamakla başlar.</p>
       </div>
       <div class="approach-card">
         <i class="fas fa-handshake approach-icon"></i>
-        <div class="approach-title">Seninle İnşa Ederiz</div>
-        <p class="approach-desc">Çözümleri dışarıdan dayatmıyor, kurumunuzun içindeki insanlarla birlikte tasarlıyoruz. Sahiplenme kalıcılığı getirir.</p>
+        <div class="approach-title" data-i18n="danis.approach.2.title">Seninle İnşa Ederiz</div>
+        <p class="approach-desc" data-i18n="danis.approach.2.desc">Çözümleri dışarıdan dayatmıyor, kurumunuzun içindeki insanlarla birlikte tasarılıyoruz. Sahiplenme kalıcılığı getirir.</p>
       </div>
       <div class="approach-card">
         <i class="fas fa-ruler approach-icon"></i>
-        <div class="approach-title">Kuruma Özel Her Zaman</div>
-        <p class="approach-desc">Hazır şablon çözümler sunmuyoruz. Her müdahale, kurumunuzun kültürü, büyüklüğü ve sektörüne göre özelleştirilir.</p>
+        <div class="approach-title" data-i18n="danis.approach.3.title">Kuruma Özel Her Zaman</div>
+        <p class="approach-desc" data-i18n="danis.approach.3.desc">Hazır şablon çözümler sunmuyoruz. Her müdahale, kurumunuzun kültürü, büyüklüğü ve sektörüne göre özelleştirilir.</p>
       </div>
       <div class="approach-card">
         <i class="fas fa-chart-line approach-icon"></i>
-        <div class="approach-title">Ölçülemeyen Değişmez</div>
-        <p class="approach-desc">Her danışmanlık sürecinde başarı kriterleri ve ölçüm mekanizmalarını baştan tanımlarız. Sonuçları birlikte izleriz.</p>
+        <div class="approach-title" data-i18n="danis.approach.4.title">Ölçülemeyen Değişmez</div>
+        <p class="approach-desc" data-i18n="danis.approach.4.desc">Her danışmanlık sürecinde başarı kriterleri ve ölçüm mekanizmalarını baştan tanımlarız. Sonuçları birlikte izleriz.</p>
       </div>
       <div class="approach-card">
         <i class="fas fa-sync approach-icon"></i>
-        <div class="approach-title">Sürekli Öğrenen Sistem</div>
-        <p class="approach-desc">Danışmanlık bittiğinde kurumu terk etmiyoruz. Kurumunuzun kendi kendine öğrenen ve adapte olan bir yapıya kavuşmasını sağlarız.</p>
+        <div class="approach-title" data-i18n="danis.approach.5.title">Sürekli Öğrenen Sistem</div>
+        <p class="approach-desc" data-i18n="danis.approach.5.desc">Danışmanlık bittiğinde kurumu terk etmiyoruz. Kurumunuzun kendi kendine öğrenen ve adapte olan bir yapıya kavuşmasını sağlarız.</p>
       </div>
       <div class="approach-card">
         <i class="fas fa-bolt approach-icon"></i>
-        <div class="approach-title">Sahadaki 30 Yıl</div>
-        <p class="approach-desc">Önerilerimiz akademik değil, sahadaki deneyimden beslenir. Kurucumuz Hakan Selahi'nin 30+ yıllık pratik bilgisi her projede aktif rol oynar.</p>
+        <div class="approach-title" data-i18n="danis.approach.6.title">Sahadaki 30 Yıl</div>
+        <p class="approach-desc" data-i18n="danis.approach.6.desc">Önerilerimiz akademik değil, sahadaki deneyimden beslenir. Kurucumuz Hakan Selahi'nin 30+ yıllık pratik bilgisi her projede aktif rol oynar.</p>
       </div>
     </div>
 
@@ -373,20 +373,20 @@
 <section class="section-pad reveal">
   <div class="container">
     <div style="background:linear-gradient(135deg,rgba(0,200,180,0.08),rgba(0,100,200,0.06));border:1px solid rgba(0,200,180,0.18);border-radius:var(--radius-xl);padding:80px 60px;text-align:center;">
-      <div class="section-tag" style="justify-content:center;margin-bottom:20px;">Ücretsiz Ön Görüşme</div>
-      <h2 style="font-family:'Montserrat',sans-serif;font-size:clamp(28px,4vw,52px);font-weight:900;letter-spacing:-2px;line-height:1.05;margin-bottom:20px;">
+      <div class="section-tag" style="justify-content:center;margin-bottom:20px;" data-i18n="danis.cta.tag">Ücretsiz Ön Görüşme</div>
+      <h2 style="font-family:'Montserrat',sans-serif;font-size:clamp(28px,4vw,52px);font-weight:900;letter-spacing:-2px;line-height:1.05;margin-bottom:20px;" data-i18n-html="danis.cta.title">
         Dönüşümünüzü<br/><span class="gradient-text">Birlikte Tasarlayalım</span>
       </h2>
-      <p style="color:var(--silver);max-width:520px;margin:0 auto 36px;font-size:16px;line-height:1.75;">Hangi alandan ihtiyacınız olduğunu paylaşın, size özel danışmanlık programı ve yaklaşım önerelim. İlk görüşme ücretsizdir.</p>
+      <p style="color:var(--silver);max-width:520px;margin:0 auto 36px;font-size:16px;line-height:1.75;" data-i18n="danis.cta.desc">Hangi alandan ihtiyacınız olduğunu paylaşın, size özel danışmanlık programı ve yaklaşım önerelim. İlk görüşme ücretsizdir.</p>
       <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-bottom:24px;">
-        <button onclick="openTeklifModal()" class="btn btn-primary btn-lg">Hemen Başlayalım →</button>
-        <a href="https://wa.me/905330193134" target="_blank" class="btn btn-ghost btn-lg">💬 WhatsApp'tan Yazın</a>
+        <button onclick="openTeklifModal()" class="btn btn-primary btn-lg" data-i18n="danis.cta.btn1">Hemen Başlayalım →</button>
+        <a href="https://wa.me/905330193134" target="_blank" class="btn btn-ghost btn-lg" data-i18n="danis.cta.btn2">💬 WhatsApp'tan Yazın</a>
       </div>
       <div style="display:flex;gap:32px;justify-content:center;flex-wrap:wrap;">
-        <span style="font-size:13px;color:var(--silver);display:flex;align-items:center;gap:8px;"><span style="color:var(--teal);">✓</span> Kuruma Özel Çözüm</span>
-        <span style="font-size:13px;color:var(--silver);display:flex;align-items:center;gap:8px;"><span style="color:var(--teal);">✓</span> Ücretsiz Ön Görüşme</span>
-        <span style="font-size:13px;color:var(--silver);display:flex;align-items:center;gap:8px;"><span style="color:var(--teal);">✓</span> 40+ Kurum Deneyimi</span>
-        <span style="font-size:13px;color:var(--silver);display:flex;align-items:center;gap:8px;"><span style="color:var(--teal);">✓</span> Uygulanabilir Sistemler</span>
+        <span style="font-size:13px;color:var(--silver);display:flex;align-items:center;gap:8px;" data-i18n-html="danis.cta.note1"><span style="color:var(--teal);">✓</span> Kuruma Özel Çözüm</span>
+        <span style="font-size:13px;color:var(--silver);display:flex;align-items:center;gap:8px;" data-i18n-html="danis.cta.note2"><span style="color:var(--teal);">✓</span> Ücretsiz Ön Görüşme</span>
+        <span style="font-size:13px;color:var(--silver);display:flex;align-items:center;gap:8px;" data-i18n-html="danis.cta.note3"><span style="color:var(--teal);">✓</span> 40+ Kurum Deneyimi</span>
+        <span style="font-size:13px;color:var(--silver);display:flex;align-items:center;gap:8px;" data-i18n-html="danis.cta.note4"><span style="color:var(--teal);">✓</span> Uygulanabilir Sistemler</span>
       </div>
     </div>
   </div>
@@ -398,41 +398,41 @@
     <div class="footer-grid">
       <div class="footer-brand">
         <a href="index.html" class="nav-logo" style="display:inline-flex"><img src="public/logos/68.png" alt="Derin Akademi" class="nav-logo-img"/></a>
-        <p class="brand-desc">İnsan kaynakları alanında uzmanlaşmış danışmanlık ve eğitim şirketi. Anlatan değil, çalışan sistemler kurarız.</p>
+        <p class="brand-desc" data-i18n="shared.footer.brandesc">İnsan kaynakları alanında uzmanlaşmış danışmanlık ve eğitim şirketi. Anlatan değil, çalışan sistemler kurarız.</p>
         <div class="footer-social">
           <a class="social-btn" href="https://www.instagram.com/derinakademi/" target="_blank">📷</a>
           <a class="social-btn" href="https://www.linkedin.com/in/hakan-selahi-001969/" target="_blank">in</a>
         </div>
       </div>
       <div>
-        <div class="footer-col-title">Hizmetler</div>
+        <div class="footer-col-title" data-i18n="shared.footer.hizmetler">Hizmetler</div>
         <ul class="footer-links">
-          <li><a href="kurslar.html">Eğitimlerimiz</a></li>
-          <li><a href="danismanlik.html">Danışmanlıklarımız</a></li>
-          <li><a href="kurslar.html">Kurumsal Eğitim</a></li>
-          <li><a href="danismanlik.html">Kurumsallaşma</a></li>
+          <li><a data-i18n="nav.egitimler" href="kurslar.html">Eğitimlerimiz</a></li>
+          <li><a data-i18n="nav.danismanlik" href="danismanlik.html">Danışmanlıklarımız</a></li>
+          <li><a href="kurslar.html" data-i18n="shared.footer.kurumsal.egitim">Kurumsal Eğitim</a></li>
+          <li><a href="danismanlik.html" data-i18n="shared.footer.kurumsallasma">Kurumsallaşma</a></li>
         </ul>
       </div>
       <div>
-        <div class="footer-col-title">Şirket</div>
+        <div class="footer-col-title" data-i18n="shared.footer.sirket">Şirket</div>
         <ul class="footer-links">
-          <li><a href="hakkimizda.html">Kurumsal</a></li>
-          <li><a href="blog.html">Deneyimlerimiz</a></li>
-          <li><a href="kariyer.html">Kariyer</a></li>
-          <li><a href="iletisim.html">İletişim</a></li>
+          <li><a data-i18n="nav.hakkimizda" href="hakkimizda.html">Kurumsal</a></li>
+          <li><a data-i18n="nav.blog" href="blog.html">Deneyimlerimiz</a></li>
+          <li><a href="kariyer.html" data-i18n="shared.footer.kariyer">Kariyer</a></li>
+          <li><a data-i18n="nav.iletisim" href="iletisim.html">İletişim</a></li>
         </ul>
       </div>
       <div>
-        <div class="footer-col-title">Bülten</div>
+        <div class="footer-col-title" data-i18n="shared.footer.bulten">Bülten</div>
         <div class="footer-newsletter">
-          <p>İK gündemindeki gelişmelerden ve eğitimlerimizden haberdar ol.</p>
+          <p data-i18n="shared.footer.bulten.desc">İK gündemindeki gelişmelerden ve eğitimlerimizden haberdar ol.</p>
           <div class="newsletter-form"><input type="email" class="newsletter-input" placeholder="E-posta"/><button class="btn btn-primary btn-sm" onclick="showToast('Abone oldunuz! 🎉')">→</button></div>
         </div>
       </div>
     </div>
     <div class="footer-bottom">
-      <div class="footer-copy">© 2026 Derin Akademi. Tüm hakları saklıdır. &nbsp;<a href="https://reneedesignlab.com/tr" target="_blank" style="color:var(--silver-dim);text-decoration:none;" onmouseover="this.style.color='var(--silver)'" onmouseout="this.style.color='var(--silver-dim)'">by Renee DesignLab</a></div>
-      <div class="footer-legal"><a href="gizlilik-politikasi.html">Gizlilik Politikası</a><a href="kullanim-kosullari.html">Kullanım Koşulları</a><a href="kvkk.html">KVKK</a><a href="cerezler.html">Çerezler</a></div>
+      <div class="footer-copy" data-i18n="shared.footer.copy">© 2026 Derin Akademi. Tüm hakları saklıdır. &nbsp;<a href="https://reneedesignlab.com/tr" target="_blank" style="color:var(--silver-dim);text-decoration:none;" onmouseover="this.style.color='var(--silver)'" onmouseout="this.style.color='var(--silver-dim)'">by Renee DesignLab</a></div>
+      <div class="footer-legal"><a href="gizlilik-politikasi.html" data-i18n="shared.footer.gizlilik">Gizlilik Politikası</a><a href="kullanim-kosullari.html" data-i18n="shared.footer.kullanim">Kullanım Koşulları</a><a href="kvkk.html" data-i18n="shared.footer.kvkk">KVKK</a><a href="cerezler.html" data-i18n="shared.footer.cerezler">Çerezler</a></div>
     </div>
   </div>
 </footer>
@@ -446,7 +446,7 @@
   <div class="teklif-modal-box">
     <button class="teklif-modal-close" onclick="closeTeklifModal()">✕</button>
     <div>
-      <div style="color:var(--teal);font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:10px;">İletişim Bilgileri</div>
+      <div style="color:var(--teal);font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:10px;" data-i18n="shared.modal.contact">İletişim Bilgileri</div>
       <h2 style="font-family:'Montserrat',sans-serif;font-size:24px;font-weight:900;line-height:1.2;margin-bottom:8px;">Hemen <span class="gradient-text">Teklif Alın</span></h2>
       <p style="color:var(--silver);font-size:13px;line-height:1.75;margin-bottom:28px;">Danışmanlık ihtiyaçlarınızı paylaşın, size özel program ve teklif oluşturalım.</p>
       <div style="display:flex;flex-direction:column;gap:18px;margin-bottom:28px;">

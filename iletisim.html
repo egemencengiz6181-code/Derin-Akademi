@@ -65,11 +65,11 @@
   <div class="nav-inner">
     <a href="index.html" class="nav-logo"><img src="public/logos/68.png" alt="Derin Akademi" class="nav-logo-img"/></a>
     <ul class="nav-links">
-      <li><a href="kurslar.html">Eğitimlerimiz</a></li>
-      <li><a href="danismanlik.html">Danışmanlıklarımız</a></li>
-      <li><a href="hakkimizda.html">Kurumsal</a></li>
-      <li><a href="referanslar.html">Referanslarımız</a></li>
-      <li><a href="blog.html">Deneyimlerimiz</a></li>
+      <li><a data-i18n="nav.egitimler" href="kurslar.html">Eğitimlerimiz</a></li>
+      <li><a data-i18n="nav.danismanlik" href="danismanlik.html">Danışmanlıklarımız</a></li>
+      <li><a data-i18n="nav.hakkimizda" href="hakkimizda.html">Kurumsal</a></li>
+      <li><a data-i18n="nav.referanslar" href="referanslar.html">Referanslarımız</a></li>
+      <li><a data-i18n="nav.blog" href="blog.html">Deneyimlerimiz</a></li>
       <li><a href="iletisim.html" class="active">İletişim</a></li>
     </ul>
     <div class="nav-actions">
@@ -82,8 +82,8 @@
 </nav>
 <div class="mobile-nav">
   <button class="mobile-nav-close">✕</button>
-  <a href="index.html">Ana Sayfa</a><a href="kurslar.html">Eğitimlerimiz</a><a href="danismanlik.html">Danışmanlıklarımız</a>
-  <a href="hakkimizda.html">Kurumsal</a><a href="referanslar.html">Referanslarımız</a><a href="blog.html">Deneyimlerimiz</a><a href="iletisim.html" class="active">İletişim</a>
+  <a data-i18n="nav.anasayfa" href="index.html">Ana Sayfa</a><a data-i18n="nav.egitimler" href="kurslar.html">Eğitimlerimiz</a><a data-i18n="nav.danismanlik" href="danismanlik.html">Danışmanlıklarımız</a>
+  <a data-i18n="nav.hakkimizda" href="hakkimizda.html">Kurumsal</a><a data-i18n="nav.referanslar" href="referanslar.html">Referanslarımız</a><a data-i18n="nav.blog" href="blog.html">Deneyimlerimiz</a><a href="iletisim.html" class="active">İletişim</a>
   <div class="mobile-nav-actions">
     <button onclick="openTeklifModal()" class="btn btn-primary btn-md" style="width:100%;justify-content:center">Özel Teklif Al</button>
   </div>
@@ -92,9 +92,9 @@
 <!-- ══ PAGE HERO ══ -->
 <div class="page-hero">
   <div class="container">
-    <div class="page-hero-tag reveal"><span class="section-tag">İletişim</span></div>
-    <h1 class="page-hero-title reveal reveal-d1">Yardım için<br>Buradayız</h1>
-    <p class="page-hero-desc reveal reveal-d2">Sorularınız, önerileriniz veya kurumsal çözüm talepleriniz için bize ulaşın — 24 saat içinde yanıt veriyoruz.</p>
+    <div class="page-hero-tag reveal"><span class="section-tag" data-i18n="ilet.hero.tag">İletişim</span></div>
+    <h1 class="page-hero-title reveal reveal-d1" data-i18n-html="ilet.hero.title">Yardım için<br>Buradayız</h1>
+    <p class="page-hero-desc reveal reveal-d2" data-i18n="ilet.hero.desc">Sorularınız, önerileriniz veya kurumsal çözüm talepleriniz için bize ulaşın — 24 saat içinde yanıt veriyoruz.</p>
   </div>
 </div>
 
@@ -105,26 +105,26 @@
 
       <!-- Left: Info + Map -->
       <div>
-        <div class="section-tag reveal">Bilgilerimiz</div>
-        <h2 class="section-title reveal reveal-d1">Bizimle<br><span class="gradient-text">İletişime Geçin</span></h2>
-        <p style="color:var(--silver);font-size:14px;line-height:1.8;margin-bottom:36px;" class="reveal reveal-d2">Formdan mesaj gönderebilir, e-posta atabilir ya da sosyal medya üzerinden ulaşabilirsiniz.</p>
+        <div class="section-tag reveal" data-i18n="ilet.info.tag">Bilgilerimiz</div>
+        <h2 class="section-title reveal reveal-d1" data-i18n-html="ilet.info.title">Bizimle<br><span class="gradient-text">İletişime Geçin</span></h2>
+        <p style="color:var(--silver);font-size:14px;line-height:1.8;margin-bottom:36px;" class="reveal reveal-d2" data-i18n="ilet.info.desc">Formdan mesaj gönderebilir, e-posta atabilir ya da sosyal medya üzerinden ulaşabilirsiniz.</p>
 
         <div class="contact-info reveal reveal-d2">
           <div class="info-card">
             <div class="info-icon">📍</div>
-            <div><div class="info-text-title">Adres</div><div class="info-text-val">İçerenköy Mah. Topçu İbrahim Sokak Quick Tower Sitesi No:8-10D Ataşehir, İstanbul 34752</div></div>
+            <div><div class="info-text-title" data-i18n="ilet.info.adres">Adres</div><div class="info-text-val">İçerenköy Mah. Topçu İbrahim Sokak Quick Tower Sitesi No:8-10D Ataşehir, İstanbul 34752</div></div>
           </div>
           <div class="info-card">
             <div class="info-icon">📞</div>
-            <div><div class="info-text-title">Telefon</div><div class="info-text-val"><a href="tel:+905330193134" style="color:inherit;text-decoration:none;">0 (533) 019 31 34</a></div></div>
+            <div><div class="info-text-title" data-i18n="ilet.info.telefon">Telefon</div><div class="info-text-val"><a href="tel:+905330193134" style="color:inherit;text-decoration:none;">0 (533) 019 31 34</a></div></div>
           </div>
           <div class="info-card">
             <div class="info-icon">📧</div>
-            <div><div class="info-text-title">E-posta</div><div class="info-text-val"><a href="mailto:info@derinakademi.net" style="color:inherit;text-decoration:none;">info@derinakademi.net</a></div></div>
+            <div><div class="info-text-title" data-i18n="ilet.info.email">E-posta</div><div class="info-text-val"><a href="mailto:info@derinakademi.net" style="color:inherit;text-decoration:none;">info@derinakademi.net</a></div></div>
           </div>
           <div class="info-card">
             <div class="info-icon">🕐</div>
-            <div><div class="info-text-title">Çalışma Saatleri</div><div class="info-text-val">Hafta içi 09:00 – 18:00 (TST)</div></div>
+            <div><div class="info-text-title" data-i18n="ilet.info.saatler">Çalışma Saatleri</div><div class="info-text-val" data-i18n="ilet.info.saatler.val">Hafta içi 09:00 – 18:00 (TST)</div></div>
           </div>
         </div>
 
@@ -144,56 +144,56 @@
 
       <!-- Right: Form -->
       <div class="contact-form-wrap reveal">
-        <h2 class="form-title">Mesaj Gönderin</h2>
-        <p class="form-subtitle">Yanıt süresi en fazla 24 saattir.</p>
+        <h2 class="form-title" data-i18n="ilet.form.title">Mesaj Gönderin</h2>
+        <p class="form-subtitle" data-i18n="ilet.form.subtitle">Yanıt süresi en fazla 24 saattir.</p>
 
         <div class="form-row">
           <div class="form-group">
-            <label class="form-label">Ad</label>
-            <input type="text" class="form-input" placeholder="Adınız"/>
+            <label class="form-label" data-i18n="ilet.form.ad">Ad</label>
+            <input type="text" class="form-input" data-i18n-placeholder="ilet.form.placeholder.ad" placeholder="Adınız"/>
           </div>
           <div class="form-group">
-            <label class="form-label">Soyad</label>
-            <input type="text" class="form-input" placeholder="Soyadınız"/>
+            <label class="form-label" data-i18n="ilet.form.soyad">Soyad</label>
+            <input type="text" class="form-input" data-i18n-placeholder="ilet.form.placeholder.soyad" placeholder="Soyadınız"/>
           </div>
         </div>
 
         <div class="form-group">
-          <label class="form-label">E-posta</label>
-          <input type="email" class="form-input" placeholder="ornek@mail.com"/>
+          <label class="form-label" data-i18n="ilet.form.email">E-posta</label>
+          <input type="email" class="form-input" data-i18n-placeholder="ilet.form.placeholder.email" placeholder="ornek@mail.com"/>
         </div>
 
         <div class="form-group">
-          <label class="form-label">Telefon (İsteğe Bağlı)</label>
-          <input type="tel" class="form-input" placeholder="+90 5XX XXX XX XX"/>
+          <label class="form-label" data-i18n="ilet.form.telefon">Telefon (İsteğe Bağlı)</label>
+          <input type="tel" class="form-input" data-i18n-placeholder="ilet.form.placeholder.tel" placeholder="+90 5XX XXX XX XX"/>
         </div>
 
         <div class="form-group">
-          <label class="form-label">Konu</label>
+          <label class="form-label" data-i18n="ilet.form.konu">Konu</label>
           <select class="form-input">
-            <option value="">Konu seçin…</option>
-            <option>Kurs & İçerik</option>
-            <option>Teknik Destek</option>
-            <option>Fatura & Ödeme</option>
-            <option>Sertifika</option>
-            <option>Kurumsal Çözümler</option>
-            <option>Eğitmen Olmak İstiyorum</option>
-            <option>Basın & Medya</option>
-            <option>Diğer</option>
+            <option value="" data-i18n="ilet.form.konu.sec">Konu seçin…</option>
+            <option data-i18n="ilet.form.konu.kurs">Kurs & İçerik</option>
+            <option data-i18n="ilet.form.konu.destek">Teknik Destek</option>
+            <option data-i18n="ilet.form.konu.fatura">Fatura & Ödeme</option>
+            <option data-i18n="ilet.form.konu.sertifika">Sertifika</option>
+            <option data-i18n="ilet.form.konu.kurumsal">Kurumsal Çözümler</option>
+            <option data-i18n="ilet.form.konu.egitmen">Eğitmen Olmak İstiyorum</option>
+            <option data-i18n="ilet.form.konu.basin">Basın & Medya</option>
+            <option data-i18n="ilet.form.konu.diger">Diğer</option>
           </select>
         </div>
 
         <div class="form-group">
-          <label class="form-label">Mesajınız</label>
-          <textarea class="form-textarea" placeholder="Mesajınızı buraya yazın…"></textarea>
+          <label class="form-label" data-i18n="ilet.form.mesaj">Mesajınız</label>
+          <textarea class="form-textarea" data-i18n-placeholder="ilet.form.placeholder.mesaj" placeholder="Mesajınızı buraya yazın…"></textarea>
         </div>
 
         <div style="display:flex;align-items:center;gap:10px;margin-bottom:24px;">
           <input type="checkbox" id="kvkk" style="width:16px;height:16px;accent-color:var(--teal);cursor:pointer;"/>
-          <label for="kvkk" style="font-size:12px;color:var(--silver);cursor:pointer;"> <a href="#" style="color:var(--teal)">KVKK Aydınlatma Metni</a>'ni okudum, onaylıyorum.</label>
+          <label for="kvkk" style="font-size:12px;color:var(--silver);cursor:pointer;" data-i18n-html="ilet.form.kvkk"> <a href="#" style="color:var(--teal)">KVKK Aydınlatma Metni</a>'ni okudum, onaylıyorum.</label>
         </div>
 
-        <button class="btn btn-primary btn-lg" style="width:100%;justify-content:center" onclick="showToast('Mesajınız iletildi! 🎉 En kısa sürede yanıt vereceğiz.')">
+        <button class="btn btn-primary btn-lg" style="width:100%;justify-content:center" onclick="showToast('Mesajınız iletildi! 🎉 En kısa sürede yanıt vereceğiz.')" data-i18n="ilet.form.submit">
           Gönder →
         </button>
       </div>
@@ -207,32 +207,32 @@
     <div class="footer-grid">
       <div class="footer-brand">
         <a href="index.html" class="nav-logo" style="display:inline-flex"><img src="public/logos/68.png" alt="Derin Akademi" class="nav-logo-img"/></a>
-        <p class="brand-desc">İnsan kaynakları alanında uzmanlaşmış danışmanlık ve eğitim şirketi. Anlatan değil, çalışan sistemler kurarız.</p>
+        <p class="brand-desc" data-i18n="shared.footer.brandesc">İnsan kaynakları alanında uzmanlaşmış danışmanlık ve eğitim şirketi. Anlatan değil, çalışan sistemler kurarız.</p>
         <div class="footer-social">
           <a class="social-btn" href="https://www.instagram.com/derinakademi/" target="_blank">📷</a>
           <a class="social-btn" href="https://www.linkedin.com/in/hakan-selahi-001969/" target="_blank">in</a>
         </div>
       </div>
       <div>
-        <div class="footer-col-title">Hizmetler</div>
+        <div class="footer-col-title" data-i18n="shared.footer.hizmetler">Hizmetler</div>
         <ul class="footer-links">
-          <li><a href="kurslar.html">Eğitimlerimiz</a></li>
-          <li><a href="danismanlik.html">Danışmanlıklarımız</a></li>
+          <li><a data-i18n="nav.egitimler" href="kurslar.html">Eğitimlerimiz</a></li>
+          <li><a data-i18n="nav.danismanlik" href="danismanlik.html">Danışmanlıklarımız</a></li>
           <li><a href="kurslar.html">Kurumsal Eğitim</a></li>
           <li><a href="danismanlik.html">Kurumsallaşma</a></li>
         </ul>
       </div>
       <div>
-        <div class="footer-col-title">Şirket</div>
+        <div class="footer-col-title" data-i18n="shared.footer.sirket">Şirket</div>
         <ul class="footer-links">
-          <li><a href="hakkimizda.html">Kurumsal</a></li>
-          <li><a href="blog.html">Deneyimlerimiz</a></li>
+          <li><a data-i18n="nav.hakkimizda" href="hakkimizda.html">Kurumsal</a></li>
+          <li><a data-i18n="nav.blog" href="blog.html">Deneyimlerimiz</a></li>
           <li><a href="kariyer.html">Kariyer</a></li>
-          <li><a href="iletisim.html">İletişim</a></li>
+          <li><a data-i18n="nav.iletisim" href="iletisim.html">İletişim</a></li>
         </ul>
       </div>
       <div>
-        <div class="footer-col-title">Bülten</div>
+        <div class="footer-col-title" data-i18n="shared.footer.bulten">Bülten</div>
         <div class="footer-newsletter">
           <p>İK gündemindeki gelişmelerden ve eğitimlerimizden haberdar ol.</p>
           <div class="newsletter-form"><input type="email" class="newsletter-input" placeholder="E-posta"/><button class="btn btn-primary btn-sm" onclick="showToast('Abone oldunuz! 🎉')">→</button></div>
@@ -240,8 +240,8 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <div class="footer-copy">© 2026 Derin Akademi. Tüm hakları saklıdır. &nbsp;<a href="https://reneedesignlab.com/tr" target="_blank" style="color:var(--silver-dim);text-decoration:none;" onmouseover="this.style.color='var(--silver)'" onmouseout="this.style.color='var(--silver-dim)'">by Renee DesignLab</a></div>
-      <div class="footer-legal"><a href="gizlilik-politikasi.html">Gizlilik Politikası</a><a href="kullanim-kosullari.html">Kullanım Koşulları</a><a href="kvkk.html">KVKK</a><a href="cerezler.html">Çerezler</a></div>
+      <div class="footer-copy" data-i18n="shared.footer.copy">© 2026 Derin Akademi. Tüm hakları saklıdır. &nbsp;<a href="https://reneedesignlab.com/tr" target="_blank" style="color:var(--silver-dim);text-decoration:none;" onmouseover="this.style.color='var(--silver)'" onmouseout="this.style.color='var(--silver-dim)'">by Renee DesignLab</a></div>
+      <div class="footer-legal"><a href="gizlilik-politikasi.html" data-i18n="shared.footer.gizlilik">Gizlilik Politikası</a><a href="kullanim-kosullari.html" data-i18n="shared.footer.kullanim">Kullanım Koşulları</a><a href="kvkk.html" data-i18n="shared.footer.kvkk">KVKK</a><a href="cerezler.html" data-i18n="shared.footer.cerezler">Çerezler</a></div>
     </div>
   </div>
 </footer>
@@ -255,7 +255,7 @@
   <div class="teklif-modal-box">
     <button class="teklif-modal-close" onclick="closeTeklifModal()">✕</button>
     <div>
-      <div style="color:var(--teal);font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:10px;">İletişim Bilgileri</div>
+      <div style="color:var(--teal);font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:10px;" data-i18n="shared.modal.contact">İletişim Bilgileri</div>
       <h2 style="font-family:'Montserrat',sans-serif;font-size:24px;font-weight:900;line-height:1.2;margin-bottom:8px;">Hemen <span class="gradient-text">Teklif Alın</span></h2>
       <p style="color:var(--silver);font-size:13px;line-height:1.75;margin-bottom:28px;">Eğitim ihtiyaçlarınızı paylaşın, size özel program ve teklif oluşturalım.</p>
       <div style="display:flex;flex-direction:column;gap:18px;margin-bottom:28px;">

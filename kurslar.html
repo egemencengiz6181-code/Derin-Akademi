@@ -75,11 +75,11 @@
     <a href="index.html" class="nav-logo"><img src="public/logos/68.png" alt="Derin Akademi" class="nav-logo-img"/></a>
     <ul class="nav-links">
       <li><a href="kurslar.html" class="active">Eğitimlerimiz</a></li>
-      <li><a href="danismanlik.html">Danışmanlıklarımız</a></li>
-      <li><a href="hakkimizda.html">Kurumsal</a></li>
-      <li><a href="referanslar.html">Referanslarımız</a></li>
-      <li><a href="blog.html">Deneyimlerimiz</a></li>
-      <li><a href="iletisim.html">İletişim</a></li>
+      <li><a data-i18n="nav.danismanlik" href="danismanlik.html">Danışmanlıklarımız</a></li>
+      <li><a data-i18n="nav.hakkimizda" href="hakkimizda.html">Kurumsal</a></li>
+      <li><a data-i18n="nav.referanslar" href="referanslar.html">Referanslarımız</a></li>
+      <li><a data-i18n="nav.blog" href="blog.html">Deneyimlerimiz</a></li>
+      <li><a data-i18n="nav.iletisim" href="iletisim.html">İletişim</a></li>
     </ul>
     <div class="nav-actions">
       <button id="darkModeToggle" onclick="toggleDarkMode()" class="btn btn-ghost btn-sm" style="font-weight:700;letter-spacing:1px;padding:7px 14px;min-width:52px;" title="Dark/Light Mode">🌙</button>
@@ -91,8 +91,8 @@
 </nav>
 <div class="mobile-nav">
   <button class="mobile-nav-close">✕</button>
-  <a href="index.html">Ana Sayfa</a><a href="kurslar.html" class="active">Eğitimlerimiz</a><a href="danismanlik.html">Danışmanlıklarımız</a>
-  <a href="hakkimizda.html">Kurumsal</a><a href="referanslar.html">Referanslarımız</a><a href="blog.html">Deneyimlerimiz</a><a href="iletisim.html">İletişim</a>
+  <a data-i18n="nav.anasayfa" href="index.html">Ana Sayfa</a><a href="kurslar.html" class="active">Eğitimlerimiz</a><a data-i18n="nav.danismanlik" href="danismanlik.html">Danışmanlıklarımız</a>
+  <a data-i18n="nav.hakkimizda" href="hakkimizda.html">Kurumsal</a><a data-i18n="nav.referanslar" href="referanslar.html">Referanslarımız</a><a data-i18n="nav.blog" href="blog.html">Deneyimlerimiz</a><a data-i18n="nav.iletisim" href="iletisim.html">İletişim</a>
   <div class="mobile-nav-actions">
     <button onclick="openTeklifModal()" class="btn btn-primary btn-md" style="width:100%;justify-content:center">Özel Teklif Al</button>
   </div>
@@ -101,9 +101,9 @@
 <!-- ══ PAGE HERO ══ -->
 <div class="page-hero">
   <div class="container">
-    <div class="page-hero-tag reveal"><span class="section-tag">İK Dönüşüm Akademisi</span></div>
-    <h1 class="page-hero-title reveal reveal-d1">İK Dönüşüm<br/><span class="gradient-text">Akademisi</span></h1>
-    <p class="page-hero-desc reveal reveal-d2">İnsan Kaynaklarını stratejik bir iş ortağına dönüştüren gelişim alanları. Liderlik, İK sistemleri, veri kullanımı ve yapay zekâ uygulamalarını kapsayan dört ana yetkinlik alanı.</p>
+    <div class="page-hero-tag reveal"><span class="section-tag" data-i18n="kurs.hero.tag">İK Dönüşüm Akademisi</span></div>
+    <h1 class="page-hero-title reveal reveal-d1" data-i18n-html="kurs.hero.title">İK Dönüşüm<br/><span class="gradient-text">Akademisi</span></h1>
+    <p class="page-hero-desc reveal reveal-d2" data-i18n="kurs.hero.desc">İnsan Kaynaklarını stratejik bir iş ortağına dönüştüren gelişim alanları. Liderlik, İK sistemleri, veri kullanımı ve yapay zekâ uygulamalarını kapsayan dört ana yetkinlik alanı.</p>
   </div>
 </div>
 
@@ -111,11 +111,11 @@
 <div style="position:relative;z-index:2;padding:40px 0;border-bottom:1px solid var(--glass-bd);">
   <div class="container">
     <div style="display:flex;gap:40px;justify-content:center;flex-wrap:wrap;">
-      <div style="text-align:center"><div style="font-family:'Montserrat',sans-serif;font-size:24px;font-weight:800">10<span style="color:var(--teal)">+</span></div><div style="font-size:13px;color:var(--silver)">Eğitim Programı</div></div>
-      <div style="text-align:center"><div style="font-family:'Montserrat',sans-serif;font-size:24px;font-weight:800">4<span style="color:var(--teal)"></span></div><div style="font-size:13px;color:var(--silver)">Kategori</div></div>
-      <div style="text-align:center"><div style="font-family:'Montserrat',sans-serif;font-size:24px;font-weight:800">40<span style="color:var(--teal)">+</span></div><div style="font-size:13px;color:var(--silver)">Hizmet Verilen Kurum</div></div>
-      <div style="text-align:center"><div style="font-family:'Montserrat',sans-serif;font-size:24px;font-weight:800">98<span style="color:var(--teal)">%</span></div><div style="font-size:13px;color:var(--silver)">Memnuniyet</div></div>
-      <div style="text-align:center"><div style="font-family:'Montserrat',sans-serif;font-size:24px;font-weight:800">7<span style="color:var(--teal)">+</span></div><div style="font-size:13px;color:var(--silver)">Farklı Sektör</div></div>
+      <div style="text-align:center"><div style="font-family:'Montserrat',sans-serif;font-size:24px;font-weight:800">10<span style="color:var(--teal)">+</span></div><div style="font-size:13px;color:var(--silver)" data-i18n="kurs.stat.egitim">Eğitim Programı</div></div>
+      <div style="text-align:center"><div style="font-family:'Montserrat',sans-serif;font-size:24px;font-weight:800">4<span style="color:var(--teal)"></span></div><div style="font-size:13px;color:var(--silver)" data-i18n="kurs.stat.kategori">Kategori</div></div>
+      <div style="text-align:center"><div style="font-family:'Montserrat',sans-serif;font-size:24px;font-weight:800">40<span style="color:var(--teal)">+</span></div><div style="font-size:13px;color:var(--silver)" data-i18n="kurs.stat.kurum">Hizmet Verilen Kurum</div></div>
+      <div style="text-align:center"><div style="font-family:'Montserrat',sans-serif;font-size:24px;font-weight:800">98<span style="color:var(--teal)">%</span></div><div style="font-size:13px;color:var(--silver)" data-i18n="kurs.stat.memnuniyet">Memnuniyet</div></div>
+      <div style="text-align:center"><div style="font-family:'Montserrat',sans-serif;font-size:24px;font-weight:800">7<span style="color:var(--teal)">+</span></div><div style="font-size:13px;color:var(--silver)" data-i18n="kurs.stat.sektor">Farklı Sektör</div></div>
     </div>
   </div>
 </div>
@@ -128,7 +128,7 @@
     <div style="margin-bottom:48px;">
       <div style="display:flex;align-items:center;gap:12px;margin-bottom:28px;">
         <span style="font-size:22px">🏆</span>
-        <h2 style="font-family:'Montserrat',sans-serif;font-size:20px;font-weight:800;">Liderlik &amp; İletişim</h2>
+        <h2 style="font-family:'Montserrat',sans-serif;font-size:20px;font-weight:800;" data-i18n="kurs.cat.liderlik">Liderlik &amp; İletişim</h2>
         <div style="flex:1;height:1px;background:var(--glass-bd);margin-left:8px;"></div>
       </div>
       <div class="courses-grid-3">
@@ -137,11 +137,11 @@
           <div class="course-thumb"><div class="course-thumb-bg c-bg-1"></div><i class="fas fa-crosshairs course-thumb-icon"></i></div>
           <div class="course-body">
             <div class="course-category">Liderlik &amp; İletişim</div>
-            <a href="egitimler/yeni-nesil-liderlik.html" style="text-decoration:none;color:inherit;"><h3 class="course-title" style="transition:color 0.2s;" onmouseover="this.style.color='var(--teal)'" onmouseout="this.style.color=''">Yeni Nesil Liderlik</h3></a>
-            <p class="course-desc">Klasik yönetim anlayışından çıkarak güven, gelişim ve performans odaklı bir liderlik yaklaşımı geliştirin.</p>
+            <a href="egitimler/yeni-nesil-liderlik.html" style="text-decoration:none;color:inherit;"><h3 class="course-title" style="transition:color 0.2s;" onmouseover="this.style.color='var(--teal)'" onmouseout="this.style.color=''" data-i18n="kurs.liderlik.title">Yeni Nesil Liderlik</h3></a>
+            <p class="course-desc" data-i18n="kurs.liderlik.desc">Klasik yönetim anlayışından çıkarak güven, gelişim ve performans odaklı bir liderlik yaklaşımı geliştirin.</p>
             <div class="course-footer" style="flex-direction:column;gap:8px;align-items:stretch;">
-              <button onclick="openTeklifModal()" class="btn btn-primary btn-sm" style="justify-content:center">Bilgi Al</button>
-              <a href="https://wa.me/905330193134" target="_blank" class="btn btn-ghost btn-sm" style="justify-content:center">💬 WhatsApp</a>
+              <button onclick="openTeklifModal()" class="btn btn-primary btn-sm" style="justify-content:center" data-i18n="shared.btn.bilgial2">Bilgi Al</button>
+              <a href="https://wa.me/905330193134" target="_blank" class="btn btn-ghost btn-sm" style="justify-content:center" data-i18n="shared.btn.whatsapp2">💬 WhatsApp</a>
             </div>
           </div>
         </div>
@@ -150,11 +150,11 @@
           <div class="course-thumb"><div class="course-thumb-bg c-bg-2"></div><i class="fas fa-comment course-thumb-icon"></i></div>
           <div class="course-body">
             <div class="course-category">Liderlik &amp; İletişim</div>
-            <a href="egitimler/haddini-bildirme.html" style="text-decoration:none;color:inherit;"><h3 class="course-title" style="transition:color 0.2s;" onmouseover="this.style.color='var(--teal)'" onmouseout="this.style.color=''">Etkin Geri Bildirim ve Zor Konuşmalar</h3></a>
-            <p class="course-desc">Açık ve yapıcı geri bildirim verme becerilerini geliştirin, zor konuşmaları sağlıklı şekilde yönetin.</p>
+            <a href="egitimler/haddini-bildirme.html" style="text-decoration:none;color:inherit;"><h3 class="course-title" style="transition:color 0.2s;" onmouseover="this.style.color='var(--teal)'" onmouseout="this.style.color=''" data-i18n="kurs.geribildirim.title">Etkin Geri Bildirim ve Zor Konuşmalar</h3></a>
+            <p class="course-desc" data-i18n="kurs.geribildirim.desc">Açık ve yapıcı geri bildirim verme becerilerini geliştirin, zor konuşmaları sağlıklı şekilde yönetin.</p>
             <div class="course-footer" style="flex-direction:column;gap:8px;align-items:stretch;">
-              <button onclick="openTeklifModal()" class="btn btn-primary btn-sm" style="justify-content:center">Bilgi Al</button>
-              <a href="https://wa.me/905330193134" target="_blank" class="btn btn-ghost btn-sm" style="justify-content:center">💬 WhatsApp</a>
+              <button onclick="openTeklifModal()" class="btn btn-primary btn-sm" style="justify-content:center" data-i18n="shared.btn.bilgial2">Bilgi Al</button>
+              <a href="https://wa.me/905330193134" target="_blank" class="btn btn-ghost btn-sm" style="justify-content:center" data-i18n="shared.btn.whatsapp2">💬 WhatsApp</a>
             </div>
           </div>
         </div>
@@ -163,11 +163,11 @@
           <div class="course-thumb"><div class="course-thumb-bg c-bg-3"></div><i class="fas fa-handshake course-thumb-icon"></i></div>
           <div class="course-body">
             <div class="course-category">Liderlik &amp; İletişim</div>
-            <a href="egitimler/kapsayan-kazanir.html" style="text-decoration:none;color:inherit;"><h3 class="course-title" style="transition:color 0.2s;" onmouseover="this.style.color='var(--teal)'" onmouseout="this.style.color=''">Kapsayıcı Liderlik</h3></a>
-            <p class="course-desc">Kapsayıcı liderlik yaklaşımını benimseyin, ekiplerde farklılıkları avantaja dönüştürün.</p>
+            <a href="egitimler/kapsayan-kazanir.html" style="text-decoration:none;color:inherit;"><h3 class="course-title" style="transition:color 0.2s;" onmouseover="this.style.color='var(--teal)'" onmouseout="this.style.color=''" data-i18n="kurs.kapsayici.title">Kapsayıcı Liderlik</h3></a>
+            <p class="course-desc" data-i18n="kurs.kapsayici.desc">Kapsayıcı liderlik yaklaşımını benimseyin, ekiplerde farklılıkları avantaja dönüştürün.</p>
             <div class="course-footer" style="flex-direction:column;gap:8px;align-items:stretch;">
-              <button onclick="openTeklifModal()" class="btn btn-primary btn-sm" style="justify-content:center">Bilgi Al</button>
-              <a href="https://wa.me/905330193134" target="_blank" class="btn btn-ghost btn-sm" style="justify-content:center">💬 WhatsApp</a>
+              <button onclick="openTeklifModal()" class="btn btn-primary btn-sm" style="justify-content:center" data-i18n="shared.btn.bilgial2">Bilgi Al</button>
+              <a href="https://wa.me/905330193134" target="_blank" class="btn btn-ghost btn-sm" style="justify-content:center" data-i18n="shared.btn.whatsapp2">💬 WhatsApp</a>
             </div>
           </div>
         </div>
@@ -179,7 +179,7 @@
     <div style="margin-bottom:48px;">
       <div style="display:flex;align-items:center;gap:12px;margin-bottom:28px;">
         <i class="fas fa-cog" style="font-size:22px;color:var(--teal)"></i>
-        <h2 style="font-family:'Montserrat',sans-serif;font-size:20px;font-weight:800;">Sistem &amp; Yönetim</h2>
+        <h2 style="font-family:'Montserrat',sans-serif;font-size:20px;font-weight:800;" data-i18n="kurs.cat.sistem">Sistem &amp; Yönetim</h2>
         <div style="flex:1;height:1px;background:var(--glass-bd);margin-left:8px;"></div>
       </div>
       <div class="courses-grid-3">
@@ -188,11 +188,11 @@
           <div class="course-thumb"><div class="course-thumb-bg c-bg-4"></div><i class="fas fa-crosshairs course-thumb-icon"></i></div>
           <div class="course-body">
             <div class="course-category">Sistem &amp; Yönetim</div>
-            <a href="egitimler/mulakat-becerileri.html" style="text-decoration:none;color:inherit;"><h3 class="course-title" style="transition:color 0.2s;" onmouseover="this.style.color='var(--teal)'" onmouseout="this.style.color=''">Mülakat Becerileri 5.0</h3></a>
-            <p class="course-desc">Davranış odaklı mülakat teknikleri ile adayların yetkinliklerini daha doğru değerlendirin ve işe alım süreçlerini sistematik hale getirin.</p>
+            <a href="egitimler/mulakat-becerileri.html" style="text-decoration:none;color:inherit;"><h3 class="course-title" style="transition:color 0.2s;" onmouseover="this.style.color='var(--teal)'" onmouseout="this.style.color=''" data-i18n="kurs.mulakat.title">Mülakat Becerileri 5.0</h3></a>
+            <p class="course-desc" data-i18n="kurs.mulakat.desc">Davranış odaklı mülakat teknikleri ile adayların yetkinliklerini daha doğru değerlendirin ve işe alım süreçlerini sistematik hale getirin.</p>
             <div class="course-footer" style="flex-direction:column;gap:8px;align-items:stretch;">
-              <button onclick="openTeklifModal()" class="btn btn-primary btn-sm" style="justify-content:center">Bilgi Al</button>
-              <a href="https://wa.me/905330193134" target="_blank" class="btn btn-ghost btn-sm" style="justify-content:center">💬 WhatsApp</a>
+              <button onclick="openTeklifModal()" class="btn btn-primary btn-sm" style="justify-content:center" data-i18n="shared.btn.bilgial2">Bilgi Al</button>
+              <a href="https://wa.me/905330193134" target="_blank" class="btn btn-ghost btn-sm" style="justify-content:center" data-i18n="shared.btn.whatsapp2">💬 WhatsApp</a>
             </div>
           </div>
         </div>
@@ -201,11 +201,11 @@
           <div class="course-thumb"><div class="course-thumb-bg c-bg-5"></div><i class="fas fa-chart-bar course-thumb-icon"></i></div>
           <div class="course-body">
             <div class="course-category">Sistem &amp; Yönetim</div>
-            <a href="egitimler/stratejik-ik-yonetimi.html" style="text-decoration:none;color:inherit;"><h3 class="course-title" style="transition:color 0.2s;" onmouseover="this.style.color='var(--teal)'" onmouseout="this.style.color=''">Stratejik İK Yönetimi</h3></a>
-            <p class="course-desc">İK profesyonellerinin organizasyon içinde stratejik bir iş ortağı olarak konumlanmasını destekleyin.</p>
+            <a href="egitimler/stratejik-ik-yonetimi.html" style="text-decoration:none;color:inherit;"><h3 class="course-title" style="transition:color 0.2s;" onmouseover="this.style.color='var(--teal)'" onmouseout="this.style.color=''" data-i18n="kurs.stratejik.title">Stratejik İK Yönetimi</h3></a>
+            <p class="course-desc" data-i18n="kurs.stratejik.desc">İK profesyonellerinin organizasyon içinde stratejik bir iş ortağı olarak konumlanmasını destekleyin.</p>
             <div class="course-footer" style="flex-direction:column;gap:8px;align-items:stretch;">
-              <button onclick="openTeklifModal()" class="btn btn-primary btn-sm" style="justify-content:center">Bilgi Al</button>
-              <a href="https://wa.me/905330193134" target="_blank" class="btn btn-ghost btn-sm" style="justify-content:center">💬 WhatsApp</a>
+              <button onclick="openTeklifModal()" class="btn btn-primary btn-sm" style="justify-content:center" data-i18n="shared.btn.bilgial2">Bilgi Al</button>
+              <a href="https://wa.me/905330193134" target="_blank" class="btn btn-ghost btn-sm" style="justify-content:center" data-i18n="shared.btn.whatsapp2">💬 WhatsApp</a>
             </div>
           </div>
         </div>
@@ -214,11 +214,11 @@
           <div class="course-thumb"><div class="course-thumb-bg c-bg-6"></div><i class="fas fa-star course-thumb-icon"></i></div>
           <div class="course-body">
             <div class="course-category">Sistem &amp; Yönetim</div>
-            <a href="egitimler/performans-360.html" style="text-decoration:none;color:inherit;"><h3 class="course-title" style="transition:color 0.2s;" onmouseover="this.style.color='var(--teal)'" onmouseout="this.style.color=''">Performans 360</h3></a>
-            <p class="course-desc">Kurumlarda sürdürülebilir ve gelişim odaklı bir performans yönetim sistemi kurun.</p>
+            <a href="egitimler/performans-360.html" style="text-decoration:none;color:inherit;"><h3 class="course-title" style="transition:color 0.2s;" onmouseover="this.style.color='var(--teal)'" onmouseout="this.style.color=''" data-i18n="kurs.perf360.title">Performans 360</h3></a>
+            <p class="course-desc" data-i18n="kurs.perf360.desc">Kurumlarda sürdürülebilir ve gelişim odaklı bir performans yönetim sistemi kurun.</p>
             <div class="course-footer" style="flex-direction:column;gap:8px;align-items:stretch;">
-              <button onclick="openTeklifModal()" class="btn btn-primary btn-sm" style="justify-content:center">Bilgi Al</button>
-              <a href="https://wa.me/905330193134" target="_blank" class="btn btn-ghost btn-sm" style="justify-content:center">💬 WhatsApp</a>
+              <button onclick="openTeklifModal()" class="btn btn-primary btn-sm" style="justify-content:center" data-i18n="shared.btn.bilgial2">Bilgi Al</button>
+              <a href="https://wa.me/905330193134" target="_blank" class="btn btn-ghost btn-sm" style="justify-content:center" data-i18n="shared.btn.whatsapp2">💬 WhatsApp</a>
             </div>
           </div>
         </div>
@@ -227,11 +227,11 @@
           <div class="course-thumb"><div class="course-thumb-bg c-bg-7"></div><i class="fas fa-money-bill-wave course-thumb-icon"></i></div>
           <div class="course-body">
             <div class="course-category">Sistem &amp; Yönetim</div>
-            <a href="egitimler/ucretin-otesi.html" style="text-decoration:none;color:inherit;"><h3 class="course-title" style="transition:color 0.2s;" onmouseover="this.style.color='var(--teal)'" onmouseout="this.style.color=''">Stratejik Ücret ve Ödül Yönetimi</h3></a>
-            <p class="course-desc">Stratejik ve sürdürülebilir ücret politikalarıyla çalışan bağlılığını ve performansı destekleyin.</p>
+            <a href="egitimler/ucretin-otesi.html" style="text-decoration:none;color:inherit;"><h3 class="course-title" style="transition:color 0.2s;" onmouseover="this.style.color='var(--teal)'" onmouseout="this.style.color=''" data-i18n="kurs.ucret.title">Stratejik Ücret ve Ödül Yönetimi</h3></a>
+            <p class="course-desc" data-i18n="kurs.ucret.desc">Stratejik ve sürdürülebilir ücret politikalarıyla çalışan bağlılığını ve performansı destekleyin.</p>
             <div class="course-footer" style="flex-direction:column;gap:8px;align-items:stretch;">
-              <button onclick="openTeklifModal()" class="btn btn-primary btn-sm" style="justify-content:center">Bilgi Al</button>
-              <a href="https://wa.me/905330193134" target="_blank" class="btn btn-ghost btn-sm" style="justify-content:center">💬 WhatsApp</a>
+              <button onclick="openTeklifModal()" class="btn btn-primary btn-sm" style="justify-content:center" data-i18n="shared.btn.bilgial2">Bilgi Al</button>
+              <a href="https://wa.me/905330193134" target="_blank" class="btn btn-ghost btn-sm" style="justify-content:center" data-i18n="shared.btn.whatsapp2">💬 WhatsApp</a>
             </div>
           </div>
         </div>
@@ -240,11 +240,11 @@
           <div class="course-thumb"><div class="course-thumb-bg c-bg-8"></div><i class="fas fa-people-group course-thumb-icon"></i></div>
           <div class="course-body">
             <div class="course-category">Sistem &amp; Yönetim</div>
-            <a href="egitimler/aidiyet-tasarimi.html" style="text-decoration:none;color:inherit;"><h3 class="course-title" style="transition:color 0.2s;" onmouseover="this.style.color='var(--teal)'" onmouseout="this.style.color=''">Çalışan Deneyimi ve Aidiyet Tasarımı</h3></a>
-            <p class="course-desc">Çalışan deneyimini bütünsel şekilde tasarlayarak bağlılık ve kurum kültürünü güçlendirin.</p>
+            <a href="egitimler/aidiyet-tasarimi.html" style="text-decoration:none;color:inherit;"><h3 class="course-title" style="transition:color 0.2s;" onmouseover="this.style.color='var(--teal)'" onmouseout="this.style.color=''" data-i18n="kurs.aidiyet.title">Çalışan Deneyimi ve Aidiyet Tasarımı</h3></a>
+            <p class="course-desc" data-i18n="kurs.aidiyet.desc">Çalışan deneyimini bütünsel şekilde tasarlayarak bağlılık ve kurum kültürünü güçlendirin.</p>
             <div class="course-footer" style="flex-direction:column;gap:8px;align-items:stretch;">
-              <button onclick="openTeklifModal()" class="btn btn-primary btn-sm" style="justify-content:center">Bilgi Al</button>
-              <a href="https://wa.me/905330193134" target="_blank" class="btn btn-ghost btn-sm" style="justify-content:center">💬 WhatsApp</a>
+              <button onclick="openTeklifModal()" class="btn btn-primary btn-sm" style="justify-content:center" data-i18n="shared.btn.bilgial2">Bilgi Al</button>
+              <a href="https://wa.me/905330193134" target="_blank" class="btn btn-ghost btn-sm" style="justify-content:center" data-i18n="shared.btn.whatsapp2">💬 WhatsApp</a>
             </div>
           </div>
         </div>
@@ -257,7 +257,7 @@
     <div style="margin-bottom:48px;">
       <div style="display:flex;align-items:center;gap:12px;margin-bottom:28px;">
         <i class="fas fa-chart-pie" style="font-size:22px;color:var(--teal)"></i>
-        <h2 style="font-family:'Montserrat',sans-serif;font-size:20px;font-weight:800;">Veri Odaklı İK</h2>
+        <h2 style="font-family:'Montserrat',sans-serif;font-size:20px;font-weight:800;" data-i18n="kurs.cat.veri">Veri Odaklı İK</h2>
         <div style="flex:1;height:1px;background:var(--glass-bd);margin-left:8px;"></div>
       </div>
       <div class="courses-grid-3">
@@ -266,11 +266,11 @@
           <div class="course-thumb"><div class="course-thumb-bg c-bg-9"></div><i class="fas fa-chart-bar course-thumb-icon"></i></div>
           <div class="course-body">
             <div class="course-category">Veri Odaklı İK</div>
-            <a href="egitimler/veriye-donusen-insan.html" style="text-decoration:none;color:inherit;"><h3 class="course-title" style="transition:color 0.2s;" onmouseover="this.style.color='var(--teal)'" onmouseout="this.style.color=''">Veri Odaklı İK Yönetimi</h3></a>
-            <p class="course-desc">İK profesyonellerinin veri analizi ve metrikleri kullanarak daha güçlü kararlar almasını sağlayın.</p>
+            <a href="egitimler/veriye-donusen-insan.html" style="text-decoration:none;color:inherit;"><h3 class="course-title" style="transition:color 0.2s;" onmouseover="this.style.color='var(--teal)'" onmouseout="this.style.color=''" data-i18n="kurs.veri.title">Veri Odaklı İK Yönetimi</h3></a>
+            <p class="course-desc" data-i18n="kurs.veri.desc">İK profesyonellerinin veri analizi ve metrikleri kullanarak daha güçlü kararlar almasını sağlayın.</p>
             <div class="course-footer" style="flex-direction:column;gap:8px;align-items:stretch;">
-              <button onclick="openTeklifModal()" class="btn btn-primary btn-sm" style="justify-content:center">Bilgi Al</button>
-              <a href="https://wa.me/905330193134" target="_blank" class="btn btn-ghost btn-sm" style="justify-content:center">💬 WhatsApp</a>
+              <button onclick="openTeklifModal()" class="btn btn-primary btn-sm" style="justify-content:center" data-i18n="shared.btn.bilgial2">Bilgi Al</button>
+              <a href="https://wa.me/905330193134" target="_blank" class="btn btn-ghost btn-sm" style="justify-content:center" data-i18n="shared.btn.whatsapp2">💬 WhatsApp</a>
             </div>
           </div>
         </div>
@@ -282,7 +282,7 @@
     <div style="margin-bottom:48px;">
       <div style="display:flex;align-items:center;gap:12px;margin-bottom:28px;">
         <i class="fas fa-robot" style="font-size:22px;color:var(--teal)"></i>
-        <h2 style="font-family:'Montserrat',sans-serif;font-size:20px;font-weight:800;">Yapay Zekâ ve Geleceğin İK'sı</h2>
+        <h2 style="font-family:'Montserrat',sans-serif;font-size:20px;font-weight:800;" data-i18n="kurs.cat.yz">Yapay Zekâ ve Geleceğin İK'sı</h2>
         <div style="flex:1;height:1px;background:var(--glass-bd);margin-left:8px;"></div>
       </div>
       <div class="courses-grid-3">
@@ -291,11 +291,11 @@
           <div class="course-thumb"><div class="course-thumb-bg c-bg-4"></div><i class="fas fa-robot course-thumb-icon"></i></div>
           <div class="course-body">
             <div class="course-category">Yapay Zekâ ve Geleceğin İK'sı</div>
-            <a href="egitimler/yapay-zeka-ikda.html" style="text-decoration:none;color:inherit;"><h3 class="course-title" style="transition:color 0.2s;" onmouseover="this.style.color='var(--teal)'" onmouseout="this.style.color=''">Yapay Zekâ İK'da</h3></a>
-            <p class="course-desc">AI araçlarını İK süreçlerine entegre ederek verimlilik ve karar kalitesini artırın.</p>
+            <a href="egitimler/yapay-zeka-ikda.html" style="text-decoration:none;color:inherit;"><h3 class="course-title" style="transition:color 0.2s;" onmouseover="this.style.color='var(--teal)'" onmouseout="this.style.color=''" data-i18n="kurs.yz.title">Yapay Zekâ İK'da</h3></a>
+            <p class="course-desc" data-i18n="kurs.yz.desc">AI araçlarını İK süreçlerine entegre ederek verimlilik ve karar kalitesini artırın.</p>
             <div class="course-footer" style="flex-direction:column;gap:8px;align-items:stretch;">
-              <button onclick="openTeklifModal()" class="btn btn-primary btn-sm" style="justify-content:center">Bilgi Al</button>
-              <a href="https://wa.me/905330193134" target="_blank" class="btn btn-ghost btn-sm" style="justify-content:center">💬 WhatsApp</a>
+              <button onclick="openTeklifModal()" class="btn btn-primary btn-sm" style="justify-content:center" data-i18n="shared.btn.bilgial2">Bilgi Al</button>
+              <a href="https://wa.me/905330193134" target="_blank" class="btn btn-ghost btn-sm" style="justify-content:center" data-i18n="shared.btn.whatsapp2">💬 WhatsApp</a>
             </div>
           </div>
         </div>
@@ -305,12 +305,12 @@
 
     <!-- CTA -->
     <div style="background:linear-gradient(135deg,rgba(0,200,180,0.07),rgba(0,100,200,0.05));border:1px solid rgba(0,200,180,0.14);border-radius:var(--radius-xl);padding:60px;text-align:center;margin-top:20px;" class="reveal">
-      <div class="section-tag" style="justify-content:center;margin-bottom:16px;">Kurumunuza Özel</div>
-      <h2 style="font-family:'Montserrat',sans-serif;font-size:clamp(24px,3vw,40px);font-weight:900;letter-spacing:-1.5px;margin-bottom:16px;">Hangi Eğitim Kurumunuza Uygun?</h2>
-      <p style="color:var(--silver);max-width:500px;margin:0 auto 32px;font-size:15px;line-height:1.75;">Eğitim ihtiyacınızı paylaşın, kurumunuza özel program ve yaklaşım önerelim.</p>
+      <div class="section-tag" style="justify-content:center;margin-bottom:16px;" data-i18n="kurs.cta.tag">Kurumunuza Özel</div>
+      <h2 style="font-family:'Montserrat',sans-serif;font-size:clamp(24px,3vw,40px);font-weight:900;letter-spacing:-1.5px;margin-bottom:16px;" data-i18n="kurs.cta.title">Hangi Eğitim Kurumunuza Uygun?</h2>
+      <p style="color:var(--silver);max-width:500px;margin:0 auto 32px;font-size:15px;line-height:1.75;" data-i18n="kurs.cta.desc">Eğitim ihtiyacınızı paylaşın, kurumunuza özel program ve yaklaşım önerelim.</p>
       <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;">
-        <button onclick="openTeklifModal()" class="btn btn-primary btn-lg">Özel Teklif Al</button>
-        <a href="https://wa.me/905330193134" target="_blank" class="btn btn-ghost btn-lg">💬 WhatsApp’tan Ulaş</a>
+        <button onclick="openTeklifModal()" class="btn btn-primary btn-lg" data-i18n="shared.btn.hementeklif">Özel Teklif Al</button>
+        <a href="https://wa.me/905330193134" target="_blank" class="btn btn-ghost btn-lg" data-i18n="kurs.cta.whatsapp">💬 WhatsApp'tan Ulaş</a>
       </div>
     </div>
 
@@ -324,41 +324,41 @@
     <div class="footer-grid">
       <div class="footer-brand">
         <a href="index.html" class="nav-logo" style="display:inline-flex"><img src="public/logos/68.png" alt="Derin Akademi" class="nav-logo-img"/></a>
-        <p class="brand-desc">İnsan kaynakları alanında uzmanlaşmış danışmanlık ve eğitim şirketi. Anlatan değil, çalışan sistemler kurarız.</p>
+        <p class="brand-desc" data-i18n="shared.footer.brandesc">İnsan kaynakları alanında uzmanlaşmış danışmanlık ve eğitim şirketi. Anlatan değil, çalışan sistemler kurarız.</p>
         <div class="footer-social">
           <a class="social-btn" href="https://www.instagram.com/derinakademi/" target="_blank">📷</a>
           <a class="social-btn" href="https://www.linkedin.com/in/hakan-selahi-001969/" target="_blank">in</a>
         </div>
       </div>
       <div>
-        <div class="footer-col-title">Hizmetler</div>
+        <div class="footer-col-title" data-i18n="shared.footer.hizmetler">Hizmetler</div>
         <ul class="footer-links">
-          <li><a href="kurslar.html">Eğitimlerimiz</a></li>
-          <li><a href="danismanlik.html">Danışmanlıklarımız</a></li>
-          <li><a href="kurslar.html">Kurumsal Eğitim</a></li>
-          <li><a href="danismanlik.html">Kurumsallaşma</a></li>
+          <li><a data-i18n="nav.egitimler" href="kurslar.html">Eğitimlerimiz</a></li>
+          <li><a data-i18n="nav.danismanlik" href="danismanlik.html">Danışmanlıklarımız</a></li>
+          <li><a href="kurslar.html" data-i18n="shared.footer.kurumsal.egitim">Kurumsal Eğitim</a></li>
+          <li><a href="danismanlik.html" data-i18n="shared.footer.kurumsallasma">Kurumsallaşma</a></li>
         </ul>
       </div>
       <div>
-        <div class="footer-col-title">Şirket</div>
+        <div class="footer-col-title" data-i18n="shared.footer.sirket">Şirket</div>
         <ul class="footer-links">
-          <li><a href="hakkimizda.html">Kurumsal</a></li>
-          <li><a href="blog.html">Deneyimlerimiz</a></li>
-          <li><a href="kariyer.html">Kariyer</a></li>
-          <li><a href="iletisim.html">İletişim</a></li>
+          <li><a data-i18n="nav.hakkimizda" href="hakkimizda.html">Kurumsal</a></li>
+          <li><a data-i18n="nav.blog" href="blog.html">Deneyimlerimiz</a></li>
+          <li><a href="kariyer.html" data-i18n="shared.footer.kariyer">Kariyer</a></li>
+          <li><a data-i18n="nav.iletisim" href="iletisim.html">İletişim</a></li>
         </ul>
       </div>
       <div>
-        <div class="footer-col-title">Bülten</div>
+        <div class="footer-col-title" data-i18n="shared.footer.bulten">Bülten</div>
         <div class="footer-newsletter">
-          <p>İK gündemindeki gelişmelerden ve eğitimlerimizden haberdar ol.</p>
+          <p data-i18n="shared.footer.bulten.desc">İK gündemindeki gelişmelerden ve eğitimlerimizden haberdar ol.</p>
           <div class="newsletter-form"><input type="email" class="newsletter-input" placeholder="E-posta"/><button class="btn btn-primary btn-sm" onclick="showToast('Abone oldunuz! 🎉')">→</button></div>
         </div>
       </div>
     </div>
     <div class="footer-bottom">
-      <div class="footer-copy">© 2026 Derin Akademi. Tüm hakları saklıdır. &nbsp;<a href="https://reneedesignlab.com/tr" target="_blank" style="color:var(--silver-dim);text-decoration:none;" onmouseover="this.style.color='var(--silver)'" onmouseout="this.style.color='var(--silver-dim)'">by Renee DesignLab</a></div>
-      <div class="footer-legal"><a href="gizlilik-politikasi.html">Gizlilik Politikası</a><a href="kullanim-kosullari.html">Kullanım Koşulları</a><a href="kvkk.html">KVKK</a><a href="cerezler.html">Çerezler</a></div>
+      <div class="footer-copy" data-i18n="shared.footer.copy">© 2026 Derin Akademi. Tüm hakları saklıdır. &nbsp;<a href="https://reneedesignlab.com/tr" target="_blank" style="color:var(--silver-dim);text-decoration:none;" onmouseover="this.style.color='var(--silver)'" onmouseout="this.style.color='var(--silver-dim)'">by Renee DesignLab</a></div>
+      <div class="footer-legal"><a href="gizlilik-politikasi.html" data-i18n="shared.footer.gizlilik">Gizlilik Politikası</a><a href="kullanim-kosullari.html" data-i18n="shared.footer.kullanim">Kullanım Koşulları</a><a href="kvkk.html" data-i18n="shared.footer.kvkk">KVKK</a><a href="cerezler.html" data-i18n="shared.footer.cerezler">Çerezler</a></div>
     </div>
   </div>
 </footer>
@@ -372,7 +372,7 @@
   <div class="teklif-modal-box">
     <button class="teklif-modal-close" onclick="closeTeklifModal()">✕</button>
     <div>
-      <div style="color:var(--teal);font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:10px;">İletişim Bilgileri</div>
+      <div style="color:var(--teal);font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:10px;" data-i18n="shared.modal.contact">İletişim Bilgileri</div>
       <h2 style="font-family:'Montserrat',sans-serif;font-size:24px;font-weight:900;line-height:1.2;margin-bottom:8px;">Hemen <span class="gradient-text">Teklif Alın</span></h2>
       <p style="color:var(--silver);font-size:13px;line-height:1.75;margin-bottom:28px;">Eğitim ihtiyaçlarınızı paylaşın, size özel program ve teklif oluşturalım.</p>
       <div style="display:flex;flex-direction:column;gap:18px;margin-bottom:28px;">

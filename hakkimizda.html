@@ -106,12 +106,12 @@
       <img src="public/logos/68.png" alt="Derin Akademi" class="nav-logo-img"/>
     </a>
     <ul class="nav-links">
-      <li><a href="kurslar.html">Eğitimlerimiz</a></li>
-      <li><a href="danismanlik.html">Danışmanlıklarımız</a></li>
+      <li><a data-i18n="nav.egitimler" href="kurslar.html">Eğitimlerimiz</a></li>
+      <li><a data-i18n="nav.danismanlik" href="danismanlik.html">Danışmanlıklarımız</a></li>
       <li><a href="hakkimizda.html" class="active">Kurumsal</a></li>
-      <li><a href="referanslar.html">Referanslarımız</a></li>
-      <li><a href="blog.html">Deneyimlerimiz</a></li>
-      <li><a href="iletisim.html">İletişim</a></li>
+      <li><a data-i18n="nav.referanslar" href="referanslar.html">Referanslarımız</a></li>
+      <li><a data-i18n="nav.blog" href="blog.html">Deneyimlerimiz</a></li>
+      <li><a data-i18n="nav.iletisim" href="iletisim.html">İletişim</a></li>
     </ul>
     <div class="nav-actions">
       <button id="darkModeToggle" onclick="toggleDarkMode()" class="btn btn-ghost btn-sm" style="font-weight:700;letter-spacing:1px;padding:7px 14px;min-width:52px;" title="Dark/Light Mode">🌙</button>
@@ -123,8 +123,8 @@
 </nav>
 <div class="mobile-nav">
   <button class="mobile-nav-close">✕</button>
-  <a href="index.html">Ana Sayfa</a><a href="kurslar.html">Eğitimlerimiz</a><a href="danismanlik.html">Danışmanlıklarımız</a>
-  <a href="hakkimizda.html" class="active">Kurumsal</a><a href="referanslar.html">Referanslarımız</a><a href="blog.html">Deneyimlerimiz</a><a href="iletisim.html">İletişim</a>
+  <a data-i18n="nav.anasayfa" href="index.html">Ana Sayfa</a><a data-i18n="nav.egitimler" href="kurslar.html">Eğitimlerimiz</a><a data-i18n="nav.danismanlik" href="danismanlik.html">Danışmanlıklarımız</a>
+  <a href="hakkimizda.html" class="active">Kurumsal</a><a data-i18n="nav.referanslar" href="referanslar.html">Referanslarımız</a><a data-i18n="nav.blog" href="blog.html">Deneyimlerimiz</a><a data-i18n="nav.iletisim" href="iletisim.html">İletişim</a>
   <div class="mobile-nav-actions">
     <button onclick="openTeklifModal()" class="btn btn-primary btn-md" style="width:100%;justify-content:center">Özel Teklif Al</button>
   </div>
@@ -133,9 +133,9 @@
 <!-- ══ PAGE HERO ══ -->
 <div class="page-hero">
   <div class="container">
-    <div class="page-hero-tag reveal"><span class="section-tag">Hakkımızda</span></div>
-    <h1 class="page-hero-title reveal reveal-d1">Eğitim ve İK Danışmanlığında<br>Yılların Tecrübesi</h1>
-    <p class="page-hero-desc reveal reveal-d2">Derin Akademi, insan kaynakları alanında uzmanlaşmış bir danışmanlık ve eğitim şirketidir. İK'yı operasyonel bir destek fonksiyonundan, iş sonuçlarını etkileyen stratejik bir kaldıraca dönüştürüyoruz.</p>
+    <div class="page-hero-tag reveal"><span class="section-tag" data-i18n="hkm.hero.tag">Hakkımızda</span></div>
+    <h1 class="page-hero-title reveal reveal-d1" data-i18n-html="hkm.hero.title">Eğitim ve İK Danışmanlığında<br>Yılların Tecrübesi</h1>
+    <p class="page-hero-desc reveal reveal-d2" data-i18n="hkm.hero.desc">Derin Akademi, insan kaynakları alanında uzmanlaşmış bir danışmanlık ve eğitim şirketidir. İK'yı operasyonel bir destek fonksiyonundan, iş sonuçlarını etkileyen stratejik bir kaldıraca dönüştürüyoruz.</p>
   </div>
 </div>
 
@@ -143,10 +143,10 @@
 <div style="position:relative;z-index:2;padding:56px 0;border-bottom:1px solid var(--glass-bd);">
   <div class="container">
     <div class="stats-row">
-      <div class="stat-box reveal"><div class="stat-num">40<em>+</em></div><div class="stat-label">Hizmet Verilen Kurum</div></div>
-      <div class="stat-box reveal reveal-d1"><div class="stat-num">30<em>+</em></div><div class="stat-label">Yıllık Tecrübe</div></div>
-      <div class="stat-box reveal reveal-d2"><div class="stat-num">98<em>%</em></div><div class="stat-label">Memnuniyet</div></div>
-      <div class="stat-box reveal reveal-d3"><div class="stat-num">7<em>+</em></div><div class="stat-label">Farklı Sektör</div></div>
+      <div class="stat-box reveal"><div class="stat-num">40<em>+</em></div><div class="stat-label" data-i18n="hkm.stat.kurum">Hizmet Verilen Kurum</div></div>
+      <div class="stat-box reveal reveal-d1"><div class="stat-num">30<em>+</em></div><div class="stat-label" data-i18n="hkm.stat.tecrube">Yıllık Tecrübe</div></div>
+      <div class="stat-box reveal reveal-d2"><div class="stat-num">98<em>%</em></div><div class="stat-label" data-i18n="hkm.stat.memnuniyet">Memnuniyet</div></div>
+      <div class="stat-box reveal reveal-d3"><div class="stat-num">7<em>+</em></div><div class="stat-label" data-i18n="hkm.stat.sektor">Farklı Sektör</div></div>
     </div>
   </div>
 </div>
@@ -156,19 +156,19 @@
   <div class="container">
     <div class="mission-grid">
       <div>
-        <div class="section-tag reveal">Dönüşüm Felsefemiz</div>
-        <h2 class="section-title reveal reveal-d1">Anlatan Değil,<br><span class="gradient-text">Çalışan Sistemler</span> Kurarız</h2>
-        <p style="color:var(--silver);font-size:15px;line-height:1.8;margin-bottom:20px;" class="reveal reveal-d2">Derin Akademi, insan kaynakları alanında kurumlarla birlikte dönüşümü yöneten bir eğitim ve danışmanlık yapısıdır. Amacımız, insan kaynaklarını operasyonel bir destek fonksiyonu olmaktan çıkarıp, iş sonuçlarını etkileyen stratejik bir kaldıraç haline getirmektir.</p>
-        <p style="color:var(--silver);font-size:15px;line-height:1.8;margin-bottom:32px;" class="reveal reveal-d3">Bugüne kadar 40'tan fazla kurumla yürütülen çalışmalar tek bir ilkeye dayanır: Çözümler hazır modellerle değil; kurumun hedefleri, kültürü ve mevcut olgunluk seviyesi dikkate alınarak tasarlanır.</p>
+        <div class="section-tag reveal" data-i18n="hkm.felsefe.tag">Dönüşüm Felsefemiz</div>
+        <h2 class="section-title reveal reveal-d1" data-i18n-html="hkm.felsefe.title">Anlatan Değil,<br><span class="gradient-text">Çalışan Sistemler</span> Kurarız</h2>
+        <p style="color:var(--silver);font-size:15px;line-height:1.8;margin-bottom:20px;" class="reveal reveal-d2" data-i18n="hkm.felsefe.desc1">Derin Akademi, insan kaynakları alanında kurumlarla birlikte dönüşümü yöneten bir eğitim ve danışmanlık yapısıdır. Amacımız, insan kaynaklarını operasyonel bir destek fonksiyonu olmaktan çıkarıp, iş sonuçlarını etkileyen stratejik bir kaldıraç haline getirmektir.</p>
+        <p style="color:var(--silver);font-size:15px;line-height:1.8;margin-bottom:32px;" class="reveal reveal-d3" data-i18n="hkm.felsefe.desc2">Bugüne kadar 40'tan fazla kurumla yürütülen çalışmalar tek bir ilkeye dayanır: Çözümler hazır modellerle değil; kurumun hedefleri, kültürü ve mevcut olgunluk seviyesi dikkate alınarak tasarlanır.</p>
         <div style="display:flex;gap:16px;flex-wrap:wrap;" class="reveal reveal-d4">
-          <a href="kurslar.html" class="btn btn-primary btn-lg">Eğitimlerimiz</a>
-          <a href="danismanlik.html" class="btn btn-ghost btn-lg">Danışmanlık</a>
+          <a href="kurslar.html" class="btn btn-primary btn-lg" data-i18n="hkm.felsefe.btn1">Eğitimlerimiz</a>
+          <a href="danismanlik.html" class="btn btn-ghost btn-lg" data-i18n="hkm.felsefe.btn2">Danışmanlık</a>
         </div>
       </div>
       <div class="mission-visual reveal reveal-d2">
-        <div class="mv-card" style="grid-column:1;grid-row:1"><i class="fas fa-bullseye mv-card-icon"></i><div class="mv-card-label">Davranış Dönüşümü</div><div class="mv-card-sub">Karar &amp; yönetim biçimi</div></div>
-        <div class="mv-card" style="grid-column:2;grid-row:1/3"><i class="fas fa-chess-pawn mv-card-icon"></i><div class="mv-card-label">Stratejik İK</div><div class="mv-card-sub">Operasyonelten stratejiye</div></div>
-        <div class="mv-card" style="grid-column:1;grid-row:2"><i class="fas fa-hammer mv-card-icon"></i><div class="mv-card-label">Kuruma Özel</div><div class="mv-card-sub">Hazır model yok</div></div>
+        <div class="mv-card" style="grid-column:1;grid-row:1"><i class="fas fa-bullseye mv-card-icon"></i><div class="mv-card-label" data-i18n="hkm.felsefe.card1.label">Davranış Dönüşümü</div><div class="mv-card-sub" data-i18n="hkm.felsefe.card1.sub">Karar &amp; yönetim biçimi</div></div>
+        <div class="mv-card" style="grid-column:2;grid-row:1/3"><i class="fas fa-chess-pawn mv-card-icon"></i><div class="mv-card-label" data-i18n="hkm.felsefe.card2.label">Stratejik İK</div><div class="mv-card-sub" data-i18n="hkm.felsefe.card2.sub">Operasyonelten stratejiye</div></div>
+        <div class="mv-card" style="grid-column:1;grid-row:2"><i class="fas fa-hammer mv-card-icon"></i><div class="mv-card-label" data-i18n="hkm.felsefe.card3.label">Kuruma Özel</div><div class="mv-card-sub" data-i18n="hkm.felsefe.card3.sub">Hazır model yok</div></div>
       </div>
     </div>
   </div>
@@ -178,8 +178,8 @@
 <section class="section-pad" style="padding-top:0">
   <div class="container">
     <div style="text-align:center;margin-bottom:60px;">
-      <div class="section-tag reveal" style="justify-content:center">Değerlerimiz</div>
-      <h2 class="section-title reveal reveal-d1" style="text-align:center">İlkelerimiz Bizi<br><span class="gradient-text">Biz Yapar</span></h2>
+      <div class="section-tag reveal" style="justify-content:center" data-i18n="hkm.degerler.tag">Değerlerimiz</div>
+      <h2 class="section-title reveal reveal-d1" style="text-align:center" data-i18n-html="hkm.degerler.title">İlkelerimiz Bizi<br><span class="gradient-text">Biz Yapar</span></h2>
     </div>
     <div class="values-grid">
       <div class="value-card reveal"><i class="fas fa-flask value-icon"></i><h3 class="value-title">Derinlik Üzerine</h3><p class="value-desc">Yüzeysel içerik değil, konseptin özüne inen, uygulamalı, derinlemesine programlar tasarlıyoruz.</p></div>
@@ -203,21 +203,21 @@
         <span style="font-size:90px;opacity:0.3;display:none;width:100%;height:100%;align-items:center;justify-content:center;">👤</span>
       </div>
       <div>
-        <div class="section-tag reveal">Kurucumuz</div>
-        <h2 class="section-title reveal reveal-d1">Hakan Selahi</h2>
-        <p class="founder-sub reveal reveal-d2">İK Stratejisti · ACC Koç · Kurumsallaşma Danışmanı ve Eğitmeni</p>
-        <p class="founder-bio reveal reveal-d3">30+ yıllık tecrübeyle Derin Akademi'nin kurucusu Hakan Selahi, bugüne kadar hem yerli hem de yabancı sermayeli kırktan fazla şirkete uzmanlık alanlarında danışmanlık ve kuruma özel eğitimler sunmuştur. CHRO ve İK Direktörlüğü deneyimiyle HSBC, Deutsche Bank, Acıbadem Sağlık gibi önde gelen kurumlarda liderlik yapmıştır.</p>
-        <p class="founder-bio reveal reveal-d3" style="margin-top:-10px;">Uzmanlık alanları: Kurumsallaşma tasarımı, performans ve yetenek yönetimi. Her kurumun ihtiyacına özel olarak tasarlanan çözümler; sadece teorik bilgi değil, gerçek iş yaşamından beslenen içgörülerle şekillenir.</p>
+        <div class="section-tag reveal" data-i18n="hkm.kurucu.tag">Kurucumuz</div>
+        <h2 class="section-title reveal reveal-d1" data-i18n="hkm.kurucu.name">Hakan Selahi</h2>
+        <p class="founder-sub reveal reveal-d2" data-i18n="hkm.kurucu.role">İK Stratejisti · ACC Koç · Kurumsallaşma Danışmanı ve Eğitmeni</p>
+        <p class="founder-bio reveal reveal-d3" data-i18n="hkm.kurucu.bio1">30+ yıllık tecrübeyle Derin Akademi'nin kurucusu Hakan Selahi, bugüne kadar hem yerli hem de yabancı sermayeli kırktan fazla şirkete uzmanlık alanlarında danışmanlık ve kuruma özel eğitimler sunmuştur. CHRO ve İK Direktörlüğü deneyimiyle HSBC, Deutsche Bank, Acıbadem Sağlık gibi önde gelen kurumlarda liderlik yapmıştır.</p>
+        <p class="founder-bio reveal reveal-d3" style="margin-top:-10px;" data-i18n="hkm.kurucu.bio2">Uzmanlık alanları: Kurumsallaşma tasarımı, performans ve yetenek yönetimi. Her kurumun ihtiyacına özel olarak tasarlanan çözümler; sadece teorik bilgi değil, gerçek iş yaşamından beslenen içgörülerle şekillenir.</p>
         <div class="founder-chips reveal reveal-d4">
           <span class="founder-chip">HSBC</span>
           <span class="founder-chip">Deutsche Bank</span>
           <span class="founder-chip">Acıbadem Sağlık</span>
           <span class="founder-chip">CHRO Deneyimi</span>
         </div>
-        <p class="founder-memb reveal reveal-d5">🎓 Adler ACC Sertifikalı Koç &nbsp;·&nbsp; NLP Uygulayıcısı &nbsp;·&nbsp; TEGEP Üyesi &nbsp;·&nbsp; ICF Üyesi</p>
+        <p class="founder-memb reveal reveal-d5" data-i18n="hkm.kurucu.memberships">🎓 Adler ACC Sertifikalı Koç &nbsp;·&nbsp; NLP Uygulayıcısı &nbsp;·&nbsp; TEGEP Üyesi &nbsp;·&nbsp; ICF Üyesi</p>
         <div style="display:flex;gap:14px;flex-wrap:wrap;margin-top:24px;" class="reveal">
-          <button onclick="openTeklifModal()" class="btn btn-primary btn-lg">Teklif Al</button>
-          <a href="iletisim.html" class="btn btn-ghost btn-lg">Bize Ulaş</a>
+          <button onclick="openTeklifModal()" class="btn btn-primary btn-lg" data-i18n="hkm.kurucu.btn1">Teklif Al</button>
+          <a href="iletisim.html" class="btn btn-ghost btn-lg" data-i18n="hkm.kurucu.btn2">Bize Ulaş</a>
         </div>
       </div>
     </div>
@@ -228,12 +228,12 @@
 <section class="section-pad" style="padding-bottom:120px;">
   <div class="container">
     <div class="about-cta reveal">
-      <div class="section-tag" style="justify-content:center;margin-bottom:16px;">Katıl</div>
-      <h2 class="section-title" style="text-align:center;font-size:clamp(28px,4vw,48px);">Dönüşümün Bir Parçası Ol</h2>
-      <p style="color:var(--silver);max-width:520px;margin:16px auto 32px;text-align:center;font-size:15px;">İK'nızı stratejik bir değere dönüştürmek için kurumunuza özel program hazırlayalım. Hemen ulaşın.</p>
+      <div class="section-tag" style="justify-content:center;margin-bottom:16px;" data-i18n="hkm.cta.tag">Katıl</div>
+      <h2 class="section-title" style="text-align:center;font-size:clamp(28px,4vw,48px);" data-i18n="hkm.cta.title">Dönüşümün Bir Parcıası Ol</h2>
+      <p style="color:var(--silver);max-width:520px;margin:16px auto 32px;text-align:center;font-size:15px;" data-i18n="hkm.cta.desc">İK'nızı stratejik bir değere dönüştürmek için kurumunuza özel program hazırlayalım. Hemen ulaşın.</p>
       <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
-        <button onclick="openTeklifModal()" class="btn btn-primary btn-xl">Özel Teklif Al</button>
-        <a href="kurslar.html" class="btn btn-ghost btn-xl">Eğitimlerimiz</a>
+        <button onclick="openTeklifModal()" class="btn btn-primary btn-xl" data-i18n="hkm.cta.btn1">Özel Teklif Al</button>
+        <a href="kurslar.html" class="btn btn-ghost btn-xl" data-i18n="hkm.cta.btn2">Eğitimlerimiz</a>
       </div>
     </div>
   </div>
@@ -245,32 +245,32 @@
     <div class="footer-grid">
       <div class="footer-brand">
         <a href="index.html" class="nav-logo" style="display:inline-flex"><img src="public/logos/68.png" alt="Derin Akademi" class="nav-logo-img"/></a>
-        <p class="brand-desc">İnsan kaynakları alanında uzmanlaşmış danışmanlık ve eğitim şirketi. Anlatan değil, çalışan sistemler kurarız.</p>
+        <p class="brand-desc" data-i18n="shared.footer.brandesc">İnsan kaynakları alanında uzmanlaşmış danışmanlık ve eğitim şirketi. Anlatan değil, çalışan sistemler kurarız.</p>
         <div class="footer-social">
           <a class="social-btn" href="https://www.instagram.com/derinakademi/" target="_blank">📷</a>
           <a class="social-btn" href="https://www.linkedin.com/in/hakan-selahi-001969/" target="_blank">in</a>
         </div>
       </div>
       <div>
-        <div class="footer-col-title">Hizmetler</div>
+        <div class="footer-col-title" data-i18n="shared.footer.hizmetler">Hizmetler</div>
         <ul class="footer-links">
-          <li><a href="kurslar.html">Eğitimlerimiz</a></li>
-          <li><a href="danismanlik.html">Danışmanlıklarımız</a></li>
+          <li><a data-i18n="nav.egitimler" href="kurslar.html">Eğitimlerimiz</a></li>
+          <li><a data-i18n="nav.danismanlik" href="danismanlik.html">Danışmanlıklarımız</a></li>
           <li><a href="kurslar.html">Kurumsal Eğitim</a></li>
           <li><a href="danismanlik.html">Kurumsallaşma</a></li>
         </ul>
       </div>
       <div>
-        <div class="footer-col-title">Şirket</div>
+        <div class="footer-col-title" data-i18n="shared.footer.sirket">Şirket</div>
         <ul class="footer-links">
-          <li><a href="hakkimizda.html">Kurumsal</a></li>
-          <li><a href="blog.html">Deneyimlerimiz</a></li>
+          <li><a data-i18n="nav.hakkimizda" href="hakkimizda.html">Kurumsal</a></li>
+          <li><a data-i18n="nav.blog" href="blog.html">Deneyimlerimiz</a></li>
           <li><a href="kariyer.html">Kariyer</a></li>
-          <li><a href="iletisim.html">İletişim</a></li>
+          <li><a data-i18n="nav.iletisim" href="iletisim.html">İletişim</a></li>
         </ul>
       </div>
       <div>
-        <div class="footer-col-title">Bülten</div>
+        <div class="footer-col-title" data-i18n="shared.footer.bulten">Bülten</div>
         <div class="footer-newsletter">
           <p>İK gündemindeki gelişmelerden ve eğitimlerimizden haberdar ol.</p>
           <div class="newsletter-form"><input type="email" class="newsletter-input" placeholder="E-posta"/><button class="btn btn-primary btn-sm" onclick="showToast('Abone oldunuz! 🎉')">→</button></div>
@@ -278,8 +278,8 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <div class="footer-copy">© 2026 Derin Akademi. Tüm hakları saklıdır. &nbsp;<a href="https://reneedesignlab.com/tr" target="_blank" style="color:var(--silver-dim);text-decoration:none;" onmouseover="this.style.color='var(--silver)'" onmouseout="this.style.color='var(--silver-dim)'">by Renee DesignLab</a></div>
-      <div class="footer-legal"><a href="gizlilik-politikasi.html">Gizlilik Politikası</a><a href="kullanim-kosullari.html">Kullanım Koşulları</a><a href="kvkk.html">KVKK</a><a href="cerezler.html">Çerezler</a></div>
+      <div class="footer-copy" data-i18n="shared.footer.copy">© 2026 Derin Akademi. Tüm hakları saklıdır. &nbsp;<a href="https://reneedesignlab.com/tr" target="_blank" style="color:var(--silver-dim);text-decoration:none;" onmouseover="this.style.color='var(--silver)'" onmouseout="this.style.color='var(--silver-dim)'">by Renee DesignLab</a></div>
+      <div class="footer-legal"><a href="gizlilik-politikasi.html" data-i18n="shared.footer.gizlilik">Gizlilik Politikası</a><a href="kullanim-kosullari.html" data-i18n="shared.footer.kullanim">Kullanım Koşulları</a><a href="kvkk.html" data-i18n="shared.footer.kvkk">KVKK</a><a href="cerezler.html" data-i18n="shared.footer.cerezler">Çerezler</a></div>
     </div>
   </div>
 </footer>
@@ -304,7 +304,7 @@
   <div class="teklif-modal-box">
     <button class="teklif-modal-close" onclick="closeTeklifModal()">✕</button>
     <div>
-      <div style="color:var(--teal);font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:10px;">İletişim Bilgileri</div>
+      <div style="color:var(--teal);font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:10px;" data-i18n="shared.modal.contact">İletişim Bilgileri</div>
       <h2 style="font-family:'Montserrat',sans-serif;font-size:24px;font-weight:900;line-height:1.2;margin-bottom:8px;">Hemen <span class="gradient-text">Teklif Alın</span></h2>
       <p style="color:var(--silver);font-size:13px;line-height:1.75;margin-bottom:28px;">Eğitim ihtiyaçlarınızı paylaşın, size özel program ve teklif oluşturalım.</p>
       <div style="display:flex;flex-direction:column;gap:18px;margin-bottom:28px;">

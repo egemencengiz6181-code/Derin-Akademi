@@ -91,12 +91,12 @@
   <div class="nav-inner">
     <a href="index.html" class="nav-logo"><img src="public/logos/68.png" alt="Derin Akademi" class="nav-logo-img"/></a>
     <ul class="nav-links">
-      <li><a href="kurslar.html">Eğitimlerimiz</a></li>
-      <li><a href="danismanlik.html">Danışmanlıklarımız</a></li>
-      <li><a href="hakkimizda.html">Kurumsal</a></li>
-      <li><a href="referanslar.html">Referanslarımız</a></li>
+      <li><a data-i18n="nav.egitimler" href="kurslar.html">Eğitimlerimiz</a></li>
+      <li><a data-i18n="nav.danismanlik" href="danismanlik.html">Danışmanlıklarımız</a></li>
+      <li><a data-i18n="nav.hakkimizda" href="hakkimizda.html">Kurumsal</a></li>
+      <li><a data-i18n="nav.referanslar" href="referanslar.html">Referanslarımız</a></li>
       <li><a href="blog.html" class="active">Deneyimlerimiz</a></li>
-      <li><a href="iletisim.html">İletişim</a></li>
+      <li><a data-i18n="nav.iletisim" href="iletisim.html">İletişim</a></li>
     </ul>
     <div class="nav-actions">
       <button id="darkModeToggle" onclick="toggleDarkMode()" class="btn btn-ghost btn-sm" style="font-weight:700;letter-spacing:1px;padding:7px 14px;min-width:52px;" title="Dark/Light Mode">🌙</button>
@@ -108,13 +108,13 @@
 </nav>
 <div class="mobile-nav">
   <button class="mobile-nav-close">✕</button>
-  <a href="index.html">Ana Sayfa</a>
-  <a href="kurslar.html">Eğitimlerimiz</a>
-  <a href="danismanlik.html">Danışmanlıklarımız</a>
-  <a href="hakkimizda.html">Kurumsal</a>
-  <a href="referanslar.html">Referanslarımız</a>
+  <a data-i18n="nav.anasayfa" href="index.html">Ana Sayfa</a>
+  <a data-i18n="nav.egitimler" href="kurslar.html">Eğitimlerimiz</a>
+  <a data-i18n="nav.danismanlik" href="danismanlik.html">Danışmanlıklarımız</a>
+  <a data-i18n="nav.hakkimizda" href="hakkimizda.html">Kurumsal</a>
+  <a data-i18n="nav.referanslar" href="referanslar.html">Referanslarımız</a>
   <a href="blog.html" class="active">Deneyimlerimiz</a>
-  <a href="iletisim.html">İletişim</a>
+  <a data-i18n="nav.iletisim" href="iletisim.html">İletişim</a>
   <div class="mobile-nav-actions">
     <button onclick="openTeklifModal()" class="btn btn-primary btn-md" style="width:100%;justify-content:center">Özel Teklif Al</button>
   </div>
@@ -122,9 +122,9 @@
 
 <div class="page-hero">
   <div class="container">
-    <div class="page-hero-tag reveal"><span class="section-tag">Deneyimlerimiz</span></div>
-    <h1 class="page-hero-title reveal reveal-d1">İK ve Liderlik<br/><span class="gradient-text">Üzerine Derin Düşünceler</span></h1>
-    <p class="page-hero-desc reveal reveal-d2">Sahadan gelen gözlemler, araştırmaya dayalı çıkarımlar ve kurumsal dönüşüm üzerine gerçek içgörüler.</p>
+    <div class="page-hero-tag reveal"><span class="section-tag" data-i18n="blog.hero.tag">Deneyimlerimiz</span></div>
+    <h1 class="page-hero-title reveal reveal-d1" data-i18n-html="blog.hero.title">İK ve Liderlik<br/><span class="gradient-text">Üzerine Derin Düşünceler</span></h1>
+    <p class="page-hero-desc reveal reveal-d2" data-i18n="blog.hero.desc">Sahadan gelen gözlemler, araştırmaya dayalı çıkarımlar ve kurumsal dönüşüm üzerine gerçek içgörüler.</p>
   </div>
 </div>
 
@@ -137,11 +137,11 @@
         <span style="font-size:90px;opacity:0.3;display:none;width:100%;height:100%;align-items:center;justify-content:center;">👤</span>
       </div>
       <div class="founder-content">
-        <div class="section-tag reveal">Kurucumuz</div>
-        <h2 class="section-title reveal reveal-d1">Hakan Selahi</h2>
-        <p style="color:var(--teal);font-weight:600;margin-bottom:14px;margin-top:6px;line-height:1.6;" class="reveal reveal-d2">İK Stratejisti · ACC Koç · Kurumsallaşma Danışmanı</p>
-        <p style="font-size:14px;color:var(--silver);line-height:1.8;margin-bottom:20px;" class="reveal reveal-d3">30+ yıllık tecrübe ile insan kaynakları alanında yüzlerce kurumu stratejik dönüşüm sürecinde yönetmiştir. Bu yazılar da ona ait derinlemesine düşünceler, sahadan gelen gözlemler ve kurumsal yaşamın gerçek içgörüleridir.</p>
-        <a href="hakkimizda.html" class="btn btn-ghost btn-md reveal" style="width:fit-content;">Hakkında Daha Fazla →</a>
+        <div class="section-tag reveal" data-i18n="blog.kurucu.tag">Kurucumuz</div>
+        <h2 class="section-title reveal reveal-d1" data-i18n="blog.kurucu.name">Hakan Selahi</h2>
+        <p style="color:var(--teal);font-weight:600;margin-bottom:14px;margin-top:6px;line-height:1.6;" class="reveal reveal-d2" data-i18n="blog.kurucu.role">İK Stratejisti · ACC Koç · Kurumsallaşma Danışmanı</p>
+        <p style="font-size:14px;color:var(--silver);line-height:1.8;margin-bottom:20px;" class="reveal reveal-d3" data-i18n="blog.kurucu.bio">30+ yıllık tecrübe ile insan kaynakları alanında yüzlerce kurumu stratejik dönüşüm sürecinde yönetmiştir. Bu yazılar da ona ait derinlemesine düşünceler, sahadan gelen gözlemler ve kurumsal yaşamın gerçek içgörüleridir.</p>
+        <a href="hakkimizda.html" class="btn btn-ghost btn-md reveal" style="width:fit-content;" data-i18n="blog.kurucu.link">Hakkında Daha Fazla →</a>
       </div>
     </div>
   </div>
@@ -150,15 +150,15 @@
 <section class="section-pad">
   <div class="container">
     <div class="blog-filter reveal">
-      <h2 style="font-size:24px;font-weight:900;margin-bottom:20px;color:var(--white);">Yazılarımız</h2>
+      <h2 style="font-size:24px;font-weight:900;margin-bottom:20px;color:var(--white);" data-i18n="blog.yazlarimiz">Yazılarımız</h2>
       <div style="display:flex;flex-wrap:wrap;gap:10px;">
-        <button class="filter-tab active" onclick="filterPosts('tumu', this)">Tumu</button>
-      <button class="filter-tab" onclick="filterPosts('liderlik', this)">&#127919; Liderlik</button>
-      <button class="filter-tab" onclick="filterPosts('ise-alim', this)">&#128101; Ise Alim</button>
-      <button class="filter-tab" onclick="filterPosts('performans', this)">&#128200; Performans</button>
-      <button class="filter-tab" onclick="filterPosts('stratejik-ik', this)">&#129517; Stratejik IK</button>
-        <button class="filter-tab" onclick="filterPosts('yz-ik', this)">&#129302; YZ &amp; IK</button>
-        <button class="filter-tab" onclick="filterPosts('kurumsal', this)">&#127963; Kurumsal</button>
+        <button class="filter-tab active" onclick="filterPosts('tumu', this)" data-i18n="blog.filter.tumu">Tümü</button>
+      <button class="filter-tab" onclick="filterPosts('liderlik', this)" data-i18n="blog.filter.liderlik">&#127919; Liderlik</button>
+      <button class="filter-tab" onclick="filterPosts('ise-alim', this)" data-i18n="blog.filter.isealim">&#128101; İşe Alım</button>
+      <button class="filter-tab" onclick="filterPosts('performans', this)" data-i18n="blog.filter.performans">&#128200; Performans</button>
+      <button class="filter-tab" onclick="filterPosts('stratejik-ik', this)" data-i18n="blog.filter.stratejik">&#129517; Stratejik İK</button>
+        <button class="filter-tab" onclick="filterPosts('yz-ik', this)" data-i18n="blog.filter.yz">&#129302; YZ &amp; IK</button>
+        <button class="filter-tab" onclick="filterPosts('kurumsal', this)" data-i18n="blog.filter.kurumsal">&#127963; Kurumsal</button>
       </div>
     </div>
 
@@ -166,59 +166,59 @@
       <main>
         <div class="featured-post reveal" data-cat="liderlik">
           <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&q=80&auto=format&fit=crop" alt="Geri Bildirim Kulturu" class="featured-post-img"/>
-          <span class="featured-badge">One Cikan</span>
+          <span class="featured-badge" data-i18n="blog.featured.badge">Öne Çıkan</span>
           <div class="featured-body">
             <div class="featured-meta">
-              <span class="feat-cat">&#127919; Liderlik</span>
+              <span class="feat-cat" data-i18n="blog.feat.cat">&#127919; Liderlik</span>
               <span class="feat-dot"></span>
-              <span class="feat-date">Haziran 2025</span>
+              <span class="feat-date" data-i18n="blog.feat.date">Haziran 2025</span>
               <span class="feat-dot"></span>
-              <span class="feat-read">7 dk okuma</span>
+              <span class="feat-read" data-i18n="blog.feat.read">7 dk okuma</span>
             </div>
-            <h2 class="featured-title"><a href="blog/geri-bildirim-kulturu.html">Geri Bildirim Kulturu Nasil Insa Edilir?</a></h2>
-            <p class="featured-excerpt">Kurumda gercek bir geri bildirim kulturu kurmak yalnizca anket gondermekten ibaret degil. Psikolojik guvenlik, yapilandirilmis model ve liderlik davranisi ucgeninde bir donusum gerektiriyor.</p>
-            <a href="blog/geri-bildirim-kulturu.html" class="btn-read">Yaziyi Oku &rarr;</a>
+            <h2 class="featured-title"><a href="blog/geri-bildirim-kulturu.html" data-i18n="blog.feat.title">Geri Bildirim Kültürü Nasıl İnşa Edilir?</a></h2>
+            <p class="featured-excerpt" data-i18n="blog.feat.excerpt">Kurumda gerçek bir geri bildirim kültürü kurmak yalnızca anket göndermekten ibaret değil. Psikolojik guvenlik, yapilandirilmis model ve liderlik davranisi ucgeninde bir donusum gerektiriyor.</p>
+            <a href="blog/geri-bildirim-kulturu.html" class="btn-read" data-i18n="blog.feat.btn">Yazıyı Oku &rarr;</a>
           </div>
         </div>
 
         <div class="posts-grid" id="posts-grid">
           <div class="post-card reveal reveal-d1" data-cat="yz-ik">
-            <img src="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=800&q=80&auto=format&fit=crop" alt="Yapay Zeka Ise Alim" class="post-card-img"/>
+            <img src="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=800&q=80&auto=format&fit=crop" alt="Yapay Zekâ İşe Alım" class="post-card-img"/>
             <div class="post-card-body">
-              <div class="post-cat">&#129302; YZ &amp; IK</div>
-              <h3 class="post-title"><a href="blog/yapay-zeka-ise-alim.html">Yapay Zeka Ise Alimi Nasil Degistiriyor?</a></h3>
-              <p class="post-excerpt">CV taramasindan yetkinlik degerlendirmesine kadar yapay zekanin IK sureclerine etkisi ve dikkat edilmesi gereken kritik noktalar.</p>
-              <div class="post-footer"><span class="post-date">Mayis 2025 &middot; 6 dk</span><a href="blog/yapay-zeka-ise-alim.html" class="post-read">Oku &rarr;</a></div>
+              <div class="post-cat" data-i18n="blog.post.yz.cat">&#129302; YZ &amp; IK</div>
+              <h3 class="post-title"><a href="blog/yapay-zeka-ise-alim.html" data-i18n="blog.post.yz.title">Yapay Zekâ İşe Alımı Nasıl Değiştiriyor?</a></h3>
+              <p class="post-excerpt" data-i18n="blog.post.yz.excerpt">CV taramasından yetkinlik değlendirmesine kadar yapay zekanın İK süreçlerine etkisi ve dikkat edilmesi gereken kritik noktalar.</p>
+              <div class="post-footer"><span class="post-date" data-i18n="blog.post.yz.meta">Mayıs 2025 &middot; 6 dk</span><a href="blog/yapay-zeka-ise-alim.html" class="post-read" data-i18n="blog.btn.oku">Oku &rarr;</a></div>
             </div>
           </div>
 
           <div class="post-card reveal reveal-d2" data-cat="performans">
             <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=800&q=80&auto=format&fit=crop" alt="Performans Yonetimi" class="post-card-img"/>
             <div class="post-card-body">
-              <div class="post-cat">&#128200; Performans</div>
-              <h3 class="post-title"><a href="blog/performans-yonetimi-hatalar.html">Performans Yonetiminde Yapilan 5 Kritik Hata</a></h3>
-              <p class="post-excerpt">Yillik degerlendirme doNgusunden hedef belirsizligine kadar kurumlarin tekrarladi&#287;i hatalar ve nasil kacinilar.</p>
-              <div class="post-footer"><span class="post-date">Nisan 2025 &middot; 8 dk</span><a href="blog/performans-yonetimi-hatalar.html" class="post-read">Oku &rarr;</a></div>
+              <div class="post-cat" data-i18n="blog.post.perf.cat">&#128200; Performans</div>
+              <h3 class="post-title"><a href="blog/performans-yonetimi-hatalar.html" data-i18n="blog.post.perf.title">Performans Yönetiminde Yapılan 5 Kritik Hata</a></h3>
+              <p class="post-excerpt" data-i18n="blog.post.perf.excerpt">Yillik degerlendirme doNgusunden hedef belirsizligine kadar kurumlarin tekrarladi&#287;i hatalar ve nasil kacinilar.</p>
+              <div class="post-footer"><span class="post-date" data-i18n="blog.post.perf.meta">Nisan 2025 &middot; 8 dk</span><a href="blog/performans-yonetimi-hatalar.html" class="post-read" data-i18n="blog.btn.oku">Oku &rarr;</a></div>
             </div>
           </div>
 
           <div class="post-card reveal reveal-d1" data-cat="kurumsal">
-            <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80&auto=format&fit=crop" alt="Aile Sirketi" class="post-card-img"/>
+            <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80&auto=format&fit=crop" alt="Aile Şirketi" class="post-card-img"/>
             <div class="post-card-body">
-              <div class="post-cat">&#127963; Kurumsal</div>
-              <h3 class="post-title"><a href="blog/aile-sirketi-kurumsallasmasi.html">Aile Sirketi Kurumsalasirken Neden Basarisiz Olur?</a></h3>
-              <p class="post-excerpt">Aile sirketinin kurumsal bir yapiya gecis surecinde karsilastigi en yaygin tuzaklar ve bunlardan nasil cikilir.</p>
-              <div class="post-footer"><span class="post-date">Mart 2025 &middot; 9 dk</span><a href="blog/aile-sirketi-kurumsallasmasi.html" class="post-read">Oku &rarr;</a></div>
+              <div class="post-cat" data-i18n="blog.post.aile.cat">&#127963; Kurumsal</div>
+              <h3 class="post-title"><a href="blog/aile-sirketi-kurumsallasmasi.html" data-i18n="blog.post.aile.title">Aile Şirketi Kurumsallaşırken Neden Başarısız Olur?</a></h3>
+              <p class="post-excerpt" data-i18n="blog.post.aile.excerpt">Aile şirketinin kurumsal bir yapıya geçiş sürecinde karşılaştığı en yaygın tuzaklar ve bunlardan nasil cikilir.</p>
+              <div class="post-footer"><span class="post-date" data-i18n="blog.post.aile.meta">Mart 2025 &middot; 9 dk</span><a href="blog/aile-sirketi-kurumsallasmasi.html" class="post-read" data-i18n="blog.btn.oku">Oku &rarr;</a></div>
             </div>
           </div>
 
           <div class="post-card reveal reveal-d2" data-cat="stratejik-ik">
             <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80&auto=format&fit=crop" alt="Isgucku Planlamasi" class="post-card-img"/>
             <div class="post-card-body">
-              <div class="post-cat">&#129517; Stratejik IK</div>
-              <h3 class="post-title"><a href="blog/isgucku-planlamasi-2026.html">Isgucku Planlamasi 2026: Neden Simdi Baslamalisiniz?</a></h3>
-              <p class="post-excerpt">Demografik dalgalanmalar, teknoloji yetkinlik boslukları ve belirsiz ekonomik tabloda proaktif kadro planlamasinin onemi.</p>
-              <div class="post-footer"><span class="post-date">Subat 2025 &middot; 7 dk</span><a href="blog/isgucku-planlamasi-2026.html" class="post-read">Oku &rarr;</a></div>
+              <div class="post-cat" data-i18n="blog.post.isguc.cat">&#129517; Stratejik İK</div>
+              <h3 class="post-title"><a href="blog/isgucku-planlamasi-2026.html" data-i18n="blog.post.isguc.title">İşgüçü Planlaması 2026: Neden Şimdi Başlamalısınız?</a></h3>
+              <p class="post-excerpt" data-i18n="blog.post.isguc.excerpt">Demografik dalgalanmalar, teknoloji yetkinlik boşlukları ve belirsiz ekonomik tabloda proaktif kadro planlamasının önemi.</p>
+              <div class="post-footer"><span class="post-date" data-i18n="blog.post.isguc.meta">Şubat 2025 &middot; 7 dk</span><a href="blog/isgucku-planlamasi-2026.html" class="post-read" data-i18n="blog.btn.oku">Oku &rarr;</a></div>
             </div>
           </div>
         </div>
@@ -269,43 +269,43 @@
 
       <aside class="sidebar reveal">
         <div class="sidebar-widget">
-          <div class="widget-title">&#128236; Bultene Abone Ol</div>
-          <p style="font-size:13px;color:var(--silver);margin-bottom:16px;line-height:1.65;">IK gundemindeki gelismeler ve yeni yazilarimiz icin haftada bir e-posta.</p>
+          <div class="widget-title" data-i18n="blog.sidebar.bulten.title">&#128236; Bültene Abone Ol</div>
+          <p style="font-size:13px;color:var(--silver);margin-bottom:16px;line-height:1.65;" data-i18n="blog.sidebar.bulten.desc">İK gündemindeki gelişmeler ve yeni yazılarımız için haftada bir e-posta.</p>
           <input type="email" class="nl-input" placeholder="E-posta adresiniz"/>
           <button class="btn btn-primary btn-sm" style="width:100%;justify-content:center;" onclick="showToast('Abone oldunuz!')">Abone Ol</button>
         </div>
 
         <div class="sidebar-widget">
-          <div class="widget-title">&#128293; Populer Yazilar</div>
+          <div class="widget-title" data-i18n="blog.sidebar.populer">&#128293; Popüler Yazılar</div>
           <div class="pop-list">
-            <div class="pop-item"><div class="pop-num">01</div><div class="pop-title"><a href="blog/geri-bildirim-kulturu.html">Geri Bildirim Kulturu Nasil Insa Edilir?</a></div></div>
-            <div class="pop-item"><div class="pop-num">02</div><div class="pop-title"><a href="blog/performans-yonetimi-hatalar.html">Performansta 5 Kritik Hata</a></div></div>
-            <div class="pop-item"><div class="pop-num">03</div><div class="pop-title"><a href="blog/aile-sirketi-kurumsallasmasi.html">Aile Sirketi Kurumsallasmasindan Basarisizlik</a></div></div>
-            <div class="pop-item"><div class="pop-num">04</div><div class="pop-title"><a href="blog/yapay-zeka-ise-alim.html">YZ ve Ise Alim</a></div></div>
-            <div class="pop-item"><div class="pop-num">05</div><div class="pop-title"><a href="blog/isgucku-planlamasi-2026.html">Isgucku Planlamasi 2026</a></div></div>
+            <div class="pop-item"><div class="pop-num">01</div><div class="pop-title"><a href="blog/geri-bildirim-kulturu.html" data-i18n="blog.sidebar.populer.1">Geri Bildirim Kültürü Nasıl İnşa Edilir?</a></div></div>
+            <div class="pop-item"><div class="pop-num">02</div><div class="pop-title"><a href="blog/performans-yonetimi-hatalar.html" data-i18n="blog.sidebar.populer.2">Performansta 5 Kritik Hata</a></div></div>
+            <div class="pop-item"><div class="pop-num">03</div><div class="pop-title"><a href="blog/aile-sirketi-kurumsallasmasi.html" data-i18n="blog.sidebar.populer.3">Aile Şirketi Kurumsallaşmasından Başarısızlık</a></div></div>
+            <div class="pop-item"><div class="pop-num">04</div><div class="pop-title"><a href="blog/yapay-zeka-ise-alim.html" data-i18n="blog.sidebar.populer.4">YZ ve İşe Alım</a></div></div>
+            <div class="pop-item"><div class="pop-num">05</div><div class="pop-title"><a href="blog/isgucku-planlamasi-2026.html" data-i18n="blog.sidebar.populer.5">İşgüçü Planlaması 2026</a></div></div>
           </div>
         </div>
 
         <div class="sidebar-widget">
-          <div class="widget-title">&#127991;&#65039; Etiketler</div>
+          <div class="widget-title" data-i18n="blog.sidebar.etiketler">&#127991;&#65039; Etiketler</div>
           <div class="tags-cloud">
-            <span class="tag-pill">Liderlik</span>
-            <span class="tag-pill">Ise Alim</span>
-            <span class="tag-pill">Performans</span>
-            <span class="tag-pill">Yetenek</span>
-            <span class="tag-pill">Kurumsallasma</span>
-            <span class="tag-pill">OKR</span>
-            <span class="tag-pill">Yapay Zeka</span>
-            <span class="tag-pill">Geri Bildirim</span>
-            <span class="tag-pill">Kocluk</span>
-            <span class="tag-pill">Ucret</span>
+            <span class="tag-pill" data-i18n="blog.tag.liderlik">Liderlik</span>
+            <span class="tag-pill" data-i18n="blog.tag.isealim">İşe Alım</span>
+            <span class="tag-pill" data-i18n="blog.tag.performans">Performans</span>
+            <span class="tag-pill" data-i18n="blog.tag.yetenek">Yetenek</span>
+            <span class="tag-pill" data-i18n="blog.tag.kurumsallasma">Kurumsallaşma</span>
+            <span class="tag-pill" data-i18n="blog.tag.okr">OKR</span>
+            <span class="tag-pill" data-i18n="blog.tag.yz">Yapay Zekâ</span>
+            <span class="tag-pill" data-i18n="blog.tag.geribildirim">Geri Bildirim</span>
+            <span class="tag-pill" data-i18n="blog.tag.kocluk">Koçluk</span>
+            <span class="tag-pill">Ücret</span>
           </div>
         </div>
 
         <div class="sidebar-widget sidebar-cta">
           <div style="font-size:36px;margin-bottom:12px;">&#127919;</div>
-          <div class="widget-title" style="text-align:center;">Kurumunuza Ozel Danismanlik</div>
-          <p style="font-size:13px;color:var(--silver);line-height:1.6;margin-bottom:18px;">IK sureclerinizi stratejik bir rekabet avantajina donusturmek icin konusalim.</p>
+          <div class="widget-title" style="text-align:center;">Kurumunuza Özel Danışmanlık</div>
+          <p style="font-size:13px;color:var(--silver);line-height:1.6;margin-bottom:18px;">İK süreçlerinizi stratejik bir rekabet avantajına dönüştürmek için konuşalım.</p>
           <button onclick="openTeklifModal()" class="btn btn-primary btn-sm" style="width:100%;justify-content:center;">Teklif Al &rarr;</button>
         </div>
       </aside>
@@ -318,52 +318,52 @@
     <div class="footer-grid">
       <div class="footer-brand">
         <a href="index.html" class="nav-logo" style="display:inline-flex"><img src="public/logos/68.png" alt="Derin Akademi" class="nav-logo-img"/></a>
-        <p class="brand-desc">Insan kaynaklari alaninda uzmanlasmis danismanlik ve egitim sirketi. Anlatan degil, calisan sistemler kurariz.</p>
+        <p class="brand-desc" data-i18n="shared.footer.brandesc">İnsan kaynakları alanında uzmanlaşmış danışmanlık ve eğitim şirketi. Anlatan degil, calisan sistemler kurariz.</p>
         <div class="footer-social">
           <a class="social-btn" href="https://www.instagram.com/derinakademi/" target="_blank">&#128247;</a>
           <a class="social-btn" href="https://www.linkedin.com/in/hakan-selahi-001969/" target="_blank">in</a>
         </div>
       </div>
       <div>
-        <div class="footer-col-title">Hizmetler</div>
+        <div class="footer-col-title" data-i18n="shared.footer.hizmetler">Hizmetler</div>
         <ul class="footer-links">
-          <li><a href="kurslar.html">Egitimlerimiz</a></li>
-          <li><a href="danismanlik.html">Danismanliklarimiz</a></li>
+          <li><a data-i18n="nav.egitimler" href="kurslar.html">Eğitimlerimiz</a></li>
+          <li><a data-i18n="nav.danismanlik" href="danismanlik.html">Danışmanlıklarımız</a></li>
         </ul>
       </div>
       <div>
-        <div class="footer-col-title">Sirket</div>
+        <div class="footer-col-title" data-i18n="shared.footer.sirket">Şirket</div>
         <ul class="footer-links">
-          <li><a href="hakkimizda.html">Kurumsal</a></li>
-          <li><a href="blog.html">Deneyimlerimiz</a></li>
+          <li><a data-i18n="nav.hakkimizda" href="hakkimizda.html">Kurumsal</a></li>
+          <li><a data-i18n="nav.blog" href="blog.html">Deneyimlerimiz</a></li>
           <li><a href="kariyer.html">Kariyer</a></li>
-          <li><a href="iletisim.html">Iletisim</a></li>
+          <li><a data-i18n="nav.iletisim" href="iletisim.html">İletişim</a></li>
         </ul>
       </div>
       <div>
-        <div class="footer-col-title">Bulten</div>
+        <div class="footer-col-title" data-i18n="shared.footer.bulten">Bülten</div>
         <div class="footer-newsletter">
-          <p>IK gundeminden haberdar ol.</p>
+          <p>İK gündeminden haberdar ol.</p>
           <div class="newsletter-form"><input type="email" class="newsletter-input" placeholder="E-posta"/><button class="btn btn-primary btn-sm" onclick="showToast('Abone oldunuz!')">&rarr;</button></div>
         </div>
       </div>
     </div>
     <div class="footer-bottom">
-      <div class="footer-copy">&copy; 2026 Derin Akademi. Tum haklari saklidir. &nbsp;<a href="https://reneedesignlab.com/tr" target="_blank" style="color:var(--silver-dim);text-decoration:none;">by Renee DesignLab</a></div>
-      <div class="footer-legal"><a href="gizlilik-politikasi.html">Gizlilik</a><a href="kvkk.html">KVKK</a><a href="cerezler.html">Cerezler</a></div>
+      <div class="footer-copy">&copy; 2026 Derin Akademi. Tüm hakları saklıdır. &nbsp;<a href="https://reneedesignlab.com/tr" target="_blank" style="color:var(--silver-dim);text-decoration:none;">by Renee DesignLab</a></div>
+      <div class="footer-legal"><a href="gizlilik-politikasi.html" data-i18n="shared.footer.gizlilik">Gizlilik Politikası</a><a href="kvkk.html" data-i18n="shared.footer.kvkk">KVKK</a><a href="cerezler.html" data-i18n="shared.footer.cerezler">Çerezler</a></div>
     </div>
   </div>
 </footer>
 
-<button id="back-to-top" style="position:fixed;bottom:28px;right:28px;z-index:500;width:44px;height:44px;border-radius:12px;background:var(--glass-bg);border:1px solid var(--glass-bd);color:var(--teal);font-size:18px;cursor:pointer;opacity:0;transition:var(--t-base);backdrop-filter:blur(12px);" aria-label="Yukari don">&#8593;</button>
+<button id="back-to-top" style="position:fixed;bottom:28px;right:28px;z-index:500;width:44px;height:44px;border-radius:12px;background:var(--glass-bg);border:1px solid var(--glass-bd);color:var(--teal);font-size:18px;cursor:pointer;opacity:0;transition:var(--t-base);backdrop-filter:blur(12px);" aria-label="Yukarı dön">&#8593;</button>
 
 <div id="teklif-modal" class="teklif-modal">
   <div class="teklif-modal-box">
     <button class="teklif-modal-close" onclick="closeTeklifModal()">&#x2715;</button>
     <div>
-      <div style="color:var(--teal);font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:10px;">Iletisim Bilgileri</div>
+      <div style="color:var(--teal);font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:10px;" data-i18n="shared.modal.contact">İletişim Bilgileri</div>
       <h2 style="font-family:'Montserrat',sans-serif;font-size:24px;font-weight:900;line-height:1.2;margin-bottom:8px;">Hemen <span class="gradient-text">Teklif Alin</span></h2>
-      <p style="color:var(--silver);font-size:13px;line-height:1.75;margin-bottom:28px;">Egitim ihtiyaclarinizi paylasin, size ozel program ve teklif olusturalim.</p>
+      <p style="color:var(--silver);font-size:13px;line-height:1.75;margin-bottom:28px;">Eğitim ihtiyaçlarınızı paylaşın, size ozel program ve teklif olusturalim.</p>
       <div style="display:flex;flex-direction:column;gap:18px;margin-bottom:28px;">
         <div class="teklif-info-row"><div class="teklif-info-icon">&#128222;</div><div><div style="font-size:11px;color:var(--silver-dim);margin-bottom:3px;">Telefon</div><a href="tel:+905330193134" style="font-size:14px;font-weight:600;color:var(--white);text-decoration:none;">0 (533) 019 31 34</a></div></div>
         <div class="teklif-info-row"><div class="teklif-info-icon">&#128231;</div><div><div style="font-size:11px;color:var(--silver-dim);margin-bottom:3px;">E-posta</div><a href="mailto:derin@derinakademi.net" style="font-size:14px;font-weight:600;color:var(--white);text-decoration:none;">derin@derinakademi.net</a></div></div>
