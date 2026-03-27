@@ -15,9 +15,9 @@
       padding:calc(var(--nav-h) + 48px) 0 80px;overflow:hidden;
     }
     .hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;}
-    .hero-title{font-family:'Montserrat',sans-serif;font-size:clamp(38px,5vw,70px);font-weight:900;line-height:1.06;letter-spacing:-2.5px;margin-bottom:24px;}
+    .hero-title{font-family:'Montserrat',sans-serif;font-size:clamp(32px,5vw,70px);font-weight:900;line-height:1.06;letter-spacing:-2.5px;margin-bottom:24px;overflow-wrap:break-word;word-break:break-word;}
     .hero-title .line{display:block;}
-    .hero-desc{font-size:17px;color:var(--silver);line-height:1.78;max-width:500px;margin-bottom:40px;}
+    .hero-desc{font-size:17px;color:var(--silver);line-height:1.78;max-width:500px;margin-bottom:40px;overflow-wrap:break-word;}
     .hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:52px;}
     .hero-stats{padding-top:52px;border-top:1px solid var(--glass-bd);margin-top:20px;}
     .hero-stats-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;}
@@ -245,16 +245,22 @@
       .ring-1{width:240px;height:240px;}
       .ring-2{width:300px;height:300px;}
       .ring-3{width:350px;height:350px;}
-      .hero-visual{height:340px;}
+      .hero-visual{height:340px;overflow:hidden;}
       .grid-plane{width:380px;}
       .courses-grid{grid-template-columns:1fr 1fr !important;gap:16px !important;}
+      /* Prevent strip overflow at mid-breakpoints */
+      .hero-vis-strip{white-space:normal;}
+      .hero-grid{gap:36px;}
     }
     @media(max-width:640px){
       /* Hero mobile: prevent horizontal overflow */
-      .hero{min-height:auto;padding-bottom:48px;}
-      .hero-grid{gap:28px;}
+      .hero{min-height:auto;padding-bottom:48px;overflow-x:hidden;}
+      .hero-grid{gap:28px;overflow-x:hidden;}
+      .hero-grid > *{min-width:0;max-width:100%;width:100%;}
       .hero-visual-stats{width:100%;max-width:none;}
-      .hero-vis-strip{font-size:12px;padding:10px 14px 10px 13px;gap:10px;white-space:normal;}
+      .hero-vis-strip{font-size:12px;padding:10px 14px 10px 13px;gap:10px;white-space:normal;max-width:100%;box-sizing:border-box;}
+      .hero-title{font-size:clamp(28px,8vw,48px);letter-spacing:-1.5px;}
+      .hero-desc{max-width:100%;font-size:15px;}
       .hvs-val{font-size:14px;}
       .hvs-icon{font-size:16px;}
       .hero-cta{gap:10px;margin-bottom:32px;}
